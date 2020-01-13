@@ -1,0 +1,221 @@
+syntax="proto3";
+
+package email;
+
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/any.proto";
+import "google/protobuf/empty.proto";
+import "google/rpc/status.proto";
+import "google/api/field_behavior.proto";
+
+message Sender {
+    string id = 1;
+    string email_address = 2;
+    string display_name = 3;
+}
+
+message Recipient {
+    string id = 1;
+    string email_address = 2;
+    string display_name = 3;
+}
+
+message Draft {
+    string id = 1;
+    Envelope envelope = 2;
+    map<string, string> labels = 3;
+}
+
+message Email {
+    string id = 1;
+    Envelope envelope = 2;
+    google.protobuf.Timestamp sent_at = 3;
+    google.protobuf.Timestamp received_at = 4;
+    google.protobuf.Timestamp snoozed_at = 5;
+    bool fwd = 6;
+    map<string, string> labels = 7;
+}
+
+message Envelope {
+    string id = 1;
+    Sender from = 2;
+    repeated Recipient to = 3;
+    repeated Recipient cc = 4;
+    repeated Recipient bcc = 5;
+    repeated Recipient groups = 6;
+
+    map<string, string> tags = 7;
+
+    Message message = 8;
+
+    repeated Attachment attachments = 9;
+}
+
+message Message {
+    string id = 1;
+    string subject = 2;
+    string mimetype = 3;
+
+    oneof body {
+        bytes data = 4;
+        string uri = 5;
+    }
+}
+
+message Attachment {
+    string id = 1;
+    string filename = 2;
+    string mimetype = 3;
+
+    oneof content {
+        bytes data = 4;
+        string uri = 5;
+    }
+}
+
+message Label {
+    string id = 1;
+    string name = 2;
+    string type = 3;
+}
+
+message GetDraftRequest {
+    string draft_id = 1; [(google.api.field_behavior) = REQUIRED];
+}
+
+message ListDraftsRequest {
+    string page_token = 1;
+    uint32 page_size = 2;
+    string query = 3;
+}
+
+message CreateDraftRequest {
+    Draft draft = 1; [(google.api.field_behavior) = REQUIRED];
+}
+
+message UpdateDraftRequest {
+    Draft draft = 1; [(google.api.field_behavior) = REQUIRED];
+}
+
+message DeleteDraftRequest {
+    string draft_id = 1; [(google.api.field_behavior) = REQUIRED];
+}
+
+message SendDraftRequest {
+    Draft draft = 1; [(google.api.field_behavior) = REQUIRED];
+}
+
+message ListDraftsResponse {
+    repeated Draft draft = 1;
+    string next_page_token = 2;
+    int32 total_size = 3;
+}
+
+message GetEmailRequest {
+    string email_id = 1; [(google.api.field_behavior) = REQUIRED];
+}
+
+message ListEmailsRequest {
+    map<string, string> labels = 1;
+    string page_token = 2;
+    uint32 page_size = 3;
+    string query = 4;
+}
+
+message ModifyEmailRequest {
+    Email email = 1; [(google.api.field_behavior) = REQUIRED];
+}
+
+message TrashEmailRequest {
+    string email_id = 1; [(google.api.field_behavior) = REQUIRED];
+}
+
+message UntrashEmailRequest {
+    string email_id = 1; [(google.api.field_behavior) = REQUIRED];
+}
+
+message SendEmailRequest {
+    Email email = 1; [(google.api.field_behavior) = REQUIRED];
+}
+
+message ListEmailsResponse {
+    repeated Email email = 1;
+    string next_page_token = 2;
+    int32 total_size = 3;
+}
+
+message GetLabelRequest {
+    string Label_id = 1; [(google.api.field_behavior) = REQUIRED];
+}
+
+message CreateLabelRequest {
+    Label Label = 1; [(google.api.field_behavior) = REQUIRED];
+}
+
+message UpdateLabelRequest {
+    Label Label = 1; [(google.api.field_behavior) = REQUIRED];
+}
+
+message DeleteLabelRequest {
+    string Label_id = 1; [(google.api.field_behavior) = REQUIRED];
+}
+
+message SendLabelRequest {
+    Label Label = 1; [(google.api.field_behavior) = REQUIRED];
+}
+
+message ListLabelsResponse {
+    repeated Label Label = 1;
+}
+
+service MailboxService {
+
+}
+
+service DraftService {
+    rpc GetDraft(GetDraftRequest) returns (Draft) {}
+    rpc ListDrafts(ListDraftsRequest) returns (ListDraftsResponse) {}
+    rpc CreateDraft(CreateDraftRequest) returns (Draft) {}
+    rpc UpdateDraft(UpdateDraftRequest) returns (Draft) {}
+    rpc DeleteDraft(DeleteDraftRequest) returns (google.protobuf.Empty) {}
+    rpc SendDraft(SendDraftRequest) returns (Email) {}
+}
+
+service EmailService {
+    rpc GetEmail(GetEmailRequest) returns (Email) {}
+    rpc ListEmails(ListEmailsRequest) returns (ListEmailsResponse) {}
+    rpc ModifyEmail(ModifyEmailRequest) returns (Email) {}
+    rpc TrashEmail(TrashEmailRequest) returns (google.protobuf.Empty) {}
+    rpc UntrashEmail(UntrashEmailRequest) returns (google.protobuf.Empty) {}
+    rpc SendEmail(SendEmailRequest) returns (Email) {}
+}
+
+service ThreadService {
+
+}
+
+service LabelService {
+    rpc GetLabel(GetLabelRequest) returns (Label) {}
+    rpc ListLabels(google.protobuf.Empty) returns (ListLabelsResponse) {}
+    rpc CreateLabel(CreateLabelRequest) returns (Label) {}
+    rpc UpdateLabel(UpdateLabelRequest) returns (Label) {}
+    rpc DeleteLabel(DeleteLabelRequest) returns (google.protobuf.Empty) {}
+}
+
+message StreamStateRequest {
+    map<string, string> labels = 1;
+    string query = 2;
+}
+
+message StreamingStateResponse {
+    oneof data {
+        ListMailboxesResponse mailboxes = 1;
+        ListEmailsResponse emails = 2;
+        ListThreadsResponse threads = 3;
+    }
+    google.rpc.Status status = 4;
+}
+
+service StateService {
+    rpc StreamState(StreamStateRequest) returns (stream StreamingStateResponse) {}
+}
