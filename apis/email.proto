@@ -8,6 +8,13 @@ import "google/protobuf/empty.proto";
 import "google/rpc/status.proto";
 import "google/api/field_behavior.proto";
 
+enum HistoryTypes {
+    LABEL_ADDED = 0;
+    LABEL_REMOVED = 1;
+    MESSAGE_ADDED = 2;
+    MESSAGE_DELETED = 3;
+}
+
 message Sender {
     string id = 1;
     string email_address = 2;
@@ -30,18 +37,20 @@ message Draft {
 message Email {
     string id = 1;
     string snipped = 2;
-    Envelope envelope = 3;
-    google.protobuf.Timestamp sent_at = 4;
-    google.protobuf.Timestamp received_at = 5;
-    google.protobuf.Timestamp snoozed_at = 6;
-    bool fwd = 7;
-    map<string, string> labels = 8;
+    string history_id = 3;
+    Envelope envelope = 4;
+    google.protobuf.Timestamp sent_at = 5;
+    google.protobuf.Timestamp received_at = 6;
+    google.protobuf.Timestamp snoozed_at = 7;
+    bool fwd = 8;
+    map<string, string> labels = 9;
 }
 
 message Thread {
     string id = 1;
     string snipped = 2;
-    repeated Email email = 3;
+    string history_id = 3;
+    repeated Email email = 4;
 }
 
 message Envelope {
@@ -87,6 +96,41 @@ message Label {
     string type = 3;
 }
 
+message HistoryLabelAdded {
+    repeated string label_ids = 1;
+    Email email = 2;
+}
+
+message HistoryLabelRemoved {
+    repeated string label_ids = 1;
+    Email email = 2;
+}
+
+message HistoryEmailAdded {
+    Email email = 1;
+}
+
+message HistoryEmailDeleted {
+    Email email = 1;
+}
+
+message History {
+    uint32 id = 1;
+    repeated Email emails = 2;
+    repeated HistoryLabelAdded label_added = 3;
+    repeated HistoryLabelRemoved label_removed = 4;
+    repeated HistoryEmailAdded email_added = 5;
+    repeated HistoryEmailDeleted email_deleted = 6;
+
+}
+
+message Profile {
+    string emailAddress = 1;
+    string history_id = 2;
+    int32 emails_total = 3;
+    int32 threads_total = 4;
+}
+
 message GetDraftRequest {
     string draft_id = 1; [(google.api.field_behavior) = REQUIRED];
 }
@@ -116,7 +160,7 @@ message SendDraftRequest {
 message ListDraftsResponse {
     repeated Draft draft = 1;
     string next_page_token = 2;
-    int32 total_size = 3;
+    uint32 total_size = 3;
 }
 
 message GetEmailRequest {
@@ -150,7 +194,7 @@ message SendEmailRequest {
 message ListEmailsResponse {
     repeated Email email = 1;
     string next_page_token = 2;
-    int32 total_size = 3;
+    uint32 total_size = 3;
 }
 
 message GetThreadRequest {
@@ -184,7 +228,7 @@ message SendThreadRequest {
 message ListThreadsResponse {
     repeated Thread thread = 1;
     string next_page_token = 2;
-    int32 total_size = 3;
+    uint32 total_size = 3;
 }
 
 message StreamStateRequest {
@@ -195,6 +239,20 @@ message StreamStateRequest {
 message StreamingStateResponse {
     google.protobuf.Any data = 1;
     google.rpc.Status status = 2;
+}
+
+message ListHistoryRequest {
+    HistoryTypes history_types = 1;
+    string label_id = 2;
+    string page_token = 3;
+    uint32 page_size = 4;
+    uint32 start_history_id = 5;
+}
+
+message ListHistoryResponse {
+    repeated History history = 1;
+    string next_page_token = 2;
+    uint32 history_id = 3;
 }
 
 message GetLabelRequest {
@@ -217,11 +275,17 @@ message SendLabelRequest {
     Label Label = 1; [(google.api.field_behavior) = REQUIRED];
 }
 
+message GetProfileResponse {
+    Profile profile = 1;
+}
+
 message ListLabelsResponse {
     repeated Label Label = 1;
 }
 
 service MailboxService {
+    rpc GetProfile(google.protobuf.Empty) returns (GetProfileResponse) {}
+    rpc ListHistory(ListHistoryRequest) returns (ListHistoryResponse) {}
     rpc StreamState(StreamStateRequest) returns (stream StreamingStateResponse) {}
 }
 
