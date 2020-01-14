@@ -22,18 +22,26 @@ message Recipient {
 
 message Draft {
     string id = 1;
-    Envelope envelope = 2;
-    map<string, string> labels = 3;
+    string snipped = 2;
+    Envelope envelope = 3;
+    map<string, string> labels = 4;
 }
 
 message Email {
     string id = 1;
-    Envelope envelope = 2;
-    google.protobuf.Timestamp sent_at = 3;
-    google.protobuf.Timestamp received_at = 4;
-    google.protobuf.Timestamp snoozed_at = 5;
-    bool fwd = 6;
-    map<string, string> labels = 7;
+    string snipped = 2;
+    Envelope envelope = 3;
+    google.protobuf.Timestamp sent_at = 4;
+    google.protobuf.Timestamp received_at = 5;
+    google.protobuf.Timestamp snoozed_at = 6;
+    bool fwd = 7;
+    map<string, string> labels = 8;
+}
+
+message Thread {
+    string id = 1;
+    string snipped = 2;
+    repeated Email email = 3;
 }
 
 message Envelope {
@@ -123,7 +131,8 @@ message ListEmailsRequest {
 }
 
 message ModifyEmailRequest {
-    Email email = 1; [(google.api.field_behavior) = REQUIRED];
+    string email_id = 1; [(google.api.field_behavior) = REQUIRED];
+    map<string, string> labels = 2;
 }
 
 message TrashEmailRequest {
@@ -142,6 +151,50 @@ message ListEmailsResponse {
     repeated Email email = 1;
     string next_page_token = 2;
     int32 total_size = 3;
+}
+
+message GetThreadRequest {
+    string thread_id = 1; [(google.api.field_behavior) = REQUIRED];
+}
+
+message ListThreadsRequest {
+    map<string, string> labels = 1;
+    string page_token = 2;
+    uint32 page_size = 3;
+    string query = 4;
+}
+
+message ModifyThreadRequest {
+    string thread_id = 1; [(google.api.field_behavior) = REQUIRED];
+    map<string, string> labels = 2;
+}
+
+message TrashThreadRequest {
+    string thread_id = 1; [(google.api.field_behavior) = REQUIRED];
+}
+
+message UntrashThreadRequest {
+    string thread_id = 1; [(google.api.field_behavior) = REQUIRED];
+}
+
+message SendThreadRequest {
+    Thread thread = 1; [(google.api.field_behavior) = REQUIRED];
+}
+
+message ListThreadsResponse {
+    repeated Thread thread = 1;
+    string next_page_token = 2;
+    int32 total_size = 3;
+}
+
+message StreamStateRequest {
+    map<string, string> labels = 1;
+    string query = 2;
+}
+
+message StreamingStateResponse {
+    google.protobuf.Any data = 1;
+    google.rpc.Status status = 2;
 }
 
 message GetLabelRequest {
@@ -169,7 +222,7 @@ message ListLabelsResponse {
 }
 
 service MailboxService {
-
+    rpc StreamState(StreamStateRequest) returns (stream StreamingStateResponse) {}
 }
 
 service DraftService {
@@ -191,7 +244,11 @@ service EmailService {
 }
 
 service ThreadService {
-
+    rpc GetThread(GetThreadRequest) returns (Thread) {}
+    rpc ListThreads(ListThreadsRequest) returns (ListThreadsResponse) {}
+    rpc ModifyThread(ModifyThreadRequest) returns (Thread) {}
+    rpc TrashThread(TrashThreadRequest) returns (google.protobuf.Empty) {}
+    rpc UntrashThread(UntrashThreadRequest) returns (google.protobuf.Empty) {}
 }
 
 service LabelService {
@@ -200,22 +257,4 @@ service LabelService {
     rpc CreateLabel(CreateLabelRequest) returns (Label) {}
     rpc UpdateLabel(UpdateLabelRequest) returns (Label) {}
     rpc DeleteLabel(DeleteLabelRequest) returns (google.protobuf.Empty) {}
-}
-
-message StreamStateRequest {
-    map<string, string> labels = 1;
-    string query = 2;
-}
-
-message StreamingStateResponse {
-    oneof data {
-        ListMailboxesResponse mailboxes = 1;
-        ListEmailsResponse emails = 2;
-        ListThreadsResponse threads = 3;
-    }
-    google.rpc.Status status = 4;
-}
-
-service StateService {
-    rpc StreamState(StreamStateRequest) returns (stream StreamingStateResponse) {}
 }
