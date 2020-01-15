@@ -1,0 +1,43 @@
+syntax = "proto3";
+
+package account;
+
+import "google/protobuf/empty.proto";
+
+message SignupRequest {
+    string username = 1;
+    string password = 2;
+}
+
+message SigninRequest {
+    string username = 1;
+    string password = 2;
+}
+
+message SigninResponse {
+    string token = 1;
+}
+
+message ResetPasswordRequest {
+    string token = 1;
+    string password = 2;
+}
+
+message UserInfoResponse {
+    string username = 1;
+    string email = 2;
+    string name = 3;
+    string given_name = 4;
+    string family_name = 5;
+    oneof picture {
+        bytes data = 6;
+        string uri = 7;
+    }
+}
+
+service AccountService {
+    rpc Signup(SignupRequest) returns (google.protobuf.Empty) {}
+    rpc Signin(SigninRequest) returns (SigninResponse) {}
+    rpc ResetPassword(ResetPasswordRequest) returns (google.protobuf.Empty) {}
+    rpc UserInfo(google.protobuf.Empty) returns (UserInfoResponse) {}
+}
