@@ -6,7 +6,6 @@ import "google/protobuf/timestamp.proto";
 import "google/protobuf/any.proto";
 import "google/protobuf/empty.proto";
 import "google/rpc/status.proto";
-import "google/api/field_behavior.proto";
 
 enum HistoryTypes {
     LABEL_ADDED = 0;
@@ -132,7 +131,7 @@ message Profile {
 }
 
 message GetDraftRequest {
-    string draft_id = 1; [(google.api.field_behavior) = REQUIRED];
+    string draft_id = 1;
 }
 
 message ListDraftsRequest {
@@ -142,19 +141,19 @@ message ListDraftsRequest {
 }
 
 message CreateDraftRequest {
-    Draft draft = 1; [(google.api.field_behavior) = REQUIRED];
+    Draft draft = 1;
 }
 
 message UpdateDraftRequest {
-    Draft draft = 1; [(google.api.field_behavior) = REQUIRED];
+    Draft draft = 1;
 }
 
 message DeleteDraftRequest {
-    string draft_id = 1; [(google.api.field_behavior) = REQUIRED];
+    string draft_id = 1;
 }
 
 message SendDraftRequest {
-    Draft draft = 1; [(google.api.field_behavior) = REQUIRED];
+    Draft draft = 1;
 }
 
 message ListDraftsResponse {
@@ -164,7 +163,7 @@ message ListDraftsResponse {
 }
 
 message GetEmailRequest {
-    string email_id = 1; [(google.api.field_behavior) = REQUIRED];
+    string email_id = 1;
 }
 
 message ListEmailsRequest {
@@ -175,20 +174,20 @@ message ListEmailsRequest {
 }
 
 message ModifyEmailRequest {
-    string email_id = 1; [(google.api.field_behavior) = REQUIRED];
+    string email_id = 1;
     map<string, string> labels = 2;
 }
 
 message TrashEmailRequest {
-    string email_id = 1; [(google.api.field_behavior) = REQUIRED];
+    string email_id = 1;
 }
 
 message UntrashEmailRequest {
-    string email_id = 1; [(google.api.field_behavior) = REQUIRED];
+    string email_id = 1;
 }
 
 message SendEmailRequest {
-    Email email = 1; [(google.api.field_behavior) = REQUIRED];
+    Email email = 1;
 }
 
 message ListEmailsResponse {
@@ -198,7 +197,7 @@ message ListEmailsResponse {
 }
 
 message GetThreadRequest {
-    string thread_id = 1; [(google.api.field_behavior) = REQUIRED];
+    string thread_id = 1;
 }
 
 message ListThreadsRequest {
@@ -209,20 +208,20 @@ message ListThreadsRequest {
 }
 
 message ModifyThreadRequest {
-    string thread_id = 1; [(google.api.field_behavior) = REQUIRED];
+    string thread_id = 1;
     map<string, string> labels = 2;
 }
 
 message TrashThreadRequest {
-    string thread_id = 1; [(google.api.field_behavior) = REQUIRED];
+    string thread_id = 1;
 }
 
 message UntrashThreadRequest {
-    string thread_id = 1; [(google.api.field_behavior) = REQUIRED];
+    string thread_id = 1;
 }
 
 message SendThreadRequest {
-    Thread thread = 1; [(google.api.field_behavior) = REQUIRED];
+    Thread thread = 1;
 }
 
 message ListThreadsResponse {
@@ -256,23 +255,23 @@ message ListHistoryResponse {
 }
 
 message GetLabelRequest {
-    string Label_id = 1; [(google.api.field_behavior) = REQUIRED];
+    string Label_id = 1;
 }
 
 message CreateLabelRequest {
-    Label Label = 1; [(google.api.field_behavior) = REQUIRED];
+    Label Label = 1;
 }
 
 message UpdateLabelRequest {
-    Label Label = 1; [(google.api.field_behavior) = REQUIRED];
+    Label Label = 1;
 }
 
 message DeleteLabelRequest {
-    string Label_id = 1; [(google.api.field_behavior) = REQUIRED];
+    string Label_id = 1;
 }
 
 message SendLabelRequest {
-    Label Label = 1; [(google.api.field_behavior) = REQUIRED];
+    Label Label = 1;
 }
 
 message GetProfileResponse {
