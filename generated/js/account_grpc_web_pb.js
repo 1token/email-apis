@@ -151,6 +151,86 @@ proto.account.AccountServicePromiseClient.prototype.signup =
 /**
  * @const
  * @type {!grpc.web.MethodDescriptor<
+ *   !proto.account.VerifyEmailRequest,
+ *   !proto.google.protobuf.Empty>}
+ */
+const methodDescriptor_AccountService_VerifyEmail = new grpc.web.MethodDescriptor(
+  '/account.AccountService/VerifyEmail',
+  grpc.web.MethodType.UNARY,
+  proto.account.VerifyEmailRequest,
+  google_protobuf_empty_pb.Empty,
+  /**
+   * @param {!proto.account.VerifyEmailRequest} request
+   * @return {!Uint8Array}
+   */
+  function(request) {
+    return request.serializeBinary();
+  },
+  google_protobuf_empty_pb.Empty.deserializeBinary
+);
+
+
+/**
+ * @const
+ * @type {!grpc.web.AbstractClientBase.MethodInfo<
+ *   !proto.account.VerifyEmailRequest,
+ *   !proto.google.protobuf.Empty>}
+ */
+const methodInfo_AccountService_VerifyEmail = new grpc.web.AbstractClientBase.MethodInfo(
+  google_protobuf_empty_pb.Empty,
+  /**
+   * @param {!proto.account.VerifyEmailRequest} request
+   * @return {!Uint8Array}
+   */
+  function(request) {
+    return request.serializeBinary();
+  },
+  google_protobuf_empty_pb.Empty.deserializeBinary
+);
+
+
+/**
+ * @param {!proto.account.VerifyEmailRequest} request The
+ *     request proto
+ * @param {?Object<string, string>} metadata User defined
+ *     call metadata
+ * @param {function(?grpc.web.Error, ?proto.google.protobuf.Empty)}
+ *     callback The callback function(error, response)
+ * @return {!grpc.web.ClientReadableStream<!proto.google.protobuf.Empty>|undefined}
+ *     The XHR Node Readable Stream
+ */
+proto.account.AccountServiceClient.prototype.verifyEmail =
+    function(request, metadata, callback) {
+  return this.client_.rpcCall(this.hostname_ +
+      '/account.AccountService/VerifyEmail',
+      request,
+      metadata || {},
+      methodDescriptor_AccountService_VerifyEmail,
+      callback);
+};
+
+
+/**
+ * @param {!proto.account.VerifyEmailRequest} request The
+ *     request proto
+ * @param {?Object<string, string>} metadata User defined
+ *     call metadata
+ * @return {!Promise<!proto.google.protobuf.Empty>}
+ *     A native promise that resolves to the response
+ */
+proto.account.AccountServicePromiseClient.prototype.verifyEmail =
+    function(request, metadata) {
+  return this.client_.unaryCall(this.hostname_ +
+      '/account.AccountService/VerifyEmail',
+      request,
+      metadata || {},
+      methodDescriptor_AccountService_VerifyEmail);
+};
+
+
+/**
+ * @const
+ * @type {!grpc.web.MethodDescriptor<
  *   !proto.account.SigninRequest,
  *   !proto.account.SigninResponse>}
  */

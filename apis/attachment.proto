@@ -1,0 +1,43 @@
+syntax="proto3";
+
+package attachment;
+
+import "google/protobuf/empty.proto";
+
+message AttachmentMetadata {
+    string id = 1;
+    string uri = 2;
+    string filename = 3;
+    string mimetype = 4;
+}
+
+message GetAttachmentMetadataRequest {
+    string attachment_metadata_id = 1;
+    string email_id = 2;
+}
+
+message ListAttachmentsMetadataRequest {
+    string email_id = 1;
+}
+
+message ListAttachmentsMetadataResponse {
+    repeated AttachmentMetadata attachment_metadata = 1;
+}
+
+message DeleteAttachmentRequest {
+    string attachment_metadata_id = 1;
+    string email_id = 2;
+}
+
+message DeleteAllAttachmentRequest {
+    string email_id = 1;
+}
+
+service LabelService {
+    rpc GetAttachmentMetadata(GetAttachmentMetadataRequest) returns (AttachmentMetadata) {}
+    rpc ListAttachmentMetadata(ListAttachmentsMetadataRequest) returns (ListAttachmentsMetadataResponse) {}
+    rpc DeleteAttachment(DeleteAttachmentRequest) returns (google.protobuf.Empty) {}
+    rpc DeleteAllAttachment(DeleteAllAttachmentRequest) returns (google.protobuf.Empty) {}
+}
+
+// upload/download Attachments via http
