@@ -43,6 +43,24 @@ build-proto:
 			--grpc-web_out=import_style=commonjs,mode=grpcwebtext:generated/js \
 			attachment.proto
 
+	protoc -I$(GOOGLEAPIS_DIR) \
+			-I/usr/local/include \
+			-I apis \
+			--dart_out=grpc:generated/dart \
+			email.proto
+
+	protoc -I$(GOOGLEAPIS_DIR) \
+			-I/usr/local/include \
+			-I apis \
+			--dart_out=grpc:generated/dart \
+			account.proto
+
+	protoc -I$(GOOGLEAPIS_DIR) \
+			-I/usr/local/include \
+			-I apis \
+			--dart_out=grpc:generated/dart \
+			attachment.proto
+
 clean:
 	rm -r generated/go/*
 	rm -r generated/js/*

@@ -179,8 +179,8 @@ proto.attachment.AttachmentMetadata.prototype.toObject = function(opt_includeIns
 proto.attachment.AttachmentMetadata.toObject = function(includeInstance, msg) {
   var f, obj = {
     id: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    filename: jspb.Message.getFieldWithDefault(msg, 2, ""),
-    originalname: jspb.Message.getFieldWithDefault(msg, 3, ""),
+    uri: jspb.Message.getFieldWithDefault(msg, 2, ""),
+    filename: jspb.Message.getFieldWithDefault(msg, 3, ""),
     mimetype: jspb.Message.getFieldWithDefault(msg, 4, "")
   };
 
@@ -224,11 +224,11 @@ proto.attachment.AttachmentMetadata.deserializeBinaryFromReader = function(msg, 
       break;
     case 2:
       var value = /** @type {string} */ (reader.readString());
-      msg.setFilename(value);
+      msg.setUri(value);
       break;
     case 3:
       var value = /** @type {string} */ (reader.readString());
-      msg.setOriginalname(value);
+      msg.setFilename(value);
       break;
     case 4:
       var value = /** @type {string} */ (reader.readString());
@@ -270,14 +270,14 @@ proto.attachment.AttachmentMetadata.serializeBinaryToWriter = function(message, 
       f
     );
   }
-  f = message.getFilename();
+  f = message.getUri();
   if (f.length > 0) {
     writer.writeString(
       2,
       f
     );
   }
-  f = message.getOriginalname();
+  f = message.getFilename();
   if (f.length > 0) {
     writer.writeString(
       3,
@@ -313,10 +313,10 @@ proto.attachment.AttachmentMetadata.prototype.setId = function(value) {
 
 
 /**
- * optional string filename = 2;
+ * optional string uri = 2;
  * @return {string}
  */
-proto.attachment.AttachmentMetadata.prototype.getFilename = function() {
+proto.attachment.AttachmentMetadata.prototype.getUri = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
@@ -325,16 +325,16 @@ proto.attachment.AttachmentMetadata.prototype.getFilename = function() {
  * @param {string} value
  * @return {!proto.attachment.AttachmentMetadata} returns this
  */
-proto.attachment.AttachmentMetadata.prototype.setFilename = function(value) {
+proto.attachment.AttachmentMetadata.prototype.setUri = function(value) {
   return jspb.Message.setProto3StringField(this, 2, value);
 };
 
 
 /**
- * optional string originalname = 3;
+ * optional string filename = 3;
  * @return {string}
  */
-proto.attachment.AttachmentMetadata.prototype.getOriginalname = function() {
+proto.attachment.AttachmentMetadata.prototype.getFilename = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
 };
 
@@ -343,7 +343,7 @@ proto.attachment.AttachmentMetadata.prototype.getOriginalname = function() {
  * @param {string} value
  * @return {!proto.attachment.AttachmentMetadata} returns this
  */
-proto.attachment.AttachmentMetadata.prototype.setOriginalname = function(value) {
+proto.attachment.AttachmentMetadata.prototype.setFilename = function(value) {
   return jspb.Message.setProto3StringField(this, 3, value);
 };
 
