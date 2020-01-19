@@ -10,7 +10,7 @@ import 'dart:core' as $core;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class SignupRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('SignupRequest', package: const $pb.PackageName('account'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('SignupRequest', package: const $pb.PackageName('service'), createEmptyInstance: create)
     ..aOS(1, 'username')
     ..aOS(2, 'password')
     ..hasRequiredFields = false
@@ -51,7 +51,7 @@ class SignupRequest extends $pb.GeneratedMessage {
 }
 
 class VerifyEmailRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('VerifyEmailRequest', package: const $pb.PackageName('account'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('VerifyEmailRequest', package: const $pb.PackageName('service'), createEmptyInstance: create)
     ..aOS(1, 'email')
     ..hasRequiredFields = false
   ;
@@ -82,7 +82,7 @@ class VerifyEmailRequest extends $pb.GeneratedMessage {
 }
 
 class SigninRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('SigninRequest', package: const $pb.PackageName('account'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('SigninRequest', package: const $pb.PackageName('service'), createEmptyInstance: create)
     ..aOS(1, 'username')
     ..aOS(2, 'password')
     ..hasRequiredFields = false
@@ -123,7 +123,7 @@ class SigninRequest extends $pb.GeneratedMessage {
 }
 
 class SigninResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('SigninResponse', package: const $pb.PackageName('account'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('SigninResponse', package: const $pb.PackageName('service'), createEmptyInstance: create)
     ..aOS(1, 'token')
     ..hasRequiredFields = false
   ;
@@ -154,7 +154,7 @@ class SigninResponse extends $pb.GeneratedMessage {
 }
 
 class ResetPasswordRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ResetPasswordRequest', package: const $pb.PackageName('account'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ResetPasswordRequest', package: const $pb.PackageName('service'), createEmptyInstance: create)
     ..aOS(1, 'token')
     ..aOS(2, 'password')
     ..hasRequiredFields = false
@@ -206,7 +206,7 @@ class UserInfoResponse extends $pb.GeneratedMessage {
     7 : UserInfoResponse_Picture.uri,
     0 : UserInfoResponse_Picture.notSet
   };
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('UserInfoResponse', package: const $pb.PackageName('account'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('UserInfoResponse', package: const $pb.PackageName('service'), createEmptyInstance: create)
     ..oo(0, [6, 7])
     ..aOS(1, 'username')
     ..aOS(2, 'email')

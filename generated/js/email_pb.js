@@ -20,56 +20,56 @@ var google_protobuf_empty_pb = require('google-protobuf/google/protobuf/empty_pb
 goog.object.extend(proto, google_protobuf_empty_pb);
 var google_rpc_status_pb = require('./google/rpc/status_pb.js');
 goog.object.extend(proto, google_rpc_status_pb);
-goog.exportSymbol('proto.email.Attachment', null, global);
-goog.exportSymbol('proto.email.Attachment.ContentCase', null, global);
-goog.exportSymbol('proto.email.CreateDraftRequest', null, global);
-goog.exportSymbol('proto.email.CreateLabelRequest', null, global);
-goog.exportSymbol('proto.email.DeleteDraftRequest', null, global);
-goog.exportSymbol('proto.email.DeleteLabelRequest', null, global);
-goog.exportSymbol('proto.email.Draft', null, global);
-goog.exportSymbol('proto.email.Email', null, global);
-goog.exportSymbol('proto.email.Envelope', null, global);
-goog.exportSymbol('proto.email.GetDraftRequest', null, global);
-goog.exportSymbol('proto.email.GetEmailRequest', null, global);
-goog.exportSymbol('proto.email.GetLabelRequest', null, global);
-goog.exportSymbol('proto.email.GetProfileResponse', null, global);
-goog.exportSymbol('proto.email.GetThreadRequest', null, global);
-goog.exportSymbol('proto.email.History', null, global);
-goog.exportSymbol('proto.email.HistoryEmailAdded', null, global);
-goog.exportSymbol('proto.email.HistoryEmailDeleted', null, global);
-goog.exportSymbol('proto.email.HistoryLabelAdded', null, global);
-goog.exportSymbol('proto.email.HistoryLabelRemoved', null, global);
-goog.exportSymbol('proto.email.HistoryTypes', null, global);
-goog.exportSymbol('proto.email.Label', null, global);
-goog.exportSymbol('proto.email.ListDraftsRequest', null, global);
-goog.exportSymbol('proto.email.ListDraftsResponse', null, global);
-goog.exportSymbol('proto.email.ListEmailsRequest', null, global);
-goog.exportSymbol('proto.email.ListEmailsResponse', null, global);
-goog.exportSymbol('proto.email.ListHistoryRequest', null, global);
-goog.exportSymbol('proto.email.ListHistoryResponse', null, global);
-goog.exportSymbol('proto.email.ListLabelsResponse', null, global);
-goog.exportSymbol('proto.email.ListThreadsRequest', null, global);
-goog.exportSymbol('proto.email.ListThreadsResponse', null, global);
-goog.exportSymbol('proto.email.Message', null, global);
-goog.exportSymbol('proto.email.Message.BodyCase', null, global);
-goog.exportSymbol('proto.email.ModifyEmailRequest', null, global);
-goog.exportSymbol('proto.email.ModifyThreadRequest', null, global);
-goog.exportSymbol('proto.email.Profile', null, global);
-goog.exportSymbol('proto.email.Recipient', null, global);
-goog.exportSymbol('proto.email.SendDraftRequest', null, global);
-goog.exportSymbol('proto.email.SendEmailRequest', null, global);
-goog.exportSymbol('proto.email.SendLabelRequest', null, global);
-goog.exportSymbol('proto.email.SendThreadRequest', null, global);
-goog.exportSymbol('proto.email.Sender', null, global);
-goog.exportSymbol('proto.email.StreamStateRequest', null, global);
-goog.exportSymbol('proto.email.StreamingStateResponse', null, global);
-goog.exportSymbol('proto.email.Thread', null, global);
-goog.exportSymbol('proto.email.TrashEmailRequest', null, global);
-goog.exportSymbol('proto.email.TrashThreadRequest', null, global);
-goog.exportSymbol('proto.email.UntrashEmailRequest', null, global);
-goog.exportSymbol('proto.email.UntrashThreadRequest', null, global);
-goog.exportSymbol('proto.email.UpdateDraftRequest', null, global);
-goog.exportSymbol('proto.email.UpdateLabelRequest', null, global);
+goog.exportSymbol('proto.service.Attachment', null, global);
+goog.exportSymbol('proto.service.Attachment.ContentCase', null, global);
+goog.exportSymbol('proto.service.CreateDraftRequest', null, global);
+goog.exportSymbol('proto.service.CreateLabelRequest', null, global);
+goog.exportSymbol('proto.service.DeleteDraftRequest', null, global);
+goog.exportSymbol('proto.service.DeleteLabelRequest', null, global);
+goog.exportSymbol('proto.service.Draft', null, global);
+goog.exportSymbol('proto.service.Email', null, global);
+goog.exportSymbol('proto.service.Envelope', null, global);
+goog.exportSymbol('proto.service.GetDraftRequest', null, global);
+goog.exportSymbol('proto.service.GetEmailRequest', null, global);
+goog.exportSymbol('proto.service.GetLabelRequest', null, global);
+goog.exportSymbol('proto.service.GetProfileResponse', null, global);
+goog.exportSymbol('proto.service.GetThreadRequest', null, global);
+goog.exportSymbol('proto.service.History', null, global);
+goog.exportSymbol('proto.service.HistoryEmailAdded', null, global);
+goog.exportSymbol('proto.service.HistoryEmailDeleted', null, global);
+goog.exportSymbol('proto.service.HistoryLabelAdded', null, global);
+goog.exportSymbol('proto.service.HistoryLabelRemoved', null, global);
+goog.exportSymbol('proto.service.HistoryTypes', null, global);
+goog.exportSymbol('proto.service.Label', null, global);
+goog.exportSymbol('proto.service.ListDraftsRequest', null, global);
+goog.exportSymbol('proto.service.ListDraftsResponse', null, global);
+goog.exportSymbol('proto.service.ListEmailsRequest', null, global);
+goog.exportSymbol('proto.service.ListEmailsResponse', null, global);
+goog.exportSymbol('proto.service.ListHistoryRequest', null, global);
+goog.exportSymbol('proto.service.ListHistoryResponse', null, global);
+goog.exportSymbol('proto.service.ListLabelsResponse', null, global);
+goog.exportSymbol('proto.service.ListThreadsRequest', null, global);
+goog.exportSymbol('proto.service.ListThreadsResponse', null, global);
+goog.exportSymbol('proto.service.Message', null, global);
+goog.exportSymbol('proto.service.Message.BodyCase', null, global);
+goog.exportSymbol('proto.service.ModifyEmailRequest', null, global);
+goog.exportSymbol('proto.service.ModifyThreadRequest', null, global);
+goog.exportSymbol('proto.service.Profile', null, global);
+goog.exportSymbol('proto.service.Recipient', null, global);
+goog.exportSymbol('proto.service.SendDraftRequest', null, global);
+goog.exportSymbol('proto.service.SendEmailRequest', null, global);
+goog.exportSymbol('proto.service.SendLabelRequest', null, global);
+goog.exportSymbol('proto.service.SendThreadRequest', null, global);
+goog.exportSymbol('proto.service.Sender', null, global);
+goog.exportSymbol('proto.service.StreamStateRequest', null, global);
+goog.exportSymbol('proto.service.StreamingStateResponse', null, global);
+goog.exportSymbol('proto.service.Thread', null, global);
+goog.exportSymbol('proto.service.TrashEmailRequest', null, global);
+goog.exportSymbol('proto.service.TrashThreadRequest', null, global);
+goog.exportSymbol('proto.service.UntrashEmailRequest', null, global);
+goog.exportSymbol('proto.service.UntrashThreadRequest', null, global);
+goog.exportSymbol('proto.service.UpdateDraftRequest', null, global);
+goog.exportSymbol('proto.service.UpdateLabelRequest', null, global);
 /**
  * Generated by JsPbCodeGenerator.
  * @param {Array=} opt_data Optional initial data array, typically from a
@@ -80,16 +80,16 @@ goog.exportSymbol('proto.email.UpdateLabelRequest', null, global);
  * @extends {jspb.Message}
  * @constructor
  */
-proto.email.Sender = function(opt_data) {
+proto.service.Sender = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.email.Sender, jspb.Message);
+goog.inherits(proto.service.Sender, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.email.Sender.displayName = 'proto.email.Sender';
+  proto.service.Sender.displayName = 'proto.service.Sender';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -101,16 +101,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.email.Recipient = function(opt_data) {
+proto.service.Recipient = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.email.Recipient, jspb.Message);
+goog.inherits(proto.service.Recipient, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.email.Recipient.displayName = 'proto.email.Recipient';
+  proto.service.Recipient.displayName = 'proto.service.Recipient';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -122,16 +122,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.email.Draft = function(opt_data) {
+proto.service.Draft = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.email.Draft, jspb.Message);
+goog.inherits(proto.service.Draft, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.email.Draft.displayName = 'proto.email.Draft';
+  proto.service.Draft.displayName = 'proto.service.Draft';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -143,16 +143,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.email.Email = function(opt_data) {
+proto.service.Email = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.email.Email, jspb.Message);
+goog.inherits(proto.service.Email, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.email.Email.displayName = 'proto.email.Email';
+  proto.service.Email.displayName = 'proto.service.Email';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -164,16 +164,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.email.Thread = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, proto.email.Thread.repeatedFields_, null);
+proto.service.Thread = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.service.Thread.repeatedFields_, null);
 };
-goog.inherits(proto.email.Thread, jspb.Message);
+goog.inherits(proto.service.Thread, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.email.Thread.displayName = 'proto.email.Thread';
+  proto.service.Thread.displayName = 'proto.service.Thread';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -185,16 +185,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.email.Envelope = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, proto.email.Envelope.repeatedFields_, null);
+proto.service.Envelope = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.service.Envelope.repeatedFields_, null);
 };
-goog.inherits(proto.email.Envelope, jspb.Message);
+goog.inherits(proto.service.Envelope, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.email.Envelope.displayName = 'proto.email.Envelope';
+  proto.service.Envelope.displayName = 'proto.service.Envelope';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -206,16 +206,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.email.Message = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, proto.email.Message.oneofGroups_);
+proto.service.Message = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, proto.service.Message.oneofGroups_);
 };
-goog.inherits(proto.email.Message, jspb.Message);
+goog.inherits(proto.service.Message, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.email.Message.displayName = 'proto.email.Message';
+  proto.service.Message.displayName = 'proto.service.Message';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -227,16 +227,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.email.Attachment = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, proto.email.Attachment.oneofGroups_);
+proto.service.Attachment = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, proto.service.Attachment.oneofGroups_);
 };
-goog.inherits(proto.email.Attachment, jspb.Message);
+goog.inherits(proto.service.Attachment, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.email.Attachment.displayName = 'proto.email.Attachment';
+  proto.service.Attachment.displayName = 'proto.service.Attachment';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -248,16 +248,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.email.Label = function(opt_data) {
+proto.service.Label = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.email.Label, jspb.Message);
+goog.inherits(proto.service.Label, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.email.Label.displayName = 'proto.email.Label';
+  proto.service.Label.displayName = 'proto.service.Label';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -269,16 +269,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.email.HistoryLabelAdded = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, proto.email.HistoryLabelAdded.repeatedFields_, null);
+proto.service.HistoryLabelAdded = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.service.HistoryLabelAdded.repeatedFields_, null);
 };
-goog.inherits(proto.email.HistoryLabelAdded, jspb.Message);
+goog.inherits(proto.service.HistoryLabelAdded, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.email.HistoryLabelAdded.displayName = 'proto.email.HistoryLabelAdded';
+  proto.service.HistoryLabelAdded.displayName = 'proto.service.HistoryLabelAdded';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -290,16 +290,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.email.HistoryLabelRemoved = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, proto.email.HistoryLabelRemoved.repeatedFields_, null);
+proto.service.HistoryLabelRemoved = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.service.HistoryLabelRemoved.repeatedFields_, null);
 };
-goog.inherits(proto.email.HistoryLabelRemoved, jspb.Message);
+goog.inherits(proto.service.HistoryLabelRemoved, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.email.HistoryLabelRemoved.displayName = 'proto.email.HistoryLabelRemoved';
+  proto.service.HistoryLabelRemoved.displayName = 'proto.service.HistoryLabelRemoved';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -311,16 +311,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.email.HistoryEmailAdded = function(opt_data) {
+proto.service.HistoryEmailAdded = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.email.HistoryEmailAdded, jspb.Message);
+goog.inherits(proto.service.HistoryEmailAdded, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.email.HistoryEmailAdded.displayName = 'proto.email.HistoryEmailAdded';
+  proto.service.HistoryEmailAdded.displayName = 'proto.service.HistoryEmailAdded';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -332,16 +332,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.email.HistoryEmailDeleted = function(opt_data) {
+proto.service.HistoryEmailDeleted = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.email.HistoryEmailDeleted, jspb.Message);
+goog.inherits(proto.service.HistoryEmailDeleted, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.email.HistoryEmailDeleted.displayName = 'proto.email.HistoryEmailDeleted';
+  proto.service.HistoryEmailDeleted.displayName = 'proto.service.HistoryEmailDeleted';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -353,16 +353,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.email.History = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, proto.email.History.repeatedFields_, null);
+proto.service.History = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.service.History.repeatedFields_, null);
 };
-goog.inherits(proto.email.History, jspb.Message);
+goog.inherits(proto.service.History, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.email.History.displayName = 'proto.email.History';
+  proto.service.History.displayName = 'proto.service.History';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -374,16 +374,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.email.Profile = function(opt_data) {
+proto.service.Profile = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.email.Profile, jspb.Message);
+goog.inherits(proto.service.Profile, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.email.Profile.displayName = 'proto.email.Profile';
+  proto.service.Profile.displayName = 'proto.service.Profile';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -395,16 +395,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.email.GetDraftRequest = function(opt_data) {
+proto.service.GetDraftRequest = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.email.GetDraftRequest, jspb.Message);
+goog.inherits(proto.service.GetDraftRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.email.GetDraftRequest.displayName = 'proto.email.GetDraftRequest';
+  proto.service.GetDraftRequest.displayName = 'proto.service.GetDraftRequest';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -416,16 +416,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.email.ListDraftsRequest = function(opt_data) {
+proto.service.ListDraftsRequest = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.email.ListDraftsRequest, jspb.Message);
+goog.inherits(proto.service.ListDraftsRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.email.ListDraftsRequest.displayName = 'proto.email.ListDraftsRequest';
+  proto.service.ListDraftsRequest.displayName = 'proto.service.ListDraftsRequest';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -437,16 +437,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.email.CreateDraftRequest = function(opt_data) {
+proto.service.CreateDraftRequest = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.email.CreateDraftRequest, jspb.Message);
+goog.inherits(proto.service.CreateDraftRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.email.CreateDraftRequest.displayName = 'proto.email.CreateDraftRequest';
+  proto.service.CreateDraftRequest.displayName = 'proto.service.CreateDraftRequest';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -458,16 +458,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.email.UpdateDraftRequest = function(opt_data) {
+proto.service.UpdateDraftRequest = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.email.UpdateDraftRequest, jspb.Message);
+goog.inherits(proto.service.UpdateDraftRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.email.UpdateDraftRequest.displayName = 'proto.email.UpdateDraftRequest';
+  proto.service.UpdateDraftRequest.displayName = 'proto.service.UpdateDraftRequest';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -479,16 +479,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.email.DeleteDraftRequest = function(opt_data) {
+proto.service.DeleteDraftRequest = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.email.DeleteDraftRequest, jspb.Message);
+goog.inherits(proto.service.DeleteDraftRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.email.DeleteDraftRequest.displayName = 'proto.email.DeleteDraftRequest';
+  proto.service.DeleteDraftRequest.displayName = 'proto.service.DeleteDraftRequest';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -500,16 +500,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.email.SendDraftRequest = function(opt_data) {
+proto.service.SendDraftRequest = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.email.SendDraftRequest, jspb.Message);
+goog.inherits(proto.service.SendDraftRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.email.SendDraftRequest.displayName = 'proto.email.SendDraftRequest';
+  proto.service.SendDraftRequest.displayName = 'proto.service.SendDraftRequest';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -521,16 +521,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.email.ListDraftsResponse = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, proto.email.ListDraftsResponse.repeatedFields_, null);
+proto.service.ListDraftsResponse = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.service.ListDraftsResponse.repeatedFields_, null);
 };
-goog.inherits(proto.email.ListDraftsResponse, jspb.Message);
+goog.inherits(proto.service.ListDraftsResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.email.ListDraftsResponse.displayName = 'proto.email.ListDraftsResponse';
+  proto.service.ListDraftsResponse.displayName = 'proto.service.ListDraftsResponse';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -542,16 +542,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.email.GetEmailRequest = function(opt_data) {
+proto.service.GetEmailRequest = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.email.GetEmailRequest, jspb.Message);
+goog.inherits(proto.service.GetEmailRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.email.GetEmailRequest.displayName = 'proto.email.GetEmailRequest';
+  proto.service.GetEmailRequest.displayName = 'proto.service.GetEmailRequest';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -563,16 +563,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.email.ListEmailsRequest = function(opt_data) {
+proto.service.ListEmailsRequest = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.email.ListEmailsRequest, jspb.Message);
+goog.inherits(proto.service.ListEmailsRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.email.ListEmailsRequest.displayName = 'proto.email.ListEmailsRequest';
+  proto.service.ListEmailsRequest.displayName = 'proto.service.ListEmailsRequest';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -584,16 +584,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.email.ModifyEmailRequest = function(opt_data) {
+proto.service.ModifyEmailRequest = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.email.ModifyEmailRequest, jspb.Message);
+goog.inherits(proto.service.ModifyEmailRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.email.ModifyEmailRequest.displayName = 'proto.email.ModifyEmailRequest';
+  proto.service.ModifyEmailRequest.displayName = 'proto.service.ModifyEmailRequest';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -605,16 +605,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.email.TrashEmailRequest = function(opt_data) {
+proto.service.TrashEmailRequest = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.email.TrashEmailRequest, jspb.Message);
+goog.inherits(proto.service.TrashEmailRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.email.TrashEmailRequest.displayName = 'proto.email.TrashEmailRequest';
+  proto.service.TrashEmailRequest.displayName = 'proto.service.TrashEmailRequest';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -626,16 +626,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.email.UntrashEmailRequest = function(opt_data) {
+proto.service.UntrashEmailRequest = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.email.UntrashEmailRequest, jspb.Message);
+goog.inherits(proto.service.UntrashEmailRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.email.UntrashEmailRequest.displayName = 'proto.email.UntrashEmailRequest';
+  proto.service.UntrashEmailRequest.displayName = 'proto.service.UntrashEmailRequest';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -647,16 +647,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.email.SendEmailRequest = function(opt_data) {
+proto.service.SendEmailRequest = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.email.SendEmailRequest, jspb.Message);
+goog.inherits(proto.service.SendEmailRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.email.SendEmailRequest.displayName = 'proto.email.SendEmailRequest';
+  proto.service.SendEmailRequest.displayName = 'proto.service.SendEmailRequest';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -668,16 +668,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.email.ListEmailsResponse = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, proto.email.ListEmailsResponse.repeatedFields_, null);
+proto.service.ListEmailsResponse = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.service.ListEmailsResponse.repeatedFields_, null);
 };
-goog.inherits(proto.email.ListEmailsResponse, jspb.Message);
+goog.inherits(proto.service.ListEmailsResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.email.ListEmailsResponse.displayName = 'proto.email.ListEmailsResponse';
+  proto.service.ListEmailsResponse.displayName = 'proto.service.ListEmailsResponse';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -689,16 +689,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.email.GetThreadRequest = function(opt_data) {
+proto.service.GetThreadRequest = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.email.GetThreadRequest, jspb.Message);
+goog.inherits(proto.service.GetThreadRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.email.GetThreadRequest.displayName = 'proto.email.GetThreadRequest';
+  proto.service.GetThreadRequest.displayName = 'proto.service.GetThreadRequest';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -710,16 +710,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.email.ListThreadsRequest = function(opt_data) {
+proto.service.ListThreadsRequest = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.email.ListThreadsRequest, jspb.Message);
+goog.inherits(proto.service.ListThreadsRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.email.ListThreadsRequest.displayName = 'proto.email.ListThreadsRequest';
+  proto.service.ListThreadsRequest.displayName = 'proto.service.ListThreadsRequest';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -731,16 +731,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.email.ModifyThreadRequest = function(opt_data) {
+proto.service.ModifyThreadRequest = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.email.ModifyThreadRequest, jspb.Message);
+goog.inherits(proto.service.ModifyThreadRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.email.ModifyThreadRequest.displayName = 'proto.email.ModifyThreadRequest';
+  proto.service.ModifyThreadRequest.displayName = 'proto.service.ModifyThreadRequest';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -752,16 +752,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.email.TrashThreadRequest = function(opt_data) {
+proto.service.TrashThreadRequest = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.email.TrashThreadRequest, jspb.Message);
+goog.inherits(proto.service.TrashThreadRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.email.TrashThreadRequest.displayName = 'proto.email.TrashThreadRequest';
+  proto.service.TrashThreadRequest.displayName = 'proto.service.TrashThreadRequest';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -773,16 +773,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.email.UntrashThreadRequest = function(opt_data) {
+proto.service.UntrashThreadRequest = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.email.UntrashThreadRequest, jspb.Message);
+goog.inherits(proto.service.UntrashThreadRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.email.UntrashThreadRequest.displayName = 'proto.email.UntrashThreadRequest';
+  proto.service.UntrashThreadRequest.displayName = 'proto.service.UntrashThreadRequest';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -794,16 +794,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.email.SendThreadRequest = function(opt_data) {
+proto.service.SendThreadRequest = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.email.SendThreadRequest, jspb.Message);
+goog.inherits(proto.service.SendThreadRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.email.SendThreadRequest.displayName = 'proto.email.SendThreadRequest';
+  proto.service.SendThreadRequest.displayName = 'proto.service.SendThreadRequest';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -815,16 +815,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.email.ListThreadsResponse = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, proto.email.ListThreadsResponse.repeatedFields_, null);
+proto.service.ListThreadsResponse = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.service.ListThreadsResponse.repeatedFields_, null);
 };
-goog.inherits(proto.email.ListThreadsResponse, jspb.Message);
+goog.inherits(proto.service.ListThreadsResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.email.ListThreadsResponse.displayName = 'proto.email.ListThreadsResponse';
+  proto.service.ListThreadsResponse.displayName = 'proto.service.ListThreadsResponse';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -836,16 +836,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.email.StreamStateRequest = function(opt_data) {
+proto.service.StreamStateRequest = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.email.StreamStateRequest, jspb.Message);
+goog.inherits(proto.service.StreamStateRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.email.StreamStateRequest.displayName = 'proto.email.StreamStateRequest';
+  proto.service.StreamStateRequest.displayName = 'proto.service.StreamStateRequest';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -857,16 +857,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.email.StreamingStateResponse = function(opt_data) {
+proto.service.StreamingStateResponse = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.email.StreamingStateResponse, jspb.Message);
+goog.inherits(proto.service.StreamingStateResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.email.StreamingStateResponse.displayName = 'proto.email.StreamingStateResponse';
+  proto.service.StreamingStateResponse.displayName = 'proto.service.StreamingStateResponse';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -878,16 +878,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.email.ListHistoryRequest = function(opt_data) {
+proto.service.ListHistoryRequest = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.email.ListHistoryRequest, jspb.Message);
+goog.inherits(proto.service.ListHistoryRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.email.ListHistoryRequest.displayName = 'proto.email.ListHistoryRequest';
+  proto.service.ListHistoryRequest.displayName = 'proto.service.ListHistoryRequest';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -899,16 +899,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.email.ListHistoryResponse = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, proto.email.ListHistoryResponse.repeatedFields_, null);
+proto.service.ListHistoryResponse = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.service.ListHistoryResponse.repeatedFields_, null);
 };
-goog.inherits(proto.email.ListHistoryResponse, jspb.Message);
+goog.inherits(proto.service.ListHistoryResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.email.ListHistoryResponse.displayName = 'proto.email.ListHistoryResponse';
+  proto.service.ListHistoryResponse.displayName = 'proto.service.ListHistoryResponse';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -920,16 +920,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.email.GetLabelRequest = function(opt_data) {
+proto.service.GetLabelRequest = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.email.GetLabelRequest, jspb.Message);
+goog.inherits(proto.service.GetLabelRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.email.GetLabelRequest.displayName = 'proto.email.GetLabelRequest';
+  proto.service.GetLabelRequest.displayName = 'proto.service.GetLabelRequest';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -941,16 +941,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.email.CreateLabelRequest = function(opt_data) {
+proto.service.CreateLabelRequest = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.email.CreateLabelRequest, jspb.Message);
+goog.inherits(proto.service.CreateLabelRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.email.CreateLabelRequest.displayName = 'proto.email.CreateLabelRequest';
+  proto.service.CreateLabelRequest.displayName = 'proto.service.CreateLabelRequest';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -962,16 +962,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.email.UpdateLabelRequest = function(opt_data) {
+proto.service.UpdateLabelRequest = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.email.UpdateLabelRequest, jspb.Message);
+goog.inherits(proto.service.UpdateLabelRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.email.UpdateLabelRequest.displayName = 'proto.email.UpdateLabelRequest';
+  proto.service.UpdateLabelRequest.displayName = 'proto.service.UpdateLabelRequest';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -983,16 +983,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.email.DeleteLabelRequest = function(opt_data) {
+proto.service.DeleteLabelRequest = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.email.DeleteLabelRequest, jspb.Message);
+goog.inherits(proto.service.DeleteLabelRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.email.DeleteLabelRequest.displayName = 'proto.email.DeleteLabelRequest';
+  proto.service.DeleteLabelRequest.displayName = 'proto.service.DeleteLabelRequest';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -1004,16 +1004,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.email.SendLabelRequest = function(opt_data) {
+proto.service.SendLabelRequest = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.email.SendLabelRequest, jspb.Message);
+goog.inherits(proto.service.SendLabelRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.email.SendLabelRequest.displayName = 'proto.email.SendLabelRequest';
+  proto.service.SendLabelRequest.displayName = 'proto.service.SendLabelRequest';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -1025,16 +1025,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.email.GetProfileResponse = function(opt_data) {
+proto.service.GetProfileResponse = function(opt_data) {
   jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.email.GetProfileResponse, jspb.Message);
+goog.inherits(proto.service.GetProfileResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.email.GetProfileResponse.displayName = 'proto.email.GetProfileResponse';
+  proto.service.GetProfileResponse.displayName = 'proto.service.GetProfileResponse';
 }
 /**
  * Generated by JsPbCodeGenerator.
@@ -1046,16 +1046,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.email.ListLabelsResponse = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, proto.email.ListLabelsResponse.repeatedFields_, null);
+proto.service.ListLabelsResponse = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.service.ListLabelsResponse.repeatedFields_, null);
 };
-goog.inherits(proto.email.ListLabelsResponse, jspb.Message);
+goog.inherits(proto.service.ListLabelsResponse, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.email.ListLabelsResponse.displayName = 'proto.email.ListLabelsResponse';
+  proto.service.ListLabelsResponse.displayName = 'proto.service.ListLabelsResponse';
 }
 
 
@@ -1073,8 +1073,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.email.Sender.prototype.toObject = function(opt_includeInstance) {
-  return proto.email.Sender.toObject(opt_includeInstance, this);
+proto.service.Sender.prototype.toObject = function(opt_includeInstance) {
+  return proto.service.Sender.toObject(opt_includeInstance, this);
 };
 
 
@@ -1083,11 +1083,11 @@ proto.email.Sender.prototype.toObject = function(opt_includeInstance) {
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.email.Sender} msg The msg instance to transform.
+ * @param {!proto.service.Sender} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.email.Sender.toObject = function(includeInstance, msg) {
+proto.service.Sender.toObject = function(includeInstance, msg) {
   var f, obj = {
     id: jspb.Message.getFieldWithDefault(msg, 1, ""),
     emailAddress: jspb.Message.getFieldWithDefault(msg, 2, ""),
@@ -1105,23 +1105,23 @@ proto.email.Sender.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.email.Sender}
+ * @return {!proto.service.Sender}
  */
-proto.email.Sender.deserializeBinary = function(bytes) {
+proto.service.Sender.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.email.Sender;
-  return proto.email.Sender.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.service.Sender;
+  return proto.service.Sender.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.email.Sender} msg The message object to deserialize into.
+ * @param {!proto.service.Sender} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.email.Sender}
+ * @return {!proto.service.Sender}
  */
-proto.email.Sender.deserializeBinaryFromReader = function(msg, reader) {
+proto.service.Sender.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -1153,9 +1153,9 @@ proto.email.Sender.deserializeBinaryFromReader = function(msg, reader) {
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.email.Sender.prototype.serializeBinary = function() {
+proto.service.Sender.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.email.Sender.serializeBinaryToWriter(this, writer);
+  proto.service.Sender.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -1163,11 +1163,11 @@ proto.email.Sender.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.email.Sender} message
+ * @param {!proto.service.Sender} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.email.Sender.serializeBinaryToWriter = function(message, writer) {
+proto.service.Sender.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getId();
   if (f.length > 0) {
@@ -1197,16 +1197,16 @@ proto.email.Sender.serializeBinaryToWriter = function(message, writer) {
  * optional string id = 1;
  * @return {string}
  */
-proto.email.Sender.prototype.getId = function() {
+proto.service.Sender.prototype.getId = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.email.Sender} returns this
+ * @return {!proto.service.Sender} returns this
  */
-proto.email.Sender.prototype.setId = function(value) {
+proto.service.Sender.prototype.setId = function(value) {
   return jspb.Message.setProto3StringField(this, 1, value);
 };
 
@@ -1215,16 +1215,16 @@ proto.email.Sender.prototype.setId = function(value) {
  * optional string email_address = 2;
  * @return {string}
  */
-proto.email.Sender.prototype.getEmailAddress = function() {
+proto.service.Sender.prototype.getEmailAddress = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.email.Sender} returns this
+ * @return {!proto.service.Sender} returns this
  */
-proto.email.Sender.prototype.setEmailAddress = function(value) {
+proto.service.Sender.prototype.setEmailAddress = function(value) {
   return jspb.Message.setProto3StringField(this, 2, value);
 };
 
@@ -1233,16 +1233,16 @@ proto.email.Sender.prototype.setEmailAddress = function(value) {
  * optional string display_name = 3;
  * @return {string}
  */
-proto.email.Sender.prototype.getDisplayName = function() {
+proto.service.Sender.prototype.getDisplayName = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.email.Sender} returns this
+ * @return {!proto.service.Sender} returns this
  */
-proto.email.Sender.prototype.setDisplayName = function(value) {
+proto.service.Sender.prototype.setDisplayName = function(value) {
   return jspb.Message.setProto3StringField(this, 3, value);
 };
 
@@ -1263,8 +1263,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.email.Recipient.prototype.toObject = function(opt_includeInstance) {
-  return proto.email.Recipient.toObject(opt_includeInstance, this);
+proto.service.Recipient.prototype.toObject = function(opt_includeInstance) {
+  return proto.service.Recipient.toObject(opt_includeInstance, this);
 };
 
 
@@ -1273,11 +1273,11 @@ proto.email.Recipient.prototype.toObject = function(opt_includeInstance) {
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.email.Recipient} msg The msg instance to transform.
+ * @param {!proto.service.Recipient} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.email.Recipient.toObject = function(includeInstance, msg) {
+proto.service.Recipient.toObject = function(includeInstance, msg) {
   var f, obj = {
     id: jspb.Message.getFieldWithDefault(msg, 1, ""),
     emailAddress: jspb.Message.getFieldWithDefault(msg, 2, ""),
@@ -1295,23 +1295,23 @@ proto.email.Recipient.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.email.Recipient}
+ * @return {!proto.service.Recipient}
  */
-proto.email.Recipient.deserializeBinary = function(bytes) {
+proto.service.Recipient.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.email.Recipient;
-  return proto.email.Recipient.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.service.Recipient;
+  return proto.service.Recipient.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.email.Recipient} msg The message object to deserialize into.
+ * @param {!proto.service.Recipient} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.email.Recipient}
+ * @return {!proto.service.Recipient}
  */
-proto.email.Recipient.deserializeBinaryFromReader = function(msg, reader) {
+proto.service.Recipient.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -1343,9 +1343,9 @@ proto.email.Recipient.deserializeBinaryFromReader = function(msg, reader) {
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.email.Recipient.prototype.serializeBinary = function() {
+proto.service.Recipient.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.email.Recipient.serializeBinaryToWriter(this, writer);
+  proto.service.Recipient.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -1353,11 +1353,11 @@ proto.email.Recipient.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.email.Recipient} message
+ * @param {!proto.service.Recipient} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.email.Recipient.serializeBinaryToWriter = function(message, writer) {
+proto.service.Recipient.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getId();
   if (f.length > 0) {
@@ -1387,16 +1387,16 @@ proto.email.Recipient.serializeBinaryToWriter = function(message, writer) {
  * optional string id = 1;
  * @return {string}
  */
-proto.email.Recipient.prototype.getId = function() {
+proto.service.Recipient.prototype.getId = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.email.Recipient} returns this
+ * @return {!proto.service.Recipient} returns this
  */
-proto.email.Recipient.prototype.setId = function(value) {
+proto.service.Recipient.prototype.setId = function(value) {
   return jspb.Message.setProto3StringField(this, 1, value);
 };
 
@@ -1405,16 +1405,16 @@ proto.email.Recipient.prototype.setId = function(value) {
  * optional string email_address = 2;
  * @return {string}
  */
-proto.email.Recipient.prototype.getEmailAddress = function() {
+proto.service.Recipient.prototype.getEmailAddress = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.email.Recipient} returns this
+ * @return {!proto.service.Recipient} returns this
  */
-proto.email.Recipient.prototype.setEmailAddress = function(value) {
+proto.service.Recipient.prototype.setEmailAddress = function(value) {
   return jspb.Message.setProto3StringField(this, 2, value);
 };
 
@@ -1423,16 +1423,16 @@ proto.email.Recipient.prototype.setEmailAddress = function(value) {
  * optional string display_name = 3;
  * @return {string}
  */
-proto.email.Recipient.prototype.getDisplayName = function() {
+proto.service.Recipient.prototype.getDisplayName = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.email.Recipient} returns this
+ * @return {!proto.service.Recipient} returns this
  */
-proto.email.Recipient.prototype.setDisplayName = function(value) {
+proto.service.Recipient.prototype.setDisplayName = function(value) {
   return jspb.Message.setProto3StringField(this, 3, value);
 };
 
@@ -1453,8 +1453,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.email.Draft.prototype.toObject = function(opt_includeInstance) {
-  return proto.email.Draft.toObject(opt_includeInstance, this);
+proto.service.Draft.prototype.toObject = function(opt_includeInstance) {
+  return proto.service.Draft.toObject(opt_includeInstance, this);
 };
 
 
@@ -1463,15 +1463,15 @@ proto.email.Draft.prototype.toObject = function(opt_includeInstance) {
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.email.Draft} msg The msg instance to transform.
+ * @param {!proto.service.Draft} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.email.Draft.toObject = function(includeInstance, msg) {
+proto.service.Draft.toObject = function(includeInstance, msg) {
   var f, obj = {
     id: jspb.Message.getFieldWithDefault(msg, 1, ""),
     snipped: jspb.Message.getFieldWithDefault(msg, 2, ""),
-    envelope: (f = msg.getEnvelope()) && proto.email.Envelope.toObject(includeInstance, f),
+    envelope: (f = msg.getEnvelope()) && proto.service.Envelope.toObject(includeInstance, f),
     labelsMap: (f = msg.getLabelsMap()) ? f.toObject(includeInstance, undefined) : []
   };
 
@@ -1486,23 +1486,23 @@ proto.email.Draft.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.email.Draft}
+ * @return {!proto.service.Draft}
  */
-proto.email.Draft.deserializeBinary = function(bytes) {
+proto.service.Draft.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.email.Draft;
-  return proto.email.Draft.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.service.Draft;
+  return proto.service.Draft.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.email.Draft} msg The message object to deserialize into.
+ * @param {!proto.service.Draft} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.email.Draft}
+ * @return {!proto.service.Draft}
  */
-proto.email.Draft.deserializeBinaryFromReader = function(msg, reader) {
+proto.service.Draft.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -1518,8 +1518,8 @@ proto.email.Draft.deserializeBinaryFromReader = function(msg, reader) {
       msg.setSnipped(value);
       break;
     case 3:
-      var value = new proto.email.Envelope;
-      reader.readMessage(value,proto.email.Envelope.deserializeBinaryFromReader);
+      var value = new proto.service.Envelope;
+      reader.readMessage(value,proto.service.Envelope.deserializeBinaryFromReader);
       msg.setEnvelope(value);
       break;
     case 4:
@@ -1541,9 +1541,9 @@ proto.email.Draft.deserializeBinaryFromReader = function(msg, reader) {
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.email.Draft.prototype.serializeBinary = function() {
+proto.service.Draft.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.email.Draft.serializeBinaryToWriter(this, writer);
+  proto.service.Draft.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -1551,11 +1551,11 @@ proto.email.Draft.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.email.Draft} message
+ * @param {!proto.service.Draft} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.email.Draft.serializeBinaryToWriter = function(message, writer) {
+proto.service.Draft.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getId();
   if (f.length > 0) {
@@ -1576,7 +1576,7 @@ proto.email.Draft.serializeBinaryToWriter = function(message, writer) {
     writer.writeMessage(
       3,
       f,
-      proto.email.Envelope.serializeBinaryToWriter
+      proto.service.Envelope.serializeBinaryToWriter
     );
   }
   f = message.getLabelsMap(true);
@@ -1590,16 +1590,16 @@ proto.email.Draft.serializeBinaryToWriter = function(message, writer) {
  * optional string id = 1;
  * @return {string}
  */
-proto.email.Draft.prototype.getId = function() {
+proto.service.Draft.prototype.getId = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.email.Draft} returns this
+ * @return {!proto.service.Draft} returns this
  */
-proto.email.Draft.prototype.setId = function(value) {
+proto.service.Draft.prototype.setId = function(value) {
   return jspb.Message.setProto3StringField(this, 1, value);
 };
 
@@ -1608,44 +1608,44 @@ proto.email.Draft.prototype.setId = function(value) {
  * optional string snipped = 2;
  * @return {string}
  */
-proto.email.Draft.prototype.getSnipped = function() {
+proto.service.Draft.prototype.getSnipped = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.email.Draft} returns this
+ * @return {!proto.service.Draft} returns this
  */
-proto.email.Draft.prototype.setSnipped = function(value) {
+proto.service.Draft.prototype.setSnipped = function(value) {
   return jspb.Message.setProto3StringField(this, 2, value);
 };
 
 
 /**
  * optional Envelope envelope = 3;
- * @return {?proto.email.Envelope}
+ * @return {?proto.service.Envelope}
  */
-proto.email.Draft.prototype.getEnvelope = function() {
-  return /** @type{?proto.email.Envelope} */ (
-    jspb.Message.getWrapperField(this, proto.email.Envelope, 3));
+proto.service.Draft.prototype.getEnvelope = function() {
+  return /** @type{?proto.service.Envelope} */ (
+    jspb.Message.getWrapperField(this, proto.service.Envelope, 3));
 };
 
 
 /**
- * @param {?proto.email.Envelope|undefined} value
- * @return {!proto.email.Draft} returns this
+ * @param {?proto.service.Envelope|undefined} value
+ * @return {!proto.service.Draft} returns this
 */
-proto.email.Draft.prototype.setEnvelope = function(value) {
+proto.service.Draft.prototype.setEnvelope = function(value) {
   return jspb.Message.setWrapperField(this, 3, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.email.Draft} returns this
+ * @return {!proto.service.Draft} returns this
  */
-proto.email.Draft.prototype.clearEnvelope = function() {
+proto.service.Draft.prototype.clearEnvelope = function() {
   return this.setEnvelope(undefined);
 };
 
@@ -1654,7 +1654,7 @@ proto.email.Draft.prototype.clearEnvelope = function() {
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.email.Draft.prototype.hasEnvelope = function() {
+proto.service.Draft.prototype.hasEnvelope = function() {
   return jspb.Message.getField(this, 3) != null;
 };
 
@@ -1665,7 +1665,7 @@ proto.email.Draft.prototype.hasEnvelope = function() {
  * empty, instead returning `undefined`
  * @return {!jspb.Map<string,string>}
  */
-proto.email.Draft.prototype.getLabelsMap = function(opt_noLazyCreate) {
+proto.service.Draft.prototype.getLabelsMap = function(opt_noLazyCreate) {
   return /** @type {!jspb.Map<string,string>} */ (
       jspb.Message.getMapField(this, 4, opt_noLazyCreate,
       null));
@@ -1674,9 +1674,9 @@ proto.email.Draft.prototype.getLabelsMap = function(opt_noLazyCreate) {
 
 /**
  * Clears values from the map. The map will be non-null.
- * @return {!proto.email.Draft} returns this
+ * @return {!proto.service.Draft} returns this
  */
-proto.email.Draft.prototype.clearLabelsMap = function() {
+proto.service.Draft.prototype.clearLabelsMap = function() {
   this.getLabelsMap().clear();
   return this;};
 
@@ -1697,8 +1697,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.email.Email.prototype.toObject = function(opt_includeInstance) {
-  return proto.email.Email.toObject(opt_includeInstance, this);
+proto.service.Email.prototype.toObject = function(opt_includeInstance) {
+  return proto.service.Email.toObject(opt_includeInstance, this);
 };
 
 
@@ -1707,16 +1707,16 @@ proto.email.Email.prototype.toObject = function(opt_includeInstance) {
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.email.Email} msg The msg instance to transform.
+ * @param {!proto.service.Email} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.email.Email.toObject = function(includeInstance, msg) {
+proto.service.Email.toObject = function(includeInstance, msg) {
   var f, obj = {
     id: jspb.Message.getFieldWithDefault(msg, 1, ""),
     snipped: jspb.Message.getFieldWithDefault(msg, 2, ""),
     historyId: jspb.Message.getFieldWithDefault(msg, 3, ""),
-    envelope: (f = msg.getEnvelope()) && proto.email.Envelope.toObject(includeInstance, f),
+    envelope: (f = msg.getEnvelope()) && proto.service.Envelope.toObject(includeInstance, f),
     sentAt: (f = msg.getSentAt()) && google_protobuf_timestamp_pb.Timestamp.toObject(includeInstance, f),
     receivedAt: (f = msg.getReceivedAt()) && google_protobuf_timestamp_pb.Timestamp.toObject(includeInstance, f),
     snoozedAt: (f = msg.getSnoozedAt()) && google_protobuf_timestamp_pb.Timestamp.toObject(includeInstance, f),
@@ -1735,23 +1735,23 @@ proto.email.Email.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.email.Email}
+ * @return {!proto.service.Email}
  */
-proto.email.Email.deserializeBinary = function(bytes) {
+proto.service.Email.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.email.Email;
-  return proto.email.Email.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.service.Email;
+  return proto.service.Email.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.email.Email} msg The message object to deserialize into.
+ * @param {!proto.service.Email} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.email.Email}
+ * @return {!proto.service.Email}
  */
-proto.email.Email.deserializeBinaryFromReader = function(msg, reader) {
+proto.service.Email.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -1771,8 +1771,8 @@ proto.email.Email.deserializeBinaryFromReader = function(msg, reader) {
       msg.setHistoryId(value);
       break;
     case 4:
-      var value = new proto.email.Envelope;
-      reader.readMessage(value,proto.email.Envelope.deserializeBinaryFromReader);
+      var value = new proto.service.Envelope;
+      reader.readMessage(value,proto.service.Envelope.deserializeBinaryFromReader);
       msg.setEnvelope(value);
       break;
     case 5:
@@ -1813,9 +1813,9 @@ proto.email.Email.deserializeBinaryFromReader = function(msg, reader) {
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.email.Email.prototype.serializeBinary = function() {
+proto.service.Email.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.email.Email.serializeBinaryToWriter(this, writer);
+  proto.service.Email.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -1823,11 +1823,11 @@ proto.email.Email.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.email.Email} message
+ * @param {!proto.service.Email} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.email.Email.serializeBinaryToWriter = function(message, writer) {
+proto.service.Email.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getId();
   if (f.length > 0) {
@@ -1855,7 +1855,7 @@ proto.email.Email.serializeBinaryToWriter = function(message, writer) {
     writer.writeMessage(
       4,
       f,
-      proto.email.Envelope.serializeBinaryToWriter
+      proto.service.Envelope.serializeBinaryToWriter
     );
   }
   f = message.getSentAt();
@@ -1900,16 +1900,16 @@ proto.email.Email.serializeBinaryToWriter = function(message, writer) {
  * optional string id = 1;
  * @return {string}
  */
-proto.email.Email.prototype.getId = function() {
+proto.service.Email.prototype.getId = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.email.Email} returns this
+ * @return {!proto.service.Email} returns this
  */
-proto.email.Email.prototype.setId = function(value) {
+proto.service.Email.prototype.setId = function(value) {
   return jspb.Message.setProto3StringField(this, 1, value);
 };
 
@@ -1918,16 +1918,16 @@ proto.email.Email.prototype.setId = function(value) {
  * optional string snipped = 2;
  * @return {string}
  */
-proto.email.Email.prototype.getSnipped = function() {
+proto.service.Email.prototype.getSnipped = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.email.Email} returns this
+ * @return {!proto.service.Email} returns this
  */
-proto.email.Email.prototype.setSnipped = function(value) {
+proto.service.Email.prototype.setSnipped = function(value) {
   return jspb.Message.setProto3StringField(this, 2, value);
 };
 
@@ -1936,44 +1936,44 @@ proto.email.Email.prototype.setSnipped = function(value) {
  * optional string history_id = 3;
  * @return {string}
  */
-proto.email.Email.prototype.getHistoryId = function() {
+proto.service.Email.prototype.getHistoryId = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.email.Email} returns this
+ * @return {!proto.service.Email} returns this
  */
-proto.email.Email.prototype.setHistoryId = function(value) {
+proto.service.Email.prototype.setHistoryId = function(value) {
   return jspb.Message.setProto3StringField(this, 3, value);
 };
 
 
 /**
  * optional Envelope envelope = 4;
- * @return {?proto.email.Envelope}
+ * @return {?proto.service.Envelope}
  */
-proto.email.Email.prototype.getEnvelope = function() {
-  return /** @type{?proto.email.Envelope} */ (
-    jspb.Message.getWrapperField(this, proto.email.Envelope, 4));
+proto.service.Email.prototype.getEnvelope = function() {
+  return /** @type{?proto.service.Envelope} */ (
+    jspb.Message.getWrapperField(this, proto.service.Envelope, 4));
 };
 
 
 /**
- * @param {?proto.email.Envelope|undefined} value
- * @return {!proto.email.Email} returns this
+ * @param {?proto.service.Envelope|undefined} value
+ * @return {!proto.service.Email} returns this
 */
-proto.email.Email.prototype.setEnvelope = function(value) {
+proto.service.Email.prototype.setEnvelope = function(value) {
   return jspb.Message.setWrapperField(this, 4, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.email.Email} returns this
+ * @return {!proto.service.Email} returns this
  */
-proto.email.Email.prototype.clearEnvelope = function() {
+proto.service.Email.prototype.clearEnvelope = function() {
   return this.setEnvelope(undefined);
 };
 
@@ -1982,7 +1982,7 @@ proto.email.Email.prototype.clearEnvelope = function() {
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.email.Email.prototype.hasEnvelope = function() {
+proto.service.Email.prototype.hasEnvelope = function() {
   return jspb.Message.getField(this, 4) != null;
 };
 
@@ -1991,7 +1991,7 @@ proto.email.Email.prototype.hasEnvelope = function() {
  * optional google.protobuf.Timestamp sent_at = 5;
  * @return {?proto.google.protobuf.Timestamp}
  */
-proto.email.Email.prototype.getSentAt = function() {
+proto.service.Email.prototype.getSentAt = function() {
   return /** @type{?proto.google.protobuf.Timestamp} */ (
     jspb.Message.getWrapperField(this, google_protobuf_timestamp_pb.Timestamp, 5));
 };
@@ -1999,18 +1999,18 @@ proto.email.Email.prototype.getSentAt = function() {
 
 /**
  * @param {?proto.google.protobuf.Timestamp|undefined} value
- * @return {!proto.email.Email} returns this
+ * @return {!proto.service.Email} returns this
 */
-proto.email.Email.prototype.setSentAt = function(value) {
+proto.service.Email.prototype.setSentAt = function(value) {
   return jspb.Message.setWrapperField(this, 5, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.email.Email} returns this
+ * @return {!proto.service.Email} returns this
  */
-proto.email.Email.prototype.clearSentAt = function() {
+proto.service.Email.prototype.clearSentAt = function() {
   return this.setSentAt(undefined);
 };
 
@@ -2019,7 +2019,7 @@ proto.email.Email.prototype.clearSentAt = function() {
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.email.Email.prototype.hasSentAt = function() {
+proto.service.Email.prototype.hasSentAt = function() {
   return jspb.Message.getField(this, 5) != null;
 };
 
@@ -2028,7 +2028,7 @@ proto.email.Email.prototype.hasSentAt = function() {
  * optional google.protobuf.Timestamp received_at = 6;
  * @return {?proto.google.protobuf.Timestamp}
  */
-proto.email.Email.prototype.getReceivedAt = function() {
+proto.service.Email.prototype.getReceivedAt = function() {
   return /** @type{?proto.google.protobuf.Timestamp} */ (
     jspb.Message.getWrapperField(this, google_protobuf_timestamp_pb.Timestamp, 6));
 };
@@ -2036,18 +2036,18 @@ proto.email.Email.prototype.getReceivedAt = function() {
 
 /**
  * @param {?proto.google.protobuf.Timestamp|undefined} value
- * @return {!proto.email.Email} returns this
+ * @return {!proto.service.Email} returns this
 */
-proto.email.Email.prototype.setReceivedAt = function(value) {
+proto.service.Email.prototype.setReceivedAt = function(value) {
   return jspb.Message.setWrapperField(this, 6, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.email.Email} returns this
+ * @return {!proto.service.Email} returns this
  */
-proto.email.Email.prototype.clearReceivedAt = function() {
+proto.service.Email.prototype.clearReceivedAt = function() {
   return this.setReceivedAt(undefined);
 };
 
@@ -2056,7 +2056,7 @@ proto.email.Email.prototype.clearReceivedAt = function() {
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.email.Email.prototype.hasReceivedAt = function() {
+proto.service.Email.prototype.hasReceivedAt = function() {
   return jspb.Message.getField(this, 6) != null;
 };
 
@@ -2065,7 +2065,7 @@ proto.email.Email.prototype.hasReceivedAt = function() {
  * optional google.protobuf.Timestamp snoozed_at = 7;
  * @return {?proto.google.protobuf.Timestamp}
  */
-proto.email.Email.prototype.getSnoozedAt = function() {
+proto.service.Email.prototype.getSnoozedAt = function() {
   return /** @type{?proto.google.protobuf.Timestamp} */ (
     jspb.Message.getWrapperField(this, google_protobuf_timestamp_pb.Timestamp, 7));
 };
@@ -2073,18 +2073,18 @@ proto.email.Email.prototype.getSnoozedAt = function() {
 
 /**
  * @param {?proto.google.protobuf.Timestamp|undefined} value
- * @return {!proto.email.Email} returns this
+ * @return {!proto.service.Email} returns this
 */
-proto.email.Email.prototype.setSnoozedAt = function(value) {
+proto.service.Email.prototype.setSnoozedAt = function(value) {
   return jspb.Message.setWrapperField(this, 7, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.email.Email} returns this
+ * @return {!proto.service.Email} returns this
  */
-proto.email.Email.prototype.clearSnoozedAt = function() {
+proto.service.Email.prototype.clearSnoozedAt = function() {
   return this.setSnoozedAt(undefined);
 };
 
@@ -2093,7 +2093,7 @@ proto.email.Email.prototype.clearSnoozedAt = function() {
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.email.Email.prototype.hasSnoozedAt = function() {
+proto.service.Email.prototype.hasSnoozedAt = function() {
   return jspb.Message.getField(this, 7) != null;
 };
 
@@ -2102,16 +2102,16 @@ proto.email.Email.prototype.hasSnoozedAt = function() {
  * optional bool fwd = 8;
  * @return {boolean}
  */
-proto.email.Email.prototype.getFwd = function() {
+proto.service.Email.prototype.getFwd = function() {
   return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 8, false));
 };
 
 
 /**
  * @param {boolean} value
- * @return {!proto.email.Email} returns this
+ * @return {!proto.service.Email} returns this
  */
-proto.email.Email.prototype.setFwd = function(value) {
+proto.service.Email.prototype.setFwd = function(value) {
   return jspb.Message.setProto3BooleanField(this, 8, value);
 };
 
@@ -2122,7 +2122,7 @@ proto.email.Email.prototype.setFwd = function(value) {
  * empty, instead returning `undefined`
  * @return {!jspb.Map<string,string>}
  */
-proto.email.Email.prototype.getLabelsMap = function(opt_noLazyCreate) {
+proto.service.Email.prototype.getLabelsMap = function(opt_noLazyCreate) {
   return /** @type {!jspb.Map<string,string>} */ (
       jspb.Message.getMapField(this, 9, opt_noLazyCreate,
       null));
@@ -2131,9 +2131,9 @@ proto.email.Email.prototype.getLabelsMap = function(opt_noLazyCreate) {
 
 /**
  * Clears values from the map. The map will be non-null.
- * @return {!proto.email.Email} returns this
+ * @return {!proto.service.Email} returns this
  */
-proto.email.Email.prototype.clearLabelsMap = function() {
+proto.service.Email.prototype.clearLabelsMap = function() {
   this.getLabelsMap().clear();
   return this;};
 
@@ -2144,7 +2144,7 @@ proto.email.Email.prototype.clearLabelsMap = function() {
  * @private {!Array<number>}
  * @const
  */
-proto.email.Thread.repeatedFields_ = [4];
+proto.service.Thread.repeatedFields_ = [4];
 
 
 
@@ -2161,8 +2161,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.email.Thread.prototype.toObject = function(opt_includeInstance) {
-  return proto.email.Thread.toObject(opt_includeInstance, this);
+proto.service.Thread.prototype.toObject = function(opt_includeInstance) {
+  return proto.service.Thread.toObject(opt_includeInstance, this);
 };
 
 
@@ -2171,17 +2171,17 @@ proto.email.Thread.prototype.toObject = function(opt_includeInstance) {
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.email.Thread} msg The msg instance to transform.
+ * @param {!proto.service.Thread} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.email.Thread.toObject = function(includeInstance, msg) {
+proto.service.Thread.toObject = function(includeInstance, msg) {
   var f, obj = {
     id: jspb.Message.getFieldWithDefault(msg, 1, ""),
     snipped: jspb.Message.getFieldWithDefault(msg, 2, ""),
     historyId: jspb.Message.getFieldWithDefault(msg, 3, ""),
     emailList: jspb.Message.toObjectList(msg.getEmailList(),
-    proto.email.Email.toObject, includeInstance)
+    proto.service.Email.toObject, includeInstance)
   };
 
   if (includeInstance) {
@@ -2195,23 +2195,23 @@ proto.email.Thread.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.email.Thread}
+ * @return {!proto.service.Thread}
  */
-proto.email.Thread.deserializeBinary = function(bytes) {
+proto.service.Thread.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.email.Thread;
-  return proto.email.Thread.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.service.Thread;
+  return proto.service.Thread.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.email.Thread} msg The message object to deserialize into.
+ * @param {!proto.service.Thread} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.email.Thread}
+ * @return {!proto.service.Thread}
  */
-proto.email.Thread.deserializeBinaryFromReader = function(msg, reader) {
+proto.service.Thread.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -2231,8 +2231,8 @@ proto.email.Thread.deserializeBinaryFromReader = function(msg, reader) {
       msg.setHistoryId(value);
       break;
     case 4:
-      var value = new proto.email.Email;
-      reader.readMessage(value,proto.email.Email.deserializeBinaryFromReader);
+      var value = new proto.service.Email;
+      reader.readMessage(value,proto.service.Email.deserializeBinaryFromReader);
       msg.addEmail(value);
       break;
     default:
@@ -2248,9 +2248,9 @@ proto.email.Thread.deserializeBinaryFromReader = function(msg, reader) {
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.email.Thread.prototype.serializeBinary = function() {
+proto.service.Thread.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.email.Thread.serializeBinaryToWriter(this, writer);
+  proto.service.Thread.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -2258,11 +2258,11 @@ proto.email.Thread.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.email.Thread} message
+ * @param {!proto.service.Thread} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.email.Thread.serializeBinaryToWriter = function(message, writer) {
+proto.service.Thread.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getId();
   if (f.length > 0) {
@@ -2290,7 +2290,7 @@ proto.email.Thread.serializeBinaryToWriter = function(message, writer) {
     writer.writeRepeatedMessage(
       4,
       f,
-      proto.email.Email.serializeBinaryToWriter
+      proto.service.Email.serializeBinaryToWriter
     );
   }
 };
@@ -2300,16 +2300,16 @@ proto.email.Thread.serializeBinaryToWriter = function(message, writer) {
  * optional string id = 1;
  * @return {string}
  */
-proto.email.Thread.prototype.getId = function() {
+proto.service.Thread.prototype.getId = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.email.Thread} returns this
+ * @return {!proto.service.Thread} returns this
  */
-proto.email.Thread.prototype.setId = function(value) {
+proto.service.Thread.prototype.setId = function(value) {
   return jspb.Message.setProto3StringField(this, 1, value);
 };
 
@@ -2318,16 +2318,16 @@ proto.email.Thread.prototype.setId = function(value) {
  * optional string snipped = 2;
  * @return {string}
  */
-proto.email.Thread.prototype.getSnipped = function() {
+proto.service.Thread.prototype.getSnipped = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.email.Thread} returns this
+ * @return {!proto.service.Thread} returns this
  */
-proto.email.Thread.prototype.setSnipped = function(value) {
+proto.service.Thread.prototype.setSnipped = function(value) {
   return jspb.Message.setProto3StringField(this, 2, value);
 };
 
@@ -2336,54 +2336,54 @@ proto.email.Thread.prototype.setSnipped = function(value) {
  * optional string history_id = 3;
  * @return {string}
  */
-proto.email.Thread.prototype.getHistoryId = function() {
+proto.service.Thread.prototype.getHistoryId = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.email.Thread} returns this
+ * @return {!proto.service.Thread} returns this
  */
-proto.email.Thread.prototype.setHistoryId = function(value) {
+proto.service.Thread.prototype.setHistoryId = function(value) {
   return jspb.Message.setProto3StringField(this, 3, value);
 };
 
 
 /**
  * repeated Email email = 4;
- * @return {!Array<!proto.email.Email>}
+ * @return {!Array<!proto.service.Email>}
  */
-proto.email.Thread.prototype.getEmailList = function() {
-  return /** @type{!Array<!proto.email.Email>} */ (
-    jspb.Message.getRepeatedWrapperField(this, proto.email.Email, 4));
+proto.service.Thread.prototype.getEmailList = function() {
+  return /** @type{!Array<!proto.service.Email>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.service.Email, 4));
 };
 
 
 /**
- * @param {!Array<!proto.email.Email>} value
- * @return {!proto.email.Thread} returns this
+ * @param {!Array<!proto.service.Email>} value
+ * @return {!proto.service.Thread} returns this
 */
-proto.email.Thread.prototype.setEmailList = function(value) {
+proto.service.Thread.prototype.setEmailList = function(value) {
   return jspb.Message.setRepeatedWrapperField(this, 4, value);
 };
 
 
 /**
- * @param {!proto.email.Email=} opt_value
+ * @param {!proto.service.Email=} opt_value
  * @param {number=} opt_index
- * @return {!proto.email.Email}
+ * @return {!proto.service.Email}
  */
-proto.email.Thread.prototype.addEmail = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 4, opt_value, proto.email.Email, opt_index);
+proto.service.Thread.prototype.addEmail = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 4, opt_value, proto.service.Email, opt_index);
 };
 
 
 /**
  * Clears the list making it empty but non-null.
- * @return {!proto.email.Thread} returns this
+ * @return {!proto.service.Thread} returns this
  */
-proto.email.Thread.prototype.clearEmailList = function() {
+proto.service.Thread.prototype.clearEmailList = function() {
   return this.setEmailList([]);
 };
 
@@ -2394,7 +2394,7 @@ proto.email.Thread.prototype.clearEmailList = function() {
  * @private {!Array<number>}
  * @const
  */
-proto.email.Envelope.repeatedFields_ = [3,4,5,6,9];
+proto.service.Envelope.repeatedFields_ = [3,4,5,6,9];
 
 
 
@@ -2411,8 +2411,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.email.Envelope.prototype.toObject = function(opt_includeInstance) {
-  return proto.email.Envelope.toObject(opt_includeInstance, this);
+proto.service.Envelope.prototype.toObject = function(opt_includeInstance) {
+  return proto.service.Envelope.toObject(opt_includeInstance, this);
 };
 
 
@@ -2421,26 +2421,26 @@ proto.email.Envelope.prototype.toObject = function(opt_includeInstance) {
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.email.Envelope} msg The msg instance to transform.
+ * @param {!proto.service.Envelope} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.email.Envelope.toObject = function(includeInstance, msg) {
+proto.service.Envelope.toObject = function(includeInstance, msg) {
   var f, obj = {
     id: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    from: (f = msg.getFrom()) && proto.email.Sender.toObject(includeInstance, f),
+    from: (f = msg.getFrom()) && proto.service.Sender.toObject(includeInstance, f),
     toList: jspb.Message.toObjectList(msg.getToList(),
-    proto.email.Recipient.toObject, includeInstance),
+    proto.service.Recipient.toObject, includeInstance),
     ccList: jspb.Message.toObjectList(msg.getCcList(),
-    proto.email.Recipient.toObject, includeInstance),
+    proto.service.Recipient.toObject, includeInstance),
     bccList: jspb.Message.toObjectList(msg.getBccList(),
-    proto.email.Recipient.toObject, includeInstance),
+    proto.service.Recipient.toObject, includeInstance),
     groupsList: jspb.Message.toObjectList(msg.getGroupsList(),
-    proto.email.Recipient.toObject, includeInstance),
+    proto.service.Recipient.toObject, includeInstance),
     tagsMap: (f = msg.getTagsMap()) ? f.toObject(includeInstance, undefined) : [],
-    message: (f = msg.getMessage()) && proto.email.Message.toObject(includeInstance, f),
+    message: (f = msg.getMessage()) && proto.service.Message.toObject(includeInstance, f),
     attachmentsList: jspb.Message.toObjectList(msg.getAttachmentsList(),
-    proto.email.Attachment.toObject, includeInstance)
+    proto.service.Attachment.toObject, includeInstance)
   };
 
   if (includeInstance) {
@@ -2454,23 +2454,23 @@ proto.email.Envelope.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.email.Envelope}
+ * @return {!proto.service.Envelope}
  */
-proto.email.Envelope.deserializeBinary = function(bytes) {
+proto.service.Envelope.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.email.Envelope;
-  return proto.email.Envelope.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.service.Envelope;
+  return proto.service.Envelope.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.email.Envelope} msg The message object to deserialize into.
+ * @param {!proto.service.Envelope} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.email.Envelope}
+ * @return {!proto.service.Envelope}
  */
-proto.email.Envelope.deserializeBinaryFromReader = function(msg, reader) {
+proto.service.Envelope.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -2482,28 +2482,28 @@ proto.email.Envelope.deserializeBinaryFromReader = function(msg, reader) {
       msg.setId(value);
       break;
     case 2:
-      var value = new proto.email.Sender;
-      reader.readMessage(value,proto.email.Sender.deserializeBinaryFromReader);
+      var value = new proto.service.Sender;
+      reader.readMessage(value,proto.service.Sender.deserializeBinaryFromReader);
       msg.setFrom(value);
       break;
     case 3:
-      var value = new proto.email.Recipient;
-      reader.readMessage(value,proto.email.Recipient.deserializeBinaryFromReader);
+      var value = new proto.service.Recipient;
+      reader.readMessage(value,proto.service.Recipient.deserializeBinaryFromReader);
       msg.addTo(value);
       break;
     case 4:
-      var value = new proto.email.Recipient;
-      reader.readMessage(value,proto.email.Recipient.deserializeBinaryFromReader);
+      var value = new proto.service.Recipient;
+      reader.readMessage(value,proto.service.Recipient.deserializeBinaryFromReader);
       msg.addCc(value);
       break;
     case 5:
-      var value = new proto.email.Recipient;
-      reader.readMessage(value,proto.email.Recipient.deserializeBinaryFromReader);
+      var value = new proto.service.Recipient;
+      reader.readMessage(value,proto.service.Recipient.deserializeBinaryFromReader);
       msg.addBcc(value);
       break;
     case 6:
-      var value = new proto.email.Recipient;
-      reader.readMessage(value,proto.email.Recipient.deserializeBinaryFromReader);
+      var value = new proto.service.Recipient;
+      reader.readMessage(value,proto.service.Recipient.deserializeBinaryFromReader);
       msg.addGroups(value);
       break;
     case 7:
@@ -2513,13 +2513,13 @@ proto.email.Envelope.deserializeBinaryFromReader = function(msg, reader) {
          });
       break;
     case 8:
-      var value = new proto.email.Message;
-      reader.readMessage(value,proto.email.Message.deserializeBinaryFromReader);
+      var value = new proto.service.Message;
+      reader.readMessage(value,proto.service.Message.deserializeBinaryFromReader);
       msg.setMessage(value);
       break;
     case 9:
-      var value = new proto.email.Attachment;
-      reader.readMessage(value,proto.email.Attachment.deserializeBinaryFromReader);
+      var value = new proto.service.Attachment;
+      reader.readMessage(value,proto.service.Attachment.deserializeBinaryFromReader);
       msg.addAttachments(value);
       break;
     default:
@@ -2535,9 +2535,9 @@ proto.email.Envelope.deserializeBinaryFromReader = function(msg, reader) {
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.email.Envelope.prototype.serializeBinary = function() {
+proto.service.Envelope.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.email.Envelope.serializeBinaryToWriter(this, writer);
+  proto.service.Envelope.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -2545,11 +2545,11 @@ proto.email.Envelope.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.email.Envelope} message
+ * @param {!proto.service.Envelope} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.email.Envelope.serializeBinaryToWriter = function(message, writer) {
+proto.service.Envelope.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getId();
   if (f.length > 0) {
@@ -2563,7 +2563,7 @@ proto.email.Envelope.serializeBinaryToWriter = function(message, writer) {
     writer.writeMessage(
       2,
       f,
-      proto.email.Sender.serializeBinaryToWriter
+      proto.service.Sender.serializeBinaryToWriter
     );
   }
   f = message.getToList();
@@ -2571,7 +2571,7 @@ proto.email.Envelope.serializeBinaryToWriter = function(message, writer) {
     writer.writeRepeatedMessage(
       3,
       f,
-      proto.email.Recipient.serializeBinaryToWriter
+      proto.service.Recipient.serializeBinaryToWriter
     );
   }
   f = message.getCcList();
@@ -2579,7 +2579,7 @@ proto.email.Envelope.serializeBinaryToWriter = function(message, writer) {
     writer.writeRepeatedMessage(
       4,
       f,
-      proto.email.Recipient.serializeBinaryToWriter
+      proto.service.Recipient.serializeBinaryToWriter
     );
   }
   f = message.getBccList();
@@ -2587,7 +2587,7 @@ proto.email.Envelope.serializeBinaryToWriter = function(message, writer) {
     writer.writeRepeatedMessage(
       5,
       f,
-      proto.email.Recipient.serializeBinaryToWriter
+      proto.service.Recipient.serializeBinaryToWriter
     );
   }
   f = message.getGroupsList();
@@ -2595,7 +2595,7 @@ proto.email.Envelope.serializeBinaryToWriter = function(message, writer) {
     writer.writeRepeatedMessage(
       6,
       f,
-      proto.email.Recipient.serializeBinaryToWriter
+      proto.service.Recipient.serializeBinaryToWriter
     );
   }
   f = message.getTagsMap(true);
@@ -2607,7 +2607,7 @@ proto.email.Envelope.serializeBinaryToWriter = function(message, writer) {
     writer.writeMessage(
       8,
       f,
-      proto.email.Message.serializeBinaryToWriter
+      proto.service.Message.serializeBinaryToWriter
     );
   }
   f = message.getAttachmentsList();
@@ -2615,7 +2615,7 @@ proto.email.Envelope.serializeBinaryToWriter = function(message, writer) {
     writer.writeRepeatedMessage(
       9,
       f,
-      proto.email.Attachment.serializeBinaryToWriter
+      proto.service.Attachment.serializeBinaryToWriter
     );
   }
 };
@@ -2625,44 +2625,44 @@ proto.email.Envelope.serializeBinaryToWriter = function(message, writer) {
  * optional string id = 1;
  * @return {string}
  */
-proto.email.Envelope.prototype.getId = function() {
+proto.service.Envelope.prototype.getId = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.email.Envelope} returns this
+ * @return {!proto.service.Envelope} returns this
  */
-proto.email.Envelope.prototype.setId = function(value) {
+proto.service.Envelope.prototype.setId = function(value) {
   return jspb.Message.setProto3StringField(this, 1, value);
 };
 
 
 /**
  * optional Sender from = 2;
- * @return {?proto.email.Sender}
+ * @return {?proto.service.Sender}
  */
-proto.email.Envelope.prototype.getFrom = function() {
-  return /** @type{?proto.email.Sender} */ (
-    jspb.Message.getWrapperField(this, proto.email.Sender, 2));
+proto.service.Envelope.prototype.getFrom = function() {
+  return /** @type{?proto.service.Sender} */ (
+    jspb.Message.getWrapperField(this, proto.service.Sender, 2));
 };
 
 
 /**
- * @param {?proto.email.Sender|undefined} value
- * @return {!proto.email.Envelope} returns this
+ * @param {?proto.service.Sender|undefined} value
+ * @return {!proto.service.Envelope} returns this
 */
-proto.email.Envelope.prototype.setFrom = function(value) {
+proto.service.Envelope.prototype.setFrom = function(value) {
   return jspb.Message.setWrapperField(this, 2, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.email.Envelope} returns this
+ * @return {!proto.service.Envelope} returns this
  */
-proto.email.Envelope.prototype.clearFrom = function() {
+proto.service.Envelope.prototype.clearFrom = function() {
   return this.setFrom(undefined);
 };
 
@@ -2671,159 +2671,159 @@ proto.email.Envelope.prototype.clearFrom = function() {
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.email.Envelope.prototype.hasFrom = function() {
+proto.service.Envelope.prototype.hasFrom = function() {
   return jspb.Message.getField(this, 2) != null;
 };
 
 
 /**
  * repeated Recipient to = 3;
- * @return {!Array<!proto.email.Recipient>}
+ * @return {!Array<!proto.service.Recipient>}
  */
-proto.email.Envelope.prototype.getToList = function() {
-  return /** @type{!Array<!proto.email.Recipient>} */ (
-    jspb.Message.getRepeatedWrapperField(this, proto.email.Recipient, 3));
+proto.service.Envelope.prototype.getToList = function() {
+  return /** @type{!Array<!proto.service.Recipient>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.service.Recipient, 3));
 };
 
 
 /**
- * @param {!Array<!proto.email.Recipient>} value
- * @return {!proto.email.Envelope} returns this
+ * @param {!Array<!proto.service.Recipient>} value
+ * @return {!proto.service.Envelope} returns this
 */
-proto.email.Envelope.prototype.setToList = function(value) {
+proto.service.Envelope.prototype.setToList = function(value) {
   return jspb.Message.setRepeatedWrapperField(this, 3, value);
 };
 
 
 /**
- * @param {!proto.email.Recipient=} opt_value
+ * @param {!proto.service.Recipient=} opt_value
  * @param {number=} opt_index
- * @return {!proto.email.Recipient}
+ * @return {!proto.service.Recipient}
  */
-proto.email.Envelope.prototype.addTo = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 3, opt_value, proto.email.Recipient, opt_index);
+proto.service.Envelope.prototype.addTo = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 3, opt_value, proto.service.Recipient, opt_index);
 };
 
 
 /**
  * Clears the list making it empty but non-null.
- * @return {!proto.email.Envelope} returns this
+ * @return {!proto.service.Envelope} returns this
  */
-proto.email.Envelope.prototype.clearToList = function() {
+proto.service.Envelope.prototype.clearToList = function() {
   return this.setToList([]);
 };
 
 
 /**
  * repeated Recipient cc = 4;
- * @return {!Array<!proto.email.Recipient>}
+ * @return {!Array<!proto.service.Recipient>}
  */
-proto.email.Envelope.prototype.getCcList = function() {
-  return /** @type{!Array<!proto.email.Recipient>} */ (
-    jspb.Message.getRepeatedWrapperField(this, proto.email.Recipient, 4));
+proto.service.Envelope.prototype.getCcList = function() {
+  return /** @type{!Array<!proto.service.Recipient>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.service.Recipient, 4));
 };
 
 
 /**
- * @param {!Array<!proto.email.Recipient>} value
- * @return {!proto.email.Envelope} returns this
+ * @param {!Array<!proto.service.Recipient>} value
+ * @return {!proto.service.Envelope} returns this
 */
-proto.email.Envelope.prototype.setCcList = function(value) {
+proto.service.Envelope.prototype.setCcList = function(value) {
   return jspb.Message.setRepeatedWrapperField(this, 4, value);
 };
 
 
 /**
- * @param {!proto.email.Recipient=} opt_value
+ * @param {!proto.service.Recipient=} opt_value
  * @param {number=} opt_index
- * @return {!proto.email.Recipient}
+ * @return {!proto.service.Recipient}
  */
-proto.email.Envelope.prototype.addCc = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 4, opt_value, proto.email.Recipient, opt_index);
+proto.service.Envelope.prototype.addCc = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 4, opt_value, proto.service.Recipient, opt_index);
 };
 
 
 /**
  * Clears the list making it empty but non-null.
- * @return {!proto.email.Envelope} returns this
+ * @return {!proto.service.Envelope} returns this
  */
-proto.email.Envelope.prototype.clearCcList = function() {
+proto.service.Envelope.prototype.clearCcList = function() {
   return this.setCcList([]);
 };
 
 
 /**
  * repeated Recipient bcc = 5;
- * @return {!Array<!proto.email.Recipient>}
+ * @return {!Array<!proto.service.Recipient>}
  */
-proto.email.Envelope.prototype.getBccList = function() {
-  return /** @type{!Array<!proto.email.Recipient>} */ (
-    jspb.Message.getRepeatedWrapperField(this, proto.email.Recipient, 5));
+proto.service.Envelope.prototype.getBccList = function() {
+  return /** @type{!Array<!proto.service.Recipient>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.service.Recipient, 5));
 };
 
 
 /**
- * @param {!Array<!proto.email.Recipient>} value
- * @return {!proto.email.Envelope} returns this
+ * @param {!Array<!proto.service.Recipient>} value
+ * @return {!proto.service.Envelope} returns this
 */
-proto.email.Envelope.prototype.setBccList = function(value) {
+proto.service.Envelope.prototype.setBccList = function(value) {
   return jspb.Message.setRepeatedWrapperField(this, 5, value);
 };
 
 
 /**
- * @param {!proto.email.Recipient=} opt_value
+ * @param {!proto.service.Recipient=} opt_value
  * @param {number=} opt_index
- * @return {!proto.email.Recipient}
+ * @return {!proto.service.Recipient}
  */
-proto.email.Envelope.prototype.addBcc = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 5, opt_value, proto.email.Recipient, opt_index);
+proto.service.Envelope.prototype.addBcc = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 5, opt_value, proto.service.Recipient, opt_index);
 };
 
 
 /**
  * Clears the list making it empty but non-null.
- * @return {!proto.email.Envelope} returns this
+ * @return {!proto.service.Envelope} returns this
  */
-proto.email.Envelope.prototype.clearBccList = function() {
+proto.service.Envelope.prototype.clearBccList = function() {
   return this.setBccList([]);
 };
 
 
 /**
  * repeated Recipient groups = 6;
- * @return {!Array<!proto.email.Recipient>}
+ * @return {!Array<!proto.service.Recipient>}
  */
-proto.email.Envelope.prototype.getGroupsList = function() {
-  return /** @type{!Array<!proto.email.Recipient>} */ (
-    jspb.Message.getRepeatedWrapperField(this, proto.email.Recipient, 6));
+proto.service.Envelope.prototype.getGroupsList = function() {
+  return /** @type{!Array<!proto.service.Recipient>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.service.Recipient, 6));
 };
 
 
 /**
- * @param {!Array<!proto.email.Recipient>} value
- * @return {!proto.email.Envelope} returns this
+ * @param {!Array<!proto.service.Recipient>} value
+ * @return {!proto.service.Envelope} returns this
 */
-proto.email.Envelope.prototype.setGroupsList = function(value) {
+proto.service.Envelope.prototype.setGroupsList = function(value) {
   return jspb.Message.setRepeatedWrapperField(this, 6, value);
 };
 
 
 /**
- * @param {!proto.email.Recipient=} opt_value
+ * @param {!proto.service.Recipient=} opt_value
  * @param {number=} opt_index
- * @return {!proto.email.Recipient}
+ * @return {!proto.service.Recipient}
  */
-proto.email.Envelope.prototype.addGroups = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 6, opt_value, proto.email.Recipient, opt_index);
+proto.service.Envelope.prototype.addGroups = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 6, opt_value, proto.service.Recipient, opt_index);
 };
 
 
 /**
  * Clears the list making it empty but non-null.
- * @return {!proto.email.Envelope} returns this
+ * @return {!proto.service.Envelope} returns this
  */
-proto.email.Envelope.prototype.clearGroupsList = function() {
+proto.service.Envelope.prototype.clearGroupsList = function() {
   return this.setGroupsList([]);
 };
 
@@ -2834,7 +2834,7 @@ proto.email.Envelope.prototype.clearGroupsList = function() {
  * empty, instead returning `undefined`
  * @return {!jspb.Map<string,string>}
  */
-proto.email.Envelope.prototype.getTagsMap = function(opt_noLazyCreate) {
+proto.service.Envelope.prototype.getTagsMap = function(opt_noLazyCreate) {
   return /** @type {!jspb.Map<string,string>} */ (
       jspb.Message.getMapField(this, 7, opt_noLazyCreate,
       null));
@@ -2843,37 +2843,37 @@ proto.email.Envelope.prototype.getTagsMap = function(opt_noLazyCreate) {
 
 /**
  * Clears values from the map. The map will be non-null.
- * @return {!proto.email.Envelope} returns this
+ * @return {!proto.service.Envelope} returns this
  */
-proto.email.Envelope.prototype.clearTagsMap = function() {
+proto.service.Envelope.prototype.clearTagsMap = function() {
   this.getTagsMap().clear();
   return this;};
 
 
 /**
  * optional Message message = 8;
- * @return {?proto.email.Message}
+ * @return {?proto.service.Message}
  */
-proto.email.Envelope.prototype.getMessage = function() {
-  return /** @type{?proto.email.Message} */ (
-    jspb.Message.getWrapperField(this, proto.email.Message, 8));
+proto.service.Envelope.prototype.getMessage = function() {
+  return /** @type{?proto.service.Message} */ (
+    jspb.Message.getWrapperField(this, proto.service.Message, 8));
 };
 
 
 /**
- * @param {?proto.email.Message|undefined} value
- * @return {!proto.email.Envelope} returns this
+ * @param {?proto.service.Message|undefined} value
+ * @return {!proto.service.Envelope} returns this
 */
-proto.email.Envelope.prototype.setMessage = function(value) {
+proto.service.Envelope.prototype.setMessage = function(value) {
   return jspb.Message.setWrapperField(this, 8, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.email.Envelope} returns this
+ * @return {!proto.service.Envelope} returns this
  */
-proto.email.Envelope.prototype.clearMessage = function() {
+proto.service.Envelope.prototype.clearMessage = function() {
   return this.setMessage(undefined);
 };
 
@@ -2882,45 +2882,45 @@ proto.email.Envelope.prototype.clearMessage = function() {
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.email.Envelope.prototype.hasMessage = function() {
+proto.service.Envelope.prototype.hasMessage = function() {
   return jspb.Message.getField(this, 8) != null;
 };
 
 
 /**
  * repeated Attachment attachments = 9;
- * @return {!Array<!proto.email.Attachment>}
+ * @return {!Array<!proto.service.Attachment>}
  */
-proto.email.Envelope.prototype.getAttachmentsList = function() {
-  return /** @type{!Array<!proto.email.Attachment>} */ (
-    jspb.Message.getRepeatedWrapperField(this, proto.email.Attachment, 9));
+proto.service.Envelope.prototype.getAttachmentsList = function() {
+  return /** @type{!Array<!proto.service.Attachment>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.service.Attachment, 9));
 };
 
 
 /**
- * @param {!Array<!proto.email.Attachment>} value
- * @return {!proto.email.Envelope} returns this
+ * @param {!Array<!proto.service.Attachment>} value
+ * @return {!proto.service.Envelope} returns this
 */
-proto.email.Envelope.prototype.setAttachmentsList = function(value) {
+proto.service.Envelope.prototype.setAttachmentsList = function(value) {
   return jspb.Message.setRepeatedWrapperField(this, 9, value);
 };
 
 
 /**
- * @param {!proto.email.Attachment=} opt_value
+ * @param {!proto.service.Attachment=} opt_value
  * @param {number=} opt_index
- * @return {!proto.email.Attachment}
+ * @return {!proto.service.Attachment}
  */
-proto.email.Envelope.prototype.addAttachments = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 9, opt_value, proto.email.Attachment, opt_index);
+proto.service.Envelope.prototype.addAttachments = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 9, opt_value, proto.service.Attachment, opt_index);
 };
 
 
 /**
  * Clears the list making it empty but non-null.
- * @return {!proto.email.Envelope} returns this
+ * @return {!proto.service.Envelope} returns this
  */
-proto.email.Envelope.prototype.clearAttachmentsList = function() {
+proto.service.Envelope.prototype.clearAttachmentsList = function() {
   return this.setAttachmentsList([]);
 };
 
@@ -2934,22 +2934,22 @@ proto.email.Envelope.prototype.clearAttachmentsList = function() {
  * @private {!Array<!Array<number>>}
  * @const
  */
-proto.email.Message.oneofGroups_ = [[4,5]];
+proto.service.Message.oneofGroups_ = [[4,5]];
 
 /**
  * @enum {number}
  */
-proto.email.Message.BodyCase = {
+proto.service.Message.BodyCase = {
   BODY_NOT_SET: 0,
   DATA: 4,
   URI: 5
 };
 
 /**
- * @return {proto.email.Message.BodyCase}
+ * @return {proto.service.Message.BodyCase}
  */
-proto.email.Message.prototype.getBodyCase = function() {
-  return /** @type {proto.email.Message.BodyCase} */(jspb.Message.computeOneofCase(this, proto.email.Message.oneofGroups_[0]));
+proto.service.Message.prototype.getBodyCase = function() {
+  return /** @type {proto.service.Message.BodyCase} */(jspb.Message.computeOneofCase(this, proto.service.Message.oneofGroups_[0]));
 };
 
 
@@ -2967,8 +2967,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.email.Message.prototype.toObject = function(opt_includeInstance) {
-  return proto.email.Message.toObject(opt_includeInstance, this);
+proto.service.Message.prototype.toObject = function(opt_includeInstance) {
+  return proto.service.Message.toObject(opt_includeInstance, this);
 };
 
 
@@ -2977,11 +2977,11 @@ proto.email.Message.prototype.toObject = function(opt_includeInstance) {
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.email.Message} msg The msg instance to transform.
+ * @param {!proto.service.Message} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.email.Message.toObject = function(includeInstance, msg) {
+proto.service.Message.toObject = function(includeInstance, msg) {
   var f, obj = {
     id: jspb.Message.getFieldWithDefault(msg, 1, ""),
     subject: jspb.Message.getFieldWithDefault(msg, 2, ""),
@@ -3001,23 +3001,23 @@ proto.email.Message.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.email.Message}
+ * @return {!proto.service.Message}
  */
-proto.email.Message.deserializeBinary = function(bytes) {
+proto.service.Message.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.email.Message;
-  return proto.email.Message.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.service.Message;
+  return proto.service.Message.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.email.Message} msg The message object to deserialize into.
+ * @param {!proto.service.Message} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.email.Message}
+ * @return {!proto.service.Message}
  */
-proto.email.Message.deserializeBinaryFromReader = function(msg, reader) {
+proto.service.Message.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -3057,9 +3057,9 @@ proto.email.Message.deserializeBinaryFromReader = function(msg, reader) {
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.email.Message.prototype.serializeBinary = function() {
+proto.service.Message.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.email.Message.serializeBinaryToWriter(this, writer);
+  proto.service.Message.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -3067,11 +3067,11 @@ proto.email.Message.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.email.Message} message
+ * @param {!proto.service.Message} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.email.Message.serializeBinaryToWriter = function(message, writer) {
+proto.service.Message.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getId();
   if (f.length > 0) {
@@ -3115,16 +3115,16 @@ proto.email.Message.serializeBinaryToWriter = function(message, writer) {
  * optional string id = 1;
  * @return {string}
  */
-proto.email.Message.prototype.getId = function() {
+proto.service.Message.prototype.getId = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.email.Message} returns this
+ * @return {!proto.service.Message} returns this
  */
-proto.email.Message.prototype.setId = function(value) {
+proto.service.Message.prototype.setId = function(value) {
   return jspb.Message.setProto3StringField(this, 1, value);
 };
 
@@ -3133,16 +3133,16 @@ proto.email.Message.prototype.setId = function(value) {
  * optional string subject = 2;
  * @return {string}
  */
-proto.email.Message.prototype.getSubject = function() {
+proto.service.Message.prototype.getSubject = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.email.Message} returns this
+ * @return {!proto.service.Message} returns this
  */
-proto.email.Message.prototype.setSubject = function(value) {
+proto.service.Message.prototype.setSubject = function(value) {
   return jspb.Message.setProto3StringField(this, 2, value);
 };
 
@@ -3151,16 +3151,16 @@ proto.email.Message.prototype.setSubject = function(value) {
  * optional string mimetype = 3;
  * @return {string}
  */
-proto.email.Message.prototype.getMimetype = function() {
+proto.service.Message.prototype.getMimetype = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.email.Message} returns this
+ * @return {!proto.service.Message} returns this
  */
-proto.email.Message.prototype.setMimetype = function(value) {
+proto.service.Message.prototype.setMimetype = function(value) {
   return jspb.Message.setProto3StringField(this, 3, value);
 };
 
@@ -3169,7 +3169,7 @@ proto.email.Message.prototype.setMimetype = function(value) {
  * optional bytes data = 4;
  * @return {string}
  */
-proto.email.Message.prototype.getData = function() {
+proto.service.Message.prototype.getData = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
 };
 
@@ -3179,7 +3179,7 @@ proto.email.Message.prototype.getData = function() {
  * This is a type-conversion wrapper around `getData()`
  * @return {string}
  */
-proto.email.Message.prototype.getData_asB64 = function() {
+proto.service.Message.prototype.getData_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
       this.getData()));
 };
@@ -3192,7 +3192,7 @@ proto.email.Message.prototype.getData_asB64 = function() {
  * This is a type-conversion wrapper around `getData()`
  * @return {!Uint8Array}
  */
-proto.email.Message.prototype.getData_asU8 = function() {
+proto.service.Message.prototype.getData_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
       this.getData()));
 };
@@ -3200,19 +3200,19 @@ proto.email.Message.prototype.getData_asU8 = function() {
 
 /**
  * @param {!(string|Uint8Array)} value
- * @return {!proto.email.Message} returns this
+ * @return {!proto.service.Message} returns this
  */
-proto.email.Message.prototype.setData = function(value) {
-  return jspb.Message.setOneofField(this, 4, proto.email.Message.oneofGroups_[0], value);
+proto.service.Message.prototype.setData = function(value) {
+  return jspb.Message.setOneofField(this, 4, proto.service.Message.oneofGroups_[0], value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.email.Message} returns this
+ * @return {!proto.service.Message} returns this
  */
-proto.email.Message.prototype.clearData = function() {
-  return jspb.Message.setOneofField(this, 4, proto.email.Message.oneofGroups_[0], undefined);
+proto.service.Message.prototype.clearData = function() {
+  return jspb.Message.setOneofField(this, 4, proto.service.Message.oneofGroups_[0], undefined);
 };
 
 
@@ -3220,7 +3220,7 @@ proto.email.Message.prototype.clearData = function() {
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.email.Message.prototype.hasData = function() {
+proto.service.Message.prototype.hasData = function() {
   return jspb.Message.getField(this, 4) != null;
 };
 
@@ -3229,26 +3229,26 @@ proto.email.Message.prototype.hasData = function() {
  * optional string uri = 5;
  * @return {string}
  */
-proto.email.Message.prototype.getUri = function() {
+proto.service.Message.prototype.getUri = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 5, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.email.Message} returns this
+ * @return {!proto.service.Message} returns this
  */
-proto.email.Message.prototype.setUri = function(value) {
-  return jspb.Message.setOneofField(this, 5, proto.email.Message.oneofGroups_[0], value);
+proto.service.Message.prototype.setUri = function(value) {
+  return jspb.Message.setOneofField(this, 5, proto.service.Message.oneofGroups_[0], value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.email.Message} returns this
+ * @return {!proto.service.Message} returns this
  */
-proto.email.Message.prototype.clearUri = function() {
-  return jspb.Message.setOneofField(this, 5, proto.email.Message.oneofGroups_[0], undefined);
+proto.service.Message.prototype.clearUri = function() {
+  return jspb.Message.setOneofField(this, 5, proto.service.Message.oneofGroups_[0], undefined);
 };
 
 
@@ -3256,7 +3256,7 @@ proto.email.Message.prototype.clearUri = function() {
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.email.Message.prototype.hasUri = function() {
+proto.service.Message.prototype.hasUri = function() {
   return jspb.Message.getField(this, 5) != null;
 };
 
@@ -3270,22 +3270,22 @@ proto.email.Message.prototype.hasUri = function() {
  * @private {!Array<!Array<number>>}
  * @const
  */
-proto.email.Attachment.oneofGroups_ = [[4,5]];
+proto.service.Attachment.oneofGroups_ = [[4,5]];
 
 /**
  * @enum {number}
  */
-proto.email.Attachment.ContentCase = {
+proto.service.Attachment.ContentCase = {
   CONTENT_NOT_SET: 0,
   DATA: 4,
   URI: 5
 };
 
 /**
- * @return {proto.email.Attachment.ContentCase}
+ * @return {proto.service.Attachment.ContentCase}
  */
-proto.email.Attachment.prototype.getContentCase = function() {
-  return /** @type {proto.email.Attachment.ContentCase} */(jspb.Message.computeOneofCase(this, proto.email.Attachment.oneofGroups_[0]));
+proto.service.Attachment.prototype.getContentCase = function() {
+  return /** @type {proto.service.Attachment.ContentCase} */(jspb.Message.computeOneofCase(this, proto.service.Attachment.oneofGroups_[0]));
 };
 
 
@@ -3303,8 +3303,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.email.Attachment.prototype.toObject = function(opt_includeInstance) {
-  return proto.email.Attachment.toObject(opt_includeInstance, this);
+proto.service.Attachment.prototype.toObject = function(opt_includeInstance) {
+  return proto.service.Attachment.toObject(opt_includeInstance, this);
 };
 
 
@@ -3313,11 +3313,11 @@ proto.email.Attachment.prototype.toObject = function(opt_includeInstance) {
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.email.Attachment} msg The msg instance to transform.
+ * @param {!proto.service.Attachment} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.email.Attachment.toObject = function(includeInstance, msg) {
+proto.service.Attachment.toObject = function(includeInstance, msg) {
   var f, obj = {
     id: jspb.Message.getFieldWithDefault(msg, 1, ""),
     filename: jspb.Message.getFieldWithDefault(msg, 2, ""),
@@ -3337,23 +3337,23 @@ proto.email.Attachment.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.email.Attachment}
+ * @return {!proto.service.Attachment}
  */
-proto.email.Attachment.deserializeBinary = function(bytes) {
+proto.service.Attachment.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.email.Attachment;
-  return proto.email.Attachment.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.service.Attachment;
+  return proto.service.Attachment.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.email.Attachment} msg The message object to deserialize into.
+ * @param {!proto.service.Attachment} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.email.Attachment}
+ * @return {!proto.service.Attachment}
  */
-proto.email.Attachment.deserializeBinaryFromReader = function(msg, reader) {
+proto.service.Attachment.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -3393,9 +3393,9 @@ proto.email.Attachment.deserializeBinaryFromReader = function(msg, reader) {
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.email.Attachment.prototype.serializeBinary = function() {
+proto.service.Attachment.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.email.Attachment.serializeBinaryToWriter(this, writer);
+  proto.service.Attachment.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -3403,11 +3403,11 @@ proto.email.Attachment.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.email.Attachment} message
+ * @param {!proto.service.Attachment} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.email.Attachment.serializeBinaryToWriter = function(message, writer) {
+proto.service.Attachment.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getId();
   if (f.length > 0) {
@@ -3451,16 +3451,16 @@ proto.email.Attachment.serializeBinaryToWriter = function(message, writer) {
  * optional string id = 1;
  * @return {string}
  */
-proto.email.Attachment.prototype.getId = function() {
+proto.service.Attachment.prototype.getId = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.email.Attachment} returns this
+ * @return {!proto.service.Attachment} returns this
  */
-proto.email.Attachment.prototype.setId = function(value) {
+proto.service.Attachment.prototype.setId = function(value) {
   return jspb.Message.setProto3StringField(this, 1, value);
 };
 
@@ -3469,16 +3469,16 @@ proto.email.Attachment.prototype.setId = function(value) {
  * optional string filename = 2;
  * @return {string}
  */
-proto.email.Attachment.prototype.getFilename = function() {
+proto.service.Attachment.prototype.getFilename = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.email.Attachment} returns this
+ * @return {!proto.service.Attachment} returns this
  */
-proto.email.Attachment.prototype.setFilename = function(value) {
+proto.service.Attachment.prototype.setFilename = function(value) {
   return jspb.Message.setProto3StringField(this, 2, value);
 };
 
@@ -3487,16 +3487,16 @@ proto.email.Attachment.prototype.setFilename = function(value) {
  * optional string mimetype = 3;
  * @return {string}
  */
-proto.email.Attachment.prototype.getMimetype = function() {
+proto.service.Attachment.prototype.getMimetype = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.email.Attachment} returns this
+ * @return {!proto.service.Attachment} returns this
  */
-proto.email.Attachment.prototype.setMimetype = function(value) {
+proto.service.Attachment.prototype.setMimetype = function(value) {
   return jspb.Message.setProto3StringField(this, 3, value);
 };
 
@@ -3505,7 +3505,7 @@ proto.email.Attachment.prototype.setMimetype = function(value) {
  * optional bytes data = 4;
  * @return {string}
  */
-proto.email.Attachment.prototype.getData = function() {
+proto.service.Attachment.prototype.getData = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
 };
 
@@ -3515,7 +3515,7 @@ proto.email.Attachment.prototype.getData = function() {
  * This is a type-conversion wrapper around `getData()`
  * @return {string}
  */
-proto.email.Attachment.prototype.getData_asB64 = function() {
+proto.service.Attachment.prototype.getData_asB64 = function() {
   return /** @type {string} */ (jspb.Message.bytesAsB64(
       this.getData()));
 };
@@ -3528,7 +3528,7 @@ proto.email.Attachment.prototype.getData_asB64 = function() {
  * This is a type-conversion wrapper around `getData()`
  * @return {!Uint8Array}
  */
-proto.email.Attachment.prototype.getData_asU8 = function() {
+proto.service.Attachment.prototype.getData_asU8 = function() {
   return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
       this.getData()));
 };
@@ -3536,19 +3536,19 @@ proto.email.Attachment.prototype.getData_asU8 = function() {
 
 /**
  * @param {!(string|Uint8Array)} value
- * @return {!proto.email.Attachment} returns this
+ * @return {!proto.service.Attachment} returns this
  */
-proto.email.Attachment.prototype.setData = function(value) {
-  return jspb.Message.setOneofField(this, 4, proto.email.Attachment.oneofGroups_[0], value);
+proto.service.Attachment.prototype.setData = function(value) {
+  return jspb.Message.setOneofField(this, 4, proto.service.Attachment.oneofGroups_[0], value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.email.Attachment} returns this
+ * @return {!proto.service.Attachment} returns this
  */
-proto.email.Attachment.prototype.clearData = function() {
-  return jspb.Message.setOneofField(this, 4, proto.email.Attachment.oneofGroups_[0], undefined);
+proto.service.Attachment.prototype.clearData = function() {
+  return jspb.Message.setOneofField(this, 4, proto.service.Attachment.oneofGroups_[0], undefined);
 };
 
 
@@ -3556,7 +3556,7 @@ proto.email.Attachment.prototype.clearData = function() {
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.email.Attachment.prototype.hasData = function() {
+proto.service.Attachment.prototype.hasData = function() {
   return jspb.Message.getField(this, 4) != null;
 };
 
@@ -3565,26 +3565,26 @@ proto.email.Attachment.prototype.hasData = function() {
  * optional string uri = 5;
  * @return {string}
  */
-proto.email.Attachment.prototype.getUri = function() {
+proto.service.Attachment.prototype.getUri = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 5, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.email.Attachment} returns this
+ * @return {!proto.service.Attachment} returns this
  */
-proto.email.Attachment.prototype.setUri = function(value) {
-  return jspb.Message.setOneofField(this, 5, proto.email.Attachment.oneofGroups_[0], value);
+proto.service.Attachment.prototype.setUri = function(value) {
+  return jspb.Message.setOneofField(this, 5, proto.service.Attachment.oneofGroups_[0], value);
 };
 
 
 /**
  * Clears the field making it undefined.
- * @return {!proto.email.Attachment} returns this
+ * @return {!proto.service.Attachment} returns this
  */
-proto.email.Attachment.prototype.clearUri = function() {
-  return jspb.Message.setOneofField(this, 5, proto.email.Attachment.oneofGroups_[0], undefined);
+proto.service.Attachment.prototype.clearUri = function() {
+  return jspb.Message.setOneofField(this, 5, proto.service.Attachment.oneofGroups_[0], undefined);
 };
 
 
@@ -3592,7 +3592,7 @@ proto.email.Attachment.prototype.clearUri = function() {
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.email.Attachment.prototype.hasUri = function() {
+proto.service.Attachment.prototype.hasUri = function() {
   return jspb.Message.getField(this, 5) != null;
 };
 
@@ -3613,8 +3613,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.email.Label.prototype.toObject = function(opt_includeInstance) {
-  return proto.email.Label.toObject(opt_includeInstance, this);
+proto.service.Label.prototype.toObject = function(opt_includeInstance) {
+  return proto.service.Label.toObject(opt_includeInstance, this);
 };
 
 
@@ -3623,11 +3623,11 @@ proto.email.Label.prototype.toObject = function(opt_includeInstance) {
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.email.Label} msg The msg instance to transform.
+ * @param {!proto.service.Label} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.email.Label.toObject = function(includeInstance, msg) {
+proto.service.Label.toObject = function(includeInstance, msg) {
   var f, obj = {
     id: jspb.Message.getFieldWithDefault(msg, 1, ""),
     name: jspb.Message.getFieldWithDefault(msg, 2, ""),
@@ -3645,23 +3645,23 @@ proto.email.Label.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.email.Label}
+ * @return {!proto.service.Label}
  */
-proto.email.Label.deserializeBinary = function(bytes) {
+proto.service.Label.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.email.Label;
-  return proto.email.Label.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.service.Label;
+  return proto.service.Label.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.email.Label} msg The message object to deserialize into.
+ * @param {!proto.service.Label} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.email.Label}
+ * @return {!proto.service.Label}
  */
-proto.email.Label.deserializeBinaryFromReader = function(msg, reader) {
+proto.service.Label.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -3693,9 +3693,9 @@ proto.email.Label.deserializeBinaryFromReader = function(msg, reader) {
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.email.Label.prototype.serializeBinary = function() {
+proto.service.Label.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.email.Label.serializeBinaryToWriter(this, writer);
+  proto.service.Label.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -3703,11 +3703,11 @@ proto.email.Label.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.email.Label} message
+ * @param {!proto.service.Label} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.email.Label.serializeBinaryToWriter = function(message, writer) {
+proto.service.Label.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getId();
   if (f.length > 0) {
@@ -3737,16 +3737,16 @@ proto.email.Label.serializeBinaryToWriter = function(message, writer) {
  * optional string id = 1;
  * @return {string}
  */
-proto.email.Label.prototype.getId = function() {
+proto.service.Label.prototype.getId = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.email.Label} returns this
+ * @return {!proto.service.Label} returns this
  */
-proto.email.Label.prototype.setId = function(value) {
+proto.service.Label.prototype.setId = function(value) {
   return jspb.Message.setProto3StringField(this, 1, value);
 };
 
@@ -3755,16 +3755,16 @@ proto.email.Label.prototype.setId = function(value) {
  * optional string name = 2;
  * @return {string}
  */
-proto.email.Label.prototype.getName = function() {
+proto.service.Label.prototype.getName = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.email.Label} returns this
+ * @return {!proto.service.Label} returns this
  */
-proto.email.Label.prototype.setName = function(value) {
+proto.service.Label.prototype.setName = function(value) {
   return jspb.Message.setProto3StringField(this, 2, value);
 };
 
@@ -3773,16 +3773,16 @@ proto.email.Label.prototype.setName = function(value) {
  * optional string type = 3;
  * @return {string}
  */
-proto.email.Label.prototype.getType = function() {
+proto.service.Label.prototype.getType = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.email.Label} returns this
+ * @return {!proto.service.Label} returns this
  */
-proto.email.Label.prototype.setType = function(value) {
+proto.service.Label.prototype.setType = function(value) {
   return jspb.Message.setProto3StringField(this, 3, value);
 };
 
@@ -3793,7 +3793,7 @@ proto.email.Label.prototype.setType = function(value) {
  * @private {!Array<number>}
  * @const
  */
-proto.email.HistoryLabelAdded.repeatedFields_ = [1];
+proto.service.HistoryLabelAdded.repeatedFields_ = [1];
 
 
 
@@ -3810,8 +3810,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.email.HistoryLabelAdded.prototype.toObject = function(opt_includeInstance) {
-  return proto.email.HistoryLabelAdded.toObject(opt_includeInstance, this);
+proto.service.HistoryLabelAdded.prototype.toObject = function(opt_includeInstance) {
+  return proto.service.HistoryLabelAdded.toObject(opt_includeInstance, this);
 };
 
 
@@ -3820,14 +3820,14 @@ proto.email.HistoryLabelAdded.prototype.toObject = function(opt_includeInstance)
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.email.HistoryLabelAdded} msg The msg instance to transform.
+ * @param {!proto.service.HistoryLabelAdded} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.email.HistoryLabelAdded.toObject = function(includeInstance, msg) {
+proto.service.HistoryLabelAdded.toObject = function(includeInstance, msg) {
   var f, obj = {
     labelIdsList: (f = jspb.Message.getRepeatedField(msg, 1)) == null ? undefined : f,
-    email: (f = msg.getEmail()) && proto.email.Email.toObject(includeInstance, f)
+    email: (f = msg.getEmail()) && proto.service.Email.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -3841,23 +3841,23 @@ proto.email.HistoryLabelAdded.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.email.HistoryLabelAdded}
+ * @return {!proto.service.HistoryLabelAdded}
  */
-proto.email.HistoryLabelAdded.deserializeBinary = function(bytes) {
+proto.service.HistoryLabelAdded.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.email.HistoryLabelAdded;
-  return proto.email.HistoryLabelAdded.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.service.HistoryLabelAdded;
+  return proto.service.HistoryLabelAdded.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.email.HistoryLabelAdded} msg The message object to deserialize into.
+ * @param {!proto.service.HistoryLabelAdded} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.email.HistoryLabelAdded}
+ * @return {!proto.service.HistoryLabelAdded}
  */
-proto.email.HistoryLabelAdded.deserializeBinaryFromReader = function(msg, reader) {
+proto.service.HistoryLabelAdded.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -3869,8 +3869,8 @@ proto.email.HistoryLabelAdded.deserializeBinaryFromReader = function(msg, reader
       msg.addLabelIds(value);
       break;
     case 2:
-      var value = new proto.email.Email;
-      reader.readMessage(value,proto.email.Email.deserializeBinaryFromReader);
+      var value = new proto.service.Email;
+      reader.readMessage(value,proto.service.Email.deserializeBinaryFromReader);
       msg.setEmail(value);
       break;
     default:
@@ -3886,9 +3886,9 @@ proto.email.HistoryLabelAdded.deserializeBinaryFromReader = function(msg, reader
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.email.HistoryLabelAdded.prototype.serializeBinary = function() {
+proto.service.HistoryLabelAdded.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.email.HistoryLabelAdded.serializeBinaryToWriter(this, writer);
+  proto.service.HistoryLabelAdded.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -3896,11 +3896,11 @@ proto.email.HistoryLabelAdded.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.email.HistoryLabelAdded} message
+ * @param {!proto.service.HistoryLabelAdded} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.email.HistoryLabelAdded.serializeBinaryToWriter = function(message, writer) {
+proto.service.HistoryLabelAdded.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getLabelIdsList();
   if (f.length > 0) {
@@ -3914,7 +3914,7 @@ proto.email.HistoryLabelAdded.serializeBinaryToWriter = function(message, writer
     writer.writeMessage(
       2,
       f,
-      proto.email.Email.serializeBinaryToWriter
+      proto.service.Email.serializeBinaryToWriter
     );
   }
 };
@@ -3924,16 +3924,16 @@ proto.email.HistoryLabelAdded.serializeBinaryToWriter = function(message, writer
  * repeated string label_ids = 1;
  * @return {!Array<string>}
  */
-proto.email.HistoryLabelAdded.prototype.getLabelIdsList = function() {
+proto.service.HistoryLabelAdded.prototype.getLabelIdsList = function() {
   return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 1));
 };
 
 
 /**
  * @param {!Array<string>} value
- * @return {!proto.email.HistoryLabelAdded} returns this
+ * @return {!proto.service.HistoryLabelAdded} returns this
  */
-proto.email.HistoryLabelAdded.prototype.setLabelIdsList = function(value) {
+proto.service.HistoryLabelAdded.prototype.setLabelIdsList = function(value) {
   return jspb.Message.setField(this, 1, value || []);
 };
 
@@ -3941,46 +3941,46 @@ proto.email.HistoryLabelAdded.prototype.setLabelIdsList = function(value) {
 /**
  * @param {string} value
  * @param {number=} opt_index
- * @return {!proto.email.HistoryLabelAdded} returns this
+ * @return {!proto.service.HistoryLabelAdded} returns this
  */
-proto.email.HistoryLabelAdded.prototype.addLabelIds = function(value, opt_index) {
+proto.service.HistoryLabelAdded.prototype.addLabelIds = function(value, opt_index) {
   return jspb.Message.addToRepeatedField(this, 1, value, opt_index);
 };
 
 
 /**
  * Clears the list making it empty but non-null.
- * @return {!proto.email.HistoryLabelAdded} returns this
+ * @return {!proto.service.HistoryLabelAdded} returns this
  */
-proto.email.HistoryLabelAdded.prototype.clearLabelIdsList = function() {
+proto.service.HistoryLabelAdded.prototype.clearLabelIdsList = function() {
   return this.setLabelIdsList([]);
 };
 
 
 /**
  * optional Email email = 2;
- * @return {?proto.email.Email}
+ * @return {?proto.service.Email}
  */
-proto.email.HistoryLabelAdded.prototype.getEmail = function() {
-  return /** @type{?proto.email.Email} */ (
-    jspb.Message.getWrapperField(this, proto.email.Email, 2));
+proto.service.HistoryLabelAdded.prototype.getEmail = function() {
+  return /** @type{?proto.service.Email} */ (
+    jspb.Message.getWrapperField(this, proto.service.Email, 2));
 };
 
 
 /**
- * @param {?proto.email.Email|undefined} value
- * @return {!proto.email.HistoryLabelAdded} returns this
+ * @param {?proto.service.Email|undefined} value
+ * @return {!proto.service.HistoryLabelAdded} returns this
 */
-proto.email.HistoryLabelAdded.prototype.setEmail = function(value) {
+proto.service.HistoryLabelAdded.prototype.setEmail = function(value) {
   return jspb.Message.setWrapperField(this, 2, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.email.HistoryLabelAdded} returns this
+ * @return {!proto.service.HistoryLabelAdded} returns this
  */
-proto.email.HistoryLabelAdded.prototype.clearEmail = function() {
+proto.service.HistoryLabelAdded.prototype.clearEmail = function() {
   return this.setEmail(undefined);
 };
 
@@ -3989,7 +3989,7 @@ proto.email.HistoryLabelAdded.prototype.clearEmail = function() {
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.email.HistoryLabelAdded.prototype.hasEmail = function() {
+proto.service.HistoryLabelAdded.prototype.hasEmail = function() {
   return jspb.Message.getField(this, 2) != null;
 };
 
@@ -4000,7 +4000,7 @@ proto.email.HistoryLabelAdded.prototype.hasEmail = function() {
  * @private {!Array<number>}
  * @const
  */
-proto.email.HistoryLabelRemoved.repeatedFields_ = [1];
+proto.service.HistoryLabelRemoved.repeatedFields_ = [1];
 
 
 
@@ -4017,8 +4017,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.email.HistoryLabelRemoved.prototype.toObject = function(opt_includeInstance) {
-  return proto.email.HistoryLabelRemoved.toObject(opt_includeInstance, this);
+proto.service.HistoryLabelRemoved.prototype.toObject = function(opt_includeInstance) {
+  return proto.service.HistoryLabelRemoved.toObject(opt_includeInstance, this);
 };
 
 
@@ -4027,14 +4027,14 @@ proto.email.HistoryLabelRemoved.prototype.toObject = function(opt_includeInstanc
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.email.HistoryLabelRemoved} msg The msg instance to transform.
+ * @param {!proto.service.HistoryLabelRemoved} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.email.HistoryLabelRemoved.toObject = function(includeInstance, msg) {
+proto.service.HistoryLabelRemoved.toObject = function(includeInstance, msg) {
   var f, obj = {
     labelIdsList: (f = jspb.Message.getRepeatedField(msg, 1)) == null ? undefined : f,
-    email: (f = msg.getEmail()) && proto.email.Email.toObject(includeInstance, f)
+    email: (f = msg.getEmail()) && proto.service.Email.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -4048,23 +4048,23 @@ proto.email.HistoryLabelRemoved.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.email.HistoryLabelRemoved}
+ * @return {!proto.service.HistoryLabelRemoved}
  */
-proto.email.HistoryLabelRemoved.deserializeBinary = function(bytes) {
+proto.service.HistoryLabelRemoved.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.email.HistoryLabelRemoved;
-  return proto.email.HistoryLabelRemoved.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.service.HistoryLabelRemoved;
+  return proto.service.HistoryLabelRemoved.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.email.HistoryLabelRemoved} msg The message object to deserialize into.
+ * @param {!proto.service.HistoryLabelRemoved} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.email.HistoryLabelRemoved}
+ * @return {!proto.service.HistoryLabelRemoved}
  */
-proto.email.HistoryLabelRemoved.deserializeBinaryFromReader = function(msg, reader) {
+proto.service.HistoryLabelRemoved.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -4076,8 +4076,8 @@ proto.email.HistoryLabelRemoved.deserializeBinaryFromReader = function(msg, read
       msg.addLabelIds(value);
       break;
     case 2:
-      var value = new proto.email.Email;
-      reader.readMessage(value,proto.email.Email.deserializeBinaryFromReader);
+      var value = new proto.service.Email;
+      reader.readMessage(value,proto.service.Email.deserializeBinaryFromReader);
       msg.setEmail(value);
       break;
     default:
@@ -4093,9 +4093,9 @@ proto.email.HistoryLabelRemoved.deserializeBinaryFromReader = function(msg, read
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.email.HistoryLabelRemoved.prototype.serializeBinary = function() {
+proto.service.HistoryLabelRemoved.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.email.HistoryLabelRemoved.serializeBinaryToWriter(this, writer);
+  proto.service.HistoryLabelRemoved.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -4103,11 +4103,11 @@ proto.email.HistoryLabelRemoved.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.email.HistoryLabelRemoved} message
+ * @param {!proto.service.HistoryLabelRemoved} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.email.HistoryLabelRemoved.serializeBinaryToWriter = function(message, writer) {
+proto.service.HistoryLabelRemoved.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getLabelIdsList();
   if (f.length > 0) {
@@ -4121,7 +4121,7 @@ proto.email.HistoryLabelRemoved.serializeBinaryToWriter = function(message, writ
     writer.writeMessage(
       2,
       f,
-      proto.email.Email.serializeBinaryToWriter
+      proto.service.Email.serializeBinaryToWriter
     );
   }
 };
@@ -4131,16 +4131,16 @@ proto.email.HistoryLabelRemoved.serializeBinaryToWriter = function(message, writ
  * repeated string label_ids = 1;
  * @return {!Array<string>}
  */
-proto.email.HistoryLabelRemoved.prototype.getLabelIdsList = function() {
+proto.service.HistoryLabelRemoved.prototype.getLabelIdsList = function() {
   return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 1));
 };
 
 
 /**
  * @param {!Array<string>} value
- * @return {!proto.email.HistoryLabelRemoved} returns this
+ * @return {!proto.service.HistoryLabelRemoved} returns this
  */
-proto.email.HistoryLabelRemoved.prototype.setLabelIdsList = function(value) {
+proto.service.HistoryLabelRemoved.prototype.setLabelIdsList = function(value) {
   return jspb.Message.setField(this, 1, value || []);
 };
 
@@ -4148,46 +4148,46 @@ proto.email.HistoryLabelRemoved.prototype.setLabelIdsList = function(value) {
 /**
  * @param {string} value
  * @param {number=} opt_index
- * @return {!proto.email.HistoryLabelRemoved} returns this
+ * @return {!proto.service.HistoryLabelRemoved} returns this
  */
-proto.email.HistoryLabelRemoved.prototype.addLabelIds = function(value, opt_index) {
+proto.service.HistoryLabelRemoved.prototype.addLabelIds = function(value, opt_index) {
   return jspb.Message.addToRepeatedField(this, 1, value, opt_index);
 };
 
 
 /**
  * Clears the list making it empty but non-null.
- * @return {!proto.email.HistoryLabelRemoved} returns this
+ * @return {!proto.service.HistoryLabelRemoved} returns this
  */
-proto.email.HistoryLabelRemoved.prototype.clearLabelIdsList = function() {
+proto.service.HistoryLabelRemoved.prototype.clearLabelIdsList = function() {
   return this.setLabelIdsList([]);
 };
 
 
 /**
  * optional Email email = 2;
- * @return {?proto.email.Email}
+ * @return {?proto.service.Email}
  */
-proto.email.HistoryLabelRemoved.prototype.getEmail = function() {
-  return /** @type{?proto.email.Email} */ (
-    jspb.Message.getWrapperField(this, proto.email.Email, 2));
+proto.service.HistoryLabelRemoved.prototype.getEmail = function() {
+  return /** @type{?proto.service.Email} */ (
+    jspb.Message.getWrapperField(this, proto.service.Email, 2));
 };
 
 
 /**
- * @param {?proto.email.Email|undefined} value
- * @return {!proto.email.HistoryLabelRemoved} returns this
+ * @param {?proto.service.Email|undefined} value
+ * @return {!proto.service.HistoryLabelRemoved} returns this
 */
-proto.email.HistoryLabelRemoved.prototype.setEmail = function(value) {
+proto.service.HistoryLabelRemoved.prototype.setEmail = function(value) {
   return jspb.Message.setWrapperField(this, 2, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.email.HistoryLabelRemoved} returns this
+ * @return {!proto.service.HistoryLabelRemoved} returns this
  */
-proto.email.HistoryLabelRemoved.prototype.clearEmail = function() {
+proto.service.HistoryLabelRemoved.prototype.clearEmail = function() {
   return this.setEmail(undefined);
 };
 
@@ -4196,7 +4196,7 @@ proto.email.HistoryLabelRemoved.prototype.clearEmail = function() {
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.email.HistoryLabelRemoved.prototype.hasEmail = function() {
+proto.service.HistoryLabelRemoved.prototype.hasEmail = function() {
   return jspb.Message.getField(this, 2) != null;
 };
 
@@ -4217,8 +4217,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.email.HistoryEmailAdded.prototype.toObject = function(opt_includeInstance) {
-  return proto.email.HistoryEmailAdded.toObject(opt_includeInstance, this);
+proto.service.HistoryEmailAdded.prototype.toObject = function(opt_includeInstance) {
+  return proto.service.HistoryEmailAdded.toObject(opt_includeInstance, this);
 };
 
 
@@ -4227,13 +4227,13 @@ proto.email.HistoryEmailAdded.prototype.toObject = function(opt_includeInstance)
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.email.HistoryEmailAdded} msg The msg instance to transform.
+ * @param {!proto.service.HistoryEmailAdded} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.email.HistoryEmailAdded.toObject = function(includeInstance, msg) {
+proto.service.HistoryEmailAdded.toObject = function(includeInstance, msg) {
   var f, obj = {
-    email: (f = msg.getEmail()) && proto.email.Email.toObject(includeInstance, f)
+    email: (f = msg.getEmail()) && proto.service.Email.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -4247,23 +4247,23 @@ proto.email.HistoryEmailAdded.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.email.HistoryEmailAdded}
+ * @return {!proto.service.HistoryEmailAdded}
  */
-proto.email.HistoryEmailAdded.deserializeBinary = function(bytes) {
+proto.service.HistoryEmailAdded.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.email.HistoryEmailAdded;
-  return proto.email.HistoryEmailAdded.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.service.HistoryEmailAdded;
+  return proto.service.HistoryEmailAdded.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.email.HistoryEmailAdded} msg The message object to deserialize into.
+ * @param {!proto.service.HistoryEmailAdded} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.email.HistoryEmailAdded}
+ * @return {!proto.service.HistoryEmailAdded}
  */
-proto.email.HistoryEmailAdded.deserializeBinaryFromReader = function(msg, reader) {
+proto.service.HistoryEmailAdded.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -4271,8 +4271,8 @@ proto.email.HistoryEmailAdded.deserializeBinaryFromReader = function(msg, reader
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = new proto.email.Email;
-      reader.readMessage(value,proto.email.Email.deserializeBinaryFromReader);
+      var value = new proto.service.Email;
+      reader.readMessage(value,proto.service.Email.deserializeBinaryFromReader);
       msg.setEmail(value);
       break;
     default:
@@ -4288,9 +4288,9 @@ proto.email.HistoryEmailAdded.deserializeBinaryFromReader = function(msg, reader
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.email.HistoryEmailAdded.prototype.serializeBinary = function() {
+proto.service.HistoryEmailAdded.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.email.HistoryEmailAdded.serializeBinaryToWriter(this, writer);
+  proto.service.HistoryEmailAdded.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -4298,18 +4298,18 @@ proto.email.HistoryEmailAdded.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.email.HistoryEmailAdded} message
+ * @param {!proto.service.HistoryEmailAdded} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.email.HistoryEmailAdded.serializeBinaryToWriter = function(message, writer) {
+proto.service.HistoryEmailAdded.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getEmail();
   if (f != null) {
     writer.writeMessage(
       1,
       f,
-      proto.email.Email.serializeBinaryToWriter
+      proto.service.Email.serializeBinaryToWriter
     );
   }
 };
@@ -4317,28 +4317,28 @@ proto.email.HistoryEmailAdded.serializeBinaryToWriter = function(message, writer
 
 /**
  * optional Email email = 1;
- * @return {?proto.email.Email}
+ * @return {?proto.service.Email}
  */
-proto.email.HistoryEmailAdded.prototype.getEmail = function() {
-  return /** @type{?proto.email.Email} */ (
-    jspb.Message.getWrapperField(this, proto.email.Email, 1));
+proto.service.HistoryEmailAdded.prototype.getEmail = function() {
+  return /** @type{?proto.service.Email} */ (
+    jspb.Message.getWrapperField(this, proto.service.Email, 1));
 };
 
 
 /**
- * @param {?proto.email.Email|undefined} value
- * @return {!proto.email.HistoryEmailAdded} returns this
+ * @param {?proto.service.Email|undefined} value
+ * @return {!proto.service.HistoryEmailAdded} returns this
 */
-proto.email.HistoryEmailAdded.prototype.setEmail = function(value) {
+proto.service.HistoryEmailAdded.prototype.setEmail = function(value) {
   return jspb.Message.setWrapperField(this, 1, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.email.HistoryEmailAdded} returns this
+ * @return {!proto.service.HistoryEmailAdded} returns this
  */
-proto.email.HistoryEmailAdded.prototype.clearEmail = function() {
+proto.service.HistoryEmailAdded.prototype.clearEmail = function() {
   return this.setEmail(undefined);
 };
 
@@ -4347,7 +4347,7 @@ proto.email.HistoryEmailAdded.prototype.clearEmail = function() {
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.email.HistoryEmailAdded.prototype.hasEmail = function() {
+proto.service.HistoryEmailAdded.prototype.hasEmail = function() {
   return jspb.Message.getField(this, 1) != null;
 };
 
@@ -4368,8 +4368,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.email.HistoryEmailDeleted.prototype.toObject = function(opt_includeInstance) {
-  return proto.email.HistoryEmailDeleted.toObject(opt_includeInstance, this);
+proto.service.HistoryEmailDeleted.prototype.toObject = function(opt_includeInstance) {
+  return proto.service.HistoryEmailDeleted.toObject(opt_includeInstance, this);
 };
 
 
@@ -4378,13 +4378,13 @@ proto.email.HistoryEmailDeleted.prototype.toObject = function(opt_includeInstanc
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.email.HistoryEmailDeleted} msg The msg instance to transform.
+ * @param {!proto.service.HistoryEmailDeleted} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.email.HistoryEmailDeleted.toObject = function(includeInstance, msg) {
+proto.service.HistoryEmailDeleted.toObject = function(includeInstance, msg) {
   var f, obj = {
-    email: (f = msg.getEmail()) && proto.email.Email.toObject(includeInstance, f)
+    email: (f = msg.getEmail()) && proto.service.Email.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -4398,23 +4398,23 @@ proto.email.HistoryEmailDeleted.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.email.HistoryEmailDeleted}
+ * @return {!proto.service.HistoryEmailDeleted}
  */
-proto.email.HistoryEmailDeleted.deserializeBinary = function(bytes) {
+proto.service.HistoryEmailDeleted.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.email.HistoryEmailDeleted;
-  return proto.email.HistoryEmailDeleted.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.service.HistoryEmailDeleted;
+  return proto.service.HistoryEmailDeleted.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.email.HistoryEmailDeleted} msg The message object to deserialize into.
+ * @param {!proto.service.HistoryEmailDeleted} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.email.HistoryEmailDeleted}
+ * @return {!proto.service.HistoryEmailDeleted}
  */
-proto.email.HistoryEmailDeleted.deserializeBinaryFromReader = function(msg, reader) {
+proto.service.HistoryEmailDeleted.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -4422,8 +4422,8 @@ proto.email.HistoryEmailDeleted.deserializeBinaryFromReader = function(msg, read
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = new proto.email.Email;
-      reader.readMessage(value,proto.email.Email.deserializeBinaryFromReader);
+      var value = new proto.service.Email;
+      reader.readMessage(value,proto.service.Email.deserializeBinaryFromReader);
       msg.setEmail(value);
       break;
     default:
@@ -4439,9 +4439,9 @@ proto.email.HistoryEmailDeleted.deserializeBinaryFromReader = function(msg, read
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.email.HistoryEmailDeleted.prototype.serializeBinary = function() {
+proto.service.HistoryEmailDeleted.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.email.HistoryEmailDeleted.serializeBinaryToWriter(this, writer);
+  proto.service.HistoryEmailDeleted.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -4449,18 +4449,18 @@ proto.email.HistoryEmailDeleted.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.email.HistoryEmailDeleted} message
+ * @param {!proto.service.HistoryEmailDeleted} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.email.HistoryEmailDeleted.serializeBinaryToWriter = function(message, writer) {
+proto.service.HistoryEmailDeleted.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getEmail();
   if (f != null) {
     writer.writeMessage(
       1,
       f,
-      proto.email.Email.serializeBinaryToWriter
+      proto.service.Email.serializeBinaryToWriter
     );
   }
 };
@@ -4468,28 +4468,28 @@ proto.email.HistoryEmailDeleted.serializeBinaryToWriter = function(message, writ
 
 /**
  * optional Email email = 1;
- * @return {?proto.email.Email}
+ * @return {?proto.service.Email}
  */
-proto.email.HistoryEmailDeleted.prototype.getEmail = function() {
-  return /** @type{?proto.email.Email} */ (
-    jspb.Message.getWrapperField(this, proto.email.Email, 1));
+proto.service.HistoryEmailDeleted.prototype.getEmail = function() {
+  return /** @type{?proto.service.Email} */ (
+    jspb.Message.getWrapperField(this, proto.service.Email, 1));
 };
 
 
 /**
- * @param {?proto.email.Email|undefined} value
- * @return {!proto.email.HistoryEmailDeleted} returns this
+ * @param {?proto.service.Email|undefined} value
+ * @return {!proto.service.HistoryEmailDeleted} returns this
 */
-proto.email.HistoryEmailDeleted.prototype.setEmail = function(value) {
+proto.service.HistoryEmailDeleted.prototype.setEmail = function(value) {
   return jspb.Message.setWrapperField(this, 1, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.email.HistoryEmailDeleted} returns this
+ * @return {!proto.service.HistoryEmailDeleted} returns this
  */
-proto.email.HistoryEmailDeleted.prototype.clearEmail = function() {
+proto.service.HistoryEmailDeleted.prototype.clearEmail = function() {
   return this.setEmail(undefined);
 };
 
@@ -4498,7 +4498,7 @@ proto.email.HistoryEmailDeleted.prototype.clearEmail = function() {
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.email.HistoryEmailDeleted.prototype.hasEmail = function() {
+proto.service.HistoryEmailDeleted.prototype.hasEmail = function() {
   return jspb.Message.getField(this, 1) != null;
 };
 
@@ -4509,7 +4509,7 @@ proto.email.HistoryEmailDeleted.prototype.hasEmail = function() {
  * @private {!Array<number>}
  * @const
  */
-proto.email.History.repeatedFields_ = [2,3,4,5,6];
+proto.service.History.repeatedFields_ = [2,3,4,5,6];
 
 
 
@@ -4526,8 +4526,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.email.History.prototype.toObject = function(opt_includeInstance) {
-  return proto.email.History.toObject(opt_includeInstance, this);
+proto.service.History.prototype.toObject = function(opt_includeInstance) {
+  return proto.service.History.toObject(opt_includeInstance, this);
 };
 
 
@@ -4536,23 +4536,23 @@ proto.email.History.prototype.toObject = function(opt_includeInstance) {
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.email.History} msg The msg instance to transform.
+ * @param {!proto.service.History} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.email.History.toObject = function(includeInstance, msg) {
+proto.service.History.toObject = function(includeInstance, msg) {
   var f, obj = {
     id: jspb.Message.getFieldWithDefault(msg, 1, 0),
     emailsList: jspb.Message.toObjectList(msg.getEmailsList(),
-    proto.email.Email.toObject, includeInstance),
+    proto.service.Email.toObject, includeInstance),
     labelAddedList: jspb.Message.toObjectList(msg.getLabelAddedList(),
-    proto.email.HistoryLabelAdded.toObject, includeInstance),
+    proto.service.HistoryLabelAdded.toObject, includeInstance),
     labelRemovedList: jspb.Message.toObjectList(msg.getLabelRemovedList(),
-    proto.email.HistoryLabelRemoved.toObject, includeInstance),
+    proto.service.HistoryLabelRemoved.toObject, includeInstance),
     emailAddedList: jspb.Message.toObjectList(msg.getEmailAddedList(),
-    proto.email.HistoryEmailAdded.toObject, includeInstance),
+    proto.service.HistoryEmailAdded.toObject, includeInstance),
     emailDeletedList: jspb.Message.toObjectList(msg.getEmailDeletedList(),
-    proto.email.HistoryEmailDeleted.toObject, includeInstance)
+    proto.service.HistoryEmailDeleted.toObject, includeInstance)
   };
 
   if (includeInstance) {
@@ -4566,23 +4566,23 @@ proto.email.History.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.email.History}
+ * @return {!proto.service.History}
  */
-proto.email.History.deserializeBinary = function(bytes) {
+proto.service.History.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.email.History;
-  return proto.email.History.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.service.History;
+  return proto.service.History.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.email.History} msg The message object to deserialize into.
+ * @param {!proto.service.History} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.email.History}
+ * @return {!proto.service.History}
  */
-proto.email.History.deserializeBinaryFromReader = function(msg, reader) {
+proto.service.History.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -4594,28 +4594,28 @@ proto.email.History.deserializeBinaryFromReader = function(msg, reader) {
       msg.setId(value);
       break;
     case 2:
-      var value = new proto.email.Email;
-      reader.readMessage(value,proto.email.Email.deserializeBinaryFromReader);
+      var value = new proto.service.Email;
+      reader.readMessage(value,proto.service.Email.deserializeBinaryFromReader);
       msg.addEmails(value);
       break;
     case 3:
-      var value = new proto.email.HistoryLabelAdded;
-      reader.readMessage(value,proto.email.HistoryLabelAdded.deserializeBinaryFromReader);
+      var value = new proto.service.HistoryLabelAdded;
+      reader.readMessage(value,proto.service.HistoryLabelAdded.deserializeBinaryFromReader);
       msg.addLabelAdded(value);
       break;
     case 4:
-      var value = new proto.email.HistoryLabelRemoved;
-      reader.readMessage(value,proto.email.HistoryLabelRemoved.deserializeBinaryFromReader);
+      var value = new proto.service.HistoryLabelRemoved;
+      reader.readMessage(value,proto.service.HistoryLabelRemoved.deserializeBinaryFromReader);
       msg.addLabelRemoved(value);
       break;
     case 5:
-      var value = new proto.email.HistoryEmailAdded;
-      reader.readMessage(value,proto.email.HistoryEmailAdded.deserializeBinaryFromReader);
+      var value = new proto.service.HistoryEmailAdded;
+      reader.readMessage(value,proto.service.HistoryEmailAdded.deserializeBinaryFromReader);
       msg.addEmailAdded(value);
       break;
     case 6:
-      var value = new proto.email.HistoryEmailDeleted;
-      reader.readMessage(value,proto.email.HistoryEmailDeleted.deserializeBinaryFromReader);
+      var value = new proto.service.HistoryEmailDeleted;
+      reader.readMessage(value,proto.service.HistoryEmailDeleted.deserializeBinaryFromReader);
       msg.addEmailDeleted(value);
       break;
     default:
@@ -4631,9 +4631,9 @@ proto.email.History.deserializeBinaryFromReader = function(msg, reader) {
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.email.History.prototype.serializeBinary = function() {
+proto.service.History.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.email.History.serializeBinaryToWriter(this, writer);
+  proto.service.History.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -4641,11 +4641,11 @@ proto.email.History.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.email.History} message
+ * @param {!proto.service.History} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.email.History.serializeBinaryToWriter = function(message, writer) {
+proto.service.History.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getId();
   if (f !== 0) {
@@ -4659,7 +4659,7 @@ proto.email.History.serializeBinaryToWriter = function(message, writer) {
     writer.writeRepeatedMessage(
       2,
       f,
-      proto.email.Email.serializeBinaryToWriter
+      proto.service.Email.serializeBinaryToWriter
     );
   }
   f = message.getLabelAddedList();
@@ -4667,7 +4667,7 @@ proto.email.History.serializeBinaryToWriter = function(message, writer) {
     writer.writeRepeatedMessage(
       3,
       f,
-      proto.email.HistoryLabelAdded.serializeBinaryToWriter
+      proto.service.HistoryLabelAdded.serializeBinaryToWriter
     );
   }
   f = message.getLabelRemovedList();
@@ -4675,7 +4675,7 @@ proto.email.History.serializeBinaryToWriter = function(message, writer) {
     writer.writeRepeatedMessage(
       4,
       f,
-      proto.email.HistoryLabelRemoved.serializeBinaryToWriter
+      proto.service.HistoryLabelRemoved.serializeBinaryToWriter
     );
   }
   f = message.getEmailAddedList();
@@ -4683,7 +4683,7 @@ proto.email.History.serializeBinaryToWriter = function(message, writer) {
     writer.writeRepeatedMessage(
       5,
       f,
-      proto.email.HistoryEmailAdded.serializeBinaryToWriter
+      proto.service.HistoryEmailAdded.serializeBinaryToWriter
     );
   }
   f = message.getEmailDeletedList();
@@ -4691,7 +4691,7 @@ proto.email.History.serializeBinaryToWriter = function(message, writer) {
     writer.writeRepeatedMessage(
       6,
       f,
-      proto.email.HistoryEmailDeleted.serializeBinaryToWriter
+      proto.service.HistoryEmailDeleted.serializeBinaryToWriter
     );
   }
 };
@@ -4701,206 +4701,206 @@ proto.email.History.serializeBinaryToWriter = function(message, writer) {
  * optional uint32 id = 1;
  * @return {number}
  */
-proto.email.History.prototype.getId = function() {
+proto.service.History.prototype.getId = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.email.History} returns this
+ * @return {!proto.service.History} returns this
  */
-proto.email.History.prototype.setId = function(value) {
+proto.service.History.prototype.setId = function(value) {
   return jspb.Message.setProto3IntField(this, 1, value);
 };
 
 
 /**
  * repeated Email emails = 2;
- * @return {!Array<!proto.email.Email>}
+ * @return {!Array<!proto.service.Email>}
  */
-proto.email.History.prototype.getEmailsList = function() {
-  return /** @type{!Array<!proto.email.Email>} */ (
-    jspb.Message.getRepeatedWrapperField(this, proto.email.Email, 2));
+proto.service.History.prototype.getEmailsList = function() {
+  return /** @type{!Array<!proto.service.Email>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.service.Email, 2));
 };
 
 
 /**
- * @param {!Array<!proto.email.Email>} value
- * @return {!proto.email.History} returns this
+ * @param {!Array<!proto.service.Email>} value
+ * @return {!proto.service.History} returns this
 */
-proto.email.History.prototype.setEmailsList = function(value) {
+proto.service.History.prototype.setEmailsList = function(value) {
   return jspb.Message.setRepeatedWrapperField(this, 2, value);
 };
 
 
 /**
- * @param {!proto.email.Email=} opt_value
+ * @param {!proto.service.Email=} opt_value
  * @param {number=} opt_index
- * @return {!proto.email.Email}
+ * @return {!proto.service.Email}
  */
-proto.email.History.prototype.addEmails = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 2, opt_value, proto.email.Email, opt_index);
+proto.service.History.prototype.addEmails = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 2, opt_value, proto.service.Email, opt_index);
 };
 
 
 /**
  * Clears the list making it empty but non-null.
- * @return {!proto.email.History} returns this
+ * @return {!proto.service.History} returns this
  */
-proto.email.History.prototype.clearEmailsList = function() {
+proto.service.History.prototype.clearEmailsList = function() {
   return this.setEmailsList([]);
 };
 
 
 /**
  * repeated HistoryLabelAdded label_added = 3;
- * @return {!Array<!proto.email.HistoryLabelAdded>}
+ * @return {!Array<!proto.service.HistoryLabelAdded>}
  */
-proto.email.History.prototype.getLabelAddedList = function() {
-  return /** @type{!Array<!proto.email.HistoryLabelAdded>} */ (
-    jspb.Message.getRepeatedWrapperField(this, proto.email.HistoryLabelAdded, 3));
+proto.service.History.prototype.getLabelAddedList = function() {
+  return /** @type{!Array<!proto.service.HistoryLabelAdded>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.service.HistoryLabelAdded, 3));
 };
 
 
 /**
- * @param {!Array<!proto.email.HistoryLabelAdded>} value
- * @return {!proto.email.History} returns this
+ * @param {!Array<!proto.service.HistoryLabelAdded>} value
+ * @return {!proto.service.History} returns this
 */
-proto.email.History.prototype.setLabelAddedList = function(value) {
+proto.service.History.prototype.setLabelAddedList = function(value) {
   return jspb.Message.setRepeatedWrapperField(this, 3, value);
 };
 
 
 /**
- * @param {!proto.email.HistoryLabelAdded=} opt_value
+ * @param {!proto.service.HistoryLabelAdded=} opt_value
  * @param {number=} opt_index
- * @return {!proto.email.HistoryLabelAdded}
+ * @return {!proto.service.HistoryLabelAdded}
  */
-proto.email.History.prototype.addLabelAdded = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 3, opt_value, proto.email.HistoryLabelAdded, opt_index);
+proto.service.History.prototype.addLabelAdded = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 3, opt_value, proto.service.HistoryLabelAdded, opt_index);
 };
 
 
 /**
  * Clears the list making it empty but non-null.
- * @return {!proto.email.History} returns this
+ * @return {!proto.service.History} returns this
  */
-proto.email.History.prototype.clearLabelAddedList = function() {
+proto.service.History.prototype.clearLabelAddedList = function() {
   return this.setLabelAddedList([]);
 };
 
 
 /**
  * repeated HistoryLabelRemoved label_removed = 4;
- * @return {!Array<!proto.email.HistoryLabelRemoved>}
+ * @return {!Array<!proto.service.HistoryLabelRemoved>}
  */
-proto.email.History.prototype.getLabelRemovedList = function() {
-  return /** @type{!Array<!proto.email.HistoryLabelRemoved>} */ (
-    jspb.Message.getRepeatedWrapperField(this, proto.email.HistoryLabelRemoved, 4));
+proto.service.History.prototype.getLabelRemovedList = function() {
+  return /** @type{!Array<!proto.service.HistoryLabelRemoved>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.service.HistoryLabelRemoved, 4));
 };
 
 
 /**
- * @param {!Array<!proto.email.HistoryLabelRemoved>} value
- * @return {!proto.email.History} returns this
+ * @param {!Array<!proto.service.HistoryLabelRemoved>} value
+ * @return {!proto.service.History} returns this
 */
-proto.email.History.prototype.setLabelRemovedList = function(value) {
+proto.service.History.prototype.setLabelRemovedList = function(value) {
   return jspb.Message.setRepeatedWrapperField(this, 4, value);
 };
 
 
 /**
- * @param {!proto.email.HistoryLabelRemoved=} opt_value
+ * @param {!proto.service.HistoryLabelRemoved=} opt_value
  * @param {number=} opt_index
- * @return {!proto.email.HistoryLabelRemoved}
+ * @return {!proto.service.HistoryLabelRemoved}
  */
-proto.email.History.prototype.addLabelRemoved = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 4, opt_value, proto.email.HistoryLabelRemoved, opt_index);
+proto.service.History.prototype.addLabelRemoved = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 4, opt_value, proto.service.HistoryLabelRemoved, opt_index);
 };
 
 
 /**
  * Clears the list making it empty but non-null.
- * @return {!proto.email.History} returns this
+ * @return {!proto.service.History} returns this
  */
-proto.email.History.prototype.clearLabelRemovedList = function() {
+proto.service.History.prototype.clearLabelRemovedList = function() {
   return this.setLabelRemovedList([]);
 };
 
 
 /**
  * repeated HistoryEmailAdded email_added = 5;
- * @return {!Array<!proto.email.HistoryEmailAdded>}
+ * @return {!Array<!proto.service.HistoryEmailAdded>}
  */
-proto.email.History.prototype.getEmailAddedList = function() {
-  return /** @type{!Array<!proto.email.HistoryEmailAdded>} */ (
-    jspb.Message.getRepeatedWrapperField(this, proto.email.HistoryEmailAdded, 5));
+proto.service.History.prototype.getEmailAddedList = function() {
+  return /** @type{!Array<!proto.service.HistoryEmailAdded>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.service.HistoryEmailAdded, 5));
 };
 
 
 /**
- * @param {!Array<!proto.email.HistoryEmailAdded>} value
- * @return {!proto.email.History} returns this
+ * @param {!Array<!proto.service.HistoryEmailAdded>} value
+ * @return {!proto.service.History} returns this
 */
-proto.email.History.prototype.setEmailAddedList = function(value) {
+proto.service.History.prototype.setEmailAddedList = function(value) {
   return jspb.Message.setRepeatedWrapperField(this, 5, value);
 };
 
 
 /**
- * @param {!proto.email.HistoryEmailAdded=} opt_value
+ * @param {!proto.service.HistoryEmailAdded=} opt_value
  * @param {number=} opt_index
- * @return {!proto.email.HistoryEmailAdded}
+ * @return {!proto.service.HistoryEmailAdded}
  */
-proto.email.History.prototype.addEmailAdded = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 5, opt_value, proto.email.HistoryEmailAdded, opt_index);
+proto.service.History.prototype.addEmailAdded = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 5, opt_value, proto.service.HistoryEmailAdded, opt_index);
 };
 
 
 /**
  * Clears the list making it empty but non-null.
- * @return {!proto.email.History} returns this
+ * @return {!proto.service.History} returns this
  */
-proto.email.History.prototype.clearEmailAddedList = function() {
+proto.service.History.prototype.clearEmailAddedList = function() {
   return this.setEmailAddedList([]);
 };
 
 
 /**
  * repeated HistoryEmailDeleted email_deleted = 6;
- * @return {!Array<!proto.email.HistoryEmailDeleted>}
+ * @return {!Array<!proto.service.HistoryEmailDeleted>}
  */
-proto.email.History.prototype.getEmailDeletedList = function() {
-  return /** @type{!Array<!proto.email.HistoryEmailDeleted>} */ (
-    jspb.Message.getRepeatedWrapperField(this, proto.email.HistoryEmailDeleted, 6));
+proto.service.History.prototype.getEmailDeletedList = function() {
+  return /** @type{!Array<!proto.service.HistoryEmailDeleted>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.service.HistoryEmailDeleted, 6));
 };
 
 
 /**
- * @param {!Array<!proto.email.HistoryEmailDeleted>} value
- * @return {!proto.email.History} returns this
+ * @param {!Array<!proto.service.HistoryEmailDeleted>} value
+ * @return {!proto.service.History} returns this
 */
-proto.email.History.prototype.setEmailDeletedList = function(value) {
+proto.service.History.prototype.setEmailDeletedList = function(value) {
   return jspb.Message.setRepeatedWrapperField(this, 6, value);
 };
 
 
 /**
- * @param {!proto.email.HistoryEmailDeleted=} opt_value
+ * @param {!proto.service.HistoryEmailDeleted=} opt_value
  * @param {number=} opt_index
- * @return {!proto.email.HistoryEmailDeleted}
+ * @return {!proto.service.HistoryEmailDeleted}
  */
-proto.email.History.prototype.addEmailDeleted = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 6, opt_value, proto.email.HistoryEmailDeleted, opt_index);
+proto.service.History.prototype.addEmailDeleted = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 6, opt_value, proto.service.HistoryEmailDeleted, opt_index);
 };
 
 
 /**
  * Clears the list making it empty but non-null.
- * @return {!proto.email.History} returns this
+ * @return {!proto.service.History} returns this
  */
-proto.email.History.prototype.clearEmailDeletedList = function() {
+proto.service.History.prototype.clearEmailDeletedList = function() {
   return this.setEmailDeletedList([]);
 };
 
@@ -4921,8 +4921,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.email.Profile.prototype.toObject = function(opt_includeInstance) {
-  return proto.email.Profile.toObject(opt_includeInstance, this);
+proto.service.Profile.prototype.toObject = function(opt_includeInstance) {
+  return proto.service.Profile.toObject(opt_includeInstance, this);
 };
 
 
@@ -4931,11 +4931,11 @@ proto.email.Profile.prototype.toObject = function(opt_includeInstance) {
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.email.Profile} msg The msg instance to transform.
+ * @param {!proto.service.Profile} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.email.Profile.toObject = function(includeInstance, msg) {
+proto.service.Profile.toObject = function(includeInstance, msg) {
   var f, obj = {
     emailaddress: jspb.Message.getFieldWithDefault(msg, 1, ""),
     historyId: jspb.Message.getFieldWithDefault(msg, 2, ""),
@@ -4954,23 +4954,23 @@ proto.email.Profile.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.email.Profile}
+ * @return {!proto.service.Profile}
  */
-proto.email.Profile.deserializeBinary = function(bytes) {
+proto.service.Profile.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.email.Profile;
-  return proto.email.Profile.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.service.Profile;
+  return proto.service.Profile.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.email.Profile} msg The message object to deserialize into.
+ * @param {!proto.service.Profile} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.email.Profile}
+ * @return {!proto.service.Profile}
  */
-proto.email.Profile.deserializeBinaryFromReader = function(msg, reader) {
+proto.service.Profile.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -5006,9 +5006,9 @@ proto.email.Profile.deserializeBinaryFromReader = function(msg, reader) {
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.email.Profile.prototype.serializeBinary = function() {
+proto.service.Profile.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.email.Profile.serializeBinaryToWriter(this, writer);
+  proto.service.Profile.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -5016,11 +5016,11 @@ proto.email.Profile.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.email.Profile} message
+ * @param {!proto.service.Profile} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.email.Profile.serializeBinaryToWriter = function(message, writer) {
+proto.service.Profile.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getEmailaddress();
   if (f.length > 0) {
@@ -5057,16 +5057,16 @@ proto.email.Profile.serializeBinaryToWriter = function(message, writer) {
  * optional string emailAddress = 1;
  * @return {string}
  */
-proto.email.Profile.prototype.getEmailaddress = function() {
+proto.service.Profile.prototype.getEmailaddress = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.email.Profile} returns this
+ * @return {!proto.service.Profile} returns this
  */
-proto.email.Profile.prototype.setEmailaddress = function(value) {
+proto.service.Profile.prototype.setEmailaddress = function(value) {
   return jspb.Message.setProto3StringField(this, 1, value);
 };
 
@@ -5075,16 +5075,16 @@ proto.email.Profile.prototype.setEmailaddress = function(value) {
  * optional string history_id = 2;
  * @return {string}
  */
-proto.email.Profile.prototype.getHistoryId = function() {
+proto.service.Profile.prototype.getHistoryId = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.email.Profile} returns this
+ * @return {!proto.service.Profile} returns this
  */
-proto.email.Profile.prototype.setHistoryId = function(value) {
+proto.service.Profile.prototype.setHistoryId = function(value) {
   return jspb.Message.setProto3StringField(this, 2, value);
 };
 
@@ -5093,16 +5093,16 @@ proto.email.Profile.prototype.setHistoryId = function(value) {
  * optional int32 emails_total = 3;
  * @return {number}
  */
-proto.email.Profile.prototype.getEmailsTotal = function() {
+proto.service.Profile.prototype.getEmailsTotal = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.email.Profile} returns this
+ * @return {!proto.service.Profile} returns this
  */
-proto.email.Profile.prototype.setEmailsTotal = function(value) {
+proto.service.Profile.prototype.setEmailsTotal = function(value) {
   return jspb.Message.setProto3IntField(this, 3, value);
 };
 
@@ -5111,16 +5111,16 @@ proto.email.Profile.prototype.setEmailsTotal = function(value) {
  * optional int32 threads_total = 4;
  * @return {number}
  */
-proto.email.Profile.prototype.getThreadsTotal = function() {
+proto.service.Profile.prototype.getThreadsTotal = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 4, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.email.Profile} returns this
+ * @return {!proto.service.Profile} returns this
  */
-proto.email.Profile.prototype.setThreadsTotal = function(value) {
+proto.service.Profile.prototype.setThreadsTotal = function(value) {
   return jspb.Message.setProto3IntField(this, 4, value);
 };
 
@@ -5141,8 +5141,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.email.GetDraftRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.email.GetDraftRequest.toObject(opt_includeInstance, this);
+proto.service.GetDraftRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.service.GetDraftRequest.toObject(opt_includeInstance, this);
 };
 
 
@@ -5151,11 +5151,11 @@ proto.email.GetDraftRequest.prototype.toObject = function(opt_includeInstance) {
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.email.GetDraftRequest} msg The msg instance to transform.
+ * @param {!proto.service.GetDraftRequest} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.email.GetDraftRequest.toObject = function(includeInstance, msg) {
+proto.service.GetDraftRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
     draftId: jspb.Message.getFieldWithDefault(msg, 1, "")
   };
@@ -5171,23 +5171,23 @@ proto.email.GetDraftRequest.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.email.GetDraftRequest}
+ * @return {!proto.service.GetDraftRequest}
  */
-proto.email.GetDraftRequest.deserializeBinary = function(bytes) {
+proto.service.GetDraftRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.email.GetDraftRequest;
-  return proto.email.GetDraftRequest.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.service.GetDraftRequest;
+  return proto.service.GetDraftRequest.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.email.GetDraftRequest} msg The message object to deserialize into.
+ * @param {!proto.service.GetDraftRequest} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.email.GetDraftRequest}
+ * @return {!proto.service.GetDraftRequest}
  */
-proto.email.GetDraftRequest.deserializeBinaryFromReader = function(msg, reader) {
+proto.service.GetDraftRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -5211,9 +5211,9 @@ proto.email.GetDraftRequest.deserializeBinaryFromReader = function(msg, reader) 
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.email.GetDraftRequest.prototype.serializeBinary = function() {
+proto.service.GetDraftRequest.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.email.GetDraftRequest.serializeBinaryToWriter(this, writer);
+  proto.service.GetDraftRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -5221,11 +5221,11 @@ proto.email.GetDraftRequest.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.email.GetDraftRequest} message
+ * @param {!proto.service.GetDraftRequest} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.email.GetDraftRequest.serializeBinaryToWriter = function(message, writer) {
+proto.service.GetDraftRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getDraftId();
   if (f.length > 0) {
@@ -5241,16 +5241,16 @@ proto.email.GetDraftRequest.serializeBinaryToWriter = function(message, writer) 
  * optional string draft_id = 1;
  * @return {string}
  */
-proto.email.GetDraftRequest.prototype.getDraftId = function() {
+proto.service.GetDraftRequest.prototype.getDraftId = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.email.GetDraftRequest} returns this
+ * @return {!proto.service.GetDraftRequest} returns this
  */
-proto.email.GetDraftRequest.prototype.setDraftId = function(value) {
+proto.service.GetDraftRequest.prototype.setDraftId = function(value) {
   return jspb.Message.setProto3StringField(this, 1, value);
 };
 
@@ -5271,8 +5271,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.email.ListDraftsRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.email.ListDraftsRequest.toObject(opt_includeInstance, this);
+proto.service.ListDraftsRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.service.ListDraftsRequest.toObject(opt_includeInstance, this);
 };
 
 
@@ -5281,11 +5281,11 @@ proto.email.ListDraftsRequest.prototype.toObject = function(opt_includeInstance)
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.email.ListDraftsRequest} msg The msg instance to transform.
+ * @param {!proto.service.ListDraftsRequest} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.email.ListDraftsRequest.toObject = function(includeInstance, msg) {
+proto.service.ListDraftsRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
     pageToken: jspb.Message.getFieldWithDefault(msg, 1, ""),
     pageSize: jspb.Message.getFieldWithDefault(msg, 2, 0),
@@ -5303,23 +5303,23 @@ proto.email.ListDraftsRequest.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.email.ListDraftsRequest}
+ * @return {!proto.service.ListDraftsRequest}
  */
-proto.email.ListDraftsRequest.deserializeBinary = function(bytes) {
+proto.service.ListDraftsRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.email.ListDraftsRequest;
-  return proto.email.ListDraftsRequest.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.service.ListDraftsRequest;
+  return proto.service.ListDraftsRequest.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.email.ListDraftsRequest} msg The message object to deserialize into.
+ * @param {!proto.service.ListDraftsRequest} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.email.ListDraftsRequest}
+ * @return {!proto.service.ListDraftsRequest}
  */
-proto.email.ListDraftsRequest.deserializeBinaryFromReader = function(msg, reader) {
+proto.service.ListDraftsRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -5351,9 +5351,9 @@ proto.email.ListDraftsRequest.deserializeBinaryFromReader = function(msg, reader
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.email.ListDraftsRequest.prototype.serializeBinary = function() {
+proto.service.ListDraftsRequest.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.email.ListDraftsRequest.serializeBinaryToWriter(this, writer);
+  proto.service.ListDraftsRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -5361,11 +5361,11 @@ proto.email.ListDraftsRequest.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.email.ListDraftsRequest} message
+ * @param {!proto.service.ListDraftsRequest} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.email.ListDraftsRequest.serializeBinaryToWriter = function(message, writer) {
+proto.service.ListDraftsRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getPageToken();
   if (f.length > 0) {
@@ -5395,16 +5395,16 @@ proto.email.ListDraftsRequest.serializeBinaryToWriter = function(message, writer
  * optional string page_token = 1;
  * @return {string}
  */
-proto.email.ListDraftsRequest.prototype.getPageToken = function() {
+proto.service.ListDraftsRequest.prototype.getPageToken = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.email.ListDraftsRequest} returns this
+ * @return {!proto.service.ListDraftsRequest} returns this
  */
-proto.email.ListDraftsRequest.prototype.setPageToken = function(value) {
+proto.service.ListDraftsRequest.prototype.setPageToken = function(value) {
   return jspb.Message.setProto3StringField(this, 1, value);
 };
 
@@ -5413,16 +5413,16 @@ proto.email.ListDraftsRequest.prototype.setPageToken = function(value) {
  * optional uint32 page_size = 2;
  * @return {number}
  */
-proto.email.ListDraftsRequest.prototype.getPageSize = function() {
+proto.service.ListDraftsRequest.prototype.getPageSize = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 2, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.email.ListDraftsRequest} returns this
+ * @return {!proto.service.ListDraftsRequest} returns this
  */
-proto.email.ListDraftsRequest.prototype.setPageSize = function(value) {
+proto.service.ListDraftsRequest.prototype.setPageSize = function(value) {
   return jspb.Message.setProto3IntField(this, 2, value);
 };
 
@@ -5431,16 +5431,16 @@ proto.email.ListDraftsRequest.prototype.setPageSize = function(value) {
  * optional string query = 3;
  * @return {string}
  */
-proto.email.ListDraftsRequest.prototype.getQuery = function() {
+proto.service.ListDraftsRequest.prototype.getQuery = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.email.ListDraftsRequest} returns this
+ * @return {!proto.service.ListDraftsRequest} returns this
  */
-proto.email.ListDraftsRequest.prototype.setQuery = function(value) {
+proto.service.ListDraftsRequest.prototype.setQuery = function(value) {
   return jspb.Message.setProto3StringField(this, 3, value);
 };
 
@@ -5461,8 +5461,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.email.CreateDraftRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.email.CreateDraftRequest.toObject(opt_includeInstance, this);
+proto.service.CreateDraftRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.service.CreateDraftRequest.toObject(opt_includeInstance, this);
 };
 
 
@@ -5471,13 +5471,13 @@ proto.email.CreateDraftRequest.prototype.toObject = function(opt_includeInstance
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.email.CreateDraftRequest} msg The msg instance to transform.
+ * @param {!proto.service.CreateDraftRequest} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.email.CreateDraftRequest.toObject = function(includeInstance, msg) {
+proto.service.CreateDraftRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-    draft: (f = msg.getDraft()) && proto.email.Draft.toObject(includeInstance, f)
+    draft: (f = msg.getDraft()) && proto.service.Draft.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -5491,23 +5491,23 @@ proto.email.CreateDraftRequest.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.email.CreateDraftRequest}
+ * @return {!proto.service.CreateDraftRequest}
  */
-proto.email.CreateDraftRequest.deserializeBinary = function(bytes) {
+proto.service.CreateDraftRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.email.CreateDraftRequest;
-  return proto.email.CreateDraftRequest.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.service.CreateDraftRequest;
+  return proto.service.CreateDraftRequest.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.email.CreateDraftRequest} msg The message object to deserialize into.
+ * @param {!proto.service.CreateDraftRequest} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.email.CreateDraftRequest}
+ * @return {!proto.service.CreateDraftRequest}
  */
-proto.email.CreateDraftRequest.deserializeBinaryFromReader = function(msg, reader) {
+proto.service.CreateDraftRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -5515,8 +5515,8 @@ proto.email.CreateDraftRequest.deserializeBinaryFromReader = function(msg, reade
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = new proto.email.Draft;
-      reader.readMessage(value,proto.email.Draft.deserializeBinaryFromReader);
+      var value = new proto.service.Draft;
+      reader.readMessage(value,proto.service.Draft.deserializeBinaryFromReader);
       msg.setDraft(value);
       break;
     default:
@@ -5532,9 +5532,9 @@ proto.email.CreateDraftRequest.deserializeBinaryFromReader = function(msg, reade
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.email.CreateDraftRequest.prototype.serializeBinary = function() {
+proto.service.CreateDraftRequest.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.email.CreateDraftRequest.serializeBinaryToWriter(this, writer);
+  proto.service.CreateDraftRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -5542,18 +5542,18 @@ proto.email.CreateDraftRequest.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.email.CreateDraftRequest} message
+ * @param {!proto.service.CreateDraftRequest} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.email.CreateDraftRequest.serializeBinaryToWriter = function(message, writer) {
+proto.service.CreateDraftRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getDraft();
   if (f != null) {
     writer.writeMessage(
       1,
       f,
-      proto.email.Draft.serializeBinaryToWriter
+      proto.service.Draft.serializeBinaryToWriter
     );
   }
 };
@@ -5561,28 +5561,28 @@ proto.email.CreateDraftRequest.serializeBinaryToWriter = function(message, write
 
 /**
  * optional Draft draft = 1;
- * @return {?proto.email.Draft}
+ * @return {?proto.service.Draft}
  */
-proto.email.CreateDraftRequest.prototype.getDraft = function() {
-  return /** @type{?proto.email.Draft} */ (
-    jspb.Message.getWrapperField(this, proto.email.Draft, 1));
+proto.service.CreateDraftRequest.prototype.getDraft = function() {
+  return /** @type{?proto.service.Draft} */ (
+    jspb.Message.getWrapperField(this, proto.service.Draft, 1));
 };
 
 
 /**
- * @param {?proto.email.Draft|undefined} value
- * @return {!proto.email.CreateDraftRequest} returns this
+ * @param {?proto.service.Draft|undefined} value
+ * @return {!proto.service.CreateDraftRequest} returns this
 */
-proto.email.CreateDraftRequest.prototype.setDraft = function(value) {
+proto.service.CreateDraftRequest.prototype.setDraft = function(value) {
   return jspb.Message.setWrapperField(this, 1, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.email.CreateDraftRequest} returns this
+ * @return {!proto.service.CreateDraftRequest} returns this
  */
-proto.email.CreateDraftRequest.prototype.clearDraft = function() {
+proto.service.CreateDraftRequest.prototype.clearDraft = function() {
   return this.setDraft(undefined);
 };
 
@@ -5591,7 +5591,7 @@ proto.email.CreateDraftRequest.prototype.clearDraft = function() {
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.email.CreateDraftRequest.prototype.hasDraft = function() {
+proto.service.CreateDraftRequest.prototype.hasDraft = function() {
   return jspb.Message.getField(this, 1) != null;
 };
 
@@ -5612,8 +5612,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.email.UpdateDraftRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.email.UpdateDraftRequest.toObject(opt_includeInstance, this);
+proto.service.UpdateDraftRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.service.UpdateDraftRequest.toObject(opt_includeInstance, this);
 };
 
 
@@ -5622,13 +5622,13 @@ proto.email.UpdateDraftRequest.prototype.toObject = function(opt_includeInstance
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.email.UpdateDraftRequest} msg The msg instance to transform.
+ * @param {!proto.service.UpdateDraftRequest} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.email.UpdateDraftRequest.toObject = function(includeInstance, msg) {
+proto.service.UpdateDraftRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-    draft: (f = msg.getDraft()) && proto.email.Draft.toObject(includeInstance, f)
+    draft: (f = msg.getDraft()) && proto.service.Draft.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -5642,23 +5642,23 @@ proto.email.UpdateDraftRequest.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.email.UpdateDraftRequest}
+ * @return {!proto.service.UpdateDraftRequest}
  */
-proto.email.UpdateDraftRequest.deserializeBinary = function(bytes) {
+proto.service.UpdateDraftRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.email.UpdateDraftRequest;
-  return proto.email.UpdateDraftRequest.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.service.UpdateDraftRequest;
+  return proto.service.UpdateDraftRequest.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.email.UpdateDraftRequest} msg The message object to deserialize into.
+ * @param {!proto.service.UpdateDraftRequest} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.email.UpdateDraftRequest}
+ * @return {!proto.service.UpdateDraftRequest}
  */
-proto.email.UpdateDraftRequest.deserializeBinaryFromReader = function(msg, reader) {
+proto.service.UpdateDraftRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -5666,8 +5666,8 @@ proto.email.UpdateDraftRequest.deserializeBinaryFromReader = function(msg, reade
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = new proto.email.Draft;
-      reader.readMessage(value,proto.email.Draft.deserializeBinaryFromReader);
+      var value = new proto.service.Draft;
+      reader.readMessage(value,proto.service.Draft.deserializeBinaryFromReader);
       msg.setDraft(value);
       break;
     default:
@@ -5683,9 +5683,9 @@ proto.email.UpdateDraftRequest.deserializeBinaryFromReader = function(msg, reade
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.email.UpdateDraftRequest.prototype.serializeBinary = function() {
+proto.service.UpdateDraftRequest.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.email.UpdateDraftRequest.serializeBinaryToWriter(this, writer);
+  proto.service.UpdateDraftRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -5693,18 +5693,18 @@ proto.email.UpdateDraftRequest.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.email.UpdateDraftRequest} message
+ * @param {!proto.service.UpdateDraftRequest} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.email.UpdateDraftRequest.serializeBinaryToWriter = function(message, writer) {
+proto.service.UpdateDraftRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getDraft();
   if (f != null) {
     writer.writeMessage(
       1,
       f,
-      proto.email.Draft.serializeBinaryToWriter
+      proto.service.Draft.serializeBinaryToWriter
     );
   }
 };
@@ -5712,28 +5712,28 @@ proto.email.UpdateDraftRequest.serializeBinaryToWriter = function(message, write
 
 /**
  * optional Draft draft = 1;
- * @return {?proto.email.Draft}
+ * @return {?proto.service.Draft}
  */
-proto.email.UpdateDraftRequest.prototype.getDraft = function() {
-  return /** @type{?proto.email.Draft} */ (
-    jspb.Message.getWrapperField(this, proto.email.Draft, 1));
+proto.service.UpdateDraftRequest.prototype.getDraft = function() {
+  return /** @type{?proto.service.Draft} */ (
+    jspb.Message.getWrapperField(this, proto.service.Draft, 1));
 };
 
 
 /**
- * @param {?proto.email.Draft|undefined} value
- * @return {!proto.email.UpdateDraftRequest} returns this
+ * @param {?proto.service.Draft|undefined} value
+ * @return {!proto.service.UpdateDraftRequest} returns this
 */
-proto.email.UpdateDraftRequest.prototype.setDraft = function(value) {
+proto.service.UpdateDraftRequest.prototype.setDraft = function(value) {
   return jspb.Message.setWrapperField(this, 1, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.email.UpdateDraftRequest} returns this
+ * @return {!proto.service.UpdateDraftRequest} returns this
  */
-proto.email.UpdateDraftRequest.prototype.clearDraft = function() {
+proto.service.UpdateDraftRequest.prototype.clearDraft = function() {
   return this.setDraft(undefined);
 };
 
@@ -5742,7 +5742,7 @@ proto.email.UpdateDraftRequest.prototype.clearDraft = function() {
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.email.UpdateDraftRequest.prototype.hasDraft = function() {
+proto.service.UpdateDraftRequest.prototype.hasDraft = function() {
   return jspb.Message.getField(this, 1) != null;
 };
 
@@ -5763,8 +5763,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.email.DeleteDraftRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.email.DeleteDraftRequest.toObject(opt_includeInstance, this);
+proto.service.DeleteDraftRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.service.DeleteDraftRequest.toObject(opt_includeInstance, this);
 };
 
 
@@ -5773,11 +5773,11 @@ proto.email.DeleteDraftRequest.prototype.toObject = function(opt_includeInstance
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.email.DeleteDraftRequest} msg The msg instance to transform.
+ * @param {!proto.service.DeleteDraftRequest} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.email.DeleteDraftRequest.toObject = function(includeInstance, msg) {
+proto.service.DeleteDraftRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
     draftId: jspb.Message.getFieldWithDefault(msg, 1, "")
   };
@@ -5793,23 +5793,23 @@ proto.email.DeleteDraftRequest.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.email.DeleteDraftRequest}
+ * @return {!proto.service.DeleteDraftRequest}
  */
-proto.email.DeleteDraftRequest.deserializeBinary = function(bytes) {
+proto.service.DeleteDraftRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.email.DeleteDraftRequest;
-  return proto.email.DeleteDraftRequest.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.service.DeleteDraftRequest;
+  return proto.service.DeleteDraftRequest.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.email.DeleteDraftRequest} msg The message object to deserialize into.
+ * @param {!proto.service.DeleteDraftRequest} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.email.DeleteDraftRequest}
+ * @return {!proto.service.DeleteDraftRequest}
  */
-proto.email.DeleteDraftRequest.deserializeBinaryFromReader = function(msg, reader) {
+proto.service.DeleteDraftRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -5833,9 +5833,9 @@ proto.email.DeleteDraftRequest.deserializeBinaryFromReader = function(msg, reade
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.email.DeleteDraftRequest.prototype.serializeBinary = function() {
+proto.service.DeleteDraftRequest.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.email.DeleteDraftRequest.serializeBinaryToWriter(this, writer);
+  proto.service.DeleteDraftRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -5843,11 +5843,11 @@ proto.email.DeleteDraftRequest.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.email.DeleteDraftRequest} message
+ * @param {!proto.service.DeleteDraftRequest} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.email.DeleteDraftRequest.serializeBinaryToWriter = function(message, writer) {
+proto.service.DeleteDraftRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getDraftId();
   if (f.length > 0) {
@@ -5863,16 +5863,16 @@ proto.email.DeleteDraftRequest.serializeBinaryToWriter = function(message, write
  * optional string draft_id = 1;
  * @return {string}
  */
-proto.email.DeleteDraftRequest.prototype.getDraftId = function() {
+proto.service.DeleteDraftRequest.prototype.getDraftId = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.email.DeleteDraftRequest} returns this
+ * @return {!proto.service.DeleteDraftRequest} returns this
  */
-proto.email.DeleteDraftRequest.prototype.setDraftId = function(value) {
+proto.service.DeleteDraftRequest.prototype.setDraftId = function(value) {
   return jspb.Message.setProto3StringField(this, 1, value);
 };
 
@@ -5893,8 +5893,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.email.SendDraftRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.email.SendDraftRequest.toObject(opt_includeInstance, this);
+proto.service.SendDraftRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.service.SendDraftRequest.toObject(opt_includeInstance, this);
 };
 
 
@@ -5903,13 +5903,13 @@ proto.email.SendDraftRequest.prototype.toObject = function(opt_includeInstance) 
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.email.SendDraftRequest} msg The msg instance to transform.
+ * @param {!proto.service.SendDraftRequest} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.email.SendDraftRequest.toObject = function(includeInstance, msg) {
+proto.service.SendDraftRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-    draft: (f = msg.getDraft()) && proto.email.Draft.toObject(includeInstance, f)
+    draft: (f = msg.getDraft()) && proto.service.Draft.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -5923,23 +5923,23 @@ proto.email.SendDraftRequest.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.email.SendDraftRequest}
+ * @return {!proto.service.SendDraftRequest}
  */
-proto.email.SendDraftRequest.deserializeBinary = function(bytes) {
+proto.service.SendDraftRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.email.SendDraftRequest;
-  return proto.email.SendDraftRequest.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.service.SendDraftRequest;
+  return proto.service.SendDraftRequest.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.email.SendDraftRequest} msg The message object to deserialize into.
+ * @param {!proto.service.SendDraftRequest} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.email.SendDraftRequest}
+ * @return {!proto.service.SendDraftRequest}
  */
-proto.email.SendDraftRequest.deserializeBinaryFromReader = function(msg, reader) {
+proto.service.SendDraftRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -5947,8 +5947,8 @@ proto.email.SendDraftRequest.deserializeBinaryFromReader = function(msg, reader)
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = new proto.email.Draft;
-      reader.readMessage(value,proto.email.Draft.deserializeBinaryFromReader);
+      var value = new proto.service.Draft;
+      reader.readMessage(value,proto.service.Draft.deserializeBinaryFromReader);
       msg.setDraft(value);
       break;
     default:
@@ -5964,9 +5964,9 @@ proto.email.SendDraftRequest.deserializeBinaryFromReader = function(msg, reader)
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.email.SendDraftRequest.prototype.serializeBinary = function() {
+proto.service.SendDraftRequest.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.email.SendDraftRequest.serializeBinaryToWriter(this, writer);
+  proto.service.SendDraftRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -5974,18 +5974,18 @@ proto.email.SendDraftRequest.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.email.SendDraftRequest} message
+ * @param {!proto.service.SendDraftRequest} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.email.SendDraftRequest.serializeBinaryToWriter = function(message, writer) {
+proto.service.SendDraftRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getDraft();
   if (f != null) {
     writer.writeMessage(
       1,
       f,
-      proto.email.Draft.serializeBinaryToWriter
+      proto.service.Draft.serializeBinaryToWriter
     );
   }
 };
@@ -5993,28 +5993,28 @@ proto.email.SendDraftRequest.serializeBinaryToWriter = function(message, writer)
 
 /**
  * optional Draft draft = 1;
- * @return {?proto.email.Draft}
+ * @return {?proto.service.Draft}
  */
-proto.email.SendDraftRequest.prototype.getDraft = function() {
-  return /** @type{?proto.email.Draft} */ (
-    jspb.Message.getWrapperField(this, proto.email.Draft, 1));
+proto.service.SendDraftRequest.prototype.getDraft = function() {
+  return /** @type{?proto.service.Draft} */ (
+    jspb.Message.getWrapperField(this, proto.service.Draft, 1));
 };
 
 
 /**
- * @param {?proto.email.Draft|undefined} value
- * @return {!proto.email.SendDraftRequest} returns this
+ * @param {?proto.service.Draft|undefined} value
+ * @return {!proto.service.SendDraftRequest} returns this
 */
-proto.email.SendDraftRequest.prototype.setDraft = function(value) {
+proto.service.SendDraftRequest.prototype.setDraft = function(value) {
   return jspb.Message.setWrapperField(this, 1, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.email.SendDraftRequest} returns this
+ * @return {!proto.service.SendDraftRequest} returns this
  */
-proto.email.SendDraftRequest.prototype.clearDraft = function() {
+proto.service.SendDraftRequest.prototype.clearDraft = function() {
   return this.setDraft(undefined);
 };
 
@@ -6023,7 +6023,7 @@ proto.email.SendDraftRequest.prototype.clearDraft = function() {
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.email.SendDraftRequest.prototype.hasDraft = function() {
+proto.service.SendDraftRequest.prototype.hasDraft = function() {
   return jspb.Message.getField(this, 1) != null;
 };
 
@@ -6034,7 +6034,7 @@ proto.email.SendDraftRequest.prototype.hasDraft = function() {
  * @private {!Array<number>}
  * @const
  */
-proto.email.ListDraftsResponse.repeatedFields_ = [1];
+proto.service.ListDraftsResponse.repeatedFields_ = [1];
 
 
 
@@ -6051,8 +6051,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.email.ListDraftsResponse.prototype.toObject = function(opt_includeInstance) {
-  return proto.email.ListDraftsResponse.toObject(opt_includeInstance, this);
+proto.service.ListDraftsResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.service.ListDraftsResponse.toObject(opt_includeInstance, this);
 };
 
 
@@ -6061,14 +6061,14 @@ proto.email.ListDraftsResponse.prototype.toObject = function(opt_includeInstance
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.email.ListDraftsResponse} msg The msg instance to transform.
+ * @param {!proto.service.ListDraftsResponse} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.email.ListDraftsResponse.toObject = function(includeInstance, msg) {
+proto.service.ListDraftsResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
     draftList: jspb.Message.toObjectList(msg.getDraftList(),
-    proto.email.Draft.toObject, includeInstance),
+    proto.service.Draft.toObject, includeInstance),
     nextPageToken: jspb.Message.getFieldWithDefault(msg, 2, ""),
     totalSize: jspb.Message.getFieldWithDefault(msg, 3, 0)
   };
@@ -6084,23 +6084,23 @@ proto.email.ListDraftsResponse.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.email.ListDraftsResponse}
+ * @return {!proto.service.ListDraftsResponse}
  */
-proto.email.ListDraftsResponse.deserializeBinary = function(bytes) {
+proto.service.ListDraftsResponse.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.email.ListDraftsResponse;
-  return proto.email.ListDraftsResponse.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.service.ListDraftsResponse;
+  return proto.service.ListDraftsResponse.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.email.ListDraftsResponse} msg The message object to deserialize into.
+ * @param {!proto.service.ListDraftsResponse} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.email.ListDraftsResponse}
+ * @return {!proto.service.ListDraftsResponse}
  */
-proto.email.ListDraftsResponse.deserializeBinaryFromReader = function(msg, reader) {
+proto.service.ListDraftsResponse.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -6108,8 +6108,8 @@ proto.email.ListDraftsResponse.deserializeBinaryFromReader = function(msg, reade
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = new proto.email.Draft;
-      reader.readMessage(value,proto.email.Draft.deserializeBinaryFromReader);
+      var value = new proto.service.Draft;
+      reader.readMessage(value,proto.service.Draft.deserializeBinaryFromReader);
       msg.addDraft(value);
       break;
     case 2:
@@ -6133,9 +6133,9 @@ proto.email.ListDraftsResponse.deserializeBinaryFromReader = function(msg, reade
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.email.ListDraftsResponse.prototype.serializeBinary = function() {
+proto.service.ListDraftsResponse.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.email.ListDraftsResponse.serializeBinaryToWriter(this, writer);
+  proto.service.ListDraftsResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -6143,18 +6143,18 @@ proto.email.ListDraftsResponse.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.email.ListDraftsResponse} message
+ * @param {!proto.service.ListDraftsResponse} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.email.ListDraftsResponse.serializeBinaryToWriter = function(message, writer) {
+proto.service.ListDraftsResponse.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getDraftList();
   if (f.length > 0) {
     writer.writeRepeatedMessage(
       1,
       f,
-      proto.email.Draft.serializeBinaryToWriter
+      proto.service.Draft.serializeBinaryToWriter
     );
   }
   f = message.getNextPageToken();
@@ -6176,38 +6176,38 @@ proto.email.ListDraftsResponse.serializeBinaryToWriter = function(message, write
 
 /**
  * repeated Draft draft = 1;
- * @return {!Array<!proto.email.Draft>}
+ * @return {!Array<!proto.service.Draft>}
  */
-proto.email.ListDraftsResponse.prototype.getDraftList = function() {
-  return /** @type{!Array<!proto.email.Draft>} */ (
-    jspb.Message.getRepeatedWrapperField(this, proto.email.Draft, 1));
+proto.service.ListDraftsResponse.prototype.getDraftList = function() {
+  return /** @type{!Array<!proto.service.Draft>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.service.Draft, 1));
 };
 
 
 /**
- * @param {!Array<!proto.email.Draft>} value
- * @return {!proto.email.ListDraftsResponse} returns this
+ * @param {!Array<!proto.service.Draft>} value
+ * @return {!proto.service.ListDraftsResponse} returns this
 */
-proto.email.ListDraftsResponse.prototype.setDraftList = function(value) {
+proto.service.ListDraftsResponse.prototype.setDraftList = function(value) {
   return jspb.Message.setRepeatedWrapperField(this, 1, value);
 };
 
 
 /**
- * @param {!proto.email.Draft=} opt_value
+ * @param {!proto.service.Draft=} opt_value
  * @param {number=} opt_index
- * @return {!proto.email.Draft}
+ * @return {!proto.service.Draft}
  */
-proto.email.ListDraftsResponse.prototype.addDraft = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.email.Draft, opt_index);
+proto.service.ListDraftsResponse.prototype.addDraft = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.service.Draft, opt_index);
 };
 
 
 /**
  * Clears the list making it empty but non-null.
- * @return {!proto.email.ListDraftsResponse} returns this
+ * @return {!proto.service.ListDraftsResponse} returns this
  */
-proto.email.ListDraftsResponse.prototype.clearDraftList = function() {
+proto.service.ListDraftsResponse.prototype.clearDraftList = function() {
   return this.setDraftList([]);
 };
 
@@ -6216,16 +6216,16 @@ proto.email.ListDraftsResponse.prototype.clearDraftList = function() {
  * optional string next_page_token = 2;
  * @return {string}
  */
-proto.email.ListDraftsResponse.prototype.getNextPageToken = function() {
+proto.service.ListDraftsResponse.prototype.getNextPageToken = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.email.ListDraftsResponse} returns this
+ * @return {!proto.service.ListDraftsResponse} returns this
  */
-proto.email.ListDraftsResponse.prototype.setNextPageToken = function(value) {
+proto.service.ListDraftsResponse.prototype.setNextPageToken = function(value) {
   return jspb.Message.setProto3StringField(this, 2, value);
 };
 
@@ -6234,16 +6234,16 @@ proto.email.ListDraftsResponse.prototype.setNextPageToken = function(value) {
  * optional uint32 total_size = 3;
  * @return {number}
  */
-proto.email.ListDraftsResponse.prototype.getTotalSize = function() {
+proto.service.ListDraftsResponse.prototype.getTotalSize = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.email.ListDraftsResponse} returns this
+ * @return {!proto.service.ListDraftsResponse} returns this
  */
-proto.email.ListDraftsResponse.prototype.setTotalSize = function(value) {
+proto.service.ListDraftsResponse.prototype.setTotalSize = function(value) {
   return jspb.Message.setProto3IntField(this, 3, value);
 };
 
@@ -6264,8 +6264,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.email.GetEmailRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.email.GetEmailRequest.toObject(opt_includeInstance, this);
+proto.service.GetEmailRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.service.GetEmailRequest.toObject(opt_includeInstance, this);
 };
 
 
@@ -6274,11 +6274,11 @@ proto.email.GetEmailRequest.prototype.toObject = function(opt_includeInstance) {
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.email.GetEmailRequest} msg The msg instance to transform.
+ * @param {!proto.service.GetEmailRequest} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.email.GetEmailRequest.toObject = function(includeInstance, msg) {
+proto.service.GetEmailRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
     emailId: jspb.Message.getFieldWithDefault(msg, 1, "")
   };
@@ -6294,23 +6294,23 @@ proto.email.GetEmailRequest.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.email.GetEmailRequest}
+ * @return {!proto.service.GetEmailRequest}
  */
-proto.email.GetEmailRequest.deserializeBinary = function(bytes) {
+proto.service.GetEmailRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.email.GetEmailRequest;
-  return proto.email.GetEmailRequest.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.service.GetEmailRequest;
+  return proto.service.GetEmailRequest.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.email.GetEmailRequest} msg The message object to deserialize into.
+ * @param {!proto.service.GetEmailRequest} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.email.GetEmailRequest}
+ * @return {!proto.service.GetEmailRequest}
  */
-proto.email.GetEmailRequest.deserializeBinaryFromReader = function(msg, reader) {
+proto.service.GetEmailRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -6334,9 +6334,9 @@ proto.email.GetEmailRequest.deserializeBinaryFromReader = function(msg, reader) 
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.email.GetEmailRequest.prototype.serializeBinary = function() {
+proto.service.GetEmailRequest.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.email.GetEmailRequest.serializeBinaryToWriter(this, writer);
+  proto.service.GetEmailRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -6344,11 +6344,11 @@ proto.email.GetEmailRequest.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.email.GetEmailRequest} message
+ * @param {!proto.service.GetEmailRequest} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.email.GetEmailRequest.serializeBinaryToWriter = function(message, writer) {
+proto.service.GetEmailRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getEmailId();
   if (f.length > 0) {
@@ -6364,16 +6364,16 @@ proto.email.GetEmailRequest.serializeBinaryToWriter = function(message, writer) 
  * optional string email_id = 1;
  * @return {string}
  */
-proto.email.GetEmailRequest.prototype.getEmailId = function() {
+proto.service.GetEmailRequest.prototype.getEmailId = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.email.GetEmailRequest} returns this
+ * @return {!proto.service.GetEmailRequest} returns this
  */
-proto.email.GetEmailRequest.prototype.setEmailId = function(value) {
+proto.service.GetEmailRequest.prototype.setEmailId = function(value) {
   return jspb.Message.setProto3StringField(this, 1, value);
 };
 
@@ -6394,8 +6394,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.email.ListEmailsRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.email.ListEmailsRequest.toObject(opt_includeInstance, this);
+proto.service.ListEmailsRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.service.ListEmailsRequest.toObject(opt_includeInstance, this);
 };
 
 
@@ -6404,11 +6404,11 @@ proto.email.ListEmailsRequest.prototype.toObject = function(opt_includeInstance)
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.email.ListEmailsRequest} msg The msg instance to transform.
+ * @param {!proto.service.ListEmailsRequest} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.email.ListEmailsRequest.toObject = function(includeInstance, msg) {
+proto.service.ListEmailsRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
     labelsMap: (f = msg.getLabelsMap()) ? f.toObject(includeInstance, undefined) : [],
     pageToken: jspb.Message.getFieldWithDefault(msg, 2, ""),
@@ -6427,23 +6427,23 @@ proto.email.ListEmailsRequest.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.email.ListEmailsRequest}
+ * @return {!proto.service.ListEmailsRequest}
  */
-proto.email.ListEmailsRequest.deserializeBinary = function(bytes) {
+proto.service.ListEmailsRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.email.ListEmailsRequest;
-  return proto.email.ListEmailsRequest.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.service.ListEmailsRequest;
+  return proto.service.ListEmailsRequest.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.email.ListEmailsRequest} msg The message object to deserialize into.
+ * @param {!proto.service.ListEmailsRequest} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.email.ListEmailsRequest}
+ * @return {!proto.service.ListEmailsRequest}
  */
-proto.email.ListEmailsRequest.deserializeBinaryFromReader = function(msg, reader) {
+proto.service.ListEmailsRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -6481,9 +6481,9 @@ proto.email.ListEmailsRequest.deserializeBinaryFromReader = function(msg, reader
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.email.ListEmailsRequest.prototype.serializeBinary = function() {
+proto.service.ListEmailsRequest.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.email.ListEmailsRequest.serializeBinaryToWriter(this, writer);
+  proto.service.ListEmailsRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -6491,11 +6491,11 @@ proto.email.ListEmailsRequest.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.email.ListEmailsRequest} message
+ * @param {!proto.service.ListEmailsRequest} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.email.ListEmailsRequest.serializeBinaryToWriter = function(message, writer) {
+proto.service.ListEmailsRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getLabelsMap(true);
   if (f && f.getLength() > 0) {
@@ -6531,7 +6531,7 @@ proto.email.ListEmailsRequest.serializeBinaryToWriter = function(message, writer
  * empty, instead returning `undefined`
  * @return {!jspb.Map<string,string>}
  */
-proto.email.ListEmailsRequest.prototype.getLabelsMap = function(opt_noLazyCreate) {
+proto.service.ListEmailsRequest.prototype.getLabelsMap = function(opt_noLazyCreate) {
   return /** @type {!jspb.Map<string,string>} */ (
       jspb.Message.getMapField(this, 1, opt_noLazyCreate,
       null));
@@ -6540,9 +6540,9 @@ proto.email.ListEmailsRequest.prototype.getLabelsMap = function(opt_noLazyCreate
 
 /**
  * Clears values from the map. The map will be non-null.
- * @return {!proto.email.ListEmailsRequest} returns this
+ * @return {!proto.service.ListEmailsRequest} returns this
  */
-proto.email.ListEmailsRequest.prototype.clearLabelsMap = function() {
+proto.service.ListEmailsRequest.prototype.clearLabelsMap = function() {
   this.getLabelsMap().clear();
   return this;};
 
@@ -6551,16 +6551,16 @@ proto.email.ListEmailsRequest.prototype.clearLabelsMap = function() {
  * optional string page_token = 2;
  * @return {string}
  */
-proto.email.ListEmailsRequest.prototype.getPageToken = function() {
+proto.service.ListEmailsRequest.prototype.getPageToken = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.email.ListEmailsRequest} returns this
+ * @return {!proto.service.ListEmailsRequest} returns this
  */
-proto.email.ListEmailsRequest.prototype.setPageToken = function(value) {
+proto.service.ListEmailsRequest.prototype.setPageToken = function(value) {
   return jspb.Message.setProto3StringField(this, 2, value);
 };
 
@@ -6569,16 +6569,16 @@ proto.email.ListEmailsRequest.prototype.setPageToken = function(value) {
  * optional uint32 page_size = 3;
  * @return {number}
  */
-proto.email.ListEmailsRequest.prototype.getPageSize = function() {
+proto.service.ListEmailsRequest.prototype.getPageSize = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.email.ListEmailsRequest} returns this
+ * @return {!proto.service.ListEmailsRequest} returns this
  */
-proto.email.ListEmailsRequest.prototype.setPageSize = function(value) {
+proto.service.ListEmailsRequest.prototype.setPageSize = function(value) {
   return jspb.Message.setProto3IntField(this, 3, value);
 };
 
@@ -6587,16 +6587,16 @@ proto.email.ListEmailsRequest.prototype.setPageSize = function(value) {
  * optional string query = 4;
  * @return {string}
  */
-proto.email.ListEmailsRequest.prototype.getQuery = function() {
+proto.service.ListEmailsRequest.prototype.getQuery = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.email.ListEmailsRequest} returns this
+ * @return {!proto.service.ListEmailsRequest} returns this
  */
-proto.email.ListEmailsRequest.prototype.setQuery = function(value) {
+proto.service.ListEmailsRequest.prototype.setQuery = function(value) {
   return jspb.Message.setProto3StringField(this, 4, value);
 };
 
@@ -6617,8 +6617,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.email.ModifyEmailRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.email.ModifyEmailRequest.toObject(opt_includeInstance, this);
+proto.service.ModifyEmailRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.service.ModifyEmailRequest.toObject(opt_includeInstance, this);
 };
 
 
@@ -6627,11 +6627,11 @@ proto.email.ModifyEmailRequest.prototype.toObject = function(opt_includeInstance
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.email.ModifyEmailRequest} msg The msg instance to transform.
+ * @param {!proto.service.ModifyEmailRequest} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.email.ModifyEmailRequest.toObject = function(includeInstance, msg) {
+proto.service.ModifyEmailRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
     emailId: jspb.Message.getFieldWithDefault(msg, 1, ""),
     labelsMap: (f = msg.getLabelsMap()) ? f.toObject(includeInstance, undefined) : []
@@ -6648,23 +6648,23 @@ proto.email.ModifyEmailRequest.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.email.ModifyEmailRequest}
+ * @return {!proto.service.ModifyEmailRequest}
  */
-proto.email.ModifyEmailRequest.deserializeBinary = function(bytes) {
+proto.service.ModifyEmailRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.email.ModifyEmailRequest;
-  return proto.email.ModifyEmailRequest.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.service.ModifyEmailRequest;
+  return proto.service.ModifyEmailRequest.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.email.ModifyEmailRequest} msg The message object to deserialize into.
+ * @param {!proto.service.ModifyEmailRequest} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.email.ModifyEmailRequest}
+ * @return {!proto.service.ModifyEmailRequest}
  */
-proto.email.ModifyEmailRequest.deserializeBinaryFromReader = function(msg, reader) {
+proto.service.ModifyEmailRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -6694,9 +6694,9 @@ proto.email.ModifyEmailRequest.deserializeBinaryFromReader = function(msg, reade
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.email.ModifyEmailRequest.prototype.serializeBinary = function() {
+proto.service.ModifyEmailRequest.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.email.ModifyEmailRequest.serializeBinaryToWriter(this, writer);
+  proto.service.ModifyEmailRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -6704,11 +6704,11 @@ proto.email.ModifyEmailRequest.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.email.ModifyEmailRequest} message
+ * @param {!proto.service.ModifyEmailRequest} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.email.ModifyEmailRequest.serializeBinaryToWriter = function(message, writer) {
+proto.service.ModifyEmailRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getEmailId();
   if (f.length > 0) {
@@ -6728,16 +6728,16 @@ proto.email.ModifyEmailRequest.serializeBinaryToWriter = function(message, write
  * optional string email_id = 1;
  * @return {string}
  */
-proto.email.ModifyEmailRequest.prototype.getEmailId = function() {
+proto.service.ModifyEmailRequest.prototype.getEmailId = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.email.ModifyEmailRequest} returns this
+ * @return {!proto.service.ModifyEmailRequest} returns this
  */
-proto.email.ModifyEmailRequest.prototype.setEmailId = function(value) {
+proto.service.ModifyEmailRequest.prototype.setEmailId = function(value) {
   return jspb.Message.setProto3StringField(this, 1, value);
 };
 
@@ -6748,7 +6748,7 @@ proto.email.ModifyEmailRequest.prototype.setEmailId = function(value) {
  * empty, instead returning `undefined`
  * @return {!jspb.Map<string,string>}
  */
-proto.email.ModifyEmailRequest.prototype.getLabelsMap = function(opt_noLazyCreate) {
+proto.service.ModifyEmailRequest.prototype.getLabelsMap = function(opt_noLazyCreate) {
   return /** @type {!jspb.Map<string,string>} */ (
       jspb.Message.getMapField(this, 2, opt_noLazyCreate,
       null));
@@ -6757,9 +6757,9 @@ proto.email.ModifyEmailRequest.prototype.getLabelsMap = function(opt_noLazyCreat
 
 /**
  * Clears values from the map. The map will be non-null.
- * @return {!proto.email.ModifyEmailRequest} returns this
+ * @return {!proto.service.ModifyEmailRequest} returns this
  */
-proto.email.ModifyEmailRequest.prototype.clearLabelsMap = function() {
+proto.service.ModifyEmailRequest.prototype.clearLabelsMap = function() {
   this.getLabelsMap().clear();
   return this;};
 
@@ -6780,8 +6780,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.email.TrashEmailRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.email.TrashEmailRequest.toObject(opt_includeInstance, this);
+proto.service.TrashEmailRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.service.TrashEmailRequest.toObject(opt_includeInstance, this);
 };
 
 
@@ -6790,11 +6790,11 @@ proto.email.TrashEmailRequest.prototype.toObject = function(opt_includeInstance)
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.email.TrashEmailRequest} msg The msg instance to transform.
+ * @param {!proto.service.TrashEmailRequest} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.email.TrashEmailRequest.toObject = function(includeInstance, msg) {
+proto.service.TrashEmailRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
     emailId: jspb.Message.getFieldWithDefault(msg, 1, "")
   };
@@ -6810,23 +6810,23 @@ proto.email.TrashEmailRequest.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.email.TrashEmailRequest}
+ * @return {!proto.service.TrashEmailRequest}
  */
-proto.email.TrashEmailRequest.deserializeBinary = function(bytes) {
+proto.service.TrashEmailRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.email.TrashEmailRequest;
-  return proto.email.TrashEmailRequest.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.service.TrashEmailRequest;
+  return proto.service.TrashEmailRequest.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.email.TrashEmailRequest} msg The message object to deserialize into.
+ * @param {!proto.service.TrashEmailRequest} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.email.TrashEmailRequest}
+ * @return {!proto.service.TrashEmailRequest}
  */
-proto.email.TrashEmailRequest.deserializeBinaryFromReader = function(msg, reader) {
+proto.service.TrashEmailRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -6850,9 +6850,9 @@ proto.email.TrashEmailRequest.deserializeBinaryFromReader = function(msg, reader
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.email.TrashEmailRequest.prototype.serializeBinary = function() {
+proto.service.TrashEmailRequest.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.email.TrashEmailRequest.serializeBinaryToWriter(this, writer);
+  proto.service.TrashEmailRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -6860,11 +6860,11 @@ proto.email.TrashEmailRequest.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.email.TrashEmailRequest} message
+ * @param {!proto.service.TrashEmailRequest} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.email.TrashEmailRequest.serializeBinaryToWriter = function(message, writer) {
+proto.service.TrashEmailRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getEmailId();
   if (f.length > 0) {
@@ -6880,16 +6880,16 @@ proto.email.TrashEmailRequest.serializeBinaryToWriter = function(message, writer
  * optional string email_id = 1;
  * @return {string}
  */
-proto.email.TrashEmailRequest.prototype.getEmailId = function() {
+proto.service.TrashEmailRequest.prototype.getEmailId = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.email.TrashEmailRequest} returns this
+ * @return {!proto.service.TrashEmailRequest} returns this
  */
-proto.email.TrashEmailRequest.prototype.setEmailId = function(value) {
+proto.service.TrashEmailRequest.prototype.setEmailId = function(value) {
   return jspb.Message.setProto3StringField(this, 1, value);
 };
 
@@ -6910,8 +6910,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.email.UntrashEmailRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.email.UntrashEmailRequest.toObject(opt_includeInstance, this);
+proto.service.UntrashEmailRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.service.UntrashEmailRequest.toObject(opt_includeInstance, this);
 };
 
 
@@ -6920,11 +6920,11 @@ proto.email.UntrashEmailRequest.prototype.toObject = function(opt_includeInstanc
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.email.UntrashEmailRequest} msg The msg instance to transform.
+ * @param {!proto.service.UntrashEmailRequest} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.email.UntrashEmailRequest.toObject = function(includeInstance, msg) {
+proto.service.UntrashEmailRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
     emailId: jspb.Message.getFieldWithDefault(msg, 1, "")
   };
@@ -6940,23 +6940,23 @@ proto.email.UntrashEmailRequest.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.email.UntrashEmailRequest}
+ * @return {!proto.service.UntrashEmailRequest}
  */
-proto.email.UntrashEmailRequest.deserializeBinary = function(bytes) {
+proto.service.UntrashEmailRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.email.UntrashEmailRequest;
-  return proto.email.UntrashEmailRequest.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.service.UntrashEmailRequest;
+  return proto.service.UntrashEmailRequest.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.email.UntrashEmailRequest} msg The message object to deserialize into.
+ * @param {!proto.service.UntrashEmailRequest} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.email.UntrashEmailRequest}
+ * @return {!proto.service.UntrashEmailRequest}
  */
-proto.email.UntrashEmailRequest.deserializeBinaryFromReader = function(msg, reader) {
+proto.service.UntrashEmailRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -6980,9 +6980,9 @@ proto.email.UntrashEmailRequest.deserializeBinaryFromReader = function(msg, read
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.email.UntrashEmailRequest.prototype.serializeBinary = function() {
+proto.service.UntrashEmailRequest.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.email.UntrashEmailRequest.serializeBinaryToWriter(this, writer);
+  proto.service.UntrashEmailRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -6990,11 +6990,11 @@ proto.email.UntrashEmailRequest.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.email.UntrashEmailRequest} message
+ * @param {!proto.service.UntrashEmailRequest} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.email.UntrashEmailRequest.serializeBinaryToWriter = function(message, writer) {
+proto.service.UntrashEmailRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getEmailId();
   if (f.length > 0) {
@@ -7010,16 +7010,16 @@ proto.email.UntrashEmailRequest.serializeBinaryToWriter = function(message, writ
  * optional string email_id = 1;
  * @return {string}
  */
-proto.email.UntrashEmailRequest.prototype.getEmailId = function() {
+proto.service.UntrashEmailRequest.prototype.getEmailId = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.email.UntrashEmailRequest} returns this
+ * @return {!proto.service.UntrashEmailRequest} returns this
  */
-proto.email.UntrashEmailRequest.prototype.setEmailId = function(value) {
+proto.service.UntrashEmailRequest.prototype.setEmailId = function(value) {
   return jspb.Message.setProto3StringField(this, 1, value);
 };
 
@@ -7040,8 +7040,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.email.SendEmailRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.email.SendEmailRequest.toObject(opt_includeInstance, this);
+proto.service.SendEmailRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.service.SendEmailRequest.toObject(opt_includeInstance, this);
 };
 
 
@@ -7050,13 +7050,13 @@ proto.email.SendEmailRequest.prototype.toObject = function(opt_includeInstance) 
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.email.SendEmailRequest} msg The msg instance to transform.
+ * @param {!proto.service.SendEmailRequest} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.email.SendEmailRequest.toObject = function(includeInstance, msg) {
+proto.service.SendEmailRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-    email: (f = msg.getEmail()) && proto.email.Email.toObject(includeInstance, f)
+    email: (f = msg.getEmail()) && proto.service.Email.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -7070,23 +7070,23 @@ proto.email.SendEmailRequest.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.email.SendEmailRequest}
+ * @return {!proto.service.SendEmailRequest}
  */
-proto.email.SendEmailRequest.deserializeBinary = function(bytes) {
+proto.service.SendEmailRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.email.SendEmailRequest;
-  return proto.email.SendEmailRequest.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.service.SendEmailRequest;
+  return proto.service.SendEmailRequest.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.email.SendEmailRequest} msg The message object to deserialize into.
+ * @param {!proto.service.SendEmailRequest} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.email.SendEmailRequest}
+ * @return {!proto.service.SendEmailRequest}
  */
-proto.email.SendEmailRequest.deserializeBinaryFromReader = function(msg, reader) {
+proto.service.SendEmailRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -7094,8 +7094,8 @@ proto.email.SendEmailRequest.deserializeBinaryFromReader = function(msg, reader)
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = new proto.email.Email;
-      reader.readMessage(value,proto.email.Email.deserializeBinaryFromReader);
+      var value = new proto.service.Email;
+      reader.readMessage(value,proto.service.Email.deserializeBinaryFromReader);
       msg.setEmail(value);
       break;
     default:
@@ -7111,9 +7111,9 @@ proto.email.SendEmailRequest.deserializeBinaryFromReader = function(msg, reader)
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.email.SendEmailRequest.prototype.serializeBinary = function() {
+proto.service.SendEmailRequest.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.email.SendEmailRequest.serializeBinaryToWriter(this, writer);
+  proto.service.SendEmailRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -7121,18 +7121,18 @@ proto.email.SendEmailRequest.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.email.SendEmailRequest} message
+ * @param {!proto.service.SendEmailRequest} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.email.SendEmailRequest.serializeBinaryToWriter = function(message, writer) {
+proto.service.SendEmailRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getEmail();
   if (f != null) {
     writer.writeMessage(
       1,
       f,
-      proto.email.Email.serializeBinaryToWriter
+      proto.service.Email.serializeBinaryToWriter
     );
   }
 };
@@ -7140,28 +7140,28 @@ proto.email.SendEmailRequest.serializeBinaryToWriter = function(message, writer)
 
 /**
  * optional Email email = 1;
- * @return {?proto.email.Email}
+ * @return {?proto.service.Email}
  */
-proto.email.SendEmailRequest.prototype.getEmail = function() {
-  return /** @type{?proto.email.Email} */ (
-    jspb.Message.getWrapperField(this, proto.email.Email, 1));
+proto.service.SendEmailRequest.prototype.getEmail = function() {
+  return /** @type{?proto.service.Email} */ (
+    jspb.Message.getWrapperField(this, proto.service.Email, 1));
 };
 
 
 /**
- * @param {?proto.email.Email|undefined} value
- * @return {!proto.email.SendEmailRequest} returns this
+ * @param {?proto.service.Email|undefined} value
+ * @return {!proto.service.SendEmailRequest} returns this
 */
-proto.email.SendEmailRequest.prototype.setEmail = function(value) {
+proto.service.SendEmailRequest.prototype.setEmail = function(value) {
   return jspb.Message.setWrapperField(this, 1, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.email.SendEmailRequest} returns this
+ * @return {!proto.service.SendEmailRequest} returns this
  */
-proto.email.SendEmailRequest.prototype.clearEmail = function() {
+proto.service.SendEmailRequest.prototype.clearEmail = function() {
   return this.setEmail(undefined);
 };
 
@@ -7170,7 +7170,7 @@ proto.email.SendEmailRequest.prototype.clearEmail = function() {
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.email.SendEmailRequest.prototype.hasEmail = function() {
+proto.service.SendEmailRequest.prototype.hasEmail = function() {
   return jspb.Message.getField(this, 1) != null;
 };
 
@@ -7181,7 +7181,7 @@ proto.email.SendEmailRequest.prototype.hasEmail = function() {
  * @private {!Array<number>}
  * @const
  */
-proto.email.ListEmailsResponse.repeatedFields_ = [1];
+proto.service.ListEmailsResponse.repeatedFields_ = [1];
 
 
 
@@ -7198,8 +7198,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.email.ListEmailsResponse.prototype.toObject = function(opt_includeInstance) {
-  return proto.email.ListEmailsResponse.toObject(opt_includeInstance, this);
+proto.service.ListEmailsResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.service.ListEmailsResponse.toObject(opt_includeInstance, this);
 };
 
 
@@ -7208,14 +7208,14 @@ proto.email.ListEmailsResponse.prototype.toObject = function(opt_includeInstance
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.email.ListEmailsResponse} msg The msg instance to transform.
+ * @param {!proto.service.ListEmailsResponse} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.email.ListEmailsResponse.toObject = function(includeInstance, msg) {
+proto.service.ListEmailsResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
     emailList: jspb.Message.toObjectList(msg.getEmailList(),
-    proto.email.Email.toObject, includeInstance),
+    proto.service.Email.toObject, includeInstance),
     nextPageToken: jspb.Message.getFieldWithDefault(msg, 2, ""),
     totalSize: jspb.Message.getFieldWithDefault(msg, 3, 0)
   };
@@ -7231,23 +7231,23 @@ proto.email.ListEmailsResponse.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.email.ListEmailsResponse}
+ * @return {!proto.service.ListEmailsResponse}
  */
-proto.email.ListEmailsResponse.deserializeBinary = function(bytes) {
+proto.service.ListEmailsResponse.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.email.ListEmailsResponse;
-  return proto.email.ListEmailsResponse.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.service.ListEmailsResponse;
+  return proto.service.ListEmailsResponse.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.email.ListEmailsResponse} msg The message object to deserialize into.
+ * @param {!proto.service.ListEmailsResponse} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.email.ListEmailsResponse}
+ * @return {!proto.service.ListEmailsResponse}
  */
-proto.email.ListEmailsResponse.deserializeBinaryFromReader = function(msg, reader) {
+proto.service.ListEmailsResponse.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -7255,8 +7255,8 @@ proto.email.ListEmailsResponse.deserializeBinaryFromReader = function(msg, reade
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = new proto.email.Email;
-      reader.readMessage(value,proto.email.Email.deserializeBinaryFromReader);
+      var value = new proto.service.Email;
+      reader.readMessage(value,proto.service.Email.deserializeBinaryFromReader);
       msg.addEmail(value);
       break;
     case 2:
@@ -7280,9 +7280,9 @@ proto.email.ListEmailsResponse.deserializeBinaryFromReader = function(msg, reade
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.email.ListEmailsResponse.prototype.serializeBinary = function() {
+proto.service.ListEmailsResponse.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.email.ListEmailsResponse.serializeBinaryToWriter(this, writer);
+  proto.service.ListEmailsResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -7290,18 +7290,18 @@ proto.email.ListEmailsResponse.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.email.ListEmailsResponse} message
+ * @param {!proto.service.ListEmailsResponse} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.email.ListEmailsResponse.serializeBinaryToWriter = function(message, writer) {
+proto.service.ListEmailsResponse.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getEmailList();
   if (f.length > 0) {
     writer.writeRepeatedMessage(
       1,
       f,
-      proto.email.Email.serializeBinaryToWriter
+      proto.service.Email.serializeBinaryToWriter
     );
   }
   f = message.getNextPageToken();
@@ -7323,38 +7323,38 @@ proto.email.ListEmailsResponse.serializeBinaryToWriter = function(message, write
 
 /**
  * repeated Email email = 1;
- * @return {!Array<!proto.email.Email>}
+ * @return {!Array<!proto.service.Email>}
  */
-proto.email.ListEmailsResponse.prototype.getEmailList = function() {
-  return /** @type{!Array<!proto.email.Email>} */ (
-    jspb.Message.getRepeatedWrapperField(this, proto.email.Email, 1));
+proto.service.ListEmailsResponse.prototype.getEmailList = function() {
+  return /** @type{!Array<!proto.service.Email>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.service.Email, 1));
 };
 
 
 /**
- * @param {!Array<!proto.email.Email>} value
- * @return {!proto.email.ListEmailsResponse} returns this
+ * @param {!Array<!proto.service.Email>} value
+ * @return {!proto.service.ListEmailsResponse} returns this
 */
-proto.email.ListEmailsResponse.prototype.setEmailList = function(value) {
+proto.service.ListEmailsResponse.prototype.setEmailList = function(value) {
   return jspb.Message.setRepeatedWrapperField(this, 1, value);
 };
 
 
 /**
- * @param {!proto.email.Email=} opt_value
+ * @param {!proto.service.Email=} opt_value
  * @param {number=} opt_index
- * @return {!proto.email.Email}
+ * @return {!proto.service.Email}
  */
-proto.email.ListEmailsResponse.prototype.addEmail = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.email.Email, opt_index);
+proto.service.ListEmailsResponse.prototype.addEmail = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.service.Email, opt_index);
 };
 
 
 /**
  * Clears the list making it empty but non-null.
- * @return {!proto.email.ListEmailsResponse} returns this
+ * @return {!proto.service.ListEmailsResponse} returns this
  */
-proto.email.ListEmailsResponse.prototype.clearEmailList = function() {
+proto.service.ListEmailsResponse.prototype.clearEmailList = function() {
   return this.setEmailList([]);
 };
 
@@ -7363,16 +7363,16 @@ proto.email.ListEmailsResponse.prototype.clearEmailList = function() {
  * optional string next_page_token = 2;
  * @return {string}
  */
-proto.email.ListEmailsResponse.prototype.getNextPageToken = function() {
+proto.service.ListEmailsResponse.prototype.getNextPageToken = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.email.ListEmailsResponse} returns this
+ * @return {!proto.service.ListEmailsResponse} returns this
  */
-proto.email.ListEmailsResponse.prototype.setNextPageToken = function(value) {
+proto.service.ListEmailsResponse.prototype.setNextPageToken = function(value) {
   return jspb.Message.setProto3StringField(this, 2, value);
 };
 
@@ -7381,16 +7381,16 @@ proto.email.ListEmailsResponse.prototype.setNextPageToken = function(value) {
  * optional uint32 total_size = 3;
  * @return {number}
  */
-proto.email.ListEmailsResponse.prototype.getTotalSize = function() {
+proto.service.ListEmailsResponse.prototype.getTotalSize = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.email.ListEmailsResponse} returns this
+ * @return {!proto.service.ListEmailsResponse} returns this
  */
-proto.email.ListEmailsResponse.prototype.setTotalSize = function(value) {
+proto.service.ListEmailsResponse.prototype.setTotalSize = function(value) {
   return jspb.Message.setProto3IntField(this, 3, value);
 };
 
@@ -7411,8 +7411,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.email.GetThreadRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.email.GetThreadRequest.toObject(opt_includeInstance, this);
+proto.service.GetThreadRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.service.GetThreadRequest.toObject(opt_includeInstance, this);
 };
 
 
@@ -7421,11 +7421,11 @@ proto.email.GetThreadRequest.prototype.toObject = function(opt_includeInstance) 
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.email.GetThreadRequest} msg The msg instance to transform.
+ * @param {!proto.service.GetThreadRequest} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.email.GetThreadRequest.toObject = function(includeInstance, msg) {
+proto.service.GetThreadRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
     threadId: jspb.Message.getFieldWithDefault(msg, 1, "")
   };
@@ -7441,23 +7441,23 @@ proto.email.GetThreadRequest.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.email.GetThreadRequest}
+ * @return {!proto.service.GetThreadRequest}
  */
-proto.email.GetThreadRequest.deserializeBinary = function(bytes) {
+proto.service.GetThreadRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.email.GetThreadRequest;
-  return proto.email.GetThreadRequest.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.service.GetThreadRequest;
+  return proto.service.GetThreadRequest.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.email.GetThreadRequest} msg The message object to deserialize into.
+ * @param {!proto.service.GetThreadRequest} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.email.GetThreadRequest}
+ * @return {!proto.service.GetThreadRequest}
  */
-proto.email.GetThreadRequest.deserializeBinaryFromReader = function(msg, reader) {
+proto.service.GetThreadRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -7481,9 +7481,9 @@ proto.email.GetThreadRequest.deserializeBinaryFromReader = function(msg, reader)
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.email.GetThreadRequest.prototype.serializeBinary = function() {
+proto.service.GetThreadRequest.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.email.GetThreadRequest.serializeBinaryToWriter(this, writer);
+  proto.service.GetThreadRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -7491,11 +7491,11 @@ proto.email.GetThreadRequest.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.email.GetThreadRequest} message
+ * @param {!proto.service.GetThreadRequest} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.email.GetThreadRequest.serializeBinaryToWriter = function(message, writer) {
+proto.service.GetThreadRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getThreadId();
   if (f.length > 0) {
@@ -7511,16 +7511,16 @@ proto.email.GetThreadRequest.serializeBinaryToWriter = function(message, writer)
  * optional string thread_id = 1;
  * @return {string}
  */
-proto.email.GetThreadRequest.prototype.getThreadId = function() {
+proto.service.GetThreadRequest.prototype.getThreadId = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.email.GetThreadRequest} returns this
+ * @return {!proto.service.GetThreadRequest} returns this
  */
-proto.email.GetThreadRequest.prototype.setThreadId = function(value) {
+proto.service.GetThreadRequest.prototype.setThreadId = function(value) {
   return jspb.Message.setProto3StringField(this, 1, value);
 };
 
@@ -7541,8 +7541,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.email.ListThreadsRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.email.ListThreadsRequest.toObject(opt_includeInstance, this);
+proto.service.ListThreadsRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.service.ListThreadsRequest.toObject(opt_includeInstance, this);
 };
 
 
@@ -7551,11 +7551,11 @@ proto.email.ListThreadsRequest.prototype.toObject = function(opt_includeInstance
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.email.ListThreadsRequest} msg The msg instance to transform.
+ * @param {!proto.service.ListThreadsRequest} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.email.ListThreadsRequest.toObject = function(includeInstance, msg) {
+proto.service.ListThreadsRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
     labelsMap: (f = msg.getLabelsMap()) ? f.toObject(includeInstance, undefined) : [],
     pageToken: jspb.Message.getFieldWithDefault(msg, 2, ""),
@@ -7574,23 +7574,23 @@ proto.email.ListThreadsRequest.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.email.ListThreadsRequest}
+ * @return {!proto.service.ListThreadsRequest}
  */
-proto.email.ListThreadsRequest.deserializeBinary = function(bytes) {
+proto.service.ListThreadsRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.email.ListThreadsRequest;
-  return proto.email.ListThreadsRequest.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.service.ListThreadsRequest;
+  return proto.service.ListThreadsRequest.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.email.ListThreadsRequest} msg The message object to deserialize into.
+ * @param {!proto.service.ListThreadsRequest} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.email.ListThreadsRequest}
+ * @return {!proto.service.ListThreadsRequest}
  */
-proto.email.ListThreadsRequest.deserializeBinaryFromReader = function(msg, reader) {
+proto.service.ListThreadsRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -7628,9 +7628,9 @@ proto.email.ListThreadsRequest.deserializeBinaryFromReader = function(msg, reade
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.email.ListThreadsRequest.prototype.serializeBinary = function() {
+proto.service.ListThreadsRequest.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.email.ListThreadsRequest.serializeBinaryToWriter(this, writer);
+  proto.service.ListThreadsRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -7638,11 +7638,11 @@ proto.email.ListThreadsRequest.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.email.ListThreadsRequest} message
+ * @param {!proto.service.ListThreadsRequest} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.email.ListThreadsRequest.serializeBinaryToWriter = function(message, writer) {
+proto.service.ListThreadsRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getLabelsMap(true);
   if (f && f.getLength() > 0) {
@@ -7678,7 +7678,7 @@ proto.email.ListThreadsRequest.serializeBinaryToWriter = function(message, write
  * empty, instead returning `undefined`
  * @return {!jspb.Map<string,string>}
  */
-proto.email.ListThreadsRequest.prototype.getLabelsMap = function(opt_noLazyCreate) {
+proto.service.ListThreadsRequest.prototype.getLabelsMap = function(opt_noLazyCreate) {
   return /** @type {!jspb.Map<string,string>} */ (
       jspb.Message.getMapField(this, 1, opt_noLazyCreate,
       null));
@@ -7687,9 +7687,9 @@ proto.email.ListThreadsRequest.prototype.getLabelsMap = function(opt_noLazyCreat
 
 /**
  * Clears values from the map. The map will be non-null.
- * @return {!proto.email.ListThreadsRequest} returns this
+ * @return {!proto.service.ListThreadsRequest} returns this
  */
-proto.email.ListThreadsRequest.prototype.clearLabelsMap = function() {
+proto.service.ListThreadsRequest.prototype.clearLabelsMap = function() {
   this.getLabelsMap().clear();
   return this;};
 
@@ -7698,16 +7698,16 @@ proto.email.ListThreadsRequest.prototype.clearLabelsMap = function() {
  * optional string page_token = 2;
  * @return {string}
  */
-proto.email.ListThreadsRequest.prototype.getPageToken = function() {
+proto.service.ListThreadsRequest.prototype.getPageToken = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.email.ListThreadsRequest} returns this
+ * @return {!proto.service.ListThreadsRequest} returns this
  */
-proto.email.ListThreadsRequest.prototype.setPageToken = function(value) {
+proto.service.ListThreadsRequest.prototype.setPageToken = function(value) {
   return jspb.Message.setProto3StringField(this, 2, value);
 };
 
@@ -7716,16 +7716,16 @@ proto.email.ListThreadsRequest.prototype.setPageToken = function(value) {
  * optional uint32 page_size = 3;
  * @return {number}
  */
-proto.email.ListThreadsRequest.prototype.getPageSize = function() {
+proto.service.ListThreadsRequest.prototype.getPageSize = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.email.ListThreadsRequest} returns this
+ * @return {!proto.service.ListThreadsRequest} returns this
  */
-proto.email.ListThreadsRequest.prototype.setPageSize = function(value) {
+proto.service.ListThreadsRequest.prototype.setPageSize = function(value) {
   return jspb.Message.setProto3IntField(this, 3, value);
 };
 
@@ -7734,16 +7734,16 @@ proto.email.ListThreadsRequest.prototype.setPageSize = function(value) {
  * optional string query = 4;
  * @return {string}
  */
-proto.email.ListThreadsRequest.prototype.getQuery = function() {
+proto.service.ListThreadsRequest.prototype.getQuery = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.email.ListThreadsRequest} returns this
+ * @return {!proto.service.ListThreadsRequest} returns this
  */
-proto.email.ListThreadsRequest.prototype.setQuery = function(value) {
+proto.service.ListThreadsRequest.prototype.setQuery = function(value) {
   return jspb.Message.setProto3StringField(this, 4, value);
 };
 
@@ -7764,8 +7764,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.email.ModifyThreadRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.email.ModifyThreadRequest.toObject(opt_includeInstance, this);
+proto.service.ModifyThreadRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.service.ModifyThreadRequest.toObject(opt_includeInstance, this);
 };
 
 
@@ -7774,11 +7774,11 @@ proto.email.ModifyThreadRequest.prototype.toObject = function(opt_includeInstanc
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.email.ModifyThreadRequest} msg The msg instance to transform.
+ * @param {!proto.service.ModifyThreadRequest} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.email.ModifyThreadRequest.toObject = function(includeInstance, msg) {
+proto.service.ModifyThreadRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
     threadId: jspb.Message.getFieldWithDefault(msg, 1, ""),
     labelsMap: (f = msg.getLabelsMap()) ? f.toObject(includeInstance, undefined) : []
@@ -7795,23 +7795,23 @@ proto.email.ModifyThreadRequest.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.email.ModifyThreadRequest}
+ * @return {!proto.service.ModifyThreadRequest}
  */
-proto.email.ModifyThreadRequest.deserializeBinary = function(bytes) {
+proto.service.ModifyThreadRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.email.ModifyThreadRequest;
-  return proto.email.ModifyThreadRequest.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.service.ModifyThreadRequest;
+  return proto.service.ModifyThreadRequest.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.email.ModifyThreadRequest} msg The message object to deserialize into.
+ * @param {!proto.service.ModifyThreadRequest} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.email.ModifyThreadRequest}
+ * @return {!proto.service.ModifyThreadRequest}
  */
-proto.email.ModifyThreadRequest.deserializeBinaryFromReader = function(msg, reader) {
+proto.service.ModifyThreadRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -7841,9 +7841,9 @@ proto.email.ModifyThreadRequest.deserializeBinaryFromReader = function(msg, read
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.email.ModifyThreadRequest.prototype.serializeBinary = function() {
+proto.service.ModifyThreadRequest.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.email.ModifyThreadRequest.serializeBinaryToWriter(this, writer);
+  proto.service.ModifyThreadRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -7851,11 +7851,11 @@ proto.email.ModifyThreadRequest.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.email.ModifyThreadRequest} message
+ * @param {!proto.service.ModifyThreadRequest} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.email.ModifyThreadRequest.serializeBinaryToWriter = function(message, writer) {
+proto.service.ModifyThreadRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getThreadId();
   if (f.length > 0) {
@@ -7875,16 +7875,16 @@ proto.email.ModifyThreadRequest.serializeBinaryToWriter = function(message, writ
  * optional string thread_id = 1;
  * @return {string}
  */
-proto.email.ModifyThreadRequest.prototype.getThreadId = function() {
+proto.service.ModifyThreadRequest.prototype.getThreadId = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.email.ModifyThreadRequest} returns this
+ * @return {!proto.service.ModifyThreadRequest} returns this
  */
-proto.email.ModifyThreadRequest.prototype.setThreadId = function(value) {
+proto.service.ModifyThreadRequest.prototype.setThreadId = function(value) {
   return jspb.Message.setProto3StringField(this, 1, value);
 };
 
@@ -7895,7 +7895,7 @@ proto.email.ModifyThreadRequest.prototype.setThreadId = function(value) {
  * empty, instead returning `undefined`
  * @return {!jspb.Map<string,string>}
  */
-proto.email.ModifyThreadRequest.prototype.getLabelsMap = function(opt_noLazyCreate) {
+proto.service.ModifyThreadRequest.prototype.getLabelsMap = function(opt_noLazyCreate) {
   return /** @type {!jspb.Map<string,string>} */ (
       jspb.Message.getMapField(this, 2, opt_noLazyCreate,
       null));
@@ -7904,9 +7904,9 @@ proto.email.ModifyThreadRequest.prototype.getLabelsMap = function(opt_noLazyCrea
 
 /**
  * Clears values from the map. The map will be non-null.
- * @return {!proto.email.ModifyThreadRequest} returns this
+ * @return {!proto.service.ModifyThreadRequest} returns this
  */
-proto.email.ModifyThreadRequest.prototype.clearLabelsMap = function() {
+proto.service.ModifyThreadRequest.prototype.clearLabelsMap = function() {
   this.getLabelsMap().clear();
   return this;};
 
@@ -7927,8 +7927,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.email.TrashThreadRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.email.TrashThreadRequest.toObject(opt_includeInstance, this);
+proto.service.TrashThreadRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.service.TrashThreadRequest.toObject(opt_includeInstance, this);
 };
 
 
@@ -7937,11 +7937,11 @@ proto.email.TrashThreadRequest.prototype.toObject = function(opt_includeInstance
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.email.TrashThreadRequest} msg The msg instance to transform.
+ * @param {!proto.service.TrashThreadRequest} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.email.TrashThreadRequest.toObject = function(includeInstance, msg) {
+proto.service.TrashThreadRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
     threadId: jspb.Message.getFieldWithDefault(msg, 1, "")
   };
@@ -7957,23 +7957,23 @@ proto.email.TrashThreadRequest.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.email.TrashThreadRequest}
+ * @return {!proto.service.TrashThreadRequest}
  */
-proto.email.TrashThreadRequest.deserializeBinary = function(bytes) {
+proto.service.TrashThreadRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.email.TrashThreadRequest;
-  return proto.email.TrashThreadRequest.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.service.TrashThreadRequest;
+  return proto.service.TrashThreadRequest.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.email.TrashThreadRequest} msg The message object to deserialize into.
+ * @param {!proto.service.TrashThreadRequest} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.email.TrashThreadRequest}
+ * @return {!proto.service.TrashThreadRequest}
  */
-proto.email.TrashThreadRequest.deserializeBinaryFromReader = function(msg, reader) {
+proto.service.TrashThreadRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -7997,9 +7997,9 @@ proto.email.TrashThreadRequest.deserializeBinaryFromReader = function(msg, reade
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.email.TrashThreadRequest.prototype.serializeBinary = function() {
+proto.service.TrashThreadRequest.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.email.TrashThreadRequest.serializeBinaryToWriter(this, writer);
+  proto.service.TrashThreadRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -8007,11 +8007,11 @@ proto.email.TrashThreadRequest.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.email.TrashThreadRequest} message
+ * @param {!proto.service.TrashThreadRequest} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.email.TrashThreadRequest.serializeBinaryToWriter = function(message, writer) {
+proto.service.TrashThreadRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getThreadId();
   if (f.length > 0) {
@@ -8027,16 +8027,16 @@ proto.email.TrashThreadRequest.serializeBinaryToWriter = function(message, write
  * optional string thread_id = 1;
  * @return {string}
  */
-proto.email.TrashThreadRequest.prototype.getThreadId = function() {
+proto.service.TrashThreadRequest.prototype.getThreadId = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.email.TrashThreadRequest} returns this
+ * @return {!proto.service.TrashThreadRequest} returns this
  */
-proto.email.TrashThreadRequest.prototype.setThreadId = function(value) {
+proto.service.TrashThreadRequest.prototype.setThreadId = function(value) {
   return jspb.Message.setProto3StringField(this, 1, value);
 };
 
@@ -8057,8 +8057,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.email.UntrashThreadRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.email.UntrashThreadRequest.toObject(opt_includeInstance, this);
+proto.service.UntrashThreadRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.service.UntrashThreadRequest.toObject(opt_includeInstance, this);
 };
 
 
@@ -8067,11 +8067,11 @@ proto.email.UntrashThreadRequest.prototype.toObject = function(opt_includeInstan
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.email.UntrashThreadRequest} msg The msg instance to transform.
+ * @param {!proto.service.UntrashThreadRequest} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.email.UntrashThreadRequest.toObject = function(includeInstance, msg) {
+proto.service.UntrashThreadRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
     threadId: jspb.Message.getFieldWithDefault(msg, 1, "")
   };
@@ -8087,23 +8087,23 @@ proto.email.UntrashThreadRequest.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.email.UntrashThreadRequest}
+ * @return {!proto.service.UntrashThreadRequest}
  */
-proto.email.UntrashThreadRequest.deserializeBinary = function(bytes) {
+proto.service.UntrashThreadRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.email.UntrashThreadRequest;
-  return proto.email.UntrashThreadRequest.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.service.UntrashThreadRequest;
+  return proto.service.UntrashThreadRequest.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.email.UntrashThreadRequest} msg The message object to deserialize into.
+ * @param {!proto.service.UntrashThreadRequest} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.email.UntrashThreadRequest}
+ * @return {!proto.service.UntrashThreadRequest}
  */
-proto.email.UntrashThreadRequest.deserializeBinaryFromReader = function(msg, reader) {
+proto.service.UntrashThreadRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -8127,9 +8127,9 @@ proto.email.UntrashThreadRequest.deserializeBinaryFromReader = function(msg, rea
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.email.UntrashThreadRequest.prototype.serializeBinary = function() {
+proto.service.UntrashThreadRequest.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.email.UntrashThreadRequest.serializeBinaryToWriter(this, writer);
+  proto.service.UntrashThreadRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -8137,11 +8137,11 @@ proto.email.UntrashThreadRequest.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.email.UntrashThreadRequest} message
+ * @param {!proto.service.UntrashThreadRequest} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.email.UntrashThreadRequest.serializeBinaryToWriter = function(message, writer) {
+proto.service.UntrashThreadRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getThreadId();
   if (f.length > 0) {
@@ -8157,16 +8157,16 @@ proto.email.UntrashThreadRequest.serializeBinaryToWriter = function(message, wri
  * optional string thread_id = 1;
  * @return {string}
  */
-proto.email.UntrashThreadRequest.prototype.getThreadId = function() {
+proto.service.UntrashThreadRequest.prototype.getThreadId = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.email.UntrashThreadRequest} returns this
+ * @return {!proto.service.UntrashThreadRequest} returns this
  */
-proto.email.UntrashThreadRequest.prototype.setThreadId = function(value) {
+proto.service.UntrashThreadRequest.prototype.setThreadId = function(value) {
   return jspb.Message.setProto3StringField(this, 1, value);
 };
 
@@ -8187,8 +8187,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.email.SendThreadRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.email.SendThreadRequest.toObject(opt_includeInstance, this);
+proto.service.SendThreadRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.service.SendThreadRequest.toObject(opt_includeInstance, this);
 };
 
 
@@ -8197,13 +8197,13 @@ proto.email.SendThreadRequest.prototype.toObject = function(opt_includeInstance)
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.email.SendThreadRequest} msg The msg instance to transform.
+ * @param {!proto.service.SendThreadRequest} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.email.SendThreadRequest.toObject = function(includeInstance, msg) {
+proto.service.SendThreadRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-    thread: (f = msg.getThread()) && proto.email.Thread.toObject(includeInstance, f)
+    thread: (f = msg.getThread()) && proto.service.Thread.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -8217,23 +8217,23 @@ proto.email.SendThreadRequest.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.email.SendThreadRequest}
+ * @return {!proto.service.SendThreadRequest}
  */
-proto.email.SendThreadRequest.deserializeBinary = function(bytes) {
+proto.service.SendThreadRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.email.SendThreadRequest;
-  return proto.email.SendThreadRequest.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.service.SendThreadRequest;
+  return proto.service.SendThreadRequest.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.email.SendThreadRequest} msg The message object to deserialize into.
+ * @param {!proto.service.SendThreadRequest} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.email.SendThreadRequest}
+ * @return {!proto.service.SendThreadRequest}
  */
-proto.email.SendThreadRequest.deserializeBinaryFromReader = function(msg, reader) {
+proto.service.SendThreadRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -8241,8 +8241,8 @@ proto.email.SendThreadRequest.deserializeBinaryFromReader = function(msg, reader
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = new proto.email.Thread;
-      reader.readMessage(value,proto.email.Thread.deserializeBinaryFromReader);
+      var value = new proto.service.Thread;
+      reader.readMessage(value,proto.service.Thread.deserializeBinaryFromReader);
       msg.setThread(value);
       break;
     default:
@@ -8258,9 +8258,9 @@ proto.email.SendThreadRequest.deserializeBinaryFromReader = function(msg, reader
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.email.SendThreadRequest.prototype.serializeBinary = function() {
+proto.service.SendThreadRequest.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.email.SendThreadRequest.serializeBinaryToWriter(this, writer);
+  proto.service.SendThreadRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -8268,18 +8268,18 @@ proto.email.SendThreadRequest.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.email.SendThreadRequest} message
+ * @param {!proto.service.SendThreadRequest} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.email.SendThreadRequest.serializeBinaryToWriter = function(message, writer) {
+proto.service.SendThreadRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getThread();
   if (f != null) {
     writer.writeMessage(
       1,
       f,
-      proto.email.Thread.serializeBinaryToWriter
+      proto.service.Thread.serializeBinaryToWriter
     );
   }
 };
@@ -8287,28 +8287,28 @@ proto.email.SendThreadRequest.serializeBinaryToWriter = function(message, writer
 
 /**
  * optional Thread thread = 1;
- * @return {?proto.email.Thread}
+ * @return {?proto.service.Thread}
  */
-proto.email.SendThreadRequest.prototype.getThread = function() {
-  return /** @type{?proto.email.Thread} */ (
-    jspb.Message.getWrapperField(this, proto.email.Thread, 1));
+proto.service.SendThreadRequest.prototype.getThread = function() {
+  return /** @type{?proto.service.Thread} */ (
+    jspb.Message.getWrapperField(this, proto.service.Thread, 1));
 };
 
 
 /**
- * @param {?proto.email.Thread|undefined} value
- * @return {!proto.email.SendThreadRequest} returns this
+ * @param {?proto.service.Thread|undefined} value
+ * @return {!proto.service.SendThreadRequest} returns this
 */
-proto.email.SendThreadRequest.prototype.setThread = function(value) {
+proto.service.SendThreadRequest.prototype.setThread = function(value) {
   return jspb.Message.setWrapperField(this, 1, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.email.SendThreadRequest} returns this
+ * @return {!proto.service.SendThreadRequest} returns this
  */
-proto.email.SendThreadRequest.prototype.clearThread = function() {
+proto.service.SendThreadRequest.prototype.clearThread = function() {
   return this.setThread(undefined);
 };
 
@@ -8317,7 +8317,7 @@ proto.email.SendThreadRequest.prototype.clearThread = function() {
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.email.SendThreadRequest.prototype.hasThread = function() {
+proto.service.SendThreadRequest.prototype.hasThread = function() {
   return jspb.Message.getField(this, 1) != null;
 };
 
@@ -8328,7 +8328,7 @@ proto.email.SendThreadRequest.prototype.hasThread = function() {
  * @private {!Array<number>}
  * @const
  */
-proto.email.ListThreadsResponse.repeatedFields_ = [1];
+proto.service.ListThreadsResponse.repeatedFields_ = [1];
 
 
 
@@ -8345,8 +8345,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.email.ListThreadsResponse.prototype.toObject = function(opt_includeInstance) {
-  return proto.email.ListThreadsResponse.toObject(opt_includeInstance, this);
+proto.service.ListThreadsResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.service.ListThreadsResponse.toObject(opt_includeInstance, this);
 };
 
 
@@ -8355,14 +8355,14 @@ proto.email.ListThreadsResponse.prototype.toObject = function(opt_includeInstanc
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.email.ListThreadsResponse} msg The msg instance to transform.
+ * @param {!proto.service.ListThreadsResponse} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.email.ListThreadsResponse.toObject = function(includeInstance, msg) {
+proto.service.ListThreadsResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
     threadList: jspb.Message.toObjectList(msg.getThreadList(),
-    proto.email.Thread.toObject, includeInstance),
+    proto.service.Thread.toObject, includeInstance),
     nextPageToken: jspb.Message.getFieldWithDefault(msg, 2, ""),
     totalSize: jspb.Message.getFieldWithDefault(msg, 3, 0)
   };
@@ -8378,23 +8378,23 @@ proto.email.ListThreadsResponse.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.email.ListThreadsResponse}
+ * @return {!proto.service.ListThreadsResponse}
  */
-proto.email.ListThreadsResponse.deserializeBinary = function(bytes) {
+proto.service.ListThreadsResponse.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.email.ListThreadsResponse;
-  return proto.email.ListThreadsResponse.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.service.ListThreadsResponse;
+  return proto.service.ListThreadsResponse.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.email.ListThreadsResponse} msg The message object to deserialize into.
+ * @param {!proto.service.ListThreadsResponse} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.email.ListThreadsResponse}
+ * @return {!proto.service.ListThreadsResponse}
  */
-proto.email.ListThreadsResponse.deserializeBinaryFromReader = function(msg, reader) {
+proto.service.ListThreadsResponse.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -8402,8 +8402,8 @@ proto.email.ListThreadsResponse.deserializeBinaryFromReader = function(msg, read
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = new proto.email.Thread;
-      reader.readMessage(value,proto.email.Thread.deserializeBinaryFromReader);
+      var value = new proto.service.Thread;
+      reader.readMessage(value,proto.service.Thread.deserializeBinaryFromReader);
       msg.addThread(value);
       break;
     case 2:
@@ -8427,9 +8427,9 @@ proto.email.ListThreadsResponse.deserializeBinaryFromReader = function(msg, read
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.email.ListThreadsResponse.prototype.serializeBinary = function() {
+proto.service.ListThreadsResponse.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.email.ListThreadsResponse.serializeBinaryToWriter(this, writer);
+  proto.service.ListThreadsResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -8437,18 +8437,18 @@ proto.email.ListThreadsResponse.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.email.ListThreadsResponse} message
+ * @param {!proto.service.ListThreadsResponse} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.email.ListThreadsResponse.serializeBinaryToWriter = function(message, writer) {
+proto.service.ListThreadsResponse.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getThreadList();
   if (f.length > 0) {
     writer.writeRepeatedMessage(
       1,
       f,
-      proto.email.Thread.serializeBinaryToWriter
+      proto.service.Thread.serializeBinaryToWriter
     );
   }
   f = message.getNextPageToken();
@@ -8470,38 +8470,38 @@ proto.email.ListThreadsResponse.serializeBinaryToWriter = function(message, writ
 
 /**
  * repeated Thread thread = 1;
- * @return {!Array<!proto.email.Thread>}
+ * @return {!Array<!proto.service.Thread>}
  */
-proto.email.ListThreadsResponse.prototype.getThreadList = function() {
-  return /** @type{!Array<!proto.email.Thread>} */ (
-    jspb.Message.getRepeatedWrapperField(this, proto.email.Thread, 1));
+proto.service.ListThreadsResponse.prototype.getThreadList = function() {
+  return /** @type{!Array<!proto.service.Thread>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.service.Thread, 1));
 };
 
 
 /**
- * @param {!Array<!proto.email.Thread>} value
- * @return {!proto.email.ListThreadsResponse} returns this
+ * @param {!Array<!proto.service.Thread>} value
+ * @return {!proto.service.ListThreadsResponse} returns this
 */
-proto.email.ListThreadsResponse.prototype.setThreadList = function(value) {
+proto.service.ListThreadsResponse.prototype.setThreadList = function(value) {
   return jspb.Message.setRepeatedWrapperField(this, 1, value);
 };
 
 
 /**
- * @param {!proto.email.Thread=} opt_value
+ * @param {!proto.service.Thread=} opt_value
  * @param {number=} opt_index
- * @return {!proto.email.Thread}
+ * @return {!proto.service.Thread}
  */
-proto.email.ListThreadsResponse.prototype.addThread = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.email.Thread, opt_index);
+proto.service.ListThreadsResponse.prototype.addThread = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.service.Thread, opt_index);
 };
 
 
 /**
  * Clears the list making it empty but non-null.
- * @return {!proto.email.ListThreadsResponse} returns this
+ * @return {!proto.service.ListThreadsResponse} returns this
  */
-proto.email.ListThreadsResponse.prototype.clearThreadList = function() {
+proto.service.ListThreadsResponse.prototype.clearThreadList = function() {
   return this.setThreadList([]);
 };
 
@@ -8510,16 +8510,16 @@ proto.email.ListThreadsResponse.prototype.clearThreadList = function() {
  * optional string next_page_token = 2;
  * @return {string}
  */
-proto.email.ListThreadsResponse.prototype.getNextPageToken = function() {
+proto.service.ListThreadsResponse.prototype.getNextPageToken = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.email.ListThreadsResponse} returns this
+ * @return {!proto.service.ListThreadsResponse} returns this
  */
-proto.email.ListThreadsResponse.prototype.setNextPageToken = function(value) {
+proto.service.ListThreadsResponse.prototype.setNextPageToken = function(value) {
   return jspb.Message.setProto3StringField(this, 2, value);
 };
 
@@ -8528,16 +8528,16 @@ proto.email.ListThreadsResponse.prototype.setNextPageToken = function(value) {
  * optional uint32 total_size = 3;
  * @return {number}
  */
-proto.email.ListThreadsResponse.prototype.getTotalSize = function() {
+proto.service.ListThreadsResponse.prototype.getTotalSize = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.email.ListThreadsResponse} returns this
+ * @return {!proto.service.ListThreadsResponse} returns this
  */
-proto.email.ListThreadsResponse.prototype.setTotalSize = function(value) {
+proto.service.ListThreadsResponse.prototype.setTotalSize = function(value) {
   return jspb.Message.setProto3IntField(this, 3, value);
 };
 
@@ -8558,8 +8558,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.email.StreamStateRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.email.StreamStateRequest.toObject(opt_includeInstance, this);
+proto.service.StreamStateRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.service.StreamStateRequest.toObject(opt_includeInstance, this);
 };
 
 
@@ -8568,11 +8568,11 @@ proto.email.StreamStateRequest.prototype.toObject = function(opt_includeInstance
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.email.StreamStateRequest} msg The msg instance to transform.
+ * @param {!proto.service.StreamStateRequest} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.email.StreamStateRequest.toObject = function(includeInstance, msg) {
+proto.service.StreamStateRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
     labelsMap: (f = msg.getLabelsMap()) ? f.toObject(includeInstance, undefined) : [],
     query: jspb.Message.getFieldWithDefault(msg, 2, "")
@@ -8589,23 +8589,23 @@ proto.email.StreamStateRequest.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.email.StreamStateRequest}
+ * @return {!proto.service.StreamStateRequest}
  */
-proto.email.StreamStateRequest.deserializeBinary = function(bytes) {
+proto.service.StreamStateRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.email.StreamStateRequest;
-  return proto.email.StreamStateRequest.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.service.StreamStateRequest;
+  return proto.service.StreamStateRequest.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.email.StreamStateRequest} msg The message object to deserialize into.
+ * @param {!proto.service.StreamStateRequest} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.email.StreamStateRequest}
+ * @return {!proto.service.StreamStateRequest}
  */
-proto.email.StreamStateRequest.deserializeBinaryFromReader = function(msg, reader) {
+proto.service.StreamStateRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -8635,9 +8635,9 @@ proto.email.StreamStateRequest.deserializeBinaryFromReader = function(msg, reade
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.email.StreamStateRequest.prototype.serializeBinary = function() {
+proto.service.StreamStateRequest.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.email.StreamStateRequest.serializeBinaryToWriter(this, writer);
+  proto.service.StreamStateRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -8645,11 +8645,11 @@ proto.email.StreamStateRequest.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.email.StreamStateRequest} message
+ * @param {!proto.service.StreamStateRequest} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.email.StreamStateRequest.serializeBinaryToWriter = function(message, writer) {
+proto.service.StreamStateRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getLabelsMap(true);
   if (f && f.getLength() > 0) {
@@ -8671,7 +8671,7 @@ proto.email.StreamStateRequest.serializeBinaryToWriter = function(message, write
  * empty, instead returning `undefined`
  * @return {!jspb.Map<string,string>}
  */
-proto.email.StreamStateRequest.prototype.getLabelsMap = function(opt_noLazyCreate) {
+proto.service.StreamStateRequest.prototype.getLabelsMap = function(opt_noLazyCreate) {
   return /** @type {!jspb.Map<string,string>} */ (
       jspb.Message.getMapField(this, 1, opt_noLazyCreate,
       null));
@@ -8680,9 +8680,9 @@ proto.email.StreamStateRequest.prototype.getLabelsMap = function(opt_noLazyCreat
 
 /**
  * Clears values from the map. The map will be non-null.
- * @return {!proto.email.StreamStateRequest} returns this
+ * @return {!proto.service.StreamStateRequest} returns this
  */
-proto.email.StreamStateRequest.prototype.clearLabelsMap = function() {
+proto.service.StreamStateRequest.prototype.clearLabelsMap = function() {
   this.getLabelsMap().clear();
   return this;};
 
@@ -8691,16 +8691,16 @@ proto.email.StreamStateRequest.prototype.clearLabelsMap = function() {
  * optional string query = 2;
  * @return {string}
  */
-proto.email.StreamStateRequest.prototype.getQuery = function() {
+proto.service.StreamStateRequest.prototype.getQuery = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.email.StreamStateRequest} returns this
+ * @return {!proto.service.StreamStateRequest} returns this
  */
-proto.email.StreamStateRequest.prototype.setQuery = function(value) {
+proto.service.StreamStateRequest.prototype.setQuery = function(value) {
   return jspb.Message.setProto3StringField(this, 2, value);
 };
 
@@ -8721,8 +8721,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.email.StreamingStateResponse.prototype.toObject = function(opt_includeInstance) {
-  return proto.email.StreamingStateResponse.toObject(opt_includeInstance, this);
+proto.service.StreamingStateResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.service.StreamingStateResponse.toObject(opt_includeInstance, this);
 };
 
 
@@ -8731,11 +8731,11 @@ proto.email.StreamingStateResponse.prototype.toObject = function(opt_includeInst
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.email.StreamingStateResponse} msg The msg instance to transform.
+ * @param {!proto.service.StreamingStateResponse} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.email.StreamingStateResponse.toObject = function(includeInstance, msg) {
+proto.service.StreamingStateResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
     data: (f = msg.getData()) && google_protobuf_any_pb.Any.toObject(includeInstance, f),
     status: (f = msg.getStatus()) && google_rpc_status_pb.Status.toObject(includeInstance, f)
@@ -8752,23 +8752,23 @@ proto.email.StreamingStateResponse.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.email.StreamingStateResponse}
+ * @return {!proto.service.StreamingStateResponse}
  */
-proto.email.StreamingStateResponse.deserializeBinary = function(bytes) {
+proto.service.StreamingStateResponse.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.email.StreamingStateResponse;
-  return proto.email.StreamingStateResponse.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.service.StreamingStateResponse;
+  return proto.service.StreamingStateResponse.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.email.StreamingStateResponse} msg The message object to deserialize into.
+ * @param {!proto.service.StreamingStateResponse} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.email.StreamingStateResponse}
+ * @return {!proto.service.StreamingStateResponse}
  */
-proto.email.StreamingStateResponse.deserializeBinaryFromReader = function(msg, reader) {
+proto.service.StreamingStateResponse.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -8798,9 +8798,9 @@ proto.email.StreamingStateResponse.deserializeBinaryFromReader = function(msg, r
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.email.StreamingStateResponse.prototype.serializeBinary = function() {
+proto.service.StreamingStateResponse.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.email.StreamingStateResponse.serializeBinaryToWriter(this, writer);
+  proto.service.StreamingStateResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -8808,11 +8808,11 @@ proto.email.StreamingStateResponse.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.email.StreamingStateResponse} message
+ * @param {!proto.service.StreamingStateResponse} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.email.StreamingStateResponse.serializeBinaryToWriter = function(message, writer) {
+proto.service.StreamingStateResponse.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getData();
   if (f != null) {
@@ -8837,7 +8837,7 @@ proto.email.StreamingStateResponse.serializeBinaryToWriter = function(message, w
  * optional google.protobuf.Any data = 1;
  * @return {?proto.google.protobuf.Any}
  */
-proto.email.StreamingStateResponse.prototype.getData = function() {
+proto.service.StreamingStateResponse.prototype.getData = function() {
   return /** @type{?proto.google.protobuf.Any} */ (
     jspb.Message.getWrapperField(this, google_protobuf_any_pb.Any, 1));
 };
@@ -8845,18 +8845,18 @@ proto.email.StreamingStateResponse.prototype.getData = function() {
 
 /**
  * @param {?proto.google.protobuf.Any|undefined} value
- * @return {!proto.email.StreamingStateResponse} returns this
+ * @return {!proto.service.StreamingStateResponse} returns this
 */
-proto.email.StreamingStateResponse.prototype.setData = function(value) {
+proto.service.StreamingStateResponse.prototype.setData = function(value) {
   return jspb.Message.setWrapperField(this, 1, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.email.StreamingStateResponse} returns this
+ * @return {!proto.service.StreamingStateResponse} returns this
  */
-proto.email.StreamingStateResponse.prototype.clearData = function() {
+proto.service.StreamingStateResponse.prototype.clearData = function() {
   return this.setData(undefined);
 };
 
@@ -8865,7 +8865,7 @@ proto.email.StreamingStateResponse.prototype.clearData = function() {
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.email.StreamingStateResponse.prototype.hasData = function() {
+proto.service.StreamingStateResponse.prototype.hasData = function() {
   return jspb.Message.getField(this, 1) != null;
 };
 
@@ -8874,7 +8874,7 @@ proto.email.StreamingStateResponse.prototype.hasData = function() {
  * optional google.rpc.Status status = 2;
  * @return {?proto.google.rpc.Status}
  */
-proto.email.StreamingStateResponse.prototype.getStatus = function() {
+proto.service.StreamingStateResponse.prototype.getStatus = function() {
   return /** @type{?proto.google.rpc.Status} */ (
     jspb.Message.getWrapperField(this, google_rpc_status_pb.Status, 2));
 };
@@ -8882,18 +8882,18 @@ proto.email.StreamingStateResponse.prototype.getStatus = function() {
 
 /**
  * @param {?proto.google.rpc.Status|undefined} value
- * @return {!proto.email.StreamingStateResponse} returns this
+ * @return {!proto.service.StreamingStateResponse} returns this
 */
-proto.email.StreamingStateResponse.prototype.setStatus = function(value) {
+proto.service.StreamingStateResponse.prototype.setStatus = function(value) {
   return jspb.Message.setWrapperField(this, 2, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.email.StreamingStateResponse} returns this
+ * @return {!proto.service.StreamingStateResponse} returns this
  */
-proto.email.StreamingStateResponse.prototype.clearStatus = function() {
+proto.service.StreamingStateResponse.prototype.clearStatus = function() {
   return this.setStatus(undefined);
 };
 
@@ -8902,7 +8902,7 @@ proto.email.StreamingStateResponse.prototype.clearStatus = function() {
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.email.StreamingStateResponse.prototype.hasStatus = function() {
+proto.service.StreamingStateResponse.prototype.hasStatus = function() {
   return jspb.Message.getField(this, 2) != null;
 };
 
@@ -8923,8 +8923,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.email.ListHistoryRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.email.ListHistoryRequest.toObject(opt_includeInstance, this);
+proto.service.ListHistoryRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.service.ListHistoryRequest.toObject(opt_includeInstance, this);
 };
 
 
@@ -8933,11 +8933,11 @@ proto.email.ListHistoryRequest.prototype.toObject = function(opt_includeInstance
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.email.ListHistoryRequest} msg The msg instance to transform.
+ * @param {!proto.service.ListHistoryRequest} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.email.ListHistoryRequest.toObject = function(includeInstance, msg) {
+proto.service.ListHistoryRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
     historyTypes: jspb.Message.getFieldWithDefault(msg, 1, 0),
     labelId: jspb.Message.getFieldWithDefault(msg, 2, ""),
@@ -8957,23 +8957,23 @@ proto.email.ListHistoryRequest.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.email.ListHistoryRequest}
+ * @return {!proto.service.ListHistoryRequest}
  */
-proto.email.ListHistoryRequest.deserializeBinary = function(bytes) {
+proto.service.ListHistoryRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.email.ListHistoryRequest;
-  return proto.email.ListHistoryRequest.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.service.ListHistoryRequest;
+  return proto.service.ListHistoryRequest.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.email.ListHistoryRequest} msg The message object to deserialize into.
+ * @param {!proto.service.ListHistoryRequest} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.email.ListHistoryRequest}
+ * @return {!proto.service.ListHistoryRequest}
  */
-proto.email.ListHistoryRequest.deserializeBinaryFromReader = function(msg, reader) {
+proto.service.ListHistoryRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -8981,7 +8981,7 @@ proto.email.ListHistoryRequest.deserializeBinaryFromReader = function(msg, reade
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = /** @type {!proto.email.HistoryTypes} */ (reader.readEnum());
+      var value = /** @type {!proto.service.HistoryTypes} */ (reader.readEnum());
       msg.setHistoryTypes(value);
       break;
     case 2:
@@ -9013,9 +9013,9 @@ proto.email.ListHistoryRequest.deserializeBinaryFromReader = function(msg, reade
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.email.ListHistoryRequest.prototype.serializeBinary = function() {
+proto.service.ListHistoryRequest.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.email.ListHistoryRequest.serializeBinaryToWriter(this, writer);
+  proto.service.ListHistoryRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -9023,11 +9023,11 @@ proto.email.ListHistoryRequest.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.email.ListHistoryRequest} message
+ * @param {!proto.service.ListHistoryRequest} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.email.ListHistoryRequest.serializeBinaryToWriter = function(message, writer) {
+proto.service.ListHistoryRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getHistoryTypes();
   if (f !== 0.0) {
@@ -9069,18 +9069,18 @@ proto.email.ListHistoryRequest.serializeBinaryToWriter = function(message, write
 
 /**
  * optional HistoryTypes history_types = 1;
- * @return {!proto.email.HistoryTypes}
+ * @return {!proto.service.HistoryTypes}
  */
-proto.email.ListHistoryRequest.prototype.getHistoryTypes = function() {
-  return /** @type {!proto.email.HistoryTypes} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
+proto.service.ListHistoryRequest.prototype.getHistoryTypes = function() {
+  return /** @type {!proto.service.HistoryTypes} */ (jspb.Message.getFieldWithDefault(this, 1, 0));
 };
 
 
 /**
- * @param {!proto.email.HistoryTypes} value
- * @return {!proto.email.ListHistoryRequest} returns this
+ * @param {!proto.service.HistoryTypes} value
+ * @return {!proto.service.ListHistoryRequest} returns this
  */
-proto.email.ListHistoryRequest.prototype.setHistoryTypes = function(value) {
+proto.service.ListHistoryRequest.prototype.setHistoryTypes = function(value) {
   return jspb.Message.setProto3EnumField(this, 1, value);
 };
 
@@ -9089,16 +9089,16 @@ proto.email.ListHistoryRequest.prototype.setHistoryTypes = function(value) {
  * optional string label_id = 2;
  * @return {string}
  */
-proto.email.ListHistoryRequest.prototype.getLabelId = function() {
+proto.service.ListHistoryRequest.prototype.getLabelId = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.email.ListHistoryRequest} returns this
+ * @return {!proto.service.ListHistoryRequest} returns this
  */
-proto.email.ListHistoryRequest.prototype.setLabelId = function(value) {
+proto.service.ListHistoryRequest.prototype.setLabelId = function(value) {
   return jspb.Message.setProto3StringField(this, 2, value);
 };
 
@@ -9107,16 +9107,16 @@ proto.email.ListHistoryRequest.prototype.setLabelId = function(value) {
  * optional string page_token = 3;
  * @return {string}
  */
-proto.email.ListHistoryRequest.prototype.getPageToken = function() {
+proto.service.ListHistoryRequest.prototype.getPageToken = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.email.ListHistoryRequest} returns this
+ * @return {!proto.service.ListHistoryRequest} returns this
  */
-proto.email.ListHistoryRequest.prototype.setPageToken = function(value) {
+proto.service.ListHistoryRequest.prototype.setPageToken = function(value) {
   return jspb.Message.setProto3StringField(this, 3, value);
 };
 
@@ -9125,16 +9125,16 @@ proto.email.ListHistoryRequest.prototype.setPageToken = function(value) {
  * optional uint32 page_size = 4;
  * @return {number}
  */
-proto.email.ListHistoryRequest.prototype.getPageSize = function() {
+proto.service.ListHistoryRequest.prototype.getPageSize = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 4, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.email.ListHistoryRequest} returns this
+ * @return {!proto.service.ListHistoryRequest} returns this
  */
-proto.email.ListHistoryRequest.prototype.setPageSize = function(value) {
+proto.service.ListHistoryRequest.prototype.setPageSize = function(value) {
   return jspb.Message.setProto3IntField(this, 4, value);
 };
 
@@ -9143,16 +9143,16 @@ proto.email.ListHistoryRequest.prototype.setPageSize = function(value) {
  * optional uint32 start_history_id = 5;
  * @return {number}
  */
-proto.email.ListHistoryRequest.prototype.getStartHistoryId = function() {
+proto.service.ListHistoryRequest.prototype.getStartHistoryId = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 5, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.email.ListHistoryRequest} returns this
+ * @return {!proto.service.ListHistoryRequest} returns this
  */
-proto.email.ListHistoryRequest.prototype.setStartHistoryId = function(value) {
+proto.service.ListHistoryRequest.prototype.setStartHistoryId = function(value) {
   return jspb.Message.setProto3IntField(this, 5, value);
 };
 
@@ -9163,7 +9163,7 @@ proto.email.ListHistoryRequest.prototype.setStartHistoryId = function(value) {
  * @private {!Array<number>}
  * @const
  */
-proto.email.ListHistoryResponse.repeatedFields_ = [1];
+proto.service.ListHistoryResponse.repeatedFields_ = [1];
 
 
 
@@ -9180,8 +9180,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.email.ListHistoryResponse.prototype.toObject = function(opt_includeInstance) {
-  return proto.email.ListHistoryResponse.toObject(opt_includeInstance, this);
+proto.service.ListHistoryResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.service.ListHistoryResponse.toObject(opt_includeInstance, this);
 };
 
 
@@ -9190,14 +9190,14 @@ proto.email.ListHistoryResponse.prototype.toObject = function(opt_includeInstanc
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.email.ListHistoryResponse} msg The msg instance to transform.
+ * @param {!proto.service.ListHistoryResponse} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.email.ListHistoryResponse.toObject = function(includeInstance, msg) {
+proto.service.ListHistoryResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
     historyList: jspb.Message.toObjectList(msg.getHistoryList(),
-    proto.email.History.toObject, includeInstance),
+    proto.service.History.toObject, includeInstance),
     nextPageToken: jspb.Message.getFieldWithDefault(msg, 2, ""),
     historyId: jspb.Message.getFieldWithDefault(msg, 3, 0)
   };
@@ -9213,23 +9213,23 @@ proto.email.ListHistoryResponse.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.email.ListHistoryResponse}
+ * @return {!proto.service.ListHistoryResponse}
  */
-proto.email.ListHistoryResponse.deserializeBinary = function(bytes) {
+proto.service.ListHistoryResponse.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.email.ListHistoryResponse;
-  return proto.email.ListHistoryResponse.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.service.ListHistoryResponse;
+  return proto.service.ListHistoryResponse.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.email.ListHistoryResponse} msg The message object to deserialize into.
+ * @param {!proto.service.ListHistoryResponse} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.email.ListHistoryResponse}
+ * @return {!proto.service.ListHistoryResponse}
  */
-proto.email.ListHistoryResponse.deserializeBinaryFromReader = function(msg, reader) {
+proto.service.ListHistoryResponse.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -9237,8 +9237,8 @@ proto.email.ListHistoryResponse.deserializeBinaryFromReader = function(msg, read
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = new proto.email.History;
-      reader.readMessage(value,proto.email.History.deserializeBinaryFromReader);
+      var value = new proto.service.History;
+      reader.readMessage(value,proto.service.History.deserializeBinaryFromReader);
       msg.addHistory(value);
       break;
     case 2:
@@ -9262,9 +9262,9 @@ proto.email.ListHistoryResponse.deserializeBinaryFromReader = function(msg, read
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.email.ListHistoryResponse.prototype.serializeBinary = function() {
+proto.service.ListHistoryResponse.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.email.ListHistoryResponse.serializeBinaryToWriter(this, writer);
+  proto.service.ListHistoryResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -9272,18 +9272,18 @@ proto.email.ListHistoryResponse.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.email.ListHistoryResponse} message
+ * @param {!proto.service.ListHistoryResponse} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.email.ListHistoryResponse.serializeBinaryToWriter = function(message, writer) {
+proto.service.ListHistoryResponse.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getHistoryList();
   if (f.length > 0) {
     writer.writeRepeatedMessage(
       1,
       f,
-      proto.email.History.serializeBinaryToWriter
+      proto.service.History.serializeBinaryToWriter
     );
   }
   f = message.getNextPageToken();
@@ -9305,38 +9305,38 @@ proto.email.ListHistoryResponse.serializeBinaryToWriter = function(message, writ
 
 /**
  * repeated History history = 1;
- * @return {!Array<!proto.email.History>}
+ * @return {!Array<!proto.service.History>}
  */
-proto.email.ListHistoryResponse.prototype.getHistoryList = function() {
-  return /** @type{!Array<!proto.email.History>} */ (
-    jspb.Message.getRepeatedWrapperField(this, proto.email.History, 1));
+proto.service.ListHistoryResponse.prototype.getHistoryList = function() {
+  return /** @type{!Array<!proto.service.History>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.service.History, 1));
 };
 
 
 /**
- * @param {!Array<!proto.email.History>} value
- * @return {!proto.email.ListHistoryResponse} returns this
+ * @param {!Array<!proto.service.History>} value
+ * @return {!proto.service.ListHistoryResponse} returns this
 */
-proto.email.ListHistoryResponse.prototype.setHistoryList = function(value) {
+proto.service.ListHistoryResponse.prototype.setHistoryList = function(value) {
   return jspb.Message.setRepeatedWrapperField(this, 1, value);
 };
 
 
 /**
- * @param {!proto.email.History=} opt_value
+ * @param {!proto.service.History=} opt_value
  * @param {number=} opt_index
- * @return {!proto.email.History}
+ * @return {!proto.service.History}
  */
-proto.email.ListHistoryResponse.prototype.addHistory = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.email.History, opt_index);
+proto.service.ListHistoryResponse.prototype.addHistory = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.service.History, opt_index);
 };
 
 
 /**
  * Clears the list making it empty but non-null.
- * @return {!proto.email.ListHistoryResponse} returns this
+ * @return {!proto.service.ListHistoryResponse} returns this
  */
-proto.email.ListHistoryResponse.prototype.clearHistoryList = function() {
+proto.service.ListHistoryResponse.prototype.clearHistoryList = function() {
   return this.setHistoryList([]);
 };
 
@@ -9345,16 +9345,16 @@ proto.email.ListHistoryResponse.prototype.clearHistoryList = function() {
  * optional string next_page_token = 2;
  * @return {string}
  */
-proto.email.ListHistoryResponse.prototype.getNextPageToken = function() {
+proto.service.ListHistoryResponse.prototype.getNextPageToken = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.email.ListHistoryResponse} returns this
+ * @return {!proto.service.ListHistoryResponse} returns this
  */
-proto.email.ListHistoryResponse.prototype.setNextPageToken = function(value) {
+proto.service.ListHistoryResponse.prototype.setNextPageToken = function(value) {
   return jspb.Message.setProto3StringField(this, 2, value);
 };
 
@@ -9363,16 +9363,16 @@ proto.email.ListHistoryResponse.prototype.setNextPageToken = function(value) {
  * optional uint32 history_id = 3;
  * @return {number}
  */
-proto.email.ListHistoryResponse.prototype.getHistoryId = function() {
+proto.service.ListHistoryResponse.prototype.getHistoryId = function() {
   return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
 };
 
 
 /**
  * @param {number} value
- * @return {!proto.email.ListHistoryResponse} returns this
+ * @return {!proto.service.ListHistoryResponse} returns this
  */
-proto.email.ListHistoryResponse.prototype.setHistoryId = function(value) {
+proto.service.ListHistoryResponse.prototype.setHistoryId = function(value) {
   return jspb.Message.setProto3IntField(this, 3, value);
 };
 
@@ -9393,8 +9393,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.email.GetLabelRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.email.GetLabelRequest.toObject(opt_includeInstance, this);
+proto.service.GetLabelRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.service.GetLabelRequest.toObject(opt_includeInstance, this);
 };
 
 
@@ -9403,11 +9403,11 @@ proto.email.GetLabelRequest.prototype.toObject = function(opt_includeInstance) {
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.email.GetLabelRequest} msg The msg instance to transform.
+ * @param {!proto.service.GetLabelRequest} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.email.GetLabelRequest.toObject = function(includeInstance, msg) {
+proto.service.GetLabelRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
     labelId: jspb.Message.getFieldWithDefault(msg, 1, "")
   };
@@ -9423,23 +9423,23 @@ proto.email.GetLabelRequest.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.email.GetLabelRequest}
+ * @return {!proto.service.GetLabelRequest}
  */
-proto.email.GetLabelRequest.deserializeBinary = function(bytes) {
+proto.service.GetLabelRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.email.GetLabelRequest;
-  return proto.email.GetLabelRequest.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.service.GetLabelRequest;
+  return proto.service.GetLabelRequest.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.email.GetLabelRequest} msg The message object to deserialize into.
+ * @param {!proto.service.GetLabelRequest} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.email.GetLabelRequest}
+ * @return {!proto.service.GetLabelRequest}
  */
-proto.email.GetLabelRequest.deserializeBinaryFromReader = function(msg, reader) {
+proto.service.GetLabelRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -9463,9 +9463,9 @@ proto.email.GetLabelRequest.deserializeBinaryFromReader = function(msg, reader) 
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.email.GetLabelRequest.prototype.serializeBinary = function() {
+proto.service.GetLabelRequest.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.email.GetLabelRequest.serializeBinaryToWriter(this, writer);
+  proto.service.GetLabelRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -9473,11 +9473,11 @@ proto.email.GetLabelRequest.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.email.GetLabelRequest} message
+ * @param {!proto.service.GetLabelRequest} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.email.GetLabelRequest.serializeBinaryToWriter = function(message, writer) {
+proto.service.GetLabelRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getLabelId();
   if (f.length > 0) {
@@ -9493,16 +9493,16 @@ proto.email.GetLabelRequest.serializeBinaryToWriter = function(message, writer) 
  * optional string Label_id = 1;
  * @return {string}
  */
-proto.email.GetLabelRequest.prototype.getLabelId = function() {
+proto.service.GetLabelRequest.prototype.getLabelId = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.email.GetLabelRequest} returns this
+ * @return {!proto.service.GetLabelRequest} returns this
  */
-proto.email.GetLabelRequest.prototype.setLabelId = function(value) {
+proto.service.GetLabelRequest.prototype.setLabelId = function(value) {
   return jspb.Message.setProto3StringField(this, 1, value);
 };
 
@@ -9523,8 +9523,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.email.CreateLabelRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.email.CreateLabelRequest.toObject(opt_includeInstance, this);
+proto.service.CreateLabelRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.service.CreateLabelRequest.toObject(opt_includeInstance, this);
 };
 
 
@@ -9533,13 +9533,13 @@ proto.email.CreateLabelRequest.prototype.toObject = function(opt_includeInstance
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.email.CreateLabelRequest} msg The msg instance to transform.
+ * @param {!proto.service.CreateLabelRequest} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.email.CreateLabelRequest.toObject = function(includeInstance, msg) {
+proto.service.CreateLabelRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-    label: (f = msg.getLabel()) && proto.email.Label.toObject(includeInstance, f)
+    label: (f = msg.getLabel()) && proto.service.Label.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -9553,23 +9553,23 @@ proto.email.CreateLabelRequest.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.email.CreateLabelRequest}
+ * @return {!proto.service.CreateLabelRequest}
  */
-proto.email.CreateLabelRequest.deserializeBinary = function(bytes) {
+proto.service.CreateLabelRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.email.CreateLabelRequest;
-  return proto.email.CreateLabelRequest.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.service.CreateLabelRequest;
+  return proto.service.CreateLabelRequest.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.email.CreateLabelRequest} msg The message object to deserialize into.
+ * @param {!proto.service.CreateLabelRequest} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.email.CreateLabelRequest}
+ * @return {!proto.service.CreateLabelRequest}
  */
-proto.email.CreateLabelRequest.deserializeBinaryFromReader = function(msg, reader) {
+proto.service.CreateLabelRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -9577,8 +9577,8 @@ proto.email.CreateLabelRequest.deserializeBinaryFromReader = function(msg, reade
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = new proto.email.Label;
-      reader.readMessage(value,proto.email.Label.deserializeBinaryFromReader);
+      var value = new proto.service.Label;
+      reader.readMessage(value,proto.service.Label.deserializeBinaryFromReader);
       msg.setLabel(value);
       break;
     default:
@@ -9594,9 +9594,9 @@ proto.email.CreateLabelRequest.deserializeBinaryFromReader = function(msg, reade
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.email.CreateLabelRequest.prototype.serializeBinary = function() {
+proto.service.CreateLabelRequest.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.email.CreateLabelRequest.serializeBinaryToWriter(this, writer);
+  proto.service.CreateLabelRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -9604,18 +9604,18 @@ proto.email.CreateLabelRequest.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.email.CreateLabelRequest} message
+ * @param {!proto.service.CreateLabelRequest} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.email.CreateLabelRequest.serializeBinaryToWriter = function(message, writer) {
+proto.service.CreateLabelRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getLabel();
   if (f != null) {
     writer.writeMessage(
       1,
       f,
-      proto.email.Label.serializeBinaryToWriter
+      proto.service.Label.serializeBinaryToWriter
     );
   }
 };
@@ -9623,28 +9623,28 @@ proto.email.CreateLabelRequest.serializeBinaryToWriter = function(message, write
 
 /**
  * optional Label Label = 1;
- * @return {?proto.email.Label}
+ * @return {?proto.service.Label}
  */
-proto.email.CreateLabelRequest.prototype.getLabel = function() {
-  return /** @type{?proto.email.Label} */ (
-    jspb.Message.getWrapperField(this, proto.email.Label, 1));
+proto.service.CreateLabelRequest.prototype.getLabel = function() {
+  return /** @type{?proto.service.Label} */ (
+    jspb.Message.getWrapperField(this, proto.service.Label, 1));
 };
 
 
 /**
- * @param {?proto.email.Label|undefined} value
- * @return {!proto.email.CreateLabelRequest} returns this
+ * @param {?proto.service.Label|undefined} value
+ * @return {!proto.service.CreateLabelRequest} returns this
 */
-proto.email.CreateLabelRequest.prototype.setLabel = function(value) {
+proto.service.CreateLabelRequest.prototype.setLabel = function(value) {
   return jspb.Message.setWrapperField(this, 1, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.email.CreateLabelRequest} returns this
+ * @return {!proto.service.CreateLabelRequest} returns this
  */
-proto.email.CreateLabelRequest.prototype.clearLabel = function() {
+proto.service.CreateLabelRequest.prototype.clearLabel = function() {
   return this.setLabel(undefined);
 };
 
@@ -9653,7 +9653,7 @@ proto.email.CreateLabelRequest.prototype.clearLabel = function() {
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.email.CreateLabelRequest.prototype.hasLabel = function() {
+proto.service.CreateLabelRequest.prototype.hasLabel = function() {
   return jspb.Message.getField(this, 1) != null;
 };
 
@@ -9674,8 +9674,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.email.UpdateLabelRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.email.UpdateLabelRequest.toObject(opt_includeInstance, this);
+proto.service.UpdateLabelRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.service.UpdateLabelRequest.toObject(opt_includeInstance, this);
 };
 
 
@@ -9684,13 +9684,13 @@ proto.email.UpdateLabelRequest.prototype.toObject = function(opt_includeInstance
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.email.UpdateLabelRequest} msg The msg instance to transform.
+ * @param {!proto.service.UpdateLabelRequest} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.email.UpdateLabelRequest.toObject = function(includeInstance, msg) {
+proto.service.UpdateLabelRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-    label: (f = msg.getLabel()) && proto.email.Label.toObject(includeInstance, f)
+    label: (f = msg.getLabel()) && proto.service.Label.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -9704,23 +9704,23 @@ proto.email.UpdateLabelRequest.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.email.UpdateLabelRequest}
+ * @return {!proto.service.UpdateLabelRequest}
  */
-proto.email.UpdateLabelRequest.deserializeBinary = function(bytes) {
+proto.service.UpdateLabelRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.email.UpdateLabelRequest;
-  return proto.email.UpdateLabelRequest.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.service.UpdateLabelRequest;
+  return proto.service.UpdateLabelRequest.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.email.UpdateLabelRequest} msg The message object to deserialize into.
+ * @param {!proto.service.UpdateLabelRequest} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.email.UpdateLabelRequest}
+ * @return {!proto.service.UpdateLabelRequest}
  */
-proto.email.UpdateLabelRequest.deserializeBinaryFromReader = function(msg, reader) {
+proto.service.UpdateLabelRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -9728,8 +9728,8 @@ proto.email.UpdateLabelRequest.deserializeBinaryFromReader = function(msg, reade
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = new proto.email.Label;
-      reader.readMessage(value,proto.email.Label.deserializeBinaryFromReader);
+      var value = new proto.service.Label;
+      reader.readMessage(value,proto.service.Label.deserializeBinaryFromReader);
       msg.setLabel(value);
       break;
     default:
@@ -9745,9 +9745,9 @@ proto.email.UpdateLabelRequest.deserializeBinaryFromReader = function(msg, reade
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.email.UpdateLabelRequest.prototype.serializeBinary = function() {
+proto.service.UpdateLabelRequest.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.email.UpdateLabelRequest.serializeBinaryToWriter(this, writer);
+  proto.service.UpdateLabelRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -9755,18 +9755,18 @@ proto.email.UpdateLabelRequest.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.email.UpdateLabelRequest} message
+ * @param {!proto.service.UpdateLabelRequest} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.email.UpdateLabelRequest.serializeBinaryToWriter = function(message, writer) {
+proto.service.UpdateLabelRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getLabel();
   if (f != null) {
     writer.writeMessage(
       1,
       f,
-      proto.email.Label.serializeBinaryToWriter
+      proto.service.Label.serializeBinaryToWriter
     );
   }
 };
@@ -9774,28 +9774,28 @@ proto.email.UpdateLabelRequest.serializeBinaryToWriter = function(message, write
 
 /**
  * optional Label Label = 1;
- * @return {?proto.email.Label}
+ * @return {?proto.service.Label}
  */
-proto.email.UpdateLabelRequest.prototype.getLabel = function() {
-  return /** @type{?proto.email.Label} */ (
-    jspb.Message.getWrapperField(this, proto.email.Label, 1));
+proto.service.UpdateLabelRequest.prototype.getLabel = function() {
+  return /** @type{?proto.service.Label} */ (
+    jspb.Message.getWrapperField(this, proto.service.Label, 1));
 };
 
 
 /**
- * @param {?proto.email.Label|undefined} value
- * @return {!proto.email.UpdateLabelRequest} returns this
+ * @param {?proto.service.Label|undefined} value
+ * @return {!proto.service.UpdateLabelRequest} returns this
 */
-proto.email.UpdateLabelRequest.prototype.setLabel = function(value) {
+proto.service.UpdateLabelRequest.prototype.setLabel = function(value) {
   return jspb.Message.setWrapperField(this, 1, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.email.UpdateLabelRequest} returns this
+ * @return {!proto.service.UpdateLabelRequest} returns this
  */
-proto.email.UpdateLabelRequest.prototype.clearLabel = function() {
+proto.service.UpdateLabelRequest.prototype.clearLabel = function() {
   return this.setLabel(undefined);
 };
 
@@ -9804,7 +9804,7 @@ proto.email.UpdateLabelRequest.prototype.clearLabel = function() {
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.email.UpdateLabelRequest.prototype.hasLabel = function() {
+proto.service.UpdateLabelRequest.prototype.hasLabel = function() {
   return jspb.Message.getField(this, 1) != null;
 };
 
@@ -9825,8 +9825,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.email.DeleteLabelRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.email.DeleteLabelRequest.toObject(opt_includeInstance, this);
+proto.service.DeleteLabelRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.service.DeleteLabelRequest.toObject(opt_includeInstance, this);
 };
 
 
@@ -9835,11 +9835,11 @@ proto.email.DeleteLabelRequest.prototype.toObject = function(opt_includeInstance
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.email.DeleteLabelRequest} msg The msg instance to transform.
+ * @param {!proto.service.DeleteLabelRequest} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.email.DeleteLabelRequest.toObject = function(includeInstance, msg) {
+proto.service.DeleteLabelRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
     labelId: jspb.Message.getFieldWithDefault(msg, 1, "")
   };
@@ -9855,23 +9855,23 @@ proto.email.DeleteLabelRequest.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.email.DeleteLabelRequest}
+ * @return {!proto.service.DeleteLabelRequest}
  */
-proto.email.DeleteLabelRequest.deserializeBinary = function(bytes) {
+proto.service.DeleteLabelRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.email.DeleteLabelRequest;
-  return proto.email.DeleteLabelRequest.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.service.DeleteLabelRequest;
+  return proto.service.DeleteLabelRequest.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.email.DeleteLabelRequest} msg The message object to deserialize into.
+ * @param {!proto.service.DeleteLabelRequest} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.email.DeleteLabelRequest}
+ * @return {!proto.service.DeleteLabelRequest}
  */
-proto.email.DeleteLabelRequest.deserializeBinaryFromReader = function(msg, reader) {
+proto.service.DeleteLabelRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -9895,9 +9895,9 @@ proto.email.DeleteLabelRequest.deserializeBinaryFromReader = function(msg, reade
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.email.DeleteLabelRequest.prototype.serializeBinary = function() {
+proto.service.DeleteLabelRequest.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.email.DeleteLabelRequest.serializeBinaryToWriter(this, writer);
+  proto.service.DeleteLabelRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -9905,11 +9905,11 @@ proto.email.DeleteLabelRequest.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.email.DeleteLabelRequest} message
+ * @param {!proto.service.DeleteLabelRequest} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.email.DeleteLabelRequest.serializeBinaryToWriter = function(message, writer) {
+proto.service.DeleteLabelRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getLabelId();
   if (f.length > 0) {
@@ -9925,16 +9925,16 @@ proto.email.DeleteLabelRequest.serializeBinaryToWriter = function(message, write
  * optional string Label_id = 1;
  * @return {string}
  */
-proto.email.DeleteLabelRequest.prototype.getLabelId = function() {
+proto.service.DeleteLabelRequest.prototype.getLabelId = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /**
  * @param {string} value
- * @return {!proto.email.DeleteLabelRequest} returns this
+ * @return {!proto.service.DeleteLabelRequest} returns this
  */
-proto.email.DeleteLabelRequest.prototype.setLabelId = function(value) {
+proto.service.DeleteLabelRequest.prototype.setLabelId = function(value) {
   return jspb.Message.setProto3StringField(this, 1, value);
 };
 
@@ -9955,8 +9955,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.email.SendLabelRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.email.SendLabelRequest.toObject(opt_includeInstance, this);
+proto.service.SendLabelRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.service.SendLabelRequest.toObject(opt_includeInstance, this);
 };
 
 
@@ -9965,13 +9965,13 @@ proto.email.SendLabelRequest.prototype.toObject = function(opt_includeInstance) 
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.email.SendLabelRequest} msg The msg instance to transform.
+ * @param {!proto.service.SendLabelRequest} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.email.SendLabelRequest.toObject = function(includeInstance, msg) {
+proto.service.SendLabelRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-    label: (f = msg.getLabel()) && proto.email.Label.toObject(includeInstance, f)
+    label: (f = msg.getLabel()) && proto.service.Label.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -9985,23 +9985,23 @@ proto.email.SendLabelRequest.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.email.SendLabelRequest}
+ * @return {!proto.service.SendLabelRequest}
  */
-proto.email.SendLabelRequest.deserializeBinary = function(bytes) {
+proto.service.SendLabelRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.email.SendLabelRequest;
-  return proto.email.SendLabelRequest.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.service.SendLabelRequest;
+  return proto.service.SendLabelRequest.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.email.SendLabelRequest} msg The message object to deserialize into.
+ * @param {!proto.service.SendLabelRequest} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.email.SendLabelRequest}
+ * @return {!proto.service.SendLabelRequest}
  */
-proto.email.SendLabelRequest.deserializeBinaryFromReader = function(msg, reader) {
+proto.service.SendLabelRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -10009,8 +10009,8 @@ proto.email.SendLabelRequest.deserializeBinaryFromReader = function(msg, reader)
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = new proto.email.Label;
-      reader.readMessage(value,proto.email.Label.deserializeBinaryFromReader);
+      var value = new proto.service.Label;
+      reader.readMessage(value,proto.service.Label.deserializeBinaryFromReader);
       msg.setLabel(value);
       break;
     default:
@@ -10026,9 +10026,9 @@ proto.email.SendLabelRequest.deserializeBinaryFromReader = function(msg, reader)
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.email.SendLabelRequest.prototype.serializeBinary = function() {
+proto.service.SendLabelRequest.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.email.SendLabelRequest.serializeBinaryToWriter(this, writer);
+  proto.service.SendLabelRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -10036,18 +10036,18 @@ proto.email.SendLabelRequest.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.email.SendLabelRequest} message
+ * @param {!proto.service.SendLabelRequest} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.email.SendLabelRequest.serializeBinaryToWriter = function(message, writer) {
+proto.service.SendLabelRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getLabel();
   if (f != null) {
     writer.writeMessage(
       1,
       f,
-      proto.email.Label.serializeBinaryToWriter
+      proto.service.Label.serializeBinaryToWriter
     );
   }
 };
@@ -10055,28 +10055,28 @@ proto.email.SendLabelRequest.serializeBinaryToWriter = function(message, writer)
 
 /**
  * optional Label Label = 1;
- * @return {?proto.email.Label}
+ * @return {?proto.service.Label}
  */
-proto.email.SendLabelRequest.prototype.getLabel = function() {
-  return /** @type{?proto.email.Label} */ (
-    jspb.Message.getWrapperField(this, proto.email.Label, 1));
+proto.service.SendLabelRequest.prototype.getLabel = function() {
+  return /** @type{?proto.service.Label} */ (
+    jspb.Message.getWrapperField(this, proto.service.Label, 1));
 };
 
 
 /**
- * @param {?proto.email.Label|undefined} value
- * @return {!proto.email.SendLabelRequest} returns this
+ * @param {?proto.service.Label|undefined} value
+ * @return {!proto.service.SendLabelRequest} returns this
 */
-proto.email.SendLabelRequest.prototype.setLabel = function(value) {
+proto.service.SendLabelRequest.prototype.setLabel = function(value) {
   return jspb.Message.setWrapperField(this, 1, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.email.SendLabelRequest} returns this
+ * @return {!proto.service.SendLabelRequest} returns this
  */
-proto.email.SendLabelRequest.prototype.clearLabel = function() {
+proto.service.SendLabelRequest.prototype.clearLabel = function() {
   return this.setLabel(undefined);
 };
 
@@ -10085,7 +10085,7 @@ proto.email.SendLabelRequest.prototype.clearLabel = function() {
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.email.SendLabelRequest.prototype.hasLabel = function() {
+proto.service.SendLabelRequest.prototype.hasLabel = function() {
   return jspb.Message.getField(this, 1) != null;
 };
 
@@ -10106,8 +10106,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.email.GetProfileResponse.prototype.toObject = function(opt_includeInstance) {
-  return proto.email.GetProfileResponse.toObject(opt_includeInstance, this);
+proto.service.GetProfileResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.service.GetProfileResponse.toObject(opt_includeInstance, this);
 };
 
 
@@ -10116,13 +10116,13 @@ proto.email.GetProfileResponse.prototype.toObject = function(opt_includeInstance
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.email.GetProfileResponse} msg The msg instance to transform.
+ * @param {!proto.service.GetProfileResponse} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.email.GetProfileResponse.toObject = function(includeInstance, msg) {
+proto.service.GetProfileResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
-    profile: (f = msg.getProfile()) && proto.email.Profile.toObject(includeInstance, f)
+    profile: (f = msg.getProfile()) && proto.service.Profile.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -10136,23 +10136,23 @@ proto.email.GetProfileResponse.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.email.GetProfileResponse}
+ * @return {!proto.service.GetProfileResponse}
  */
-proto.email.GetProfileResponse.deserializeBinary = function(bytes) {
+proto.service.GetProfileResponse.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.email.GetProfileResponse;
-  return proto.email.GetProfileResponse.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.service.GetProfileResponse;
+  return proto.service.GetProfileResponse.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.email.GetProfileResponse} msg The message object to deserialize into.
+ * @param {!proto.service.GetProfileResponse} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.email.GetProfileResponse}
+ * @return {!proto.service.GetProfileResponse}
  */
-proto.email.GetProfileResponse.deserializeBinaryFromReader = function(msg, reader) {
+proto.service.GetProfileResponse.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -10160,8 +10160,8 @@ proto.email.GetProfileResponse.deserializeBinaryFromReader = function(msg, reade
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = new proto.email.Profile;
-      reader.readMessage(value,proto.email.Profile.deserializeBinaryFromReader);
+      var value = new proto.service.Profile;
+      reader.readMessage(value,proto.service.Profile.deserializeBinaryFromReader);
       msg.setProfile(value);
       break;
     default:
@@ -10177,9 +10177,9 @@ proto.email.GetProfileResponse.deserializeBinaryFromReader = function(msg, reade
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.email.GetProfileResponse.prototype.serializeBinary = function() {
+proto.service.GetProfileResponse.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.email.GetProfileResponse.serializeBinaryToWriter(this, writer);
+  proto.service.GetProfileResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -10187,18 +10187,18 @@ proto.email.GetProfileResponse.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.email.GetProfileResponse} message
+ * @param {!proto.service.GetProfileResponse} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.email.GetProfileResponse.serializeBinaryToWriter = function(message, writer) {
+proto.service.GetProfileResponse.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getProfile();
   if (f != null) {
     writer.writeMessage(
       1,
       f,
-      proto.email.Profile.serializeBinaryToWriter
+      proto.service.Profile.serializeBinaryToWriter
     );
   }
 };
@@ -10206,28 +10206,28 @@ proto.email.GetProfileResponse.serializeBinaryToWriter = function(message, write
 
 /**
  * optional Profile profile = 1;
- * @return {?proto.email.Profile}
+ * @return {?proto.service.Profile}
  */
-proto.email.GetProfileResponse.prototype.getProfile = function() {
-  return /** @type{?proto.email.Profile} */ (
-    jspb.Message.getWrapperField(this, proto.email.Profile, 1));
+proto.service.GetProfileResponse.prototype.getProfile = function() {
+  return /** @type{?proto.service.Profile} */ (
+    jspb.Message.getWrapperField(this, proto.service.Profile, 1));
 };
 
 
 /**
- * @param {?proto.email.Profile|undefined} value
- * @return {!proto.email.GetProfileResponse} returns this
+ * @param {?proto.service.Profile|undefined} value
+ * @return {!proto.service.GetProfileResponse} returns this
 */
-proto.email.GetProfileResponse.prototype.setProfile = function(value) {
+proto.service.GetProfileResponse.prototype.setProfile = function(value) {
   return jspb.Message.setWrapperField(this, 1, value);
 };
 
 
 /**
  * Clears the message field making it undefined.
- * @return {!proto.email.GetProfileResponse} returns this
+ * @return {!proto.service.GetProfileResponse} returns this
  */
-proto.email.GetProfileResponse.prototype.clearProfile = function() {
+proto.service.GetProfileResponse.prototype.clearProfile = function() {
   return this.setProfile(undefined);
 };
 
@@ -10236,7 +10236,7 @@ proto.email.GetProfileResponse.prototype.clearProfile = function() {
  * Returns whether this field is set.
  * @return {boolean}
  */
-proto.email.GetProfileResponse.prototype.hasProfile = function() {
+proto.service.GetProfileResponse.prototype.hasProfile = function() {
   return jspb.Message.getField(this, 1) != null;
 };
 
@@ -10247,7 +10247,7 @@ proto.email.GetProfileResponse.prototype.hasProfile = function() {
  * @private {!Array<number>}
  * @const
  */
-proto.email.ListLabelsResponse.repeatedFields_ = [1];
+proto.service.ListLabelsResponse.repeatedFields_ = [1];
 
 
 
@@ -10264,8 +10264,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.email.ListLabelsResponse.prototype.toObject = function(opt_includeInstance) {
-  return proto.email.ListLabelsResponse.toObject(opt_includeInstance, this);
+proto.service.ListLabelsResponse.prototype.toObject = function(opt_includeInstance) {
+  return proto.service.ListLabelsResponse.toObject(opt_includeInstance, this);
 };
 
 
@@ -10274,14 +10274,14 @@ proto.email.ListLabelsResponse.prototype.toObject = function(opt_includeInstance
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.email.ListLabelsResponse} msg The msg instance to transform.
+ * @param {!proto.service.ListLabelsResponse} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.email.ListLabelsResponse.toObject = function(includeInstance, msg) {
+proto.service.ListLabelsResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
     labelList: jspb.Message.toObjectList(msg.getLabelList(),
-    proto.email.Label.toObject, includeInstance)
+    proto.service.Label.toObject, includeInstance)
   };
 
   if (includeInstance) {
@@ -10295,23 +10295,23 @@ proto.email.ListLabelsResponse.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.email.ListLabelsResponse}
+ * @return {!proto.service.ListLabelsResponse}
  */
-proto.email.ListLabelsResponse.deserializeBinary = function(bytes) {
+proto.service.ListLabelsResponse.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.email.ListLabelsResponse;
-  return proto.email.ListLabelsResponse.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.service.ListLabelsResponse;
+  return proto.service.ListLabelsResponse.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.email.ListLabelsResponse} msg The message object to deserialize into.
+ * @param {!proto.service.ListLabelsResponse} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.email.ListLabelsResponse}
+ * @return {!proto.service.ListLabelsResponse}
  */
-proto.email.ListLabelsResponse.deserializeBinaryFromReader = function(msg, reader) {
+proto.service.ListLabelsResponse.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -10319,8 +10319,8 @@ proto.email.ListLabelsResponse.deserializeBinaryFromReader = function(msg, reade
     var field = reader.getFieldNumber();
     switch (field) {
     case 1:
-      var value = new proto.email.Label;
-      reader.readMessage(value,proto.email.Label.deserializeBinaryFromReader);
+      var value = new proto.service.Label;
+      reader.readMessage(value,proto.service.Label.deserializeBinaryFromReader);
       msg.addLabel(value);
       break;
     default:
@@ -10336,9 +10336,9 @@ proto.email.ListLabelsResponse.deserializeBinaryFromReader = function(msg, reade
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.email.ListLabelsResponse.prototype.serializeBinary = function() {
+proto.service.ListLabelsResponse.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.email.ListLabelsResponse.serializeBinaryToWriter(this, writer);
+  proto.service.ListLabelsResponse.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -10346,18 +10346,18 @@ proto.email.ListLabelsResponse.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.email.ListLabelsResponse} message
+ * @param {!proto.service.ListLabelsResponse} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.email.ListLabelsResponse.serializeBinaryToWriter = function(message, writer) {
+proto.service.ListLabelsResponse.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
   f = message.getLabelList();
   if (f.length > 0) {
     writer.writeRepeatedMessage(
       1,
       f,
-      proto.email.Label.serializeBinaryToWriter
+      proto.service.Label.serializeBinaryToWriter
     );
   }
 };
@@ -10365,38 +10365,38 @@ proto.email.ListLabelsResponse.serializeBinaryToWriter = function(message, write
 
 /**
  * repeated Label Label = 1;
- * @return {!Array<!proto.email.Label>}
+ * @return {!Array<!proto.service.Label>}
  */
-proto.email.ListLabelsResponse.prototype.getLabelList = function() {
-  return /** @type{!Array<!proto.email.Label>} */ (
-    jspb.Message.getRepeatedWrapperField(this, proto.email.Label, 1));
+proto.service.ListLabelsResponse.prototype.getLabelList = function() {
+  return /** @type{!Array<!proto.service.Label>} */ (
+    jspb.Message.getRepeatedWrapperField(this, proto.service.Label, 1));
 };
 
 
 /**
- * @param {!Array<!proto.email.Label>} value
- * @return {!proto.email.ListLabelsResponse} returns this
+ * @param {!Array<!proto.service.Label>} value
+ * @return {!proto.service.ListLabelsResponse} returns this
 */
-proto.email.ListLabelsResponse.prototype.setLabelList = function(value) {
+proto.service.ListLabelsResponse.prototype.setLabelList = function(value) {
   return jspb.Message.setRepeatedWrapperField(this, 1, value);
 };
 
 
 /**
- * @param {!proto.email.Label=} opt_value
+ * @param {!proto.service.Label=} opt_value
  * @param {number=} opt_index
- * @return {!proto.email.Label}
+ * @return {!proto.service.Label}
  */
-proto.email.ListLabelsResponse.prototype.addLabel = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.email.Label, opt_index);
+proto.service.ListLabelsResponse.prototype.addLabel = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.service.Label, opt_index);
 };
 
 
 /**
  * Clears the list making it empty but non-null.
- * @return {!proto.email.ListLabelsResponse} returns this
+ * @return {!proto.service.ListLabelsResponse} returns this
  */
-proto.email.ListLabelsResponse.prototype.clearLabelList = function() {
+proto.service.ListLabelsResponse.prototype.clearLabelList = function() {
   return this.setLabelList([]);
 };
 
@@ -10404,11 +10404,11 @@ proto.email.ListLabelsResponse.prototype.clearLabelList = function() {
 /**
  * @enum {number}
  */
-proto.email.HistoryTypes = {
+proto.service.HistoryTypes = {
   LABEL_ADDED: 0,
   LABEL_REMOVED: 1,
   MESSAGE_ADDED: 2,
   MESSAGE_DELETED: 3
 };
 
-goog.object.extend(exports, proto.email);
+goog.object.extend(exports, proto.service);

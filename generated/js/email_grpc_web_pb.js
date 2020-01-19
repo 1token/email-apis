@@ -1,5 +1,5 @@
 /**
- * @fileoverview gRPC-Web generated client stub for email
+ * @fileoverview gRPC-Web generated client stub for service
  * @enhanceable
  * @public
  */
@@ -20,7 +20,7 @@ var google_protobuf_empty_pb = require('google-protobuf/google/protobuf/empty_pb
 
 var google_rpc_status_pb = require('./google/rpc/status_pb.js')
 const proto = {};
-proto.email = require('./email_pb.js');
+proto.service = require('./email_pb.js');
 
 /**
  * @param {string} hostname
@@ -30,7 +30,7 @@ proto.email = require('./email_pb.js');
  * @struct
  * @final
  */
-proto.email.MailboxServiceClient =
+proto.service.MailboxServiceClient =
     function(hostname, credentials, options) {
   if (!options) options = {};
   options['format'] = 'text';
@@ -56,7 +56,7 @@ proto.email.MailboxServiceClient =
  * @struct
  * @final
  */
-proto.email.MailboxServicePromiseClient =
+proto.service.MailboxServicePromiseClient =
     function(hostname, credentials, options) {
   if (!options) options = {};
   options['format'] = 'text';
@@ -78,13 +78,13 @@ proto.email.MailboxServicePromiseClient =
  * @const
  * @type {!grpc.web.MethodDescriptor<
  *   !proto.google.protobuf.Empty,
- *   !proto.email.GetProfileResponse>}
+ *   !proto.service.GetProfileResponse>}
  */
 const methodDescriptor_MailboxService_GetProfile = new grpc.web.MethodDescriptor(
-  '/email.MailboxService/GetProfile',
+  '/service.MailboxService/GetProfile',
   grpc.web.MethodType.UNARY,
   google_protobuf_empty_pb.Empty,
-  proto.email.GetProfileResponse,
+  proto.service.GetProfileResponse,
   /**
    * @param {!proto.google.protobuf.Empty} request
    * @return {!Uint8Array}
@@ -92,7 +92,7 @@ const methodDescriptor_MailboxService_GetProfile = new grpc.web.MethodDescriptor
   function(request) {
     return request.serializeBinary();
   },
-  proto.email.GetProfileResponse.deserializeBinary
+  proto.service.GetProfileResponse.deserializeBinary
 );
 
 
@@ -100,10 +100,10 @@ const methodDescriptor_MailboxService_GetProfile = new grpc.web.MethodDescriptor
  * @const
  * @type {!grpc.web.AbstractClientBase.MethodInfo<
  *   !proto.google.protobuf.Empty,
- *   !proto.email.GetProfileResponse>}
+ *   !proto.service.GetProfileResponse>}
  */
 const methodInfo_MailboxService_GetProfile = new grpc.web.AbstractClientBase.MethodInfo(
-  proto.email.GetProfileResponse,
+  proto.service.GetProfileResponse,
   /**
    * @param {!proto.google.protobuf.Empty} request
    * @return {!Uint8Array}
@@ -111,7 +111,7 @@ const methodInfo_MailboxService_GetProfile = new grpc.web.AbstractClientBase.Met
   function(request) {
     return request.serializeBinary();
   },
-  proto.email.GetProfileResponse.deserializeBinary
+  proto.service.GetProfileResponse.deserializeBinary
 );
 
 
@@ -120,15 +120,15 @@ const methodInfo_MailboxService_GetProfile = new grpc.web.AbstractClientBase.Met
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
- * @param {function(?grpc.web.Error, ?proto.email.GetProfileResponse)}
+ * @param {function(?grpc.web.Error, ?proto.service.GetProfileResponse)}
  *     callback The callback function(error, response)
- * @return {!grpc.web.ClientReadableStream<!proto.email.GetProfileResponse>|undefined}
+ * @return {!grpc.web.ClientReadableStream<!proto.service.GetProfileResponse>|undefined}
  *     The XHR Node Readable Stream
  */
-proto.email.MailboxServiceClient.prototype.getProfile =
+proto.service.MailboxServiceClient.prototype.getProfile =
     function(request, metadata, callback) {
   return this.client_.rpcCall(this.hostname_ +
-      '/email.MailboxService/GetProfile',
+      '/service.MailboxService/GetProfile',
       request,
       metadata || {},
       methodDescriptor_MailboxService_GetProfile,
@@ -141,13 +141,13 @@ proto.email.MailboxServiceClient.prototype.getProfile =
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
- * @return {!Promise<!proto.email.GetProfileResponse>}
+ * @return {!Promise<!proto.service.GetProfileResponse>}
  *     A native promise that resolves to the response
  */
-proto.email.MailboxServicePromiseClient.prototype.getProfile =
+proto.service.MailboxServicePromiseClient.prototype.getProfile =
     function(request, metadata) {
   return this.client_.unaryCall(this.hostname_ +
-      '/email.MailboxService/GetProfile',
+      '/service.MailboxService/GetProfile',
       request,
       metadata || {},
       methodDescriptor_MailboxService_GetProfile);
@@ -157,58 +157,58 @@ proto.email.MailboxServicePromiseClient.prototype.getProfile =
 /**
  * @const
  * @type {!grpc.web.MethodDescriptor<
- *   !proto.email.ListHistoryRequest,
- *   !proto.email.ListHistoryResponse>}
+ *   !proto.service.ListHistoryRequest,
+ *   !proto.service.ListHistoryResponse>}
  */
 const methodDescriptor_MailboxService_ListHistory = new grpc.web.MethodDescriptor(
-  '/email.MailboxService/ListHistory',
+  '/service.MailboxService/ListHistory',
   grpc.web.MethodType.UNARY,
-  proto.email.ListHistoryRequest,
-  proto.email.ListHistoryResponse,
+  proto.service.ListHistoryRequest,
+  proto.service.ListHistoryResponse,
   /**
-   * @param {!proto.email.ListHistoryRequest} request
+   * @param {!proto.service.ListHistoryRequest} request
    * @return {!Uint8Array}
    */
   function(request) {
     return request.serializeBinary();
   },
-  proto.email.ListHistoryResponse.deserializeBinary
+  proto.service.ListHistoryResponse.deserializeBinary
 );
 
 
 /**
  * @const
  * @type {!grpc.web.AbstractClientBase.MethodInfo<
- *   !proto.email.ListHistoryRequest,
- *   !proto.email.ListHistoryResponse>}
+ *   !proto.service.ListHistoryRequest,
+ *   !proto.service.ListHistoryResponse>}
  */
 const methodInfo_MailboxService_ListHistory = new grpc.web.AbstractClientBase.MethodInfo(
-  proto.email.ListHistoryResponse,
+  proto.service.ListHistoryResponse,
   /**
-   * @param {!proto.email.ListHistoryRequest} request
+   * @param {!proto.service.ListHistoryRequest} request
    * @return {!Uint8Array}
    */
   function(request) {
     return request.serializeBinary();
   },
-  proto.email.ListHistoryResponse.deserializeBinary
+  proto.service.ListHistoryResponse.deserializeBinary
 );
 
 
 /**
- * @param {!proto.email.ListHistoryRequest} request The
+ * @param {!proto.service.ListHistoryRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
- * @param {function(?grpc.web.Error, ?proto.email.ListHistoryResponse)}
+ * @param {function(?grpc.web.Error, ?proto.service.ListHistoryResponse)}
  *     callback The callback function(error, response)
- * @return {!grpc.web.ClientReadableStream<!proto.email.ListHistoryResponse>|undefined}
+ * @return {!grpc.web.ClientReadableStream<!proto.service.ListHistoryResponse>|undefined}
  *     The XHR Node Readable Stream
  */
-proto.email.MailboxServiceClient.prototype.listHistory =
+proto.service.MailboxServiceClient.prototype.listHistory =
     function(request, metadata, callback) {
   return this.client_.rpcCall(this.hostname_ +
-      '/email.MailboxService/ListHistory',
+      '/service.MailboxService/ListHistory',
       request,
       metadata || {},
       methodDescriptor_MailboxService_ListHistory,
@@ -217,17 +217,17 @@ proto.email.MailboxServiceClient.prototype.listHistory =
 
 
 /**
- * @param {!proto.email.ListHistoryRequest} request The
+ * @param {!proto.service.ListHistoryRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
- * @return {!Promise<!proto.email.ListHistoryResponse>}
+ * @return {!Promise<!proto.service.ListHistoryResponse>}
  *     A native promise that resolves to the response
  */
-proto.email.MailboxServicePromiseClient.prototype.listHistory =
+proto.service.MailboxServicePromiseClient.prototype.listHistory =
     function(request, metadata) {
   return this.client_.unaryCall(this.hostname_ +
-      '/email.MailboxService/ListHistory',
+      '/service.MailboxService/ListHistory',
       request,
       metadata || {},
       methodDescriptor_MailboxService_ListHistory);
@@ -237,55 +237,55 @@ proto.email.MailboxServicePromiseClient.prototype.listHistory =
 /**
  * @const
  * @type {!grpc.web.MethodDescriptor<
- *   !proto.email.StreamStateRequest,
- *   !proto.email.StreamingStateResponse>}
+ *   !proto.service.StreamStateRequest,
+ *   !proto.service.StreamingStateResponse>}
  */
 const methodDescriptor_MailboxService_StreamState = new grpc.web.MethodDescriptor(
-  '/email.MailboxService/StreamState',
+  '/service.MailboxService/StreamState',
   grpc.web.MethodType.SERVER_STREAMING,
-  proto.email.StreamStateRequest,
-  proto.email.StreamingStateResponse,
+  proto.service.StreamStateRequest,
+  proto.service.StreamingStateResponse,
   /**
-   * @param {!proto.email.StreamStateRequest} request
+   * @param {!proto.service.StreamStateRequest} request
    * @return {!Uint8Array}
    */
   function(request) {
     return request.serializeBinary();
   },
-  proto.email.StreamingStateResponse.deserializeBinary
+  proto.service.StreamingStateResponse.deserializeBinary
 );
 
 
 /**
  * @const
  * @type {!grpc.web.AbstractClientBase.MethodInfo<
- *   !proto.email.StreamStateRequest,
- *   !proto.email.StreamingStateResponse>}
+ *   !proto.service.StreamStateRequest,
+ *   !proto.service.StreamingStateResponse>}
  */
 const methodInfo_MailboxService_StreamState = new grpc.web.AbstractClientBase.MethodInfo(
-  proto.email.StreamingStateResponse,
+  proto.service.StreamingStateResponse,
   /**
-   * @param {!proto.email.StreamStateRequest} request
+   * @param {!proto.service.StreamStateRequest} request
    * @return {!Uint8Array}
    */
   function(request) {
     return request.serializeBinary();
   },
-  proto.email.StreamingStateResponse.deserializeBinary
+  proto.service.StreamingStateResponse.deserializeBinary
 );
 
 
 /**
- * @param {!proto.email.StreamStateRequest} request The request proto
+ * @param {!proto.service.StreamStateRequest} request The request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
- * @return {!grpc.web.ClientReadableStream<!proto.email.StreamingStateResponse>}
+ * @return {!grpc.web.ClientReadableStream<!proto.service.StreamingStateResponse>}
  *     The XHR Node Readable Stream
  */
-proto.email.MailboxServiceClient.prototype.streamState =
+proto.service.MailboxServiceClient.prototype.streamState =
     function(request, metadata) {
   return this.client_.serverStreaming(this.hostname_ +
-      '/email.MailboxService/StreamState',
+      '/service.MailboxService/StreamState',
       request,
       metadata || {},
       methodDescriptor_MailboxService_StreamState);
@@ -293,16 +293,16 @@ proto.email.MailboxServiceClient.prototype.streamState =
 
 
 /**
- * @param {!proto.email.StreamStateRequest} request The request proto
+ * @param {!proto.service.StreamStateRequest} request The request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
- * @return {!grpc.web.ClientReadableStream<!proto.email.StreamingStateResponse>}
+ * @return {!grpc.web.ClientReadableStream<!proto.service.StreamingStateResponse>}
  *     The XHR Node Readable Stream
  */
-proto.email.MailboxServicePromiseClient.prototype.streamState =
+proto.service.MailboxServicePromiseClient.prototype.streamState =
     function(request, metadata) {
   return this.client_.serverStreaming(this.hostname_ +
-      '/email.MailboxService/StreamState',
+      '/service.MailboxService/StreamState',
       request,
       metadata || {},
       methodDescriptor_MailboxService_StreamState);
@@ -317,7 +317,7 @@ proto.email.MailboxServicePromiseClient.prototype.streamState =
  * @struct
  * @final
  */
-proto.email.DraftServiceClient =
+proto.service.DraftServiceClient =
     function(hostname, credentials, options) {
   if (!options) options = {};
   options['format'] = 'text';
@@ -343,7 +343,7 @@ proto.email.DraftServiceClient =
  * @struct
  * @final
  */
-proto.email.DraftServicePromiseClient =
+proto.service.DraftServicePromiseClient =
     function(hostname, credentials, options) {
   if (!options) options = {};
   options['format'] = 'text';
@@ -364,58 +364,58 @@ proto.email.DraftServicePromiseClient =
 /**
  * @const
  * @type {!grpc.web.MethodDescriptor<
- *   !proto.email.GetDraftRequest,
- *   !proto.email.Draft>}
+ *   !proto.service.GetDraftRequest,
+ *   !proto.service.Draft>}
  */
 const methodDescriptor_DraftService_GetDraft = new grpc.web.MethodDescriptor(
-  '/email.DraftService/GetDraft',
+  '/service.DraftService/GetDraft',
   grpc.web.MethodType.UNARY,
-  proto.email.GetDraftRequest,
-  proto.email.Draft,
+  proto.service.GetDraftRequest,
+  proto.service.Draft,
   /**
-   * @param {!proto.email.GetDraftRequest} request
+   * @param {!proto.service.GetDraftRequest} request
    * @return {!Uint8Array}
    */
   function(request) {
     return request.serializeBinary();
   },
-  proto.email.Draft.deserializeBinary
+  proto.service.Draft.deserializeBinary
 );
 
 
 /**
  * @const
  * @type {!grpc.web.AbstractClientBase.MethodInfo<
- *   !proto.email.GetDraftRequest,
- *   !proto.email.Draft>}
+ *   !proto.service.GetDraftRequest,
+ *   !proto.service.Draft>}
  */
 const methodInfo_DraftService_GetDraft = new grpc.web.AbstractClientBase.MethodInfo(
-  proto.email.Draft,
+  proto.service.Draft,
   /**
-   * @param {!proto.email.GetDraftRequest} request
+   * @param {!proto.service.GetDraftRequest} request
    * @return {!Uint8Array}
    */
   function(request) {
     return request.serializeBinary();
   },
-  proto.email.Draft.deserializeBinary
+  proto.service.Draft.deserializeBinary
 );
 
 
 /**
- * @param {!proto.email.GetDraftRequest} request The
+ * @param {!proto.service.GetDraftRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
- * @param {function(?grpc.web.Error, ?proto.email.Draft)}
+ * @param {function(?grpc.web.Error, ?proto.service.Draft)}
  *     callback The callback function(error, response)
- * @return {!grpc.web.ClientReadableStream<!proto.email.Draft>|undefined}
+ * @return {!grpc.web.ClientReadableStream<!proto.service.Draft>|undefined}
  *     The XHR Node Readable Stream
  */
-proto.email.DraftServiceClient.prototype.getDraft =
+proto.service.DraftServiceClient.prototype.getDraft =
     function(request, metadata, callback) {
   return this.client_.rpcCall(this.hostname_ +
-      '/email.DraftService/GetDraft',
+      '/service.DraftService/GetDraft',
       request,
       metadata || {},
       methodDescriptor_DraftService_GetDraft,
@@ -424,17 +424,17 @@ proto.email.DraftServiceClient.prototype.getDraft =
 
 
 /**
- * @param {!proto.email.GetDraftRequest} request The
+ * @param {!proto.service.GetDraftRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
- * @return {!Promise<!proto.email.Draft>}
+ * @return {!Promise<!proto.service.Draft>}
  *     A native promise that resolves to the response
  */
-proto.email.DraftServicePromiseClient.prototype.getDraft =
+proto.service.DraftServicePromiseClient.prototype.getDraft =
     function(request, metadata) {
   return this.client_.unaryCall(this.hostname_ +
-      '/email.DraftService/GetDraft',
+      '/service.DraftService/GetDraft',
       request,
       metadata || {},
       methodDescriptor_DraftService_GetDraft);
@@ -444,58 +444,58 @@ proto.email.DraftServicePromiseClient.prototype.getDraft =
 /**
  * @const
  * @type {!grpc.web.MethodDescriptor<
- *   !proto.email.ListDraftsRequest,
- *   !proto.email.ListDraftsResponse>}
+ *   !proto.service.ListDraftsRequest,
+ *   !proto.service.ListDraftsResponse>}
  */
 const methodDescriptor_DraftService_ListDrafts = new grpc.web.MethodDescriptor(
-  '/email.DraftService/ListDrafts',
+  '/service.DraftService/ListDrafts',
   grpc.web.MethodType.UNARY,
-  proto.email.ListDraftsRequest,
-  proto.email.ListDraftsResponse,
+  proto.service.ListDraftsRequest,
+  proto.service.ListDraftsResponse,
   /**
-   * @param {!proto.email.ListDraftsRequest} request
+   * @param {!proto.service.ListDraftsRequest} request
    * @return {!Uint8Array}
    */
   function(request) {
     return request.serializeBinary();
   },
-  proto.email.ListDraftsResponse.deserializeBinary
+  proto.service.ListDraftsResponse.deserializeBinary
 );
 
 
 /**
  * @const
  * @type {!grpc.web.AbstractClientBase.MethodInfo<
- *   !proto.email.ListDraftsRequest,
- *   !proto.email.ListDraftsResponse>}
+ *   !proto.service.ListDraftsRequest,
+ *   !proto.service.ListDraftsResponse>}
  */
 const methodInfo_DraftService_ListDrafts = new grpc.web.AbstractClientBase.MethodInfo(
-  proto.email.ListDraftsResponse,
+  proto.service.ListDraftsResponse,
   /**
-   * @param {!proto.email.ListDraftsRequest} request
+   * @param {!proto.service.ListDraftsRequest} request
    * @return {!Uint8Array}
    */
   function(request) {
     return request.serializeBinary();
   },
-  proto.email.ListDraftsResponse.deserializeBinary
+  proto.service.ListDraftsResponse.deserializeBinary
 );
 
 
 /**
- * @param {!proto.email.ListDraftsRequest} request The
+ * @param {!proto.service.ListDraftsRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
- * @param {function(?grpc.web.Error, ?proto.email.ListDraftsResponse)}
+ * @param {function(?grpc.web.Error, ?proto.service.ListDraftsResponse)}
  *     callback The callback function(error, response)
- * @return {!grpc.web.ClientReadableStream<!proto.email.ListDraftsResponse>|undefined}
+ * @return {!grpc.web.ClientReadableStream<!proto.service.ListDraftsResponse>|undefined}
  *     The XHR Node Readable Stream
  */
-proto.email.DraftServiceClient.prototype.listDrafts =
+proto.service.DraftServiceClient.prototype.listDrafts =
     function(request, metadata, callback) {
   return this.client_.rpcCall(this.hostname_ +
-      '/email.DraftService/ListDrafts',
+      '/service.DraftService/ListDrafts',
       request,
       metadata || {},
       methodDescriptor_DraftService_ListDrafts,
@@ -504,17 +504,17 @@ proto.email.DraftServiceClient.prototype.listDrafts =
 
 
 /**
- * @param {!proto.email.ListDraftsRequest} request The
+ * @param {!proto.service.ListDraftsRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
- * @return {!Promise<!proto.email.ListDraftsResponse>}
+ * @return {!Promise<!proto.service.ListDraftsResponse>}
  *     A native promise that resolves to the response
  */
-proto.email.DraftServicePromiseClient.prototype.listDrafts =
+proto.service.DraftServicePromiseClient.prototype.listDrafts =
     function(request, metadata) {
   return this.client_.unaryCall(this.hostname_ +
-      '/email.DraftService/ListDrafts',
+      '/service.DraftService/ListDrafts',
       request,
       metadata || {},
       methodDescriptor_DraftService_ListDrafts);
@@ -524,58 +524,58 @@ proto.email.DraftServicePromiseClient.prototype.listDrafts =
 /**
  * @const
  * @type {!grpc.web.MethodDescriptor<
- *   !proto.email.CreateDraftRequest,
- *   !proto.email.Draft>}
+ *   !proto.service.CreateDraftRequest,
+ *   !proto.service.Draft>}
  */
 const methodDescriptor_DraftService_CreateDraft = new grpc.web.MethodDescriptor(
-  '/email.DraftService/CreateDraft',
+  '/service.DraftService/CreateDraft',
   grpc.web.MethodType.UNARY,
-  proto.email.CreateDraftRequest,
-  proto.email.Draft,
+  proto.service.CreateDraftRequest,
+  proto.service.Draft,
   /**
-   * @param {!proto.email.CreateDraftRequest} request
+   * @param {!proto.service.CreateDraftRequest} request
    * @return {!Uint8Array}
    */
   function(request) {
     return request.serializeBinary();
   },
-  proto.email.Draft.deserializeBinary
+  proto.service.Draft.deserializeBinary
 );
 
 
 /**
  * @const
  * @type {!grpc.web.AbstractClientBase.MethodInfo<
- *   !proto.email.CreateDraftRequest,
- *   !proto.email.Draft>}
+ *   !proto.service.CreateDraftRequest,
+ *   !proto.service.Draft>}
  */
 const methodInfo_DraftService_CreateDraft = new grpc.web.AbstractClientBase.MethodInfo(
-  proto.email.Draft,
+  proto.service.Draft,
   /**
-   * @param {!proto.email.CreateDraftRequest} request
+   * @param {!proto.service.CreateDraftRequest} request
    * @return {!Uint8Array}
    */
   function(request) {
     return request.serializeBinary();
   },
-  proto.email.Draft.deserializeBinary
+  proto.service.Draft.deserializeBinary
 );
 
 
 /**
- * @param {!proto.email.CreateDraftRequest} request The
+ * @param {!proto.service.CreateDraftRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
- * @param {function(?grpc.web.Error, ?proto.email.Draft)}
+ * @param {function(?grpc.web.Error, ?proto.service.Draft)}
  *     callback The callback function(error, response)
- * @return {!grpc.web.ClientReadableStream<!proto.email.Draft>|undefined}
+ * @return {!grpc.web.ClientReadableStream<!proto.service.Draft>|undefined}
  *     The XHR Node Readable Stream
  */
-proto.email.DraftServiceClient.prototype.createDraft =
+proto.service.DraftServiceClient.prototype.createDraft =
     function(request, metadata, callback) {
   return this.client_.rpcCall(this.hostname_ +
-      '/email.DraftService/CreateDraft',
+      '/service.DraftService/CreateDraft',
       request,
       metadata || {},
       methodDescriptor_DraftService_CreateDraft,
@@ -584,17 +584,17 @@ proto.email.DraftServiceClient.prototype.createDraft =
 
 
 /**
- * @param {!proto.email.CreateDraftRequest} request The
+ * @param {!proto.service.CreateDraftRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
- * @return {!Promise<!proto.email.Draft>}
+ * @return {!Promise<!proto.service.Draft>}
  *     A native promise that resolves to the response
  */
-proto.email.DraftServicePromiseClient.prototype.createDraft =
+proto.service.DraftServicePromiseClient.prototype.createDraft =
     function(request, metadata) {
   return this.client_.unaryCall(this.hostname_ +
-      '/email.DraftService/CreateDraft',
+      '/service.DraftService/CreateDraft',
       request,
       metadata || {},
       methodDescriptor_DraftService_CreateDraft);
@@ -604,58 +604,58 @@ proto.email.DraftServicePromiseClient.prototype.createDraft =
 /**
  * @const
  * @type {!grpc.web.MethodDescriptor<
- *   !proto.email.UpdateDraftRequest,
- *   !proto.email.Draft>}
+ *   !proto.service.UpdateDraftRequest,
+ *   !proto.service.Draft>}
  */
 const methodDescriptor_DraftService_UpdateDraft = new grpc.web.MethodDescriptor(
-  '/email.DraftService/UpdateDraft',
+  '/service.DraftService/UpdateDraft',
   grpc.web.MethodType.UNARY,
-  proto.email.UpdateDraftRequest,
-  proto.email.Draft,
+  proto.service.UpdateDraftRequest,
+  proto.service.Draft,
   /**
-   * @param {!proto.email.UpdateDraftRequest} request
+   * @param {!proto.service.UpdateDraftRequest} request
    * @return {!Uint8Array}
    */
   function(request) {
     return request.serializeBinary();
   },
-  proto.email.Draft.deserializeBinary
+  proto.service.Draft.deserializeBinary
 );
 
 
 /**
  * @const
  * @type {!grpc.web.AbstractClientBase.MethodInfo<
- *   !proto.email.UpdateDraftRequest,
- *   !proto.email.Draft>}
+ *   !proto.service.UpdateDraftRequest,
+ *   !proto.service.Draft>}
  */
 const methodInfo_DraftService_UpdateDraft = new grpc.web.AbstractClientBase.MethodInfo(
-  proto.email.Draft,
+  proto.service.Draft,
   /**
-   * @param {!proto.email.UpdateDraftRequest} request
+   * @param {!proto.service.UpdateDraftRequest} request
    * @return {!Uint8Array}
    */
   function(request) {
     return request.serializeBinary();
   },
-  proto.email.Draft.deserializeBinary
+  proto.service.Draft.deserializeBinary
 );
 
 
 /**
- * @param {!proto.email.UpdateDraftRequest} request The
+ * @param {!proto.service.UpdateDraftRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
- * @param {function(?grpc.web.Error, ?proto.email.Draft)}
+ * @param {function(?grpc.web.Error, ?proto.service.Draft)}
  *     callback The callback function(error, response)
- * @return {!grpc.web.ClientReadableStream<!proto.email.Draft>|undefined}
+ * @return {!grpc.web.ClientReadableStream<!proto.service.Draft>|undefined}
  *     The XHR Node Readable Stream
  */
-proto.email.DraftServiceClient.prototype.updateDraft =
+proto.service.DraftServiceClient.prototype.updateDraft =
     function(request, metadata, callback) {
   return this.client_.rpcCall(this.hostname_ +
-      '/email.DraftService/UpdateDraft',
+      '/service.DraftService/UpdateDraft',
       request,
       metadata || {},
       methodDescriptor_DraftService_UpdateDraft,
@@ -664,17 +664,17 @@ proto.email.DraftServiceClient.prototype.updateDraft =
 
 
 /**
- * @param {!proto.email.UpdateDraftRequest} request The
+ * @param {!proto.service.UpdateDraftRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
- * @return {!Promise<!proto.email.Draft>}
+ * @return {!Promise<!proto.service.Draft>}
  *     A native promise that resolves to the response
  */
-proto.email.DraftServicePromiseClient.prototype.updateDraft =
+proto.service.DraftServicePromiseClient.prototype.updateDraft =
     function(request, metadata) {
   return this.client_.unaryCall(this.hostname_ +
-      '/email.DraftService/UpdateDraft',
+      '/service.DraftService/UpdateDraft',
       request,
       metadata || {},
       methodDescriptor_DraftService_UpdateDraft);
@@ -684,16 +684,16 @@ proto.email.DraftServicePromiseClient.prototype.updateDraft =
 /**
  * @const
  * @type {!grpc.web.MethodDescriptor<
- *   !proto.email.DeleteDraftRequest,
+ *   !proto.service.DeleteDraftRequest,
  *   !proto.google.protobuf.Empty>}
  */
 const methodDescriptor_DraftService_DeleteDraft = new grpc.web.MethodDescriptor(
-  '/email.DraftService/DeleteDraft',
+  '/service.DraftService/DeleteDraft',
   grpc.web.MethodType.UNARY,
-  proto.email.DeleteDraftRequest,
+  proto.service.DeleteDraftRequest,
   google_protobuf_empty_pb.Empty,
   /**
-   * @param {!proto.email.DeleteDraftRequest} request
+   * @param {!proto.service.DeleteDraftRequest} request
    * @return {!Uint8Array}
    */
   function(request) {
@@ -706,13 +706,13 @@ const methodDescriptor_DraftService_DeleteDraft = new grpc.web.MethodDescriptor(
 /**
  * @const
  * @type {!grpc.web.AbstractClientBase.MethodInfo<
- *   !proto.email.DeleteDraftRequest,
+ *   !proto.service.DeleteDraftRequest,
  *   !proto.google.protobuf.Empty>}
  */
 const methodInfo_DraftService_DeleteDraft = new grpc.web.AbstractClientBase.MethodInfo(
   google_protobuf_empty_pb.Empty,
   /**
-   * @param {!proto.email.DeleteDraftRequest} request
+   * @param {!proto.service.DeleteDraftRequest} request
    * @return {!Uint8Array}
    */
   function(request) {
@@ -723,7 +723,7 @@ const methodInfo_DraftService_DeleteDraft = new grpc.web.AbstractClientBase.Meth
 
 
 /**
- * @param {!proto.email.DeleteDraftRequest} request The
+ * @param {!proto.service.DeleteDraftRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
@@ -732,10 +732,10 @@ const methodInfo_DraftService_DeleteDraft = new grpc.web.AbstractClientBase.Meth
  * @return {!grpc.web.ClientReadableStream<!proto.google.protobuf.Empty>|undefined}
  *     The XHR Node Readable Stream
  */
-proto.email.DraftServiceClient.prototype.deleteDraft =
+proto.service.DraftServiceClient.prototype.deleteDraft =
     function(request, metadata, callback) {
   return this.client_.rpcCall(this.hostname_ +
-      '/email.DraftService/DeleteDraft',
+      '/service.DraftService/DeleteDraft',
       request,
       metadata || {},
       methodDescriptor_DraftService_DeleteDraft,
@@ -744,17 +744,17 @@ proto.email.DraftServiceClient.prototype.deleteDraft =
 
 
 /**
- * @param {!proto.email.DeleteDraftRequest} request The
+ * @param {!proto.service.DeleteDraftRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
  * @return {!Promise<!proto.google.protobuf.Empty>}
  *     A native promise that resolves to the response
  */
-proto.email.DraftServicePromiseClient.prototype.deleteDraft =
+proto.service.DraftServicePromiseClient.prototype.deleteDraft =
     function(request, metadata) {
   return this.client_.unaryCall(this.hostname_ +
-      '/email.DraftService/DeleteDraft',
+      '/service.DraftService/DeleteDraft',
       request,
       metadata || {},
       methodDescriptor_DraftService_DeleteDraft);
@@ -764,58 +764,58 @@ proto.email.DraftServicePromiseClient.prototype.deleteDraft =
 /**
  * @const
  * @type {!grpc.web.MethodDescriptor<
- *   !proto.email.SendDraftRequest,
- *   !proto.email.Email>}
+ *   !proto.service.SendDraftRequest,
+ *   !proto.service.Email>}
  */
 const methodDescriptor_DraftService_SendDraft = new grpc.web.MethodDescriptor(
-  '/email.DraftService/SendDraft',
+  '/service.DraftService/SendDraft',
   grpc.web.MethodType.UNARY,
-  proto.email.SendDraftRequest,
-  proto.email.Email,
+  proto.service.SendDraftRequest,
+  proto.service.Email,
   /**
-   * @param {!proto.email.SendDraftRequest} request
+   * @param {!proto.service.SendDraftRequest} request
    * @return {!Uint8Array}
    */
   function(request) {
     return request.serializeBinary();
   },
-  proto.email.Email.deserializeBinary
+  proto.service.Email.deserializeBinary
 );
 
 
 /**
  * @const
  * @type {!grpc.web.AbstractClientBase.MethodInfo<
- *   !proto.email.SendDraftRequest,
- *   !proto.email.Email>}
+ *   !proto.service.SendDraftRequest,
+ *   !proto.service.Email>}
  */
 const methodInfo_DraftService_SendDraft = new grpc.web.AbstractClientBase.MethodInfo(
-  proto.email.Email,
+  proto.service.Email,
   /**
-   * @param {!proto.email.SendDraftRequest} request
+   * @param {!proto.service.SendDraftRequest} request
    * @return {!Uint8Array}
    */
   function(request) {
     return request.serializeBinary();
   },
-  proto.email.Email.deserializeBinary
+  proto.service.Email.deserializeBinary
 );
 
 
 /**
- * @param {!proto.email.SendDraftRequest} request The
+ * @param {!proto.service.SendDraftRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
- * @param {function(?grpc.web.Error, ?proto.email.Email)}
+ * @param {function(?grpc.web.Error, ?proto.service.Email)}
  *     callback The callback function(error, response)
- * @return {!grpc.web.ClientReadableStream<!proto.email.Email>|undefined}
+ * @return {!grpc.web.ClientReadableStream<!proto.service.Email>|undefined}
  *     The XHR Node Readable Stream
  */
-proto.email.DraftServiceClient.prototype.sendDraft =
+proto.service.DraftServiceClient.prototype.sendDraft =
     function(request, metadata, callback) {
   return this.client_.rpcCall(this.hostname_ +
-      '/email.DraftService/SendDraft',
+      '/service.DraftService/SendDraft',
       request,
       metadata || {},
       methodDescriptor_DraftService_SendDraft,
@@ -824,17 +824,17 @@ proto.email.DraftServiceClient.prototype.sendDraft =
 
 
 /**
- * @param {!proto.email.SendDraftRequest} request The
+ * @param {!proto.service.SendDraftRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
- * @return {!Promise<!proto.email.Email>}
+ * @return {!Promise<!proto.service.Email>}
  *     A native promise that resolves to the response
  */
-proto.email.DraftServicePromiseClient.prototype.sendDraft =
+proto.service.DraftServicePromiseClient.prototype.sendDraft =
     function(request, metadata) {
   return this.client_.unaryCall(this.hostname_ +
-      '/email.DraftService/SendDraft',
+      '/service.DraftService/SendDraft',
       request,
       metadata || {},
       methodDescriptor_DraftService_SendDraft);
@@ -849,7 +849,7 @@ proto.email.DraftServicePromiseClient.prototype.sendDraft =
  * @struct
  * @final
  */
-proto.email.EmailServiceClient =
+proto.service.EmailServiceClient =
     function(hostname, credentials, options) {
   if (!options) options = {};
   options['format'] = 'text';
@@ -875,7 +875,7 @@ proto.email.EmailServiceClient =
  * @struct
  * @final
  */
-proto.email.EmailServicePromiseClient =
+proto.service.EmailServicePromiseClient =
     function(hostname, credentials, options) {
   if (!options) options = {};
   options['format'] = 'text';
@@ -896,58 +896,58 @@ proto.email.EmailServicePromiseClient =
 /**
  * @const
  * @type {!grpc.web.MethodDescriptor<
- *   !proto.email.GetEmailRequest,
- *   !proto.email.Email>}
+ *   !proto.service.GetEmailRequest,
+ *   !proto.service.Email>}
  */
 const methodDescriptor_EmailService_GetEmail = new grpc.web.MethodDescriptor(
-  '/email.EmailService/GetEmail',
+  '/service.EmailService/GetEmail',
   grpc.web.MethodType.UNARY,
-  proto.email.GetEmailRequest,
-  proto.email.Email,
+  proto.service.GetEmailRequest,
+  proto.service.Email,
   /**
-   * @param {!proto.email.GetEmailRequest} request
+   * @param {!proto.service.GetEmailRequest} request
    * @return {!Uint8Array}
    */
   function(request) {
     return request.serializeBinary();
   },
-  proto.email.Email.deserializeBinary
+  proto.service.Email.deserializeBinary
 );
 
 
 /**
  * @const
  * @type {!grpc.web.AbstractClientBase.MethodInfo<
- *   !proto.email.GetEmailRequest,
- *   !proto.email.Email>}
+ *   !proto.service.GetEmailRequest,
+ *   !proto.service.Email>}
  */
 const methodInfo_EmailService_GetEmail = new grpc.web.AbstractClientBase.MethodInfo(
-  proto.email.Email,
+  proto.service.Email,
   /**
-   * @param {!proto.email.GetEmailRequest} request
+   * @param {!proto.service.GetEmailRequest} request
    * @return {!Uint8Array}
    */
   function(request) {
     return request.serializeBinary();
   },
-  proto.email.Email.deserializeBinary
+  proto.service.Email.deserializeBinary
 );
 
 
 /**
- * @param {!proto.email.GetEmailRequest} request The
+ * @param {!proto.service.GetEmailRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
- * @param {function(?grpc.web.Error, ?proto.email.Email)}
+ * @param {function(?grpc.web.Error, ?proto.service.Email)}
  *     callback The callback function(error, response)
- * @return {!grpc.web.ClientReadableStream<!proto.email.Email>|undefined}
+ * @return {!grpc.web.ClientReadableStream<!proto.service.Email>|undefined}
  *     The XHR Node Readable Stream
  */
-proto.email.EmailServiceClient.prototype.getEmail =
+proto.service.EmailServiceClient.prototype.getEmail =
     function(request, metadata, callback) {
   return this.client_.rpcCall(this.hostname_ +
-      '/email.EmailService/GetEmail',
+      '/service.EmailService/GetEmail',
       request,
       metadata || {},
       methodDescriptor_EmailService_GetEmail,
@@ -956,17 +956,17 @@ proto.email.EmailServiceClient.prototype.getEmail =
 
 
 /**
- * @param {!proto.email.GetEmailRequest} request The
+ * @param {!proto.service.GetEmailRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
- * @return {!Promise<!proto.email.Email>}
+ * @return {!Promise<!proto.service.Email>}
  *     A native promise that resolves to the response
  */
-proto.email.EmailServicePromiseClient.prototype.getEmail =
+proto.service.EmailServicePromiseClient.prototype.getEmail =
     function(request, metadata) {
   return this.client_.unaryCall(this.hostname_ +
-      '/email.EmailService/GetEmail',
+      '/service.EmailService/GetEmail',
       request,
       metadata || {},
       methodDescriptor_EmailService_GetEmail);
@@ -976,58 +976,58 @@ proto.email.EmailServicePromiseClient.prototype.getEmail =
 /**
  * @const
  * @type {!grpc.web.MethodDescriptor<
- *   !proto.email.ListEmailsRequest,
- *   !proto.email.ListEmailsResponse>}
+ *   !proto.service.ListEmailsRequest,
+ *   !proto.service.ListEmailsResponse>}
  */
 const methodDescriptor_EmailService_ListEmails = new grpc.web.MethodDescriptor(
-  '/email.EmailService/ListEmails',
+  '/service.EmailService/ListEmails',
   grpc.web.MethodType.UNARY,
-  proto.email.ListEmailsRequest,
-  proto.email.ListEmailsResponse,
+  proto.service.ListEmailsRequest,
+  proto.service.ListEmailsResponse,
   /**
-   * @param {!proto.email.ListEmailsRequest} request
+   * @param {!proto.service.ListEmailsRequest} request
    * @return {!Uint8Array}
    */
   function(request) {
     return request.serializeBinary();
   },
-  proto.email.ListEmailsResponse.deserializeBinary
+  proto.service.ListEmailsResponse.deserializeBinary
 );
 
 
 /**
  * @const
  * @type {!grpc.web.AbstractClientBase.MethodInfo<
- *   !proto.email.ListEmailsRequest,
- *   !proto.email.ListEmailsResponse>}
+ *   !proto.service.ListEmailsRequest,
+ *   !proto.service.ListEmailsResponse>}
  */
 const methodInfo_EmailService_ListEmails = new grpc.web.AbstractClientBase.MethodInfo(
-  proto.email.ListEmailsResponse,
+  proto.service.ListEmailsResponse,
   /**
-   * @param {!proto.email.ListEmailsRequest} request
+   * @param {!proto.service.ListEmailsRequest} request
    * @return {!Uint8Array}
    */
   function(request) {
     return request.serializeBinary();
   },
-  proto.email.ListEmailsResponse.deserializeBinary
+  proto.service.ListEmailsResponse.deserializeBinary
 );
 
 
 /**
- * @param {!proto.email.ListEmailsRequest} request The
+ * @param {!proto.service.ListEmailsRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
- * @param {function(?grpc.web.Error, ?proto.email.ListEmailsResponse)}
+ * @param {function(?grpc.web.Error, ?proto.service.ListEmailsResponse)}
  *     callback The callback function(error, response)
- * @return {!grpc.web.ClientReadableStream<!proto.email.ListEmailsResponse>|undefined}
+ * @return {!grpc.web.ClientReadableStream<!proto.service.ListEmailsResponse>|undefined}
  *     The XHR Node Readable Stream
  */
-proto.email.EmailServiceClient.prototype.listEmails =
+proto.service.EmailServiceClient.prototype.listEmails =
     function(request, metadata, callback) {
   return this.client_.rpcCall(this.hostname_ +
-      '/email.EmailService/ListEmails',
+      '/service.EmailService/ListEmails',
       request,
       metadata || {},
       methodDescriptor_EmailService_ListEmails,
@@ -1036,17 +1036,17 @@ proto.email.EmailServiceClient.prototype.listEmails =
 
 
 /**
- * @param {!proto.email.ListEmailsRequest} request The
+ * @param {!proto.service.ListEmailsRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
- * @return {!Promise<!proto.email.ListEmailsResponse>}
+ * @return {!Promise<!proto.service.ListEmailsResponse>}
  *     A native promise that resolves to the response
  */
-proto.email.EmailServicePromiseClient.prototype.listEmails =
+proto.service.EmailServicePromiseClient.prototype.listEmails =
     function(request, metadata) {
   return this.client_.unaryCall(this.hostname_ +
-      '/email.EmailService/ListEmails',
+      '/service.EmailService/ListEmails',
       request,
       metadata || {},
       methodDescriptor_EmailService_ListEmails);
@@ -1056,58 +1056,58 @@ proto.email.EmailServicePromiseClient.prototype.listEmails =
 /**
  * @const
  * @type {!grpc.web.MethodDescriptor<
- *   !proto.email.ModifyEmailRequest,
- *   !proto.email.Email>}
+ *   !proto.service.ModifyEmailRequest,
+ *   !proto.service.Email>}
  */
 const methodDescriptor_EmailService_ModifyEmail = new grpc.web.MethodDescriptor(
-  '/email.EmailService/ModifyEmail',
+  '/service.EmailService/ModifyEmail',
   grpc.web.MethodType.UNARY,
-  proto.email.ModifyEmailRequest,
-  proto.email.Email,
+  proto.service.ModifyEmailRequest,
+  proto.service.Email,
   /**
-   * @param {!proto.email.ModifyEmailRequest} request
+   * @param {!proto.service.ModifyEmailRequest} request
    * @return {!Uint8Array}
    */
   function(request) {
     return request.serializeBinary();
   },
-  proto.email.Email.deserializeBinary
+  proto.service.Email.deserializeBinary
 );
 
 
 /**
  * @const
  * @type {!grpc.web.AbstractClientBase.MethodInfo<
- *   !proto.email.ModifyEmailRequest,
- *   !proto.email.Email>}
+ *   !proto.service.ModifyEmailRequest,
+ *   !proto.service.Email>}
  */
 const methodInfo_EmailService_ModifyEmail = new grpc.web.AbstractClientBase.MethodInfo(
-  proto.email.Email,
+  proto.service.Email,
   /**
-   * @param {!proto.email.ModifyEmailRequest} request
+   * @param {!proto.service.ModifyEmailRequest} request
    * @return {!Uint8Array}
    */
   function(request) {
     return request.serializeBinary();
   },
-  proto.email.Email.deserializeBinary
+  proto.service.Email.deserializeBinary
 );
 
 
 /**
- * @param {!proto.email.ModifyEmailRequest} request The
+ * @param {!proto.service.ModifyEmailRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
- * @param {function(?grpc.web.Error, ?proto.email.Email)}
+ * @param {function(?grpc.web.Error, ?proto.service.Email)}
  *     callback The callback function(error, response)
- * @return {!grpc.web.ClientReadableStream<!proto.email.Email>|undefined}
+ * @return {!grpc.web.ClientReadableStream<!proto.service.Email>|undefined}
  *     The XHR Node Readable Stream
  */
-proto.email.EmailServiceClient.prototype.modifyEmail =
+proto.service.EmailServiceClient.prototype.modifyEmail =
     function(request, metadata, callback) {
   return this.client_.rpcCall(this.hostname_ +
-      '/email.EmailService/ModifyEmail',
+      '/service.EmailService/ModifyEmail',
       request,
       metadata || {},
       methodDescriptor_EmailService_ModifyEmail,
@@ -1116,17 +1116,17 @@ proto.email.EmailServiceClient.prototype.modifyEmail =
 
 
 /**
- * @param {!proto.email.ModifyEmailRequest} request The
+ * @param {!proto.service.ModifyEmailRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
- * @return {!Promise<!proto.email.Email>}
+ * @return {!Promise<!proto.service.Email>}
  *     A native promise that resolves to the response
  */
-proto.email.EmailServicePromiseClient.prototype.modifyEmail =
+proto.service.EmailServicePromiseClient.prototype.modifyEmail =
     function(request, metadata) {
   return this.client_.unaryCall(this.hostname_ +
-      '/email.EmailService/ModifyEmail',
+      '/service.EmailService/ModifyEmail',
       request,
       metadata || {},
       methodDescriptor_EmailService_ModifyEmail);
@@ -1136,16 +1136,16 @@ proto.email.EmailServicePromiseClient.prototype.modifyEmail =
 /**
  * @const
  * @type {!grpc.web.MethodDescriptor<
- *   !proto.email.TrashEmailRequest,
+ *   !proto.service.TrashEmailRequest,
  *   !proto.google.protobuf.Empty>}
  */
 const methodDescriptor_EmailService_TrashEmail = new grpc.web.MethodDescriptor(
-  '/email.EmailService/TrashEmail',
+  '/service.EmailService/TrashEmail',
   grpc.web.MethodType.UNARY,
-  proto.email.TrashEmailRequest,
+  proto.service.TrashEmailRequest,
   google_protobuf_empty_pb.Empty,
   /**
-   * @param {!proto.email.TrashEmailRequest} request
+   * @param {!proto.service.TrashEmailRequest} request
    * @return {!Uint8Array}
    */
   function(request) {
@@ -1158,13 +1158,13 @@ const methodDescriptor_EmailService_TrashEmail = new grpc.web.MethodDescriptor(
 /**
  * @const
  * @type {!grpc.web.AbstractClientBase.MethodInfo<
- *   !proto.email.TrashEmailRequest,
+ *   !proto.service.TrashEmailRequest,
  *   !proto.google.protobuf.Empty>}
  */
 const methodInfo_EmailService_TrashEmail = new grpc.web.AbstractClientBase.MethodInfo(
   google_protobuf_empty_pb.Empty,
   /**
-   * @param {!proto.email.TrashEmailRequest} request
+   * @param {!proto.service.TrashEmailRequest} request
    * @return {!Uint8Array}
    */
   function(request) {
@@ -1175,7 +1175,7 @@ const methodInfo_EmailService_TrashEmail = new grpc.web.AbstractClientBase.Metho
 
 
 /**
- * @param {!proto.email.TrashEmailRequest} request The
+ * @param {!proto.service.TrashEmailRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
@@ -1184,10 +1184,10 @@ const methodInfo_EmailService_TrashEmail = new grpc.web.AbstractClientBase.Metho
  * @return {!grpc.web.ClientReadableStream<!proto.google.protobuf.Empty>|undefined}
  *     The XHR Node Readable Stream
  */
-proto.email.EmailServiceClient.prototype.trashEmail =
+proto.service.EmailServiceClient.prototype.trashEmail =
     function(request, metadata, callback) {
   return this.client_.rpcCall(this.hostname_ +
-      '/email.EmailService/TrashEmail',
+      '/service.EmailService/TrashEmail',
       request,
       metadata || {},
       methodDescriptor_EmailService_TrashEmail,
@@ -1196,17 +1196,17 @@ proto.email.EmailServiceClient.prototype.trashEmail =
 
 
 /**
- * @param {!proto.email.TrashEmailRequest} request The
+ * @param {!proto.service.TrashEmailRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
  * @return {!Promise<!proto.google.protobuf.Empty>}
  *     A native promise that resolves to the response
  */
-proto.email.EmailServicePromiseClient.prototype.trashEmail =
+proto.service.EmailServicePromiseClient.prototype.trashEmail =
     function(request, metadata) {
   return this.client_.unaryCall(this.hostname_ +
-      '/email.EmailService/TrashEmail',
+      '/service.EmailService/TrashEmail',
       request,
       metadata || {},
       methodDescriptor_EmailService_TrashEmail);
@@ -1216,16 +1216,16 @@ proto.email.EmailServicePromiseClient.prototype.trashEmail =
 /**
  * @const
  * @type {!grpc.web.MethodDescriptor<
- *   !proto.email.UntrashEmailRequest,
+ *   !proto.service.UntrashEmailRequest,
  *   !proto.google.protobuf.Empty>}
  */
 const methodDescriptor_EmailService_UntrashEmail = new grpc.web.MethodDescriptor(
-  '/email.EmailService/UntrashEmail',
+  '/service.EmailService/UntrashEmail',
   grpc.web.MethodType.UNARY,
-  proto.email.UntrashEmailRequest,
+  proto.service.UntrashEmailRequest,
   google_protobuf_empty_pb.Empty,
   /**
-   * @param {!proto.email.UntrashEmailRequest} request
+   * @param {!proto.service.UntrashEmailRequest} request
    * @return {!Uint8Array}
    */
   function(request) {
@@ -1238,13 +1238,13 @@ const methodDescriptor_EmailService_UntrashEmail = new grpc.web.MethodDescriptor
 /**
  * @const
  * @type {!grpc.web.AbstractClientBase.MethodInfo<
- *   !proto.email.UntrashEmailRequest,
+ *   !proto.service.UntrashEmailRequest,
  *   !proto.google.protobuf.Empty>}
  */
 const methodInfo_EmailService_UntrashEmail = new grpc.web.AbstractClientBase.MethodInfo(
   google_protobuf_empty_pb.Empty,
   /**
-   * @param {!proto.email.UntrashEmailRequest} request
+   * @param {!proto.service.UntrashEmailRequest} request
    * @return {!Uint8Array}
    */
   function(request) {
@@ -1255,7 +1255,7 @@ const methodInfo_EmailService_UntrashEmail = new grpc.web.AbstractClientBase.Met
 
 
 /**
- * @param {!proto.email.UntrashEmailRequest} request The
+ * @param {!proto.service.UntrashEmailRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
@@ -1264,10 +1264,10 @@ const methodInfo_EmailService_UntrashEmail = new grpc.web.AbstractClientBase.Met
  * @return {!grpc.web.ClientReadableStream<!proto.google.protobuf.Empty>|undefined}
  *     The XHR Node Readable Stream
  */
-proto.email.EmailServiceClient.prototype.untrashEmail =
+proto.service.EmailServiceClient.prototype.untrashEmail =
     function(request, metadata, callback) {
   return this.client_.rpcCall(this.hostname_ +
-      '/email.EmailService/UntrashEmail',
+      '/service.EmailService/UntrashEmail',
       request,
       metadata || {},
       methodDescriptor_EmailService_UntrashEmail,
@@ -1276,17 +1276,17 @@ proto.email.EmailServiceClient.prototype.untrashEmail =
 
 
 /**
- * @param {!proto.email.UntrashEmailRequest} request The
+ * @param {!proto.service.UntrashEmailRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
  * @return {!Promise<!proto.google.protobuf.Empty>}
  *     A native promise that resolves to the response
  */
-proto.email.EmailServicePromiseClient.prototype.untrashEmail =
+proto.service.EmailServicePromiseClient.prototype.untrashEmail =
     function(request, metadata) {
   return this.client_.unaryCall(this.hostname_ +
-      '/email.EmailService/UntrashEmail',
+      '/service.EmailService/UntrashEmail',
       request,
       metadata || {},
       methodDescriptor_EmailService_UntrashEmail);
@@ -1296,58 +1296,58 @@ proto.email.EmailServicePromiseClient.prototype.untrashEmail =
 /**
  * @const
  * @type {!grpc.web.MethodDescriptor<
- *   !proto.email.SendEmailRequest,
- *   !proto.email.Email>}
+ *   !proto.service.SendEmailRequest,
+ *   !proto.service.Email>}
  */
 const methodDescriptor_EmailService_SendEmail = new grpc.web.MethodDescriptor(
-  '/email.EmailService/SendEmail',
+  '/service.EmailService/SendEmail',
   grpc.web.MethodType.UNARY,
-  proto.email.SendEmailRequest,
-  proto.email.Email,
+  proto.service.SendEmailRequest,
+  proto.service.Email,
   /**
-   * @param {!proto.email.SendEmailRequest} request
+   * @param {!proto.service.SendEmailRequest} request
    * @return {!Uint8Array}
    */
   function(request) {
     return request.serializeBinary();
   },
-  proto.email.Email.deserializeBinary
+  proto.service.Email.deserializeBinary
 );
 
 
 /**
  * @const
  * @type {!grpc.web.AbstractClientBase.MethodInfo<
- *   !proto.email.SendEmailRequest,
- *   !proto.email.Email>}
+ *   !proto.service.SendEmailRequest,
+ *   !proto.service.Email>}
  */
 const methodInfo_EmailService_SendEmail = new grpc.web.AbstractClientBase.MethodInfo(
-  proto.email.Email,
+  proto.service.Email,
   /**
-   * @param {!proto.email.SendEmailRequest} request
+   * @param {!proto.service.SendEmailRequest} request
    * @return {!Uint8Array}
    */
   function(request) {
     return request.serializeBinary();
   },
-  proto.email.Email.deserializeBinary
+  proto.service.Email.deserializeBinary
 );
 
 
 /**
- * @param {!proto.email.SendEmailRequest} request The
+ * @param {!proto.service.SendEmailRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
- * @param {function(?grpc.web.Error, ?proto.email.Email)}
+ * @param {function(?grpc.web.Error, ?proto.service.Email)}
  *     callback The callback function(error, response)
- * @return {!grpc.web.ClientReadableStream<!proto.email.Email>|undefined}
+ * @return {!grpc.web.ClientReadableStream<!proto.service.Email>|undefined}
  *     The XHR Node Readable Stream
  */
-proto.email.EmailServiceClient.prototype.sendEmail =
+proto.service.EmailServiceClient.prototype.sendEmail =
     function(request, metadata, callback) {
   return this.client_.rpcCall(this.hostname_ +
-      '/email.EmailService/SendEmail',
+      '/service.EmailService/SendEmail',
       request,
       metadata || {},
       methodDescriptor_EmailService_SendEmail,
@@ -1356,17 +1356,17 @@ proto.email.EmailServiceClient.prototype.sendEmail =
 
 
 /**
- * @param {!proto.email.SendEmailRequest} request The
+ * @param {!proto.service.SendEmailRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
- * @return {!Promise<!proto.email.Email>}
+ * @return {!Promise<!proto.service.Email>}
  *     A native promise that resolves to the response
  */
-proto.email.EmailServicePromiseClient.prototype.sendEmail =
+proto.service.EmailServicePromiseClient.prototype.sendEmail =
     function(request, metadata) {
   return this.client_.unaryCall(this.hostname_ +
-      '/email.EmailService/SendEmail',
+      '/service.EmailService/SendEmail',
       request,
       metadata || {},
       methodDescriptor_EmailService_SendEmail);
@@ -1381,7 +1381,7 @@ proto.email.EmailServicePromiseClient.prototype.sendEmail =
  * @struct
  * @final
  */
-proto.email.ThreadServiceClient =
+proto.service.ThreadServiceClient =
     function(hostname, credentials, options) {
   if (!options) options = {};
   options['format'] = 'text';
@@ -1407,7 +1407,7 @@ proto.email.ThreadServiceClient =
  * @struct
  * @final
  */
-proto.email.ThreadServicePromiseClient =
+proto.service.ThreadServicePromiseClient =
     function(hostname, credentials, options) {
   if (!options) options = {};
   options['format'] = 'text';
@@ -1428,58 +1428,58 @@ proto.email.ThreadServicePromiseClient =
 /**
  * @const
  * @type {!grpc.web.MethodDescriptor<
- *   !proto.email.GetThreadRequest,
- *   !proto.email.Thread>}
+ *   !proto.service.GetThreadRequest,
+ *   !proto.service.Thread>}
  */
 const methodDescriptor_ThreadService_GetThread = new grpc.web.MethodDescriptor(
-  '/email.ThreadService/GetThread',
+  '/service.ThreadService/GetThread',
   grpc.web.MethodType.UNARY,
-  proto.email.GetThreadRequest,
-  proto.email.Thread,
+  proto.service.GetThreadRequest,
+  proto.service.Thread,
   /**
-   * @param {!proto.email.GetThreadRequest} request
+   * @param {!proto.service.GetThreadRequest} request
    * @return {!Uint8Array}
    */
   function(request) {
     return request.serializeBinary();
   },
-  proto.email.Thread.deserializeBinary
+  proto.service.Thread.deserializeBinary
 );
 
 
 /**
  * @const
  * @type {!grpc.web.AbstractClientBase.MethodInfo<
- *   !proto.email.GetThreadRequest,
- *   !proto.email.Thread>}
+ *   !proto.service.GetThreadRequest,
+ *   !proto.service.Thread>}
  */
 const methodInfo_ThreadService_GetThread = new grpc.web.AbstractClientBase.MethodInfo(
-  proto.email.Thread,
+  proto.service.Thread,
   /**
-   * @param {!proto.email.GetThreadRequest} request
+   * @param {!proto.service.GetThreadRequest} request
    * @return {!Uint8Array}
    */
   function(request) {
     return request.serializeBinary();
   },
-  proto.email.Thread.deserializeBinary
+  proto.service.Thread.deserializeBinary
 );
 
 
 /**
- * @param {!proto.email.GetThreadRequest} request The
+ * @param {!proto.service.GetThreadRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
- * @param {function(?grpc.web.Error, ?proto.email.Thread)}
+ * @param {function(?grpc.web.Error, ?proto.service.Thread)}
  *     callback The callback function(error, response)
- * @return {!grpc.web.ClientReadableStream<!proto.email.Thread>|undefined}
+ * @return {!grpc.web.ClientReadableStream<!proto.service.Thread>|undefined}
  *     The XHR Node Readable Stream
  */
-proto.email.ThreadServiceClient.prototype.getThread =
+proto.service.ThreadServiceClient.prototype.getThread =
     function(request, metadata, callback) {
   return this.client_.rpcCall(this.hostname_ +
-      '/email.ThreadService/GetThread',
+      '/service.ThreadService/GetThread',
       request,
       metadata || {},
       methodDescriptor_ThreadService_GetThread,
@@ -1488,17 +1488,17 @@ proto.email.ThreadServiceClient.prototype.getThread =
 
 
 /**
- * @param {!proto.email.GetThreadRequest} request The
+ * @param {!proto.service.GetThreadRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
- * @return {!Promise<!proto.email.Thread>}
+ * @return {!Promise<!proto.service.Thread>}
  *     A native promise that resolves to the response
  */
-proto.email.ThreadServicePromiseClient.prototype.getThread =
+proto.service.ThreadServicePromiseClient.prototype.getThread =
     function(request, metadata) {
   return this.client_.unaryCall(this.hostname_ +
-      '/email.ThreadService/GetThread',
+      '/service.ThreadService/GetThread',
       request,
       metadata || {},
       methodDescriptor_ThreadService_GetThread);
@@ -1508,58 +1508,58 @@ proto.email.ThreadServicePromiseClient.prototype.getThread =
 /**
  * @const
  * @type {!grpc.web.MethodDescriptor<
- *   !proto.email.ListThreadsRequest,
- *   !proto.email.ListThreadsResponse>}
+ *   !proto.service.ListThreadsRequest,
+ *   !proto.service.ListThreadsResponse>}
  */
 const methodDescriptor_ThreadService_ListThreads = new grpc.web.MethodDescriptor(
-  '/email.ThreadService/ListThreads',
+  '/service.ThreadService/ListThreads',
   grpc.web.MethodType.UNARY,
-  proto.email.ListThreadsRequest,
-  proto.email.ListThreadsResponse,
+  proto.service.ListThreadsRequest,
+  proto.service.ListThreadsResponse,
   /**
-   * @param {!proto.email.ListThreadsRequest} request
+   * @param {!proto.service.ListThreadsRequest} request
    * @return {!Uint8Array}
    */
   function(request) {
     return request.serializeBinary();
   },
-  proto.email.ListThreadsResponse.deserializeBinary
+  proto.service.ListThreadsResponse.deserializeBinary
 );
 
 
 /**
  * @const
  * @type {!grpc.web.AbstractClientBase.MethodInfo<
- *   !proto.email.ListThreadsRequest,
- *   !proto.email.ListThreadsResponse>}
+ *   !proto.service.ListThreadsRequest,
+ *   !proto.service.ListThreadsResponse>}
  */
 const methodInfo_ThreadService_ListThreads = new grpc.web.AbstractClientBase.MethodInfo(
-  proto.email.ListThreadsResponse,
+  proto.service.ListThreadsResponse,
   /**
-   * @param {!proto.email.ListThreadsRequest} request
+   * @param {!proto.service.ListThreadsRequest} request
    * @return {!Uint8Array}
    */
   function(request) {
     return request.serializeBinary();
   },
-  proto.email.ListThreadsResponse.deserializeBinary
+  proto.service.ListThreadsResponse.deserializeBinary
 );
 
 
 /**
- * @param {!proto.email.ListThreadsRequest} request The
+ * @param {!proto.service.ListThreadsRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
- * @param {function(?grpc.web.Error, ?proto.email.ListThreadsResponse)}
+ * @param {function(?grpc.web.Error, ?proto.service.ListThreadsResponse)}
  *     callback The callback function(error, response)
- * @return {!grpc.web.ClientReadableStream<!proto.email.ListThreadsResponse>|undefined}
+ * @return {!grpc.web.ClientReadableStream<!proto.service.ListThreadsResponse>|undefined}
  *     The XHR Node Readable Stream
  */
-proto.email.ThreadServiceClient.prototype.listThreads =
+proto.service.ThreadServiceClient.prototype.listThreads =
     function(request, metadata, callback) {
   return this.client_.rpcCall(this.hostname_ +
-      '/email.ThreadService/ListThreads',
+      '/service.ThreadService/ListThreads',
       request,
       metadata || {},
       methodDescriptor_ThreadService_ListThreads,
@@ -1568,17 +1568,17 @@ proto.email.ThreadServiceClient.prototype.listThreads =
 
 
 /**
- * @param {!proto.email.ListThreadsRequest} request The
+ * @param {!proto.service.ListThreadsRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
- * @return {!Promise<!proto.email.ListThreadsResponse>}
+ * @return {!Promise<!proto.service.ListThreadsResponse>}
  *     A native promise that resolves to the response
  */
-proto.email.ThreadServicePromiseClient.prototype.listThreads =
+proto.service.ThreadServicePromiseClient.prototype.listThreads =
     function(request, metadata) {
   return this.client_.unaryCall(this.hostname_ +
-      '/email.ThreadService/ListThreads',
+      '/service.ThreadService/ListThreads',
       request,
       metadata || {},
       methodDescriptor_ThreadService_ListThreads);
@@ -1588,58 +1588,58 @@ proto.email.ThreadServicePromiseClient.prototype.listThreads =
 /**
  * @const
  * @type {!grpc.web.MethodDescriptor<
- *   !proto.email.ModifyThreadRequest,
- *   !proto.email.Thread>}
+ *   !proto.service.ModifyThreadRequest,
+ *   !proto.service.Thread>}
  */
 const methodDescriptor_ThreadService_ModifyThread = new grpc.web.MethodDescriptor(
-  '/email.ThreadService/ModifyThread',
+  '/service.ThreadService/ModifyThread',
   grpc.web.MethodType.UNARY,
-  proto.email.ModifyThreadRequest,
-  proto.email.Thread,
+  proto.service.ModifyThreadRequest,
+  proto.service.Thread,
   /**
-   * @param {!proto.email.ModifyThreadRequest} request
+   * @param {!proto.service.ModifyThreadRequest} request
    * @return {!Uint8Array}
    */
   function(request) {
     return request.serializeBinary();
   },
-  proto.email.Thread.deserializeBinary
+  proto.service.Thread.deserializeBinary
 );
 
 
 /**
  * @const
  * @type {!grpc.web.AbstractClientBase.MethodInfo<
- *   !proto.email.ModifyThreadRequest,
- *   !proto.email.Thread>}
+ *   !proto.service.ModifyThreadRequest,
+ *   !proto.service.Thread>}
  */
 const methodInfo_ThreadService_ModifyThread = new grpc.web.AbstractClientBase.MethodInfo(
-  proto.email.Thread,
+  proto.service.Thread,
   /**
-   * @param {!proto.email.ModifyThreadRequest} request
+   * @param {!proto.service.ModifyThreadRequest} request
    * @return {!Uint8Array}
    */
   function(request) {
     return request.serializeBinary();
   },
-  proto.email.Thread.deserializeBinary
+  proto.service.Thread.deserializeBinary
 );
 
 
 /**
- * @param {!proto.email.ModifyThreadRequest} request The
+ * @param {!proto.service.ModifyThreadRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
- * @param {function(?grpc.web.Error, ?proto.email.Thread)}
+ * @param {function(?grpc.web.Error, ?proto.service.Thread)}
  *     callback The callback function(error, response)
- * @return {!grpc.web.ClientReadableStream<!proto.email.Thread>|undefined}
+ * @return {!grpc.web.ClientReadableStream<!proto.service.Thread>|undefined}
  *     The XHR Node Readable Stream
  */
-proto.email.ThreadServiceClient.prototype.modifyThread =
+proto.service.ThreadServiceClient.prototype.modifyThread =
     function(request, metadata, callback) {
   return this.client_.rpcCall(this.hostname_ +
-      '/email.ThreadService/ModifyThread',
+      '/service.ThreadService/ModifyThread',
       request,
       metadata || {},
       methodDescriptor_ThreadService_ModifyThread,
@@ -1648,17 +1648,17 @@ proto.email.ThreadServiceClient.prototype.modifyThread =
 
 
 /**
- * @param {!proto.email.ModifyThreadRequest} request The
+ * @param {!proto.service.ModifyThreadRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
- * @return {!Promise<!proto.email.Thread>}
+ * @return {!Promise<!proto.service.Thread>}
  *     A native promise that resolves to the response
  */
-proto.email.ThreadServicePromiseClient.prototype.modifyThread =
+proto.service.ThreadServicePromiseClient.prototype.modifyThread =
     function(request, metadata) {
   return this.client_.unaryCall(this.hostname_ +
-      '/email.ThreadService/ModifyThread',
+      '/service.ThreadService/ModifyThread',
       request,
       metadata || {},
       methodDescriptor_ThreadService_ModifyThread);
@@ -1668,16 +1668,16 @@ proto.email.ThreadServicePromiseClient.prototype.modifyThread =
 /**
  * @const
  * @type {!grpc.web.MethodDescriptor<
- *   !proto.email.TrashThreadRequest,
+ *   !proto.service.TrashThreadRequest,
  *   !proto.google.protobuf.Empty>}
  */
 const methodDescriptor_ThreadService_TrashThread = new grpc.web.MethodDescriptor(
-  '/email.ThreadService/TrashThread',
+  '/service.ThreadService/TrashThread',
   grpc.web.MethodType.UNARY,
-  proto.email.TrashThreadRequest,
+  proto.service.TrashThreadRequest,
   google_protobuf_empty_pb.Empty,
   /**
-   * @param {!proto.email.TrashThreadRequest} request
+   * @param {!proto.service.TrashThreadRequest} request
    * @return {!Uint8Array}
    */
   function(request) {
@@ -1690,13 +1690,13 @@ const methodDescriptor_ThreadService_TrashThread = new grpc.web.MethodDescriptor
 /**
  * @const
  * @type {!grpc.web.AbstractClientBase.MethodInfo<
- *   !proto.email.TrashThreadRequest,
+ *   !proto.service.TrashThreadRequest,
  *   !proto.google.protobuf.Empty>}
  */
 const methodInfo_ThreadService_TrashThread = new grpc.web.AbstractClientBase.MethodInfo(
   google_protobuf_empty_pb.Empty,
   /**
-   * @param {!proto.email.TrashThreadRequest} request
+   * @param {!proto.service.TrashThreadRequest} request
    * @return {!Uint8Array}
    */
   function(request) {
@@ -1707,7 +1707,7 @@ const methodInfo_ThreadService_TrashThread = new grpc.web.AbstractClientBase.Met
 
 
 /**
- * @param {!proto.email.TrashThreadRequest} request The
+ * @param {!proto.service.TrashThreadRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
@@ -1716,10 +1716,10 @@ const methodInfo_ThreadService_TrashThread = new grpc.web.AbstractClientBase.Met
  * @return {!grpc.web.ClientReadableStream<!proto.google.protobuf.Empty>|undefined}
  *     The XHR Node Readable Stream
  */
-proto.email.ThreadServiceClient.prototype.trashThread =
+proto.service.ThreadServiceClient.prototype.trashThread =
     function(request, metadata, callback) {
   return this.client_.rpcCall(this.hostname_ +
-      '/email.ThreadService/TrashThread',
+      '/service.ThreadService/TrashThread',
       request,
       metadata || {},
       methodDescriptor_ThreadService_TrashThread,
@@ -1728,17 +1728,17 @@ proto.email.ThreadServiceClient.prototype.trashThread =
 
 
 /**
- * @param {!proto.email.TrashThreadRequest} request The
+ * @param {!proto.service.TrashThreadRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
  * @return {!Promise<!proto.google.protobuf.Empty>}
  *     A native promise that resolves to the response
  */
-proto.email.ThreadServicePromiseClient.prototype.trashThread =
+proto.service.ThreadServicePromiseClient.prototype.trashThread =
     function(request, metadata) {
   return this.client_.unaryCall(this.hostname_ +
-      '/email.ThreadService/TrashThread',
+      '/service.ThreadService/TrashThread',
       request,
       metadata || {},
       methodDescriptor_ThreadService_TrashThread);
@@ -1748,16 +1748,16 @@ proto.email.ThreadServicePromiseClient.prototype.trashThread =
 /**
  * @const
  * @type {!grpc.web.MethodDescriptor<
- *   !proto.email.UntrashThreadRequest,
+ *   !proto.service.UntrashThreadRequest,
  *   !proto.google.protobuf.Empty>}
  */
 const methodDescriptor_ThreadService_UntrashThread = new grpc.web.MethodDescriptor(
-  '/email.ThreadService/UntrashThread',
+  '/service.ThreadService/UntrashThread',
   grpc.web.MethodType.UNARY,
-  proto.email.UntrashThreadRequest,
+  proto.service.UntrashThreadRequest,
   google_protobuf_empty_pb.Empty,
   /**
-   * @param {!proto.email.UntrashThreadRequest} request
+   * @param {!proto.service.UntrashThreadRequest} request
    * @return {!Uint8Array}
    */
   function(request) {
@@ -1770,13 +1770,13 @@ const methodDescriptor_ThreadService_UntrashThread = new grpc.web.MethodDescript
 /**
  * @const
  * @type {!grpc.web.AbstractClientBase.MethodInfo<
- *   !proto.email.UntrashThreadRequest,
+ *   !proto.service.UntrashThreadRequest,
  *   !proto.google.protobuf.Empty>}
  */
 const methodInfo_ThreadService_UntrashThread = new grpc.web.AbstractClientBase.MethodInfo(
   google_protobuf_empty_pb.Empty,
   /**
-   * @param {!proto.email.UntrashThreadRequest} request
+   * @param {!proto.service.UntrashThreadRequest} request
    * @return {!Uint8Array}
    */
   function(request) {
@@ -1787,7 +1787,7 @@ const methodInfo_ThreadService_UntrashThread = new grpc.web.AbstractClientBase.M
 
 
 /**
- * @param {!proto.email.UntrashThreadRequest} request The
+ * @param {!proto.service.UntrashThreadRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
@@ -1796,10 +1796,10 @@ const methodInfo_ThreadService_UntrashThread = new grpc.web.AbstractClientBase.M
  * @return {!grpc.web.ClientReadableStream<!proto.google.protobuf.Empty>|undefined}
  *     The XHR Node Readable Stream
  */
-proto.email.ThreadServiceClient.prototype.untrashThread =
+proto.service.ThreadServiceClient.prototype.untrashThread =
     function(request, metadata, callback) {
   return this.client_.rpcCall(this.hostname_ +
-      '/email.ThreadService/UntrashThread',
+      '/service.ThreadService/UntrashThread',
       request,
       metadata || {},
       methodDescriptor_ThreadService_UntrashThread,
@@ -1808,17 +1808,17 @@ proto.email.ThreadServiceClient.prototype.untrashThread =
 
 
 /**
- * @param {!proto.email.UntrashThreadRequest} request The
+ * @param {!proto.service.UntrashThreadRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
  * @return {!Promise<!proto.google.protobuf.Empty>}
  *     A native promise that resolves to the response
  */
-proto.email.ThreadServicePromiseClient.prototype.untrashThread =
+proto.service.ThreadServicePromiseClient.prototype.untrashThread =
     function(request, metadata) {
   return this.client_.unaryCall(this.hostname_ +
-      '/email.ThreadService/UntrashThread',
+      '/service.ThreadService/UntrashThread',
       request,
       metadata || {},
       methodDescriptor_ThreadService_UntrashThread);
@@ -1833,7 +1833,7 @@ proto.email.ThreadServicePromiseClient.prototype.untrashThread =
  * @struct
  * @final
  */
-proto.email.LabelServiceClient =
+proto.service.LabelServiceClient =
     function(hostname, credentials, options) {
   if (!options) options = {};
   options['format'] = 'text';
@@ -1859,7 +1859,7 @@ proto.email.LabelServiceClient =
  * @struct
  * @final
  */
-proto.email.LabelServicePromiseClient =
+proto.service.LabelServicePromiseClient =
     function(hostname, credentials, options) {
   if (!options) options = {};
   options['format'] = 'text';
@@ -1880,58 +1880,58 @@ proto.email.LabelServicePromiseClient =
 /**
  * @const
  * @type {!grpc.web.MethodDescriptor<
- *   !proto.email.GetLabelRequest,
- *   !proto.email.Label>}
+ *   !proto.service.GetLabelRequest,
+ *   !proto.service.Label>}
  */
 const methodDescriptor_LabelService_GetLabel = new grpc.web.MethodDescriptor(
-  '/email.LabelService/GetLabel',
+  '/service.LabelService/GetLabel',
   grpc.web.MethodType.UNARY,
-  proto.email.GetLabelRequest,
-  proto.email.Label,
+  proto.service.GetLabelRequest,
+  proto.service.Label,
   /**
-   * @param {!proto.email.GetLabelRequest} request
+   * @param {!proto.service.GetLabelRequest} request
    * @return {!Uint8Array}
    */
   function(request) {
     return request.serializeBinary();
   },
-  proto.email.Label.deserializeBinary
+  proto.service.Label.deserializeBinary
 );
 
 
 /**
  * @const
  * @type {!grpc.web.AbstractClientBase.MethodInfo<
- *   !proto.email.GetLabelRequest,
- *   !proto.email.Label>}
+ *   !proto.service.GetLabelRequest,
+ *   !proto.service.Label>}
  */
 const methodInfo_LabelService_GetLabel = new grpc.web.AbstractClientBase.MethodInfo(
-  proto.email.Label,
+  proto.service.Label,
   /**
-   * @param {!proto.email.GetLabelRequest} request
+   * @param {!proto.service.GetLabelRequest} request
    * @return {!Uint8Array}
    */
   function(request) {
     return request.serializeBinary();
   },
-  proto.email.Label.deserializeBinary
+  proto.service.Label.deserializeBinary
 );
 
 
 /**
- * @param {!proto.email.GetLabelRequest} request The
+ * @param {!proto.service.GetLabelRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
- * @param {function(?grpc.web.Error, ?proto.email.Label)}
+ * @param {function(?grpc.web.Error, ?proto.service.Label)}
  *     callback The callback function(error, response)
- * @return {!grpc.web.ClientReadableStream<!proto.email.Label>|undefined}
+ * @return {!grpc.web.ClientReadableStream<!proto.service.Label>|undefined}
  *     The XHR Node Readable Stream
  */
-proto.email.LabelServiceClient.prototype.getLabel =
+proto.service.LabelServiceClient.prototype.getLabel =
     function(request, metadata, callback) {
   return this.client_.rpcCall(this.hostname_ +
-      '/email.LabelService/GetLabel',
+      '/service.LabelService/GetLabel',
       request,
       metadata || {},
       methodDescriptor_LabelService_GetLabel,
@@ -1940,17 +1940,17 @@ proto.email.LabelServiceClient.prototype.getLabel =
 
 
 /**
- * @param {!proto.email.GetLabelRequest} request The
+ * @param {!proto.service.GetLabelRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
- * @return {!Promise<!proto.email.Label>}
+ * @return {!Promise<!proto.service.Label>}
  *     A native promise that resolves to the response
  */
-proto.email.LabelServicePromiseClient.prototype.getLabel =
+proto.service.LabelServicePromiseClient.prototype.getLabel =
     function(request, metadata) {
   return this.client_.unaryCall(this.hostname_ +
-      '/email.LabelService/GetLabel',
+      '/service.LabelService/GetLabel',
       request,
       metadata || {},
       methodDescriptor_LabelService_GetLabel);
@@ -1961,13 +1961,13 @@ proto.email.LabelServicePromiseClient.prototype.getLabel =
  * @const
  * @type {!grpc.web.MethodDescriptor<
  *   !proto.google.protobuf.Empty,
- *   !proto.email.ListLabelsResponse>}
+ *   !proto.service.ListLabelsResponse>}
  */
 const methodDescriptor_LabelService_ListLabels = new grpc.web.MethodDescriptor(
-  '/email.LabelService/ListLabels',
+  '/service.LabelService/ListLabels',
   grpc.web.MethodType.UNARY,
   google_protobuf_empty_pb.Empty,
-  proto.email.ListLabelsResponse,
+  proto.service.ListLabelsResponse,
   /**
    * @param {!proto.google.protobuf.Empty} request
    * @return {!Uint8Array}
@@ -1975,7 +1975,7 @@ const methodDescriptor_LabelService_ListLabels = new grpc.web.MethodDescriptor(
   function(request) {
     return request.serializeBinary();
   },
-  proto.email.ListLabelsResponse.deserializeBinary
+  proto.service.ListLabelsResponse.deserializeBinary
 );
 
 
@@ -1983,10 +1983,10 @@ const methodDescriptor_LabelService_ListLabels = new grpc.web.MethodDescriptor(
  * @const
  * @type {!grpc.web.AbstractClientBase.MethodInfo<
  *   !proto.google.protobuf.Empty,
- *   !proto.email.ListLabelsResponse>}
+ *   !proto.service.ListLabelsResponse>}
  */
 const methodInfo_LabelService_ListLabels = new grpc.web.AbstractClientBase.MethodInfo(
-  proto.email.ListLabelsResponse,
+  proto.service.ListLabelsResponse,
   /**
    * @param {!proto.google.protobuf.Empty} request
    * @return {!Uint8Array}
@@ -1994,7 +1994,7 @@ const methodInfo_LabelService_ListLabels = new grpc.web.AbstractClientBase.Metho
   function(request) {
     return request.serializeBinary();
   },
-  proto.email.ListLabelsResponse.deserializeBinary
+  proto.service.ListLabelsResponse.deserializeBinary
 );
 
 
@@ -2003,15 +2003,15 @@ const methodInfo_LabelService_ListLabels = new grpc.web.AbstractClientBase.Metho
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
- * @param {function(?grpc.web.Error, ?proto.email.ListLabelsResponse)}
+ * @param {function(?grpc.web.Error, ?proto.service.ListLabelsResponse)}
  *     callback The callback function(error, response)
- * @return {!grpc.web.ClientReadableStream<!proto.email.ListLabelsResponse>|undefined}
+ * @return {!grpc.web.ClientReadableStream<!proto.service.ListLabelsResponse>|undefined}
  *     The XHR Node Readable Stream
  */
-proto.email.LabelServiceClient.prototype.listLabels =
+proto.service.LabelServiceClient.prototype.listLabels =
     function(request, metadata, callback) {
   return this.client_.rpcCall(this.hostname_ +
-      '/email.LabelService/ListLabels',
+      '/service.LabelService/ListLabels',
       request,
       metadata || {},
       methodDescriptor_LabelService_ListLabels,
@@ -2024,13 +2024,13 @@ proto.email.LabelServiceClient.prototype.listLabels =
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
- * @return {!Promise<!proto.email.ListLabelsResponse>}
+ * @return {!Promise<!proto.service.ListLabelsResponse>}
  *     A native promise that resolves to the response
  */
-proto.email.LabelServicePromiseClient.prototype.listLabels =
+proto.service.LabelServicePromiseClient.prototype.listLabels =
     function(request, metadata) {
   return this.client_.unaryCall(this.hostname_ +
-      '/email.LabelService/ListLabels',
+      '/service.LabelService/ListLabels',
       request,
       metadata || {},
       methodDescriptor_LabelService_ListLabels);
@@ -2040,58 +2040,58 @@ proto.email.LabelServicePromiseClient.prototype.listLabels =
 /**
  * @const
  * @type {!grpc.web.MethodDescriptor<
- *   !proto.email.CreateLabelRequest,
- *   !proto.email.Label>}
+ *   !proto.service.CreateLabelRequest,
+ *   !proto.service.Label>}
  */
 const methodDescriptor_LabelService_CreateLabel = new grpc.web.MethodDescriptor(
-  '/email.LabelService/CreateLabel',
+  '/service.LabelService/CreateLabel',
   grpc.web.MethodType.UNARY,
-  proto.email.CreateLabelRequest,
-  proto.email.Label,
+  proto.service.CreateLabelRequest,
+  proto.service.Label,
   /**
-   * @param {!proto.email.CreateLabelRequest} request
+   * @param {!proto.service.CreateLabelRequest} request
    * @return {!Uint8Array}
    */
   function(request) {
     return request.serializeBinary();
   },
-  proto.email.Label.deserializeBinary
+  proto.service.Label.deserializeBinary
 );
 
 
 /**
  * @const
  * @type {!grpc.web.AbstractClientBase.MethodInfo<
- *   !proto.email.CreateLabelRequest,
- *   !proto.email.Label>}
+ *   !proto.service.CreateLabelRequest,
+ *   !proto.service.Label>}
  */
 const methodInfo_LabelService_CreateLabel = new grpc.web.AbstractClientBase.MethodInfo(
-  proto.email.Label,
+  proto.service.Label,
   /**
-   * @param {!proto.email.CreateLabelRequest} request
+   * @param {!proto.service.CreateLabelRequest} request
    * @return {!Uint8Array}
    */
   function(request) {
     return request.serializeBinary();
   },
-  proto.email.Label.deserializeBinary
+  proto.service.Label.deserializeBinary
 );
 
 
 /**
- * @param {!proto.email.CreateLabelRequest} request The
+ * @param {!proto.service.CreateLabelRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
- * @param {function(?grpc.web.Error, ?proto.email.Label)}
+ * @param {function(?grpc.web.Error, ?proto.service.Label)}
  *     callback The callback function(error, response)
- * @return {!grpc.web.ClientReadableStream<!proto.email.Label>|undefined}
+ * @return {!grpc.web.ClientReadableStream<!proto.service.Label>|undefined}
  *     The XHR Node Readable Stream
  */
-proto.email.LabelServiceClient.prototype.createLabel =
+proto.service.LabelServiceClient.prototype.createLabel =
     function(request, metadata, callback) {
   return this.client_.rpcCall(this.hostname_ +
-      '/email.LabelService/CreateLabel',
+      '/service.LabelService/CreateLabel',
       request,
       metadata || {},
       methodDescriptor_LabelService_CreateLabel,
@@ -2100,17 +2100,17 @@ proto.email.LabelServiceClient.prototype.createLabel =
 
 
 /**
- * @param {!proto.email.CreateLabelRequest} request The
+ * @param {!proto.service.CreateLabelRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
- * @return {!Promise<!proto.email.Label>}
+ * @return {!Promise<!proto.service.Label>}
  *     A native promise that resolves to the response
  */
-proto.email.LabelServicePromiseClient.prototype.createLabel =
+proto.service.LabelServicePromiseClient.prototype.createLabel =
     function(request, metadata) {
   return this.client_.unaryCall(this.hostname_ +
-      '/email.LabelService/CreateLabel',
+      '/service.LabelService/CreateLabel',
       request,
       metadata || {},
       methodDescriptor_LabelService_CreateLabel);
@@ -2120,58 +2120,58 @@ proto.email.LabelServicePromiseClient.prototype.createLabel =
 /**
  * @const
  * @type {!grpc.web.MethodDescriptor<
- *   !proto.email.UpdateLabelRequest,
- *   !proto.email.Label>}
+ *   !proto.service.UpdateLabelRequest,
+ *   !proto.service.Label>}
  */
 const methodDescriptor_LabelService_UpdateLabel = new grpc.web.MethodDescriptor(
-  '/email.LabelService/UpdateLabel',
+  '/service.LabelService/UpdateLabel',
   grpc.web.MethodType.UNARY,
-  proto.email.UpdateLabelRequest,
-  proto.email.Label,
+  proto.service.UpdateLabelRequest,
+  proto.service.Label,
   /**
-   * @param {!proto.email.UpdateLabelRequest} request
+   * @param {!proto.service.UpdateLabelRequest} request
    * @return {!Uint8Array}
    */
   function(request) {
     return request.serializeBinary();
   },
-  proto.email.Label.deserializeBinary
+  proto.service.Label.deserializeBinary
 );
 
 
 /**
  * @const
  * @type {!grpc.web.AbstractClientBase.MethodInfo<
- *   !proto.email.UpdateLabelRequest,
- *   !proto.email.Label>}
+ *   !proto.service.UpdateLabelRequest,
+ *   !proto.service.Label>}
  */
 const methodInfo_LabelService_UpdateLabel = new grpc.web.AbstractClientBase.MethodInfo(
-  proto.email.Label,
+  proto.service.Label,
   /**
-   * @param {!proto.email.UpdateLabelRequest} request
+   * @param {!proto.service.UpdateLabelRequest} request
    * @return {!Uint8Array}
    */
   function(request) {
     return request.serializeBinary();
   },
-  proto.email.Label.deserializeBinary
+  proto.service.Label.deserializeBinary
 );
 
 
 /**
- * @param {!proto.email.UpdateLabelRequest} request The
+ * @param {!proto.service.UpdateLabelRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
- * @param {function(?grpc.web.Error, ?proto.email.Label)}
+ * @param {function(?grpc.web.Error, ?proto.service.Label)}
  *     callback The callback function(error, response)
- * @return {!grpc.web.ClientReadableStream<!proto.email.Label>|undefined}
+ * @return {!grpc.web.ClientReadableStream<!proto.service.Label>|undefined}
  *     The XHR Node Readable Stream
  */
-proto.email.LabelServiceClient.prototype.updateLabel =
+proto.service.LabelServiceClient.prototype.updateLabel =
     function(request, metadata, callback) {
   return this.client_.rpcCall(this.hostname_ +
-      '/email.LabelService/UpdateLabel',
+      '/service.LabelService/UpdateLabel',
       request,
       metadata || {},
       methodDescriptor_LabelService_UpdateLabel,
@@ -2180,17 +2180,17 @@ proto.email.LabelServiceClient.prototype.updateLabel =
 
 
 /**
- * @param {!proto.email.UpdateLabelRequest} request The
+ * @param {!proto.service.UpdateLabelRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
- * @return {!Promise<!proto.email.Label>}
+ * @return {!Promise<!proto.service.Label>}
  *     A native promise that resolves to the response
  */
-proto.email.LabelServicePromiseClient.prototype.updateLabel =
+proto.service.LabelServicePromiseClient.prototype.updateLabel =
     function(request, metadata) {
   return this.client_.unaryCall(this.hostname_ +
-      '/email.LabelService/UpdateLabel',
+      '/service.LabelService/UpdateLabel',
       request,
       metadata || {},
       methodDescriptor_LabelService_UpdateLabel);
@@ -2200,16 +2200,16 @@ proto.email.LabelServicePromiseClient.prototype.updateLabel =
 /**
  * @const
  * @type {!grpc.web.MethodDescriptor<
- *   !proto.email.DeleteLabelRequest,
+ *   !proto.service.DeleteLabelRequest,
  *   !proto.google.protobuf.Empty>}
  */
 const methodDescriptor_LabelService_DeleteLabel = new grpc.web.MethodDescriptor(
-  '/email.LabelService/DeleteLabel',
+  '/service.LabelService/DeleteLabel',
   grpc.web.MethodType.UNARY,
-  proto.email.DeleteLabelRequest,
+  proto.service.DeleteLabelRequest,
   google_protobuf_empty_pb.Empty,
   /**
-   * @param {!proto.email.DeleteLabelRequest} request
+   * @param {!proto.service.DeleteLabelRequest} request
    * @return {!Uint8Array}
    */
   function(request) {
@@ -2222,13 +2222,13 @@ const methodDescriptor_LabelService_DeleteLabel = new grpc.web.MethodDescriptor(
 /**
  * @const
  * @type {!grpc.web.AbstractClientBase.MethodInfo<
- *   !proto.email.DeleteLabelRequest,
+ *   !proto.service.DeleteLabelRequest,
  *   !proto.google.protobuf.Empty>}
  */
 const methodInfo_LabelService_DeleteLabel = new grpc.web.AbstractClientBase.MethodInfo(
   google_protobuf_empty_pb.Empty,
   /**
-   * @param {!proto.email.DeleteLabelRequest} request
+   * @param {!proto.service.DeleteLabelRequest} request
    * @return {!Uint8Array}
    */
   function(request) {
@@ -2239,7 +2239,7 @@ const methodInfo_LabelService_DeleteLabel = new grpc.web.AbstractClientBase.Meth
 
 
 /**
- * @param {!proto.email.DeleteLabelRequest} request The
+ * @param {!proto.service.DeleteLabelRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
@@ -2248,10 +2248,10 @@ const methodInfo_LabelService_DeleteLabel = new grpc.web.AbstractClientBase.Meth
  * @return {!grpc.web.ClientReadableStream<!proto.google.protobuf.Empty>|undefined}
  *     The XHR Node Readable Stream
  */
-proto.email.LabelServiceClient.prototype.deleteLabel =
+proto.service.LabelServiceClient.prototype.deleteLabel =
     function(request, metadata, callback) {
   return this.client_.rpcCall(this.hostname_ +
-      '/email.LabelService/DeleteLabel',
+      '/service.LabelService/DeleteLabel',
       request,
       metadata || {},
       methodDescriptor_LabelService_DeleteLabel,
@@ -2260,22 +2260,22 @@ proto.email.LabelServiceClient.prototype.deleteLabel =
 
 
 /**
- * @param {!proto.email.DeleteLabelRequest} request The
+ * @param {!proto.service.DeleteLabelRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
  * @return {!Promise<!proto.google.protobuf.Empty>}
  *     A native promise that resolves to the response
  */
-proto.email.LabelServicePromiseClient.prototype.deleteLabel =
+proto.service.LabelServicePromiseClient.prototype.deleteLabel =
     function(request, metadata) {
   return this.client_.unaryCall(this.hostname_ +
-      '/email.LabelService/DeleteLabel',
+      '/service.LabelService/DeleteLabel',
       request,
       metadata || {},
       methodDescriptor_LabelService_DeleteLabel);
 };
 
 
-module.exports = proto.email;
+module.exports = proto.service;
 

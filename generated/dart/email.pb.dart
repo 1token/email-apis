@@ -18,7 +18,7 @@ import 'email.pbenum.dart';
 export 'email.pbenum.dart';
 
 class Sender extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Sender', package: const $pb.PackageName('email'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Sender', package: const $pb.PackageName('service'), createEmptyInstance: create)
     ..aOS(1, 'id')
     ..aOS(2, 'emailAddress')
     ..aOS(3, 'displayName')
@@ -69,7 +69,7 @@ class Sender extends $pb.GeneratedMessage {
 }
 
 class Recipient extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Recipient', package: const $pb.PackageName('email'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Recipient', package: const $pb.PackageName('service'), createEmptyInstance: create)
     ..aOS(1, 'id')
     ..aOS(2, 'emailAddress')
     ..aOS(3, 'displayName')
@@ -120,11 +120,11 @@ class Recipient extends $pb.GeneratedMessage {
 }
 
 class Draft extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Draft', package: const $pb.PackageName('email'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Draft', package: const $pb.PackageName('service'), createEmptyInstance: create)
     ..aOS(1, 'id')
     ..aOS(2, 'snipped')
     ..aOM<Envelope>(3, 'envelope', subBuilder: Envelope.create)
-    ..m<$core.String, $core.String>(4, 'labels', entryClassName: 'Draft.LabelsEntry', keyFieldType: $pb.PbFieldType.OS, valueFieldType: $pb.PbFieldType.OS, packageName: const $pb.PackageName('email'))
+    ..m<$core.String, $core.String>(4, 'labels', entryClassName: 'Draft.LabelsEntry', keyFieldType: $pb.PbFieldType.OS, valueFieldType: $pb.PbFieldType.OS, packageName: const $pb.PackageName('service'))
     ..hasRequiredFields = false
   ;
 
@@ -177,7 +177,7 @@ class Draft extends $pb.GeneratedMessage {
 }
 
 class Email extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Email', package: const $pb.PackageName('email'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Email', package: const $pb.PackageName('service'), createEmptyInstance: create)
     ..aOS(1, 'id')
     ..aOS(2, 'snipped')
     ..aOS(3, 'historyId')
@@ -186,7 +186,7 @@ class Email extends $pb.GeneratedMessage {
     ..aOM<$2.Timestamp>(6, 'receivedAt', subBuilder: $2.Timestamp.create)
     ..aOM<$2.Timestamp>(7, 'snoozedAt', subBuilder: $2.Timestamp.create)
     ..aOB(8, 'fwd')
-    ..m<$core.String, $core.String>(9, 'labels', entryClassName: 'Email.LabelsEntry', keyFieldType: $pb.PbFieldType.OS, valueFieldType: $pb.PbFieldType.OS, packageName: const $pb.PackageName('email'))
+    ..m<$core.String, $core.String>(9, 'labels', entryClassName: 'Email.LabelsEntry', keyFieldType: $pb.PbFieldType.OS, valueFieldType: $pb.PbFieldType.OS, packageName: const $pb.PackageName('service'))
     ..hasRequiredFields = false
   ;
 
@@ -290,7 +290,7 @@ class Email extends $pb.GeneratedMessage {
 }
 
 class Thread extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Thread', package: const $pb.PackageName('email'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Thread', package: const $pb.PackageName('service'), createEmptyInstance: create)
     ..aOS(1, 'id')
     ..aOS(2, 'snipped')
     ..aOS(3, 'historyId')
@@ -345,14 +345,14 @@ class Thread extends $pb.GeneratedMessage {
 }
 
 class Envelope extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Envelope', package: const $pb.PackageName('email'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Envelope', package: const $pb.PackageName('service'), createEmptyInstance: create)
     ..aOS(1, 'id')
     ..aOM<Sender>(2, 'from', subBuilder: Sender.create)
     ..pc<Recipient>(3, 'to', $pb.PbFieldType.PM, subBuilder: Recipient.create)
     ..pc<Recipient>(4, 'cc', $pb.PbFieldType.PM, subBuilder: Recipient.create)
     ..pc<Recipient>(5, 'bcc', $pb.PbFieldType.PM, subBuilder: Recipient.create)
     ..pc<Recipient>(6, 'groups', $pb.PbFieldType.PM, subBuilder: Recipient.create)
-    ..m<$core.String, $core.String>(7, 'tags', entryClassName: 'Envelope.TagsEntry', keyFieldType: $pb.PbFieldType.OS, valueFieldType: $pb.PbFieldType.OS, packageName: const $pb.PackageName('email'))
+    ..m<$core.String, $core.String>(7, 'tags', entryClassName: 'Envelope.TagsEntry', keyFieldType: $pb.PbFieldType.OS, valueFieldType: $pb.PbFieldType.OS, packageName: const $pb.PackageName('service'))
     ..aOM<Message>(8, 'message', subBuilder: Message.create)
     ..pc<Attachment>(9, 'attachments', $pb.PbFieldType.PM, subBuilder: Attachment.create)
     ..hasRequiredFields = false
@@ -435,7 +435,7 @@ class Message extends $pb.GeneratedMessage {
     5 : Message_Body.uri,
     0 : Message_Body.notSet
   };
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Message', package: const $pb.PackageName('email'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Message', package: const $pb.PackageName('service'), createEmptyInstance: create)
     ..oo(0, [4, 5])
     ..aOS(1, 'id')
     ..aOS(2, 'subject')
@@ -521,7 +521,7 @@ class Attachment extends $pb.GeneratedMessage {
     5 : Attachment_Content.uri,
     0 : Attachment_Content.notSet
   };
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Attachment', package: const $pb.PackageName('email'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Attachment', package: const $pb.PackageName('service'), createEmptyInstance: create)
     ..oo(0, [4, 5])
     ..aOS(1, 'id')
     ..aOS(2, 'filename')
@@ -596,7 +596,7 @@ class Attachment extends $pb.GeneratedMessage {
 }
 
 class Label extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Label', package: const $pb.PackageName('email'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Label', package: const $pb.PackageName('service'), createEmptyInstance: create)
     ..aOS(1, 'id')
     ..aOS(2, 'name')
     ..aOS(3, 'type')
@@ -647,7 +647,7 @@ class Label extends $pb.GeneratedMessage {
 }
 
 class HistoryLabelAdded extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('HistoryLabelAdded', package: const $pb.PackageName('email'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('HistoryLabelAdded', package: const $pb.PackageName('service'), createEmptyInstance: create)
     ..pPS(1, 'labelIds')
     ..aOM<Email>(2, 'email', subBuilder: Email.create)
     ..hasRequiredFields = false
@@ -684,7 +684,7 @@ class HistoryLabelAdded extends $pb.GeneratedMessage {
 }
 
 class HistoryLabelRemoved extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('HistoryLabelRemoved', package: const $pb.PackageName('email'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('HistoryLabelRemoved', package: const $pb.PackageName('service'), createEmptyInstance: create)
     ..pPS(1, 'labelIds')
     ..aOM<Email>(2, 'email', subBuilder: Email.create)
     ..hasRequiredFields = false
@@ -721,7 +721,7 @@ class HistoryLabelRemoved extends $pb.GeneratedMessage {
 }
 
 class HistoryEmailAdded extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('HistoryEmailAdded', package: const $pb.PackageName('email'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('HistoryEmailAdded', package: const $pb.PackageName('service'), createEmptyInstance: create)
     ..aOM<Email>(1, 'email', subBuilder: Email.create)
     ..hasRequiredFields = false
   ;
@@ -754,7 +754,7 @@ class HistoryEmailAdded extends $pb.GeneratedMessage {
 }
 
 class HistoryEmailDeleted extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('HistoryEmailDeleted', package: const $pb.PackageName('email'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('HistoryEmailDeleted', package: const $pb.PackageName('service'), createEmptyInstance: create)
     ..aOM<Email>(1, 'email', subBuilder: Email.create)
     ..hasRequiredFields = false
   ;
@@ -787,7 +787,7 @@ class HistoryEmailDeleted extends $pb.GeneratedMessage {
 }
 
 class History extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('History', package: const $pb.PackageName('email'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('History', package: const $pb.PackageName('service'), createEmptyInstance: create)
     ..a<$core.int>(1, 'id', $pb.PbFieldType.OU3)
     ..pc<Email>(2, 'emails', $pb.PbFieldType.PM, subBuilder: Email.create)
     ..pc<HistoryLabelAdded>(3, 'labelAdded', $pb.PbFieldType.PM, subBuilder: HistoryLabelAdded.create)
@@ -838,7 +838,7 @@ class History extends $pb.GeneratedMessage {
 }
 
 class Profile extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Profile', package: const $pb.PackageName('email'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Profile', package: const $pb.PackageName('service'), createEmptyInstance: create)
     ..aOS(1, 'emailAddress', protoName: 'emailAddress')
     ..aOS(2, 'historyId')
     ..a<$core.int>(3, 'emailsTotal', $pb.PbFieldType.O3)
@@ -899,7 +899,7 @@ class Profile extends $pb.GeneratedMessage {
 }
 
 class GetDraftRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetDraftRequest', package: const $pb.PackageName('email'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetDraftRequest', package: const $pb.PackageName('service'), createEmptyInstance: create)
     ..aOS(1, 'draftId')
     ..hasRequiredFields = false
   ;
@@ -930,7 +930,7 @@ class GetDraftRequest extends $pb.GeneratedMessage {
 }
 
 class ListDraftsRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListDraftsRequest', package: const $pb.PackageName('email'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListDraftsRequest', package: const $pb.PackageName('service'), createEmptyInstance: create)
     ..aOS(1, 'pageToken')
     ..a<$core.int>(2, 'pageSize', $pb.PbFieldType.OU3)
     ..aOS(3, 'query')
@@ -981,7 +981,7 @@ class ListDraftsRequest extends $pb.GeneratedMessage {
 }
 
 class CreateDraftRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateDraftRequest', package: const $pb.PackageName('email'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateDraftRequest', package: const $pb.PackageName('service'), createEmptyInstance: create)
     ..aOM<Draft>(1, 'draft', subBuilder: Draft.create)
     ..hasRequiredFields = false
   ;
@@ -1014,7 +1014,7 @@ class CreateDraftRequest extends $pb.GeneratedMessage {
 }
 
 class UpdateDraftRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateDraftRequest', package: const $pb.PackageName('email'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateDraftRequest', package: const $pb.PackageName('service'), createEmptyInstance: create)
     ..aOM<Draft>(1, 'draft', subBuilder: Draft.create)
     ..hasRequiredFields = false
   ;
@@ -1047,7 +1047,7 @@ class UpdateDraftRequest extends $pb.GeneratedMessage {
 }
 
 class DeleteDraftRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeleteDraftRequest', package: const $pb.PackageName('email'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeleteDraftRequest', package: const $pb.PackageName('service'), createEmptyInstance: create)
     ..aOS(1, 'draftId')
     ..hasRequiredFields = false
   ;
@@ -1078,7 +1078,7 @@ class DeleteDraftRequest extends $pb.GeneratedMessage {
 }
 
 class SendDraftRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('SendDraftRequest', package: const $pb.PackageName('email'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('SendDraftRequest', package: const $pb.PackageName('service'), createEmptyInstance: create)
     ..aOM<Draft>(1, 'draft', subBuilder: Draft.create)
     ..hasRequiredFields = false
   ;
@@ -1111,7 +1111,7 @@ class SendDraftRequest extends $pb.GeneratedMessage {
 }
 
 class ListDraftsResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListDraftsResponse', package: const $pb.PackageName('email'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListDraftsResponse', package: const $pb.PackageName('service'), createEmptyInstance: create)
     ..pc<Draft>(1, 'draft', $pb.PbFieldType.PM, subBuilder: Draft.create)
     ..aOS(2, 'nextPageToken')
     ..a<$core.int>(3, 'totalSize', $pb.PbFieldType.OU3)
@@ -1156,7 +1156,7 @@ class ListDraftsResponse extends $pb.GeneratedMessage {
 }
 
 class GetEmailRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetEmailRequest', package: const $pb.PackageName('email'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetEmailRequest', package: const $pb.PackageName('service'), createEmptyInstance: create)
     ..aOS(1, 'emailId')
     ..hasRequiredFields = false
   ;
@@ -1187,8 +1187,8 @@ class GetEmailRequest extends $pb.GeneratedMessage {
 }
 
 class ListEmailsRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListEmailsRequest', package: const $pb.PackageName('email'), createEmptyInstance: create)
-    ..m<$core.String, $core.String>(1, 'labels', entryClassName: 'ListEmailsRequest.LabelsEntry', keyFieldType: $pb.PbFieldType.OS, valueFieldType: $pb.PbFieldType.OS, packageName: const $pb.PackageName('email'))
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListEmailsRequest', package: const $pb.PackageName('service'), createEmptyInstance: create)
+    ..m<$core.String, $core.String>(1, 'labels', entryClassName: 'ListEmailsRequest.LabelsEntry', keyFieldType: $pb.PbFieldType.OS, valueFieldType: $pb.PbFieldType.OS, packageName: const $pb.PackageName('service'))
     ..aOS(2, 'pageToken')
     ..a<$core.int>(3, 'pageSize', $pb.PbFieldType.OU3)
     ..aOS(4, 'query')
@@ -1242,9 +1242,9 @@ class ListEmailsRequest extends $pb.GeneratedMessage {
 }
 
 class ModifyEmailRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ModifyEmailRequest', package: const $pb.PackageName('email'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ModifyEmailRequest', package: const $pb.PackageName('service'), createEmptyInstance: create)
     ..aOS(1, 'emailId')
-    ..m<$core.String, $core.String>(2, 'labels', entryClassName: 'ModifyEmailRequest.LabelsEntry', keyFieldType: $pb.PbFieldType.OS, valueFieldType: $pb.PbFieldType.OS, packageName: const $pb.PackageName('email'))
+    ..m<$core.String, $core.String>(2, 'labels', entryClassName: 'ModifyEmailRequest.LabelsEntry', keyFieldType: $pb.PbFieldType.OS, valueFieldType: $pb.PbFieldType.OS, packageName: const $pb.PackageName('service'))
     ..hasRequiredFields = false
   ;
 
@@ -1277,7 +1277,7 @@ class ModifyEmailRequest extends $pb.GeneratedMessage {
 }
 
 class TrashEmailRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('TrashEmailRequest', package: const $pb.PackageName('email'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('TrashEmailRequest', package: const $pb.PackageName('service'), createEmptyInstance: create)
     ..aOS(1, 'emailId')
     ..hasRequiredFields = false
   ;
@@ -1308,7 +1308,7 @@ class TrashEmailRequest extends $pb.GeneratedMessage {
 }
 
 class UntrashEmailRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('UntrashEmailRequest', package: const $pb.PackageName('email'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('UntrashEmailRequest', package: const $pb.PackageName('service'), createEmptyInstance: create)
     ..aOS(1, 'emailId')
     ..hasRequiredFields = false
   ;
@@ -1339,7 +1339,7 @@ class UntrashEmailRequest extends $pb.GeneratedMessage {
 }
 
 class SendEmailRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('SendEmailRequest', package: const $pb.PackageName('email'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('SendEmailRequest', package: const $pb.PackageName('service'), createEmptyInstance: create)
     ..aOM<Email>(1, 'email', subBuilder: Email.create)
     ..hasRequiredFields = false
   ;
@@ -1372,7 +1372,7 @@ class SendEmailRequest extends $pb.GeneratedMessage {
 }
 
 class ListEmailsResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListEmailsResponse', package: const $pb.PackageName('email'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListEmailsResponse', package: const $pb.PackageName('service'), createEmptyInstance: create)
     ..pc<Email>(1, 'email', $pb.PbFieldType.PM, subBuilder: Email.create)
     ..aOS(2, 'nextPageToken')
     ..a<$core.int>(3, 'totalSize', $pb.PbFieldType.OU3)
@@ -1417,7 +1417,7 @@ class ListEmailsResponse extends $pb.GeneratedMessage {
 }
 
 class GetThreadRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetThreadRequest', package: const $pb.PackageName('email'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetThreadRequest', package: const $pb.PackageName('service'), createEmptyInstance: create)
     ..aOS(1, 'threadId')
     ..hasRequiredFields = false
   ;
@@ -1448,8 +1448,8 @@ class GetThreadRequest extends $pb.GeneratedMessage {
 }
 
 class ListThreadsRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListThreadsRequest', package: const $pb.PackageName('email'), createEmptyInstance: create)
-    ..m<$core.String, $core.String>(1, 'labels', entryClassName: 'ListThreadsRequest.LabelsEntry', keyFieldType: $pb.PbFieldType.OS, valueFieldType: $pb.PbFieldType.OS, packageName: const $pb.PackageName('email'))
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListThreadsRequest', package: const $pb.PackageName('service'), createEmptyInstance: create)
+    ..m<$core.String, $core.String>(1, 'labels', entryClassName: 'ListThreadsRequest.LabelsEntry', keyFieldType: $pb.PbFieldType.OS, valueFieldType: $pb.PbFieldType.OS, packageName: const $pb.PackageName('service'))
     ..aOS(2, 'pageToken')
     ..a<$core.int>(3, 'pageSize', $pb.PbFieldType.OU3)
     ..aOS(4, 'query')
@@ -1503,9 +1503,9 @@ class ListThreadsRequest extends $pb.GeneratedMessage {
 }
 
 class ModifyThreadRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ModifyThreadRequest', package: const $pb.PackageName('email'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ModifyThreadRequest', package: const $pb.PackageName('service'), createEmptyInstance: create)
     ..aOS(1, 'threadId')
-    ..m<$core.String, $core.String>(2, 'labels', entryClassName: 'ModifyThreadRequest.LabelsEntry', keyFieldType: $pb.PbFieldType.OS, valueFieldType: $pb.PbFieldType.OS, packageName: const $pb.PackageName('email'))
+    ..m<$core.String, $core.String>(2, 'labels', entryClassName: 'ModifyThreadRequest.LabelsEntry', keyFieldType: $pb.PbFieldType.OS, valueFieldType: $pb.PbFieldType.OS, packageName: const $pb.PackageName('service'))
     ..hasRequiredFields = false
   ;
 
@@ -1538,7 +1538,7 @@ class ModifyThreadRequest extends $pb.GeneratedMessage {
 }
 
 class TrashThreadRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('TrashThreadRequest', package: const $pb.PackageName('email'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('TrashThreadRequest', package: const $pb.PackageName('service'), createEmptyInstance: create)
     ..aOS(1, 'threadId')
     ..hasRequiredFields = false
   ;
@@ -1569,7 +1569,7 @@ class TrashThreadRequest extends $pb.GeneratedMessage {
 }
 
 class UntrashThreadRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('UntrashThreadRequest', package: const $pb.PackageName('email'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('UntrashThreadRequest', package: const $pb.PackageName('service'), createEmptyInstance: create)
     ..aOS(1, 'threadId')
     ..hasRequiredFields = false
   ;
@@ -1600,7 +1600,7 @@ class UntrashThreadRequest extends $pb.GeneratedMessage {
 }
 
 class SendThreadRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('SendThreadRequest', package: const $pb.PackageName('email'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('SendThreadRequest', package: const $pb.PackageName('service'), createEmptyInstance: create)
     ..aOM<Thread>(1, 'thread', subBuilder: Thread.create)
     ..hasRequiredFields = false
   ;
@@ -1633,7 +1633,7 @@ class SendThreadRequest extends $pb.GeneratedMessage {
 }
 
 class ListThreadsResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListThreadsResponse', package: const $pb.PackageName('email'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListThreadsResponse', package: const $pb.PackageName('service'), createEmptyInstance: create)
     ..pc<Thread>(1, 'thread', $pb.PbFieldType.PM, subBuilder: Thread.create)
     ..aOS(2, 'nextPageToken')
     ..a<$core.int>(3, 'totalSize', $pb.PbFieldType.OU3)
@@ -1678,8 +1678,8 @@ class ListThreadsResponse extends $pb.GeneratedMessage {
 }
 
 class StreamStateRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('StreamStateRequest', package: const $pb.PackageName('email'), createEmptyInstance: create)
-    ..m<$core.String, $core.String>(1, 'labels', entryClassName: 'StreamStateRequest.LabelsEntry', keyFieldType: $pb.PbFieldType.OS, valueFieldType: $pb.PbFieldType.OS, packageName: const $pb.PackageName('email'))
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('StreamStateRequest', package: const $pb.PackageName('service'), createEmptyInstance: create)
+    ..m<$core.String, $core.String>(1, 'labels', entryClassName: 'StreamStateRequest.LabelsEntry', keyFieldType: $pb.PbFieldType.OS, valueFieldType: $pb.PbFieldType.OS, packageName: const $pb.PackageName('service'))
     ..aOS(2, 'query')
     ..hasRequiredFields = false
   ;
@@ -1713,7 +1713,7 @@ class StreamStateRequest extends $pb.GeneratedMessage {
 }
 
 class StreamingStateResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('StreamingStateResponse', package: const $pb.PackageName('email'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('StreamingStateResponse', package: const $pb.PackageName('service'), createEmptyInstance: create)
     ..aOM<$3.Any>(1, 'data', subBuilder: $3.Any.create)
     ..aOM<$4.Status>(2, 'status', subBuilder: $4.Status.create)
     ..hasRequiredFields = false
@@ -1758,7 +1758,7 @@ class StreamingStateResponse extends $pb.GeneratedMessage {
 }
 
 class ListHistoryRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListHistoryRequest', package: const $pb.PackageName('email'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListHistoryRequest', package: const $pb.PackageName('service'), createEmptyInstance: create)
     ..e<HistoryTypes>(1, 'historyTypes', $pb.PbFieldType.OE, defaultOrMaker: HistoryTypes.LABEL_ADDED, valueOf: HistoryTypes.valueOf, enumValues: HistoryTypes.values)
     ..aOS(2, 'labelId')
     ..aOS(3, 'pageToken')
@@ -1829,7 +1829,7 @@ class ListHistoryRequest extends $pb.GeneratedMessage {
 }
 
 class ListHistoryResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListHistoryResponse', package: const $pb.PackageName('email'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListHistoryResponse', package: const $pb.PackageName('service'), createEmptyInstance: create)
     ..pc<History>(1, 'history', $pb.PbFieldType.PM, subBuilder: History.create)
     ..aOS(2, 'nextPageToken')
     ..a<$core.int>(3, 'historyId', $pb.PbFieldType.OU3)
@@ -1874,7 +1874,7 @@ class ListHistoryResponse extends $pb.GeneratedMessage {
 }
 
 class GetLabelRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetLabelRequest', package: const $pb.PackageName('email'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetLabelRequest', package: const $pb.PackageName('service'), createEmptyInstance: create)
     ..aOS(1, 'LabelId', protoName: 'Label_id')
     ..hasRequiredFields = false
   ;
@@ -1905,7 +1905,7 @@ class GetLabelRequest extends $pb.GeneratedMessage {
 }
 
 class CreateLabelRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateLabelRequest', package: const $pb.PackageName('email'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateLabelRequest', package: const $pb.PackageName('service'), createEmptyInstance: create)
     ..aOM<Label>(1, 'Label', protoName: 'Label', subBuilder: Label.create)
     ..hasRequiredFields = false
   ;
@@ -1938,7 +1938,7 @@ class CreateLabelRequest extends $pb.GeneratedMessage {
 }
 
 class UpdateLabelRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateLabelRequest', package: const $pb.PackageName('email'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateLabelRequest', package: const $pb.PackageName('service'), createEmptyInstance: create)
     ..aOM<Label>(1, 'Label', protoName: 'Label', subBuilder: Label.create)
     ..hasRequiredFields = false
   ;
@@ -1971,7 +1971,7 @@ class UpdateLabelRequest extends $pb.GeneratedMessage {
 }
 
 class DeleteLabelRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeleteLabelRequest', package: const $pb.PackageName('email'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeleteLabelRequest', package: const $pb.PackageName('service'), createEmptyInstance: create)
     ..aOS(1, 'LabelId', protoName: 'Label_id')
     ..hasRequiredFields = false
   ;
@@ -2002,7 +2002,7 @@ class DeleteLabelRequest extends $pb.GeneratedMessage {
 }
 
 class SendLabelRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('SendLabelRequest', package: const $pb.PackageName('email'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('SendLabelRequest', package: const $pb.PackageName('service'), createEmptyInstance: create)
     ..aOM<Label>(1, 'Label', protoName: 'Label', subBuilder: Label.create)
     ..hasRequiredFields = false
   ;
@@ -2035,7 +2035,7 @@ class SendLabelRequest extends $pb.GeneratedMessage {
 }
 
 class GetProfileResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetProfileResponse', package: const $pb.PackageName('email'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetProfileResponse', package: const $pb.PackageName('service'), createEmptyInstance: create)
     ..aOM<Profile>(1, 'profile', subBuilder: Profile.create)
     ..hasRequiredFields = false
   ;
@@ -2068,7 +2068,7 @@ class GetProfileResponse extends $pb.GeneratedMessage {
 }
 
 class ListLabelsResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListLabelsResponse', package: const $pb.PackageName('email'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListLabelsResponse', package: const $pb.PackageName('service'), createEmptyInstance: create)
     ..pc<Label>(1, 'Label', $pb.PbFieldType.PM, protoName: 'Label', subBuilder: Label.create)
     ..hasRequiredFields = false
   ;

@@ -33,7 +33,7 @@ const ListAttachmentsMetadataRequest$json = const {
 const ListAttachmentsMetadataResponse$json = const {
   '1': 'ListAttachmentsMetadataResponse',
   '2': const [
-    const {'1': 'attachment_metadata', '3': 1, '4': 3, '5': 11, '6': '.attachment.AttachmentMetadata', '10': 'attachmentMetadata'},
+    const {'1': 'attachment_metadata', '3': 1, '4': 3, '5': 11, '6': '.service.AttachmentMetadata', '10': 'attachmentMetadata'},
   ],
 };
 

@@ -17,19 +17,19 @@ export 'email.pb.dart';
 class MailboxServiceClient extends $grpc.Client {
   static final _$getProfile =
       $grpc.ClientMethod<$0.Empty, $1.GetProfileResponse>(
-          '/email.MailboxService/GetProfile',
+          '/service.MailboxService/GetProfile',
           ($0.Empty value) => value.writeToBuffer(),
           ($core.List<$core.int> value) =>
               $1.GetProfileResponse.fromBuffer(value));
   static final _$listHistory =
       $grpc.ClientMethod<$1.ListHistoryRequest, $1.ListHistoryResponse>(
-          '/email.MailboxService/ListHistory',
+          '/service.MailboxService/ListHistory',
           ($1.ListHistoryRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) =>
               $1.ListHistoryResponse.fromBuffer(value));
   static final _$streamState =
       $grpc.ClientMethod<$1.StreamStateRequest, $1.StreamingStateResponse>(
-          '/email.MailboxService/StreamState',
+          '/service.MailboxService/StreamState',
           ($1.StreamStateRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) =>
               $1.StreamingStateResponse.fromBuffer(value));
@@ -65,7 +65,7 @@ class MailboxServiceClient extends $grpc.Client {
 }
 
 abstract class MailboxServiceBase extends $grpc.Service {
-  $core.String get $name => 'email.MailboxService';
+  $core.String get $name => 'service.MailboxService';
 
   MailboxServiceBase() {
     $addMethod($grpc.ServiceMethod<$0.Empty, $1.GetProfileResponse>(
@@ -121,32 +121,32 @@ abstract class MailboxServiceBase extends $grpc.Service {
 
 class DraftServiceClient extends $grpc.Client {
   static final _$getDraft = $grpc.ClientMethod<$1.GetDraftRequest, $1.Draft>(
-      '/email.DraftService/GetDraft',
+      '/service.DraftService/GetDraft',
       ($1.GetDraftRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $1.Draft.fromBuffer(value));
   static final _$listDrafts =
       $grpc.ClientMethod<$1.ListDraftsRequest, $1.ListDraftsResponse>(
-          '/email.DraftService/ListDrafts',
+          '/service.DraftService/ListDrafts',
           ($1.ListDraftsRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) =>
               $1.ListDraftsResponse.fromBuffer(value));
   static final _$createDraft =
       $grpc.ClientMethod<$1.CreateDraftRequest, $1.Draft>(
-          '/email.DraftService/CreateDraft',
+          '/service.DraftService/CreateDraft',
           ($1.CreateDraftRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) => $1.Draft.fromBuffer(value));
   static final _$updateDraft =
       $grpc.ClientMethod<$1.UpdateDraftRequest, $1.Draft>(
-          '/email.DraftService/UpdateDraft',
+          '/service.DraftService/UpdateDraft',
           ($1.UpdateDraftRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) => $1.Draft.fromBuffer(value));
   static final _$deleteDraft =
       $grpc.ClientMethod<$1.DeleteDraftRequest, $0.Empty>(
-          '/email.DraftService/DeleteDraft',
+          '/service.DraftService/DeleteDraft',
           ($1.DeleteDraftRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) => $0.Empty.fromBuffer(value));
   static final _$sendDraft = $grpc.ClientMethod<$1.SendDraftRequest, $1.Email>(
-      '/email.DraftService/SendDraft',
+      '/service.DraftService/SendDraft',
       ($1.SendDraftRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $1.Email.fromBuffer(value));
 
@@ -202,7 +202,7 @@ class DraftServiceClient extends $grpc.Client {
 }
 
 abstract class DraftServiceBase extends $grpc.Service {
-  $core.String get $name => 'email.DraftService';
+  $core.String get $name => 'service.DraftService';
 
   DraftServiceBase() {
     $addMethod($grpc.ServiceMethod<$1.GetDraftRequest, $1.Draft>(
@@ -298,32 +298,32 @@ abstract class DraftServiceBase extends $grpc.Service {
 
 class EmailServiceClient extends $grpc.Client {
   static final _$getEmail = $grpc.ClientMethod<$1.GetEmailRequest, $1.Email>(
-      '/email.EmailService/GetEmail',
+      '/service.EmailService/GetEmail',
       ($1.GetEmailRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $1.Email.fromBuffer(value));
   static final _$listEmails =
       $grpc.ClientMethod<$1.ListEmailsRequest, $1.ListEmailsResponse>(
-          '/email.EmailService/ListEmails',
+          '/service.EmailService/ListEmails',
           ($1.ListEmailsRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) =>
               $1.ListEmailsResponse.fromBuffer(value));
   static final _$modifyEmail =
       $grpc.ClientMethod<$1.ModifyEmailRequest, $1.Email>(
-          '/email.EmailService/ModifyEmail',
+          '/service.EmailService/ModifyEmail',
           ($1.ModifyEmailRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) => $1.Email.fromBuffer(value));
   static final _$trashEmail =
       $grpc.ClientMethod<$1.TrashEmailRequest, $0.Empty>(
-          '/email.EmailService/TrashEmail',
+          '/service.EmailService/TrashEmail',
           ($1.TrashEmailRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) => $0.Empty.fromBuffer(value));
   static final _$untrashEmail =
       $grpc.ClientMethod<$1.UntrashEmailRequest, $0.Empty>(
-          '/email.EmailService/UntrashEmail',
+          '/service.EmailService/UntrashEmail',
           ($1.UntrashEmailRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) => $0.Empty.fromBuffer(value));
   static final _$sendEmail = $grpc.ClientMethod<$1.SendEmailRequest, $1.Email>(
-      '/email.EmailService/SendEmail',
+      '/service.EmailService/SendEmail',
       ($1.SendEmailRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $1.Email.fromBuffer(value));
 
@@ -379,7 +379,7 @@ class EmailServiceClient extends $grpc.Client {
 }
 
 abstract class EmailServiceBase extends $grpc.Service {
-  $core.String get $name => 'email.EmailService';
+  $core.String get $name => 'service.EmailService';
 
   EmailServiceBase() {
     $addMethod($grpc.ServiceMethod<$1.GetEmailRequest, $1.Email>(
@@ -474,28 +474,28 @@ abstract class EmailServiceBase extends $grpc.Service {
 
 class ThreadServiceClient extends $grpc.Client {
   static final _$getThread = $grpc.ClientMethod<$1.GetThreadRequest, $1.Thread>(
-      '/email.ThreadService/GetThread',
+      '/service.ThreadService/GetThread',
       ($1.GetThreadRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $1.Thread.fromBuffer(value));
   static final _$listThreads =
       $grpc.ClientMethod<$1.ListThreadsRequest, $1.ListThreadsResponse>(
-          '/email.ThreadService/ListThreads',
+          '/service.ThreadService/ListThreads',
           ($1.ListThreadsRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) =>
               $1.ListThreadsResponse.fromBuffer(value));
   static final _$modifyThread =
       $grpc.ClientMethod<$1.ModifyThreadRequest, $1.Thread>(
-          '/email.ThreadService/ModifyThread',
+          '/service.ThreadService/ModifyThread',
           ($1.ModifyThreadRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) => $1.Thread.fromBuffer(value));
   static final _$trashThread =
       $grpc.ClientMethod<$1.TrashThreadRequest, $0.Empty>(
-          '/email.ThreadService/TrashThread',
+          '/service.ThreadService/TrashThread',
           ($1.TrashThreadRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) => $0.Empty.fromBuffer(value));
   static final _$untrashThread =
       $grpc.ClientMethod<$1.UntrashThreadRequest, $0.Empty>(
-          '/email.ThreadService/UntrashThread',
+          '/service.ThreadService/UntrashThread',
           ($1.UntrashThreadRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) => $0.Empty.fromBuffer(value));
 
@@ -544,7 +544,7 @@ class ThreadServiceClient extends $grpc.Client {
 }
 
 abstract class ThreadServiceBase extends $grpc.Service {
-  $core.String get $name => 'email.ThreadService';
+  $core.String get $name => 'service.ThreadService';
 
   ThreadServiceBase() {
     $addMethod($grpc.ServiceMethod<$1.GetThreadRequest, $1.Thread>(
@@ -628,28 +628,28 @@ abstract class ThreadServiceBase extends $grpc.Service {
 
 class LabelServiceClient extends $grpc.Client {
   static final _$getLabel = $grpc.ClientMethod<$1.GetLabelRequest, $1.Label>(
-      '/email.LabelService/GetLabel',
+      '/service.LabelService/GetLabel',
       ($1.GetLabelRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $1.Label.fromBuffer(value));
   static final _$listLabels =
       $grpc.ClientMethod<$0.Empty, $1.ListLabelsResponse>(
-          '/email.LabelService/ListLabels',
+          '/service.LabelService/ListLabels',
           ($0.Empty value) => value.writeToBuffer(),
           ($core.List<$core.int> value) =>
               $1.ListLabelsResponse.fromBuffer(value));
   static final _$createLabel =
       $grpc.ClientMethod<$1.CreateLabelRequest, $1.Label>(
-          '/email.LabelService/CreateLabel',
+          '/service.LabelService/CreateLabel',
           ($1.CreateLabelRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) => $1.Label.fromBuffer(value));
   static final _$updateLabel =
       $grpc.ClientMethod<$1.UpdateLabelRequest, $1.Label>(
-          '/email.LabelService/UpdateLabel',
+          '/service.LabelService/UpdateLabel',
           ($1.UpdateLabelRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) => $1.Label.fromBuffer(value));
   static final _$deleteLabel =
       $grpc.ClientMethod<$1.DeleteLabelRequest, $0.Empty>(
-          '/email.LabelService/DeleteLabel',
+          '/service.LabelService/DeleteLabel',
           ($1.DeleteLabelRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) => $0.Empty.fromBuffer(value));
 
@@ -697,7 +697,7 @@ class LabelServiceClient extends $grpc.Client {
 }
 
 abstract class LabelServiceBase extends $grpc.Service {
-  $core.String get $name => 'email.LabelService';
+  $core.String get $name => 'service.LabelService';
 
   LabelServiceBase() {
     $addMethod($grpc.ServiceMethod<$1.GetLabelRequest, $1.Label>(

@@ -17,24 +17,24 @@ export 'attachment.pb.dart';
 class LabelServiceClient extends $grpc.Client {
   static final _$getAttachmentMetadata = $grpc.ClientMethod<
           $0.GetAttachmentMetadataRequest, $0.AttachmentMetadata>(
-      '/attachment.LabelService/GetAttachmentMetadata',
+      '/service.LabelService/GetAttachmentMetadata',
       ($0.GetAttachmentMetadataRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $0.AttachmentMetadata.fromBuffer(value));
   static final _$listAttachmentMetadata = $grpc.ClientMethod<
           $0.ListAttachmentsMetadataRequest,
           $0.ListAttachmentsMetadataResponse>(
-      '/attachment.LabelService/ListAttachmentMetadata',
+      '/service.LabelService/ListAttachmentMetadata',
       ($0.ListAttachmentsMetadataRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) =>
           $0.ListAttachmentsMetadataResponse.fromBuffer(value));
   static final _$deleteAttachment =
       $grpc.ClientMethod<$0.DeleteAttachmentRequest, $1.Empty>(
-          '/attachment.LabelService/DeleteAttachment',
+          '/service.LabelService/DeleteAttachment',
           ($0.DeleteAttachmentRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) => $1.Empty.fromBuffer(value));
   static final _$deleteAllAttachment =
       $grpc.ClientMethod<$0.DeleteAllAttachmentRequest, $1.Empty>(
-          '/attachment.LabelService/DeleteAllAttachment',
+          '/service.LabelService/DeleteAllAttachment',
           ($0.DeleteAllAttachmentRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) => $1.Empty.fromBuffer(value));
 
@@ -79,7 +79,7 @@ class LabelServiceClient extends $grpc.Client {
 }
 
 abstract class LabelServiceBase extends $grpc.Service {
-  $core.String get $name => 'attachment.LabelService';
+  $core.String get $name => 'service.LabelService';
 
   LabelServiceBase() {
     $addMethod($grpc.ServiceMethod<$0.GetAttachmentMetadataRequest,

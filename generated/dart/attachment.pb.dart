@@ -10,7 +10,7 @@ import 'dart:core' as $core;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class AttachmentMetadata extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('AttachmentMetadata', package: const $pb.PackageName('attachment'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('AttachmentMetadata', package: const $pb.PackageName('service'), createEmptyInstance: create)
     ..aOS(1, 'id')
     ..aOS(2, 'uri')
     ..aOS(3, 'filename')
@@ -71,7 +71,7 @@ class AttachmentMetadata extends $pb.GeneratedMessage {
 }
 
 class GetAttachmentMetadataRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetAttachmentMetadataRequest', package: const $pb.PackageName('attachment'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetAttachmentMetadataRequest', package: const $pb.PackageName('service'), createEmptyInstance: create)
     ..aOS(1, 'attachmentMetadataId')
     ..aOS(2, 'emailId')
     ..hasRequiredFields = false
@@ -112,7 +112,7 @@ class GetAttachmentMetadataRequest extends $pb.GeneratedMessage {
 }
 
 class ListAttachmentsMetadataRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListAttachmentsMetadataRequest', package: const $pb.PackageName('attachment'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListAttachmentsMetadataRequest', package: const $pb.PackageName('service'), createEmptyInstance: create)
     ..aOS(1, 'emailId')
     ..hasRequiredFields = false
   ;
@@ -143,7 +143,7 @@ class ListAttachmentsMetadataRequest extends $pb.GeneratedMessage {
 }
 
 class ListAttachmentsMetadataResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListAttachmentsMetadataResponse', package: const $pb.PackageName('attachment'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListAttachmentsMetadataResponse', package: const $pb.PackageName('service'), createEmptyInstance: create)
     ..pc<AttachmentMetadata>(1, 'attachmentMetadata', $pb.PbFieldType.PM, subBuilder: AttachmentMetadata.create)
     ..hasRequiredFields = false
   ;
@@ -168,7 +168,7 @@ class ListAttachmentsMetadataResponse extends $pb.GeneratedMessage {
 }
 
 class DeleteAttachmentRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeleteAttachmentRequest', package: const $pb.PackageName('attachment'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeleteAttachmentRequest', package: const $pb.PackageName('service'), createEmptyInstance: create)
     ..aOS(1, 'attachmentMetadataId')
     ..aOS(2, 'emailId')
     ..hasRequiredFields = false
@@ -209,7 +209,7 @@ class DeleteAttachmentRequest extends $pb.GeneratedMessage {
 }
 
 class DeleteAllAttachmentRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeleteAllAttachmentRequest', package: const $pb.PackageName('attachment'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeleteAllAttachmentRequest', package: const $pb.PackageName('service'), createEmptyInstance: create)
     ..aOS(1, 'emailId')
     ..hasRequiredFields = false
   ;

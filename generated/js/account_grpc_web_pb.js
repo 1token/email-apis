@@ -1,5 +1,5 @@
 /**
- * @fileoverview gRPC-Web generated client stub for account
+ * @fileoverview gRPC-Web generated client stub for service
  * @enhanceable
  * @public
  */
@@ -14,7 +14,7 @@ grpc.web = require('grpc-web');
 
 var google_protobuf_empty_pb = require('google-protobuf/google/protobuf/empty_pb.js')
 const proto = {};
-proto.account = require('./account_pb.js');
+proto.service = require('./account_pb.js');
 
 /**
  * @param {string} hostname
@@ -24,7 +24,7 @@ proto.account = require('./account_pb.js');
  * @struct
  * @final
  */
-proto.account.AccountServiceClient =
+proto.service.AccountServiceClient =
     function(hostname, credentials, options) {
   if (!options) options = {};
   options['format'] = 'text';
@@ -50,7 +50,7 @@ proto.account.AccountServiceClient =
  * @struct
  * @final
  */
-proto.account.AccountServicePromiseClient =
+proto.service.AccountServicePromiseClient =
     function(hostname, credentials, options) {
   if (!options) options = {};
   options['format'] = 'text';
@@ -71,16 +71,16 @@ proto.account.AccountServicePromiseClient =
 /**
  * @const
  * @type {!grpc.web.MethodDescriptor<
- *   !proto.account.SignupRequest,
+ *   !proto.service.SignupRequest,
  *   !proto.google.protobuf.Empty>}
  */
 const methodDescriptor_AccountService_Signup = new grpc.web.MethodDescriptor(
-  '/account.AccountService/Signup',
+  '/service.AccountService/Signup',
   grpc.web.MethodType.UNARY,
-  proto.account.SignupRequest,
+  proto.service.SignupRequest,
   google_protobuf_empty_pb.Empty,
   /**
-   * @param {!proto.account.SignupRequest} request
+   * @param {!proto.service.SignupRequest} request
    * @return {!Uint8Array}
    */
   function(request) {
@@ -93,13 +93,13 @@ const methodDescriptor_AccountService_Signup = new grpc.web.MethodDescriptor(
 /**
  * @const
  * @type {!grpc.web.AbstractClientBase.MethodInfo<
- *   !proto.account.SignupRequest,
+ *   !proto.service.SignupRequest,
  *   !proto.google.protobuf.Empty>}
  */
 const methodInfo_AccountService_Signup = new grpc.web.AbstractClientBase.MethodInfo(
   google_protobuf_empty_pb.Empty,
   /**
-   * @param {!proto.account.SignupRequest} request
+   * @param {!proto.service.SignupRequest} request
    * @return {!Uint8Array}
    */
   function(request) {
@@ -110,7 +110,7 @@ const methodInfo_AccountService_Signup = new grpc.web.AbstractClientBase.MethodI
 
 
 /**
- * @param {!proto.account.SignupRequest} request The
+ * @param {!proto.service.SignupRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
@@ -119,10 +119,10 @@ const methodInfo_AccountService_Signup = new grpc.web.AbstractClientBase.MethodI
  * @return {!grpc.web.ClientReadableStream<!proto.google.protobuf.Empty>|undefined}
  *     The XHR Node Readable Stream
  */
-proto.account.AccountServiceClient.prototype.signup =
+proto.service.AccountServiceClient.prototype.signup =
     function(request, metadata, callback) {
   return this.client_.rpcCall(this.hostname_ +
-      '/account.AccountService/Signup',
+      '/service.AccountService/Signup',
       request,
       metadata || {},
       methodDescriptor_AccountService_Signup,
@@ -131,17 +131,17 @@ proto.account.AccountServiceClient.prototype.signup =
 
 
 /**
- * @param {!proto.account.SignupRequest} request The
+ * @param {!proto.service.SignupRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
  * @return {!Promise<!proto.google.protobuf.Empty>}
  *     A native promise that resolves to the response
  */
-proto.account.AccountServicePromiseClient.prototype.signup =
+proto.service.AccountServicePromiseClient.prototype.signup =
     function(request, metadata) {
   return this.client_.unaryCall(this.hostname_ +
-      '/account.AccountService/Signup',
+      '/service.AccountService/Signup',
       request,
       metadata || {},
       methodDescriptor_AccountService_Signup);
@@ -151,16 +151,16 @@ proto.account.AccountServicePromiseClient.prototype.signup =
 /**
  * @const
  * @type {!grpc.web.MethodDescriptor<
- *   !proto.account.VerifyEmailRequest,
+ *   !proto.service.VerifyEmailRequest,
  *   !proto.google.protobuf.Empty>}
  */
 const methodDescriptor_AccountService_VerifyEmail = new grpc.web.MethodDescriptor(
-  '/account.AccountService/VerifyEmail',
+  '/service.AccountService/VerifyEmail',
   grpc.web.MethodType.UNARY,
-  proto.account.VerifyEmailRequest,
+  proto.service.VerifyEmailRequest,
   google_protobuf_empty_pb.Empty,
   /**
-   * @param {!proto.account.VerifyEmailRequest} request
+   * @param {!proto.service.VerifyEmailRequest} request
    * @return {!Uint8Array}
    */
   function(request) {
@@ -173,13 +173,13 @@ const methodDescriptor_AccountService_VerifyEmail = new grpc.web.MethodDescripto
 /**
  * @const
  * @type {!grpc.web.AbstractClientBase.MethodInfo<
- *   !proto.account.VerifyEmailRequest,
+ *   !proto.service.VerifyEmailRequest,
  *   !proto.google.protobuf.Empty>}
  */
 const methodInfo_AccountService_VerifyEmail = new grpc.web.AbstractClientBase.MethodInfo(
   google_protobuf_empty_pb.Empty,
   /**
-   * @param {!proto.account.VerifyEmailRequest} request
+   * @param {!proto.service.VerifyEmailRequest} request
    * @return {!Uint8Array}
    */
   function(request) {
@@ -190,7 +190,7 @@ const methodInfo_AccountService_VerifyEmail = new grpc.web.AbstractClientBase.Me
 
 
 /**
- * @param {!proto.account.VerifyEmailRequest} request The
+ * @param {!proto.service.VerifyEmailRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
@@ -199,10 +199,10 @@ const methodInfo_AccountService_VerifyEmail = new grpc.web.AbstractClientBase.Me
  * @return {!grpc.web.ClientReadableStream<!proto.google.protobuf.Empty>|undefined}
  *     The XHR Node Readable Stream
  */
-proto.account.AccountServiceClient.prototype.verifyEmail =
+proto.service.AccountServiceClient.prototype.verifyEmail =
     function(request, metadata, callback) {
   return this.client_.rpcCall(this.hostname_ +
-      '/account.AccountService/VerifyEmail',
+      '/service.AccountService/VerifyEmail',
       request,
       metadata || {},
       methodDescriptor_AccountService_VerifyEmail,
@@ -211,17 +211,17 @@ proto.account.AccountServiceClient.prototype.verifyEmail =
 
 
 /**
- * @param {!proto.account.VerifyEmailRequest} request The
+ * @param {!proto.service.VerifyEmailRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
  * @return {!Promise<!proto.google.protobuf.Empty>}
  *     A native promise that resolves to the response
  */
-proto.account.AccountServicePromiseClient.prototype.verifyEmail =
+proto.service.AccountServicePromiseClient.prototype.verifyEmail =
     function(request, metadata) {
   return this.client_.unaryCall(this.hostname_ +
-      '/account.AccountService/VerifyEmail',
+      '/service.AccountService/VerifyEmail',
       request,
       metadata || {},
       methodDescriptor_AccountService_VerifyEmail);
@@ -231,58 +231,58 @@ proto.account.AccountServicePromiseClient.prototype.verifyEmail =
 /**
  * @const
  * @type {!grpc.web.MethodDescriptor<
- *   !proto.account.SigninRequest,
- *   !proto.account.SigninResponse>}
+ *   !proto.service.SigninRequest,
+ *   !proto.service.SigninResponse>}
  */
 const methodDescriptor_AccountService_Signin = new grpc.web.MethodDescriptor(
-  '/account.AccountService/Signin',
+  '/service.AccountService/Signin',
   grpc.web.MethodType.UNARY,
-  proto.account.SigninRequest,
-  proto.account.SigninResponse,
+  proto.service.SigninRequest,
+  proto.service.SigninResponse,
   /**
-   * @param {!proto.account.SigninRequest} request
+   * @param {!proto.service.SigninRequest} request
    * @return {!Uint8Array}
    */
   function(request) {
     return request.serializeBinary();
   },
-  proto.account.SigninResponse.deserializeBinary
+  proto.service.SigninResponse.deserializeBinary
 );
 
 
 /**
  * @const
  * @type {!grpc.web.AbstractClientBase.MethodInfo<
- *   !proto.account.SigninRequest,
- *   !proto.account.SigninResponse>}
+ *   !proto.service.SigninRequest,
+ *   !proto.service.SigninResponse>}
  */
 const methodInfo_AccountService_Signin = new grpc.web.AbstractClientBase.MethodInfo(
-  proto.account.SigninResponse,
+  proto.service.SigninResponse,
   /**
-   * @param {!proto.account.SigninRequest} request
+   * @param {!proto.service.SigninRequest} request
    * @return {!Uint8Array}
    */
   function(request) {
     return request.serializeBinary();
   },
-  proto.account.SigninResponse.deserializeBinary
+  proto.service.SigninResponse.deserializeBinary
 );
 
 
 /**
- * @param {!proto.account.SigninRequest} request The
+ * @param {!proto.service.SigninRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
- * @param {function(?grpc.web.Error, ?proto.account.SigninResponse)}
+ * @param {function(?grpc.web.Error, ?proto.service.SigninResponse)}
  *     callback The callback function(error, response)
- * @return {!grpc.web.ClientReadableStream<!proto.account.SigninResponse>|undefined}
+ * @return {!grpc.web.ClientReadableStream<!proto.service.SigninResponse>|undefined}
  *     The XHR Node Readable Stream
  */
-proto.account.AccountServiceClient.prototype.signin =
+proto.service.AccountServiceClient.prototype.signin =
     function(request, metadata, callback) {
   return this.client_.rpcCall(this.hostname_ +
-      '/account.AccountService/Signin',
+      '/service.AccountService/Signin',
       request,
       metadata || {},
       methodDescriptor_AccountService_Signin,
@@ -291,17 +291,17 @@ proto.account.AccountServiceClient.prototype.signin =
 
 
 /**
- * @param {!proto.account.SigninRequest} request The
+ * @param {!proto.service.SigninRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
- * @return {!Promise<!proto.account.SigninResponse>}
+ * @return {!Promise<!proto.service.SigninResponse>}
  *     A native promise that resolves to the response
  */
-proto.account.AccountServicePromiseClient.prototype.signin =
+proto.service.AccountServicePromiseClient.prototype.signin =
     function(request, metadata) {
   return this.client_.unaryCall(this.hostname_ +
-      '/account.AccountService/Signin',
+      '/service.AccountService/Signin',
       request,
       metadata || {},
       methodDescriptor_AccountService_Signin);
@@ -311,16 +311,16 @@ proto.account.AccountServicePromiseClient.prototype.signin =
 /**
  * @const
  * @type {!grpc.web.MethodDescriptor<
- *   !proto.account.ResetPasswordRequest,
+ *   !proto.service.ResetPasswordRequest,
  *   !proto.google.protobuf.Empty>}
  */
 const methodDescriptor_AccountService_ResetPassword = new grpc.web.MethodDescriptor(
-  '/account.AccountService/ResetPassword',
+  '/service.AccountService/ResetPassword',
   grpc.web.MethodType.UNARY,
-  proto.account.ResetPasswordRequest,
+  proto.service.ResetPasswordRequest,
   google_protobuf_empty_pb.Empty,
   /**
-   * @param {!proto.account.ResetPasswordRequest} request
+   * @param {!proto.service.ResetPasswordRequest} request
    * @return {!Uint8Array}
    */
   function(request) {
@@ -333,13 +333,13 @@ const methodDescriptor_AccountService_ResetPassword = new grpc.web.MethodDescrip
 /**
  * @const
  * @type {!grpc.web.AbstractClientBase.MethodInfo<
- *   !proto.account.ResetPasswordRequest,
+ *   !proto.service.ResetPasswordRequest,
  *   !proto.google.protobuf.Empty>}
  */
 const methodInfo_AccountService_ResetPassword = new grpc.web.AbstractClientBase.MethodInfo(
   google_protobuf_empty_pb.Empty,
   /**
-   * @param {!proto.account.ResetPasswordRequest} request
+   * @param {!proto.service.ResetPasswordRequest} request
    * @return {!Uint8Array}
    */
   function(request) {
@@ -350,7 +350,7 @@ const methodInfo_AccountService_ResetPassword = new grpc.web.AbstractClientBase.
 
 
 /**
- * @param {!proto.account.ResetPasswordRequest} request The
+ * @param {!proto.service.ResetPasswordRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
@@ -359,10 +359,10 @@ const methodInfo_AccountService_ResetPassword = new grpc.web.AbstractClientBase.
  * @return {!grpc.web.ClientReadableStream<!proto.google.protobuf.Empty>|undefined}
  *     The XHR Node Readable Stream
  */
-proto.account.AccountServiceClient.prototype.resetPassword =
+proto.service.AccountServiceClient.prototype.resetPassword =
     function(request, metadata, callback) {
   return this.client_.rpcCall(this.hostname_ +
-      '/account.AccountService/ResetPassword',
+      '/service.AccountService/ResetPassword',
       request,
       metadata || {},
       methodDescriptor_AccountService_ResetPassword,
@@ -371,17 +371,17 @@ proto.account.AccountServiceClient.prototype.resetPassword =
 
 
 /**
- * @param {!proto.account.ResetPasswordRequest} request The
+ * @param {!proto.service.ResetPasswordRequest} request The
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
  * @return {!Promise<!proto.google.protobuf.Empty>}
  *     A native promise that resolves to the response
  */
-proto.account.AccountServicePromiseClient.prototype.resetPassword =
+proto.service.AccountServicePromiseClient.prototype.resetPassword =
     function(request, metadata) {
   return this.client_.unaryCall(this.hostname_ +
-      '/account.AccountService/ResetPassword',
+      '/service.AccountService/ResetPassword',
       request,
       metadata || {},
       methodDescriptor_AccountService_ResetPassword);
@@ -392,13 +392,13 @@ proto.account.AccountServicePromiseClient.prototype.resetPassword =
  * @const
  * @type {!grpc.web.MethodDescriptor<
  *   !proto.google.protobuf.Empty,
- *   !proto.account.UserInfoResponse>}
+ *   !proto.service.UserInfoResponse>}
  */
 const methodDescriptor_AccountService_UserInfo = new grpc.web.MethodDescriptor(
-  '/account.AccountService/UserInfo',
+  '/service.AccountService/UserInfo',
   grpc.web.MethodType.UNARY,
   google_protobuf_empty_pb.Empty,
-  proto.account.UserInfoResponse,
+  proto.service.UserInfoResponse,
   /**
    * @param {!proto.google.protobuf.Empty} request
    * @return {!Uint8Array}
@@ -406,7 +406,7 @@ const methodDescriptor_AccountService_UserInfo = new grpc.web.MethodDescriptor(
   function(request) {
     return request.serializeBinary();
   },
-  proto.account.UserInfoResponse.deserializeBinary
+  proto.service.UserInfoResponse.deserializeBinary
 );
 
 
@@ -414,10 +414,10 @@ const methodDescriptor_AccountService_UserInfo = new grpc.web.MethodDescriptor(
  * @const
  * @type {!grpc.web.AbstractClientBase.MethodInfo<
  *   !proto.google.protobuf.Empty,
- *   !proto.account.UserInfoResponse>}
+ *   !proto.service.UserInfoResponse>}
  */
 const methodInfo_AccountService_UserInfo = new grpc.web.AbstractClientBase.MethodInfo(
-  proto.account.UserInfoResponse,
+  proto.service.UserInfoResponse,
   /**
    * @param {!proto.google.protobuf.Empty} request
    * @return {!Uint8Array}
@@ -425,7 +425,7 @@ const methodInfo_AccountService_UserInfo = new grpc.web.AbstractClientBase.Metho
   function(request) {
     return request.serializeBinary();
   },
-  proto.account.UserInfoResponse.deserializeBinary
+  proto.service.UserInfoResponse.deserializeBinary
 );
 
 
@@ -434,15 +434,15 @@ const methodInfo_AccountService_UserInfo = new grpc.web.AbstractClientBase.Metho
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
- * @param {function(?grpc.web.Error, ?proto.account.UserInfoResponse)}
+ * @param {function(?grpc.web.Error, ?proto.service.UserInfoResponse)}
  *     callback The callback function(error, response)
- * @return {!grpc.web.ClientReadableStream<!proto.account.UserInfoResponse>|undefined}
+ * @return {!grpc.web.ClientReadableStream<!proto.service.UserInfoResponse>|undefined}
  *     The XHR Node Readable Stream
  */
-proto.account.AccountServiceClient.prototype.userInfo =
+proto.service.AccountServiceClient.prototype.userInfo =
     function(request, metadata, callback) {
   return this.client_.rpcCall(this.hostname_ +
-      '/account.AccountService/UserInfo',
+      '/service.AccountService/UserInfo',
       request,
       metadata || {},
       methodDescriptor_AccountService_UserInfo,
@@ -455,18 +455,18 @@ proto.account.AccountServiceClient.prototype.userInfo =
  *     request proto
  * @param {?Object<string, string>} metadata User defined
  *     call metadata
- * @return {!Promise<!proto.account.UserInfoResponse>}
+ * @return {!Promise<!proto.service.UserInfoResponse>}
  *     A native promise that resolves to the response
  */
-proto.account.AccountServicePromiseClient.prototype.userInfo =
+proto.service.AccountServicePromiseClient.prototype.userInfo =
     function(request, metadata) {
   return this.client_.unaryCall(this.hostname_ +
-      '/account.AccountService/UserInfo',
+      '/service.AccountService/UserInfo',
       request,
       metadata || {},
       methodDescriptor_AccountService_UserInfo);
 };
 
 
-module.exports = proto.account;
+module.exports = proto.service;
 

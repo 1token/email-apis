@@ -16,26 +16,26 @@ export 'account.pb.dart';
 
 class AccountServiceClient extends $grpc.Client {
   static final _$signup = $grpc.ClientMethod<$0.SignupRequest, $1.Empty>(
-      '/account.AccountService/Signup',
+      '/service.AccountService/Signup',
       ($0.SignupRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $1.Empty.fromBuffer(value));
   static final _$verifyEmail =
       $grpc.ClientMethod<$0.VerifyEmailRequest, $1.Empty>(
-          '/account.AccountService/VerifyEmail',
+          '/service.AccountService/VerifyEmail',
           ($0.VerifyEmailRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) => $1.Empty.fromBuffer(value));
   static final _$signin =
       $grpc.ClientMethod<$0.SigninRequest, $0.SigninResponse>(
-          '/account.AccountService/Signin',
+          '/service.AccountService/Signin',
           ($0.SigninRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) => $0.SigninResponse.fromBuffer(value));
   static final _$resetPassword =
       $grpc.ClientMethod<$0.ResetPasswordRequest, $1.Empty>(
-          '/account.AccountService/ResetPassword',
+          '/service.AccountService/ResetPassword',
           ($0.ResetPasswordRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) => $1.Empty.fromBuffer(value));
   static final _$userInfo = $grpc.ClientMethod<$1.Empty, $0.UserInfoResponse>(
-      '/account.AccountService/UserInfo',
+      '/service.AccountService/UserInfo',
       ($1.Empty value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $0.UserInfoResponse.fromBuffer(value));
 
@@ -81,7 +81,7 @@ class AccountServiceClient extends $grpc.Client {
 }
 
 abstract class AccountServiceBase extends $grpc.Service {
-  $core.String get $name => 'account.AccountService';
+  $core.String get $name => 'service.AccountService';
 
   AccountServiceBase() {
     $addMethod($grpc.ServiceMethod<$0.SignupRequest, $1.Empty>(
