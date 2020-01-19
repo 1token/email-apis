@@ -24,7 +24,7 @@ proto.service = require('./attachment_pb.js');
  * @struct
  * @final
  */
-proto.service.LabelServiceClient =
+proto.service.AttachmentServiceClient =
     function(hostname, credentials, options) {
   if (!options) options = {};
   options['format'] = 'text';
@@ -50,7 +50,7 @@ proto.service.LabelServiceClient =
  * @struct
  * @final
  */
-proto.service.LabelServicePromiseClient =
+proto.service.AttachmentServicePromiseClient =
     function(hostname, credentials, options) {
   if (!options) options = {};
   options['format'] = 'text';
@@ -74,8 +74,8 @@ proto.service.LabelServicePromiseClient =
  *   !proto.service.GetAttachmentMetadataRequest,
  *   !proto.service.AttachmentMetadata>}
  */
-const methodDescriptor_LabelService_GetAttachmentMetadata = new grpc.web.MethodDescriptor(
-  '/service.LabelService/GetAttachmentMetadata',
+const methodDescriptor_AttachmentService_GetAttachmentMetadata = new grpc.web.MethodDescriptor(
+  '/service.AttachmentService/GetAttachmentMetadata',
   grpc.web.MethodType.UNARY,
   proto.service.GetAttachmentMetadataRequest,
   proto.service.AttachmentMetadata,
@@ -96,7 +96,7 @@ const methodDescriptor_LabelService_GetAttachmentMetadata = new grpc.web.MethodD
  *   !proto.service.GetAttachmentMetadataRequest,
  *   !proto.service.AttachmentMetadata>}
  */
-const methodInfo_LabelService_GetAttachmentMetadata = new grpc.web.AbstractClientBase.MethodInfo(
+const methodInfo_AttachmentService_GetAttachmentMetadata = new grpc.web.AbstractClientBase.MethodInfo(
   proto.service.AttachmentMetadata,
   /**
    * @param {!proto.service.GetAttachmentMetadataRequest} request
@@ -119,13 +119,13 @@ const methodInfo_LabelService_GetAttachmentMetadata = new grpc.web.AbstractClien
  * @return {!grpc.web.ClientReadableStream<!proto.service.AttachmentMetadata>|undefined}
  *     The XHR Node Readable Stream
  */
-proto.service.LabelServiceClient.prototype.getAttachmentMetadata =
+proto.service.AttachmentServiceClient.prototype.getAttachmentMetadata =
     function(request, metadata, callback) {
   return this.client_.rpcCall(this.hostname_ +
-      '/service.LabelService/GetAttachmentMetadata',
+      '/service.AttachmentService/GetAttachmentMetadata',
       request,
       metadata || {},
-      methodDescriptor_LabelService_GetAttachmentMetadata,
+      methodDescriptor_AttachmentService_GetAttachmentMetadata,
       callback);
 };
 
@@ -138,13 +138,13 @@ proto.service.LabelServiceClient.prototype.getAttachmentMetadata =
  * @return {!Promise<!proto.service.AttachmentMetadata>}
  *     A native promise that resolves to the response
  */
-proto.service.LabelServicePromiseClient.prototype.getAttachmentMetadata =
+proto.service.AttachmentServicePromiseClient.prototype.getAttachmentMetadata =
     function(request, metadata) {
   return this.client_.unaryCall(this.hostname_ +
-      '/service.LabelService/GetAttachmentMetadata',
+      '/service.AttachmentService/GetAttachmentMetadata',
       request,
       metadata || {},
-      methodDescriptor_LabelService_GetAttachmentMetadata);
+      methodDescriptor_AttachmentService_GetAttachmentMetadata);
 };
 
 
@@ -154,8 +154,8 @@ proto.service.LabelServicePromiseClient.prototype.getAttachmentMetadata =
  *   !proto.service.ListAttachmentsMetadataRequest,
  *   !proto.service.ListAttachmentsMetadataResponse>}
  */
-const methodDescriptor_LabelService_ListAttachmentMetadata = new grpc.web.MethodDescriptor(
-  '/service.LabelService/ListAttachmentMetadata',
+const methodDescriptor_AttachmentService_ListAttachmentMetadata = new grpc.web.MethodDescriptor(
+  '/service.AttachmentService/ListAttachmentMetadata',
   grpc.web.MethodType.UNARY,
   proto.service.ListAttachmentsMetadataRequest,
   proto.service.ListAttachmentsMetadataResponse,
@@ -176,7 +176,7 @@ const methodDescriptor_LabelService_ListAttachmentMetadata = new grpc.web.Method
  *   !proto.service.ListAttachmentsMetadataRequest,
  *   !proto.service.ListAttachmentsMetadataResponse>}
  */
-const methodInfo_LabelService_ListAttachmentMetadata = new grpc.web.AbstractClientBase.MethodInfo(
+const methodInfo_AttachmentService_ListAttachmentMetadata = new grpc.web.AbstractClientBase.MethodInfo(
   proto.service.ListAttachmentsMetadataResponse,
   /**
    * @param {!proto.service.ListAttachmentsMetadataRequest} request
@@ -199,13 +199,13 @@ const methodInfo_LabelService_ListAttachmentMetadata = new grpc.web.AbstractClie
  * @return {!grpc.web.ClientReadableStream<!proto.service.ListAttachmentsMetadataResponse>|undefined}
  *     The XHR Node Readable Stream
  */
-proto.service.LabelServiceClient.prototype.listAttachmentMetadata =
+proto.service.AttachmentServiceClient.prototype.listAttachmentMetadata =
     function(request, metadata, callback) {
   return this.client_.rpcCall(this.hostname_ +
-      '/service.LabelService/ListAttachmentMetadata',
+      '/service.AttachmentService/ListAttachmentMetadata',
       request,
       metadata || {},
-      methodDescriptor_LabelService_ListAttachmentMetadata,
+      methodDescriptor_AttachmentService_ListAttachmentMetadata,
       callback);
 };
 
@@ -218,13 +218,13 @@ proto.service.LabelServiceClient.prototype.listAttachmentMetadata =
  * @return {!Promise<!proto.service.ListAttachmentsMetadataResponse>}
  *     A native promise that resolves to the response
  */
-proto.service.LabelServicePromiseClient.prototype.listAttachmentMetadata =
+proto.service.AttachmentServicePromiseClient.prototype.listAttachmentMetadata =
     function(request, metadata) {
   return this.client_.unaryCall(this.hostname_ +
-      '/service.LabelService/ListAttachmentMetadata',
+      '/service.AttachmentService/ListAttachmentMetadata',
       request,
       metadata || {},
-      methodDescriptor_LabelService_ListAttachmentMetadata);
+      methodDescriptor_AttachmentService_ListAttachmentMetadata);
 };
 
 
@@ -234,8 +234,8 @@ proto.service.LabelServicePromiseClient.prototype.listAttachmentMetadata =
  *   !proto.service.DeleteAttachmentRequest,
  *   !proto.google.protobuf.Empty>}
  */
-const methodDescriptor_LabelService_DeleteAttachment = new grpc.web.MethodDescriptor(
-  '/service.LabelService/DeleteAttachment',
+const methodDescriptor_AttachmentService_DeleteAttachment = new grpc.web.MethodDescriptor(
+  '/service.AttachmentService/DeleteAttachment',
   grpc.web.MethodType.UNARY,
   proto.service.DeleteAttachmentRequest,
   google_protobuf_empty_pb.Empty,
@@ -256,7 +256,7 @@ const methodDescriptor_LabelService_DeleteAttachment = new grpc.web.MethodDescri
  *   !proto.service.DeleteAttachmentRequest,
  *   !proto.google.protobuf.Empty>}
  */
-const methodInfo_LabelService_DeleteAttachment = new grpc.web.AbstractClientBase.MethodInfo(
+const methodInfo_AttachmentService_DeleteAttachment = new grpc.web.AbstractClientBase.MethodInfo(
   google_protobuf_empty_pb.Empty,
   /**
    * @param {!proto.service.DeleteAttachmentRequest} request
@@ -279,13 +279,13 @@ const methodInfo_LabelService_DeleteAttachment = new grpc.web.AbstractClientBase
  * @return {!grpc.web.ClientReadableStream<!proto.google.protobuf.Empty>|undefined}
  *     The XHR Node Readable Stream
  */
-proto.service.LabelServiceClient.prototype.deleteAttachment =
+proto.service.AttachmentServiceClient.prototype.deleteAttachment =
     function(request, metadata, callback) {
   return this.client_.rpcCall(this.hostname_ +
-      '/service.LabelService/DeleteAttachment',
+      '/service.AttachmentService/DeleteAttachment',
       request,
       metadata || {},
-      methodDescriptor_LabelService_DeleteAttachment,
+      methodDescriptor_AttachmentService_DeleteAttachment,
       callback);
 };
 
@@ -298,13 +298,13 @@ proto.service.LabelServiceClient.prototype.deleteAttachment =
  * @return {!Promise<!proto.google.protobuf.Empty>}
  *     A native promise that resolves to the response
  */
-proto.service.LabelServicePromiseClient.prototype.deleteAttachment =
+proto.service.AttachmentServicePromiseClient.prototype.deleteAttachment =
     function(request, metadata) {
   return this.client_.unaryCall(this.hostname_ +
-      '/service.LabelService/DeleteAttachment',
+      '/service.AttachmentService/DeleteAttachment',
       request,
       metadata || {},
-      methodDescriptor_LabelService_DeleteAttachment);
+      methodDescriptor_AttachmentService_DeleteAttachment);
 };
 
 
@@ -314,8 +314,8 @@ proto.service.LabelServicePromiseClient.prototype.deleteAttachment =
  *   !proto.service.DeleteAllAttachmentRequest,
  *   !proto.google.protobuf.Empty>}
  */
-const methodDescriptor_LabelService_DeleteAllAttachment = new grpc.web.MethodDescriptor(
-  '/service.LabelService/DeleteAllAttachment',
+const methodDescriptor_AttachmentService_DeleteAllAttachment = new grpc.web.MethodDescriptor(
+  '/service.AttachmentService/DeleteAllAttachment',
   grpc.web.MethodType.UNARY,
   proto.service.DeleteAllAttachmentRequest,
   google_protobuf_empty_pb.Empty,
@@ -336,7 +336,7 @@ const methodDescriptor_LabelService_DeleteAllAttachment = new grpc.web.MethodDes
  *   !proto.service.DeleteAllAttachmentRequest,
  *   !proto.google.protobuf.Empty>}
  */
-const methodInfo_LabelService_DeleteAllAttachment = new grpc.web.AbstractClientBase.MethodInfo(
+const methodInfo_AttachmentService_DeleteAllAttachment = new grpc.web.AbstractClientBase.MethodInfo(
   google_protobuf_empty_pb.Empty,
   /**
    * @param {!proto.service.DeleteAllAttachmentRequest} request
@@ -359,13 +359,13 @@ const methodInfo_LabelService_DeleteAllAttachment = new grpc.web.AbstractClientB
  * @return {!grpc.web.ClientReadableStream<!proto.google.protobuf.Empty>|undefined}
  *     The XHR Node Readable Stream
  */
-proto.service.LabelServiceClient.prototype.deleteAllAttachment =
+proto.service.AttachmentServiceClient.prototype.deleteAllAttachment =
     function(request, metadata, callback) {
   return this.client_.rpcCall(this.hostname_ +
-      '/service.LabelService/DeleteAllAttachment',
+      '/service.AttachmentService/DeleteAllAttachment',
       request,
       metadata || {},
-      methodDescriptor_LabelService_DeleteAllAttachment,
+      methodDescriptor_AttachmentService_DeleteAllAttachment,
       callback);
 };
 
@@ -378,13 +378,13 @@ proto.service.LabelServiceClient.prototype.deleteAllAttachment =
  * @return {!Promise<!proto.google.protobuf.Empty>}
  *     A native promise that resolves to the response
  */
-proto.service.LabelServicePromiseClient.prototype.deleteAllAttachment =
+proto.service.AttachmentServicePromiseClient.prototype.deleteAllAttachment =
     function(request, metadata) {
   return this.client_.unaryCall(this.hostname_ +
-      '/service.LabelService/DeleteAllAttachment',
+      '/service.AttachmentService/DeleteAllAttachment',
       request,
       metadata || {},
-      methodDescriptor_LabelService_DeleteAllAttachment);
+      methodDescriptor_AttachmentService_DeleteAllAttachment);
 };
 
 

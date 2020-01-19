@@ -14,31 +14,32 @@ import 'attachment.pb.dart' as $0;
 import 'google/protobuf/empty.pb.dart' as $1;
 export 'attachment.pb.dart';
 
-class LabelServiceClient extends $grpc.Client {
+class AttachmentServiceClient extends $grpc.Client {
   static final _$getAttachmentMetadata = $grpc.ClientMethod<
           $0.GetAttachmentMetadataRequest, $0.AttachmentMetadata>(
-      '/service.LabelService/GetAttachmentMetadata',
+      '/service.AttachmentService/GetAttachmentMetadata',
       ($0.GetAttachmentMetadataRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) => $0.AttachmentMetadata.fromBuffer(value));
   static final _$listAttachmentMetadata = $grpc.ClientMethod<
           $0.ListAttachmentsMetadataRequest,
           $0.ListAttachmentsMetadataResponse>(
-      '/service.LabelService/ListAttachmentMetadata',
+      '/service.AttachmentService/ListAttachmentMetadata',
       ($0.ListAttachmentsMetadataRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) =>
           $0.ListAttachmentsMetadataResponse.fromBuffer(value));
   static final _$deleteAttachment =
       $grpc.ClientMethod<$0.DeleteAttachmentRequest, $1.Empty>(
-          '/service.LabelService/DeleteAttachment',
+          '/service.AttachmentService/DeleteAttachment',
           ($0.DeleteAttachmentRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) => $1.Empty.fromBuffer(value));
   static final _$deleteAllAttachment =
       $grpc.ClientMethod<$0.DeleteAllAttachmentRequest, $1.Empty>(
-          '/service.LabelService/DeleteAllAttachment',
+          '/service.AttachmentService/DeleteAllAttachment',
           ($0.DeleteAllAttachmentRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) => $1.Empty.fromBuffer(value));
 
-  LabelServiceClient($grpc.ClientChannel channel, {$grpc.CallOptions options})
+  AttachmentServiceClient($grpc.ClientChannel channel,
+      {$grpc.CallOptions options})
       : super(channel, options: options);
 
   $grpc.ResponseFuture<$0.AttachmentMetadata> getAttachmentMetadata(
@@ -78,10 +79,10 @@ class LabelServiceClient extends $grpc.Client {
   }
 }
 
-abstract class LabelServiceBase extends $grpc.Service {
-  $core.String get $name => 'service.LabelService';
+abstract class AttachmentServiceBase extends $grpc.Service {
+  $core.String get $name => 'service.AttachmentService';
 
-  LabelServiceBase() {
+  AttachmentServiceBase() {
     $addMethod($grpc.ServiceMethod<$0.GetAttachmentMetadataRequest,
             $0.AttachmentMetadata>(
         'GetAttachmentMetadata',

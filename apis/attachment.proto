@@ -33,7 +33,7 @@ message DeleteAllAttachmentRequest {
     string email_id = 1;
 }
 
-service LabelService {
+service AttachmentService {
     rpc GetAttachmentMetadata(GetAttachmentMetadataRequest) returns (AttachmentMetadata) {}
     rpc ListAttachmentMetadata(ListAttachmentsMetadataRequest) returns (ListAttachmentsMetadataResponse) {}
     rpc DeleteAttachment(DeleteAttachmentRequest) returns (google.protobuf.Empty) {}
