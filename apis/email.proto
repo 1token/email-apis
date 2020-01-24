@@ -28,26 +28,24 @@ message Recipient {
 
 message Draft {
     string id = 1;
-    string snipped = 2;
-    Envelope envelope = 3;
-    map<string, string> labels = 4;
+    Envelope envelope = 2;
+    map<string, string> labels = 3;
 }
 
 message Email {
     string id = 1;
-    string snipped = 2;
-    string history_id = 3;
-    Envelope envelope = 4;
-    google.protobuf.Timestamp sent_at = 5;
-    google.protobuf.Timestamp received_at = 6;
-    google.protobuf.Timestamp snoozed_at = 7;
-    bool fwd = 8;
-    map<string, string> labels = 9;
+    string history_id = 2;
+    Envelope envelope = 3;
+    google.protobuf.Timestamp sent_at = 4;
+    google.protobuf.Timestamp received_at = 5;
+    google.protobuf.Timestamp snoozed_at = 6;
+    bool fwd = 7;
+    map<string, string> labels = 8;
 }
 
 message Thread {
     string id = 1;
-    string snipped = 2;
+    string snippet = 2;
     string history_id = 3;
     repeated Email email = 4;
 }
@@ -58,7 +56,7 @@ message Envelope {
     repeated Recipient to = 3;
     repeated Recipient cc = 4;
     repeated Recipient bcc = 5;
-    repeated Recipient groups = 6;
+    repeated Recipient group = 6;
 
     map<string, string> tags = 7;
 
@@ -70,23 +68,16 @@ message Envelope {
 message Message {
     string id = 1;
     string subject = 2;
-    string mimetype = 3;
-
-    oneof body {
-        bytes data = 4;
-        string uri = 5;
-    }
+    string snippet = 3;
+    string mimetype = 4;
+    string body_uri = 5;
 }
 
 message Attachment {
     string id = 1;
     string filename = 2;
     string mimetype = 3;
-
-    oneof content {
-        bytes data = 4;
-        string uri = 5;
-    }
+    string data_uri = 5;
 }
 
 message Label {

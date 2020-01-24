@@ -37,9 +37,8 @@ const Draft$json = const {
   '1': 'Draft',
   '2': const [
     const {'1': 'id', '3': 1, '4': 1, '5': 9, '10': 'id'},
-    const {'1': 'snipped', '3': 2, '4': 1, '5': 9, '10': 'snipped'},
-    const {'1': 'envelope', '3': 3, '4': 1, '5': 11, '6': '.service.Envelope', '10': 'envelope'},
-    const {'1': 'labels', '3': 4, '4': 3, '5': 11, '6': '.service.Draft.LabelsEntry', '10': 'labels'},
+    const {'1': 'envelope', '3': 2, '4': 1, '5': 11, '6': '.service.Envelope', '10': 'envelope'},
+    const {'1': 'labels', '3': 3, '4': 3, '5': 11, '6': '.service.Draft.LabelsEntry', '10': 'labels'},
   ],
   '3': const [Draft_LabelsEntry$json],
 };
@@ -57,14 +56,13 @@ const Email$json = const {
   '1': 'Email',
   '2': const [
     const {'1': 'id', '3': 1, '4': 1, '5': 9, '10': 'id'},
-    const {'1': 'snipped', '3': 2, '4': 1, '5': 9, '10': 'snipped'},
-    const {'1': 'history_id', '3': 3, '4': 1, '5': 9, '10': 'historyId'},
-    const {'1': 'envelope', '3': 4, '4': 1, '5': 11, '6': '.service.Envelope', '10': 'envelope'},
-    const {'1': 'sent_at', '3': 5, '4': 1, '5': 11, '6': '.google.protobuf.Timestamp', '10': 'sentAt'},
-    const {'1': 'received_at', '3': 6, '4': 1, '5': 11, '6': '.google.protobuf.Timestamp', '10': 'receivedAt'},
-    const {'1': 'snoozed_at', '3': 7, '4': 1, '5': 11, '6': '.google.protobuf.Timestamp', '10': 'snoozedAt'},
-    const {'1': 'fwd', '3': 8, '4': 1, '5': 8, '10': 'fwd'},
-    const {'1': 'labels', '3': 9, '4': 3, '5': 11, '6': '.service.Email.LabelsEntry', '10': 'labels'},
+    const {'1': 'history_id', '3': 2, '4': 1, '5': 9, '10': 'historyId'},
+    const {'1': 'envelope', '3': 3, '4': 1, '5': 11, '6': '.service.Envelope', '10': 'envelope'},
+    const {'1': 'sent_at', '3': 4, '4': 1, '5': 11, '6': '.google.protobuf.Timestamp', '10': 'sentAt'},
+    const {'1': 'received_at', '3': 5, '4': 1, '5': 11, '6': '.google.protobuf.Timestamp', '10': 'receivedAt'},
+    const {'1': 'snoozed_at', '3': 6, '4': 1, '5': 11, '6': '.google.protobuf.Timestamp', '10': 'snoozedAt'},
+    const {'1': 'fwd', '3': 7, '4': 1, '5': 8, '10': 'fwd'},
+    const {'1': 'labels', '3': 8, '4': 3, '5': 11, '6': '.service.Email.LabelsEntry', '10': 'labels'},
   ],
   '3': const [Email_LabelsEntry$json],
 };
@@ -82,7 +80,7 @@ const Thread$json = const {
   '1': 'Thread',
   '2': const [
     const {'1': 'id', '3': 1, '4': 1, '5': 9, '10': 'id'},
-    const {'1': 'snipped', '3': 2, '4': 1, '5': 9, '10': 'snipped'},
+    const {'1': 'snippet', '3': 2, '4': 1, '5': 9, '10': 'snippet'},
     const {'1': 'history_id', '3': 3, '4': 1, '5': 9, '10': 'historyId'},
     const {'1': 'email', '3': 4, '4': 3, '5': 11, '6': '.service.Email', '10': 'email'},
   ],
@@ -96,7 +94,7 @@ const Envelope$json = const {
     const {'1': 'to', '3': 3, '4': 3, '5': 11, '6': '.service.Recipient', '10': 'to'},
     const {'1': 'cc', '3': 4, '4': 3, '5': 11, '6': '.service.Recipient', '10': 'cc'},
     const {'1': 'bcc', '3': 5, '4': 3, '5': 11, '6': '.service.Recipient', '10': 'bcc'},
-    const {'1': 'groups', '3': 6, '4': 3, '5': 11, '6': '.service.Recipient', '10': 'groups'},
+    const {'1': 'group', '3': 6, '4': 3, '5': 11, '6': '.service.Recipient', '10': 'group'},
     const {'1': 'tags', '3': 7, '4': 3, '5': 11, '6': '.service.Envelope.TagsEntry', '10': 'tags'},
     const {'1': 'message', '3': 8, '4': 1, '5': 11, '6': '.service.Message', '10': 'message'},
     const {'1': 'attachments', '3': 9, '4': 3, '5': 11, '6': '.service.Attachment', '10': 'attachments'},
@@ -118,12 +116,9 @@ const Message$json = const {
   '2': const [
     const {'1': 'id', '3': 1, '4': 1, '5': 9, '10': 'id'},
     const {'1': 'subject', '3': 2, '4': 1, '5': 9, '10': 'subject'},
-    const {'1': 'mimetype', '3': 3, '4': 1, '5': 9, '10': 'mimetype'},
-    const {'1': 'data', '3': 4, '4': 1, '5': 12, '9': 0, '10': 'data'},
-    const {'1': 'uri', '3': 5, '4': 1, '5': 9, '9': 0, '10': 'uri'},
-  ],
-  '8': const [
-    const {'1': 'body'},
+    const {'1': 'snippet', '3': 3, '4': 1, '5': 9, '10': 'snippet'},
+    const {'1': 'mimetype', '3': 4, '4': 1, '5': 9, '10': 'mimetype'},
+    const {'1': 'body_uri', '3': 5, '4': 1, '5': 9, '10': 'bodyUri'},
   ],
 };
 
@@ -133,11 +128,7 @@ const Attachment$json = const {
     const {'1': 'id', '3': 1, '4': 1, '5': 9, '10': 'id'},
     const {'1': 'filename', '3': 2, '4': 1, '5': 9, '10': 'filename'},
     const {'1': 'mimetype', '3': 3, '4': 1, '5': 9, '10': 'mimetype'},
-    const {'1': 'data', '3': 4, '4': 1, '5': 12, '9': 0, '10': 'data'},
-    const {'1': 'uri', '3': 5, '4': 1, '5': 9, '9': 0, '10': 'uri'},
-  ],
-  '8': const [
-    const {'1': 'content'},
+    const {'1': 'data_uri', '3': 5, '4': 1, '5': 9, '10': 'dataUri'},
   ],
 };
 

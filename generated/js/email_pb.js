@@ -21,7 +21,6 @@ goog.object.extend(proto, google_protobuf_empty_pb);
 var google_rpc_status_pb = require('./google/rpc/status_pb.js');
 goog.object.extend(proto, google_rpc_status_pb);
 goog.exportSymbol('proto.service.Attachment', null, global);
-goog.exportSymbol('proto.service.Attachment.ContentCase', null, global);
 goog.exportSymbol('proto.service.CreateDraftRequest', null, global);
 goog.exportSymbol('proto.service.CreateLabelRequest', null, global);
 goog.exportSymbol('proto.service.DeleteDraftRequest', null, global);
@@ -51,7 +50,6 @@ goog.exportSymbol('proto.service.ListLabelsResponse', null, global);
 goog.exportSymbol('proto.service.ListThreadsRequest', null, global);
 goog.exportSymbol('proto.service.ListThreadsResponse', null, global);
 goog.exportSymbol('proto.service.Message', null, global);
-goog.exportSymbol('proto.service.Message.BodyCase', null, global);
 goog.exportSymbol('proto.service.ModifyEmailRequest', null, global);
 goog.exportSymbol('proto.service.ModifyThreadRequest', null, global);
 goog.exportSymbol('proto.service.Profile', null, global);
@@ -207,7 +205,7 @@ if (goog.DEBUG && !COMPILED) {
  * @constructor
  */
 proto.service.Message = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, proto.service.Message.oneofGroups_);
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.service.Message, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
@@ -228,7 +226,7 @@ if (goog.DEBUG && !COMPILED) {
  * @constructor
  */
 proto.service.Attachment = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, proto.service.Attachment.oneofGroups_);
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
 goog.inherits(proto.service.Attachment, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
@@ -1470,7 +1468,6 @@ proto.service.Draft.prototype.toObject = function(opt_includeInstance) {
 proto.service.Draft.toObject = function(includeInstance, msg) {
   var f, obj = {
     id: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    snipped: jspb.Message.getFieldWithDefault(msg, 2, ""),
     envelope: (f = msg.getEnvelope()) && proto.service.Envelope.toObject(includeInstance, f),
     labelsMap: (f = msg.getLabelsMap()) ? f.toObject(includeInstance, undefined) : []
   };
@@ -1514,15 +1511,11 @@ proto.service.Draft.deserializeBinaryFromReader = function(msg, reader) {
       msg.setId(value);
       break;
     case 2:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setSnipped(value);
-      break;
-    case 3:
       var value = new proto.service.Envelope;
       reader.readMessage(value,proto.service.Envelope.deserializeBinaryFromReader);
       msg.setEnvelope(value);
       break;
-    case 4:
+    case 3:
       var value = msg.getLabelsMap();
       reader.readMessage(value, function(message, reader) {
         jspb.Map.deserializeBinary(message, reader, jspb.BinaryReader.prototype.readString, jspb.BinaryReader.prototype.readString, null, "", "");
@@ -1564,24 +1557,17 @@ proto.service.Draft.serializeBinaryToWriter = function(message, writer) {
       f
     );
   }
-  f = message.getSnipped();
-  if (f.length > 0) {
-    writer.writeString(
-      2,
-      f
-    );
-  }
   f = message.getEnvelope();
   if (f != null) {
     writer.writeMessage(
-      3,
+      2,
       f,
       proto.service.Envelope.serializeBinaryToWriter
     );
   }
   f = message.getLabelsMap(true);
   if (f && f.getLength() > 0) {
-    f.serializeBinary(4, writer, jspb.BinaryWriter.prototype.writeString, jspb.BinaryWriter.prototype.writeString);
+    f.serializeBinary(3, writer, jspb.BinaryWriter.prototype.writeString, jspb.BinaryWriter.prototype.writeString);
   }
 };
 
@@ -1605,30 +1591,12 @@ proto.service.Draft.prototype.setId = function(value) {
 
 
 /**
- * optional string snipped = 2;
- * @return {string}
- */
-proto.service.Draft.prototype.getSnipped = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
-};
-
-
-/**
- * @param {string} value
- * @return {!proto.service.Draft} returns this
- */
-proto.service.Draft.prototype.setSnipped = function(value) {
-  return jspb.Message.setProto3StringField(this, 2, value);
-};
-
-
-/**
- * optional Envelope envelope = 3;
+ * optional Envelope envelope = 2;
  * @return {?proto.service.Envelope}
  */
 proto.service.Draft.prototype.getEnvelope = function() {
   return /** @type{?proto.service.Envelope} */ (
-    jspb.Message.getWrapperField(this, proto.service.Envelope, 3));
+    jspb.Message.getWrapperField(this, proto.service.Envelope, 2));
 };
 
 
@@ -1637,7 +1605,7 @@ proto.service.Draft.prototype.getEnvelope = function() {
  * @return {!proto.service.Draft} returns this
 */
 proto.service.Draft.prototype.setEnvelope = function(value) {
-  return jspb.Message.setWrapperField(this, 3, value);
+  return jspb.Message.setWrapperField(this, 2, value);
 };
 
 
@@ -1655,19 +1623,19 @@ proto.service.Draft.prototype.clearEnvelope = function() {
  * @return {boolean}
  */
 proto.service.Draft.prototype.hasEnvelope = function() {
-  return jspb.Message.getField(this, 3) != null;
+  return jspb.Message.getField(this, 2) != null;
 };
 
 
 /**
- * map<string, string> labels = 4;
+ * map<string, string> labels = 3;
  * @param {boolean=} opt_noLazyCreate Do not create the map if
  * empty, instead returning `undefined`
  * @return {!jspb.Map<string,string>}
  */
 proto.service.Draft.prototype.getLabelsMap = function(opt_noLazyCreate) {
   return /** @type {!jspb.Map<string,string>} */ (
-      jspb.Message.getMapField(this, 4, opt_noLazyCreate,
+      jspb.Message.getMapField(this, 3, opt_noLazyCreate,
       null));
 };
 
@@ -1714,13 +1682,12 @@ proto.service.Email.prototype.toObject = function(opt_includeInstance) {
 proto.service.Email.toObject = function(includeInstance, msg) {
   var f, obj = {
     id: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    snipped: jspb.Message.getFieldWithDefault(msg, 2, ""),
-    historyId: jspb.Message.getFieldWithDefault(msg, 3, ""),
+    historyId: jspb.Message.getFieldWithDefault(msg, 2, ""),
     envelope: (f = msg.getEnvelope()) && proto.service.Envelope.toObject(includeInstance, f),
     sentAt: (f = msg.getSentAt()) && google_protobuf_timestamp_pb.Timestamp.toObject(includeInstance, f),
     receivedAt: (f = msg.getReceivedAt()) && google_protobuf_timestamp_pb.Timestamp.toObject(includeInstance, f),
     snoozedAt: (f = msg.getSnoozedAt()) && google_protobuf_timestamp_pb.Timestamp.toObject(includeInstance, f),
-    fwd: jspb.Message.getBooleanFieldWithDefault(msg, 8, false),
+    fwd: jspb.Message.getBooleanFieldWithDefault(msg, 7, false),
     labelsMap: (f = msg.getLabelsMap()) ? f.toObject(includeInstance, undefined) : []
   };
 
@@ -1764,37 +1731,33 @@ proto.service.Email.deserializeBinaryFromReader = function(msg, reader) {
       break;
     case 2:
       var value = /** @type {string} */ (reader.readString());
-      msg.setSnipped(value);
-      break;
-    case 3:
-      var value = /** @type {string} */ (reader.readString());
       msg.setHistoryId(value);
       break;
-    case 4:
+    case 3:
       var value = new proto.service.Envelope;
       reader.readMessage(value,proto.service.Envelope.deserializeBinaryFromReader);
       msg.setEnvelope(value);
       break;
-    case 5:
+    case 4:
       var value = new google_protobuf_timestamp_pb.Timestamp;
       reader.readMessage(value,google_protobuf_timestamp_pb.Timestamp.deserializeBinaryFromReader);
       msg.setSentAt(value);
       break;
-    case 6:
+    case 5:
       var value = new google_protobuf_timestamp_pb.Timestamp;
       reader.readMessage(value,google_protobuf_timestamp_pb.Timestamp.deserializeBinaryFromReader);
       msg.setReceivedAt(value);
       break;
-    case 7:
+    case 6:
       var value = new google_protobuf_timestamp_pb.Timestamp;
       reader.readMessage(value,google_protobuf_timestamp_pb.Timestamp.deserializeBinaryFromReader);
       msg.setSnoozedAt(value);
       break;
-    case 8:
+    case 7:
       var value = /** @type {boolean} */ (reader.readBool());
       msg.setFwd(value);
       break;
-    case 9:
+    case 8:
       var value = msg.getLabelsMap();
       reader.readMessage(value, function(message, reader) {
         jspb.Map.deserializeBinary(message, reader, jspb.BinaryReader.prototype.readString, jspb.BinaryReader.prototype.readString, null, "", "");
@@ -1836,24 +1799,17 @@ proto.service.Email.serializeBinaryToWriter = function(message, writer) {
       f
     );
   }
-  f = message.getSnipped();
+  f = message.getHistoryId();
   if (f.length > 0) {
     writer.writeString(
       2,
       f
     );
   }
-  f = message.getHistoryId();
-  if (f.length > 0) {
-    writer.writeString(
-      3,
-      f
-    );
-  }
   f = message.getEnvelope();
   if (f != null) {
     writer.writeMessage(
-      4,
+      3,
       f,
       proto.service.Envelope.serializeBinaryToWriter
     );
@@ -1861,7 +1817,7 @@ proto.service.Email.serializeBinaryToWriter = function(message, writer) {
   f = message.getSentAt();
   if (f != null) {
     writer.writeMessage(
-      5,
+      4,
       f,
       google_protobuf_timestamp_pb.Timestamp.serializeBinaryToWriter
     );
@@ -1869,7 +1825,7 @@ proto.service.Email.serializeBinaryToWriter = function(message, writer) {
   f = message.getReceivedAt();
   if (f != null) {
     writer.writeMessage(
-      6,
+      5,
       f,
       google_protobuf_timestamp_pb.Timestamp.serializeBinaryToWriter
     );
@@ -1877,7 +1833,7 @@ proto.service.Email.serializeBinaryToWriter = function(message, writer) {
   f = message.getSnoozedAt();
   if (f != null) {
     writer.writeMessage(
-      7,
+      6,
       f,
       google_protobuf_timestamp_pb.Timestamp.serializeBinaryToWriter
     );
@@ -1885,13 +1841,13 @@ proto.service.Email.serializeBinaryToWriter = function(message, writer) {
   f = message.getFwd();
   if (f) {
     writer.writeBool(
-      8,
+      7,
       f
     );
   }
   f = message.getLabelsMap(true);
   if (f && f.getLength() > 0) {
-    f.serializeBinary(9, writer, jspb.BinaryWriter.prototype.writeString, jspb.BinaryWriter.prototype.writeString);
+    f.serializeBinary(8, writer, jspb.BinaryWriter.prototype.writeString, jspb.BinaryWriter.prototype.writeString);
   }
 };
 
@@ -1915,10 +1871,10 @@ proto.service.Email.prototype.setId = function(value) {
 
 
 /**
- * optional string snipped = 2;
+ * optional string history_id = 2;
  * @return {string}
  */
-proto.service.Email.prototype.getSnipped = function() {
+proto.service.Email.prototype.getHistoryId = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
@@ -1927,36 +1883,18 @@ proto.service.Email.prototype.getSnipped = function() {
  * @param {string} value
  * @return {!proto.service.Email} returns this
  */
-proto.service.Email.prototype.setSnipped = function(value) {
+proto.service.Email.prototype.setHistoryId = function(value) {
   return jspb.Message.setProto3StringField(this, 2, value);
 };
 
 
 /**
- * optional string history_id = 3;
- * @return {string}
- */
-proto.service.Email.prototype.getHistoryId = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
-};
-
-
-/**
- * @param {string} value
- * @return {!proto.service.Email} returns this
- */
-proto.service.Email.prototype.setHistoryId = function(value) {
-  return jspb.Message.setProto3StringField(this, 3, value);
-};
-
-
-/**
- * optional Envelope envelope = 4;
+ * optional Envelope envelope = 3;
  * @return {?proto.service.Envelope}
  */
 proto.service.Email.prototype.getEnvelope = function() {
   return /** @type{?proto.service.Envelope} */ (
-    jspb.Message.getWrapperField(this, proto.service.Envelope, 4));
+    jspb.Message.getWrapperField(this, proto.service.Envelope, 3));
 };
 
 
@@ -1965,7 +1903,7 @@ proto.service.Email.prototype.getEnvelope = function() {
  * @return {!proto.service.Email} returns this
 */
 proto.service.Email.prototype.setEnvelope = function(value) {
-  return jspb.Message.setWrapperField(this, 4, value);
+  return jspb.Message.setWrapperField(this, 3, value);
 };
 
 
@@ -1983,17 +1921,17 @@ proto.service.Email.prototype.clearEnvelope = function() {
  * @return {boolean}
  */
 proto.service.Email.prototype.hasEnvelope = function() {
-  return jspb.Message.getField(this, 4) != null;
+  return jspb.Message.getField(this, 3) != null;
 };
 
 
 /**
- * optional google.protobuf.Timestamp sent_at = 5;
+ * optional google.protobuf.Timestamp sent_at = 4;
  * @return {?proto.google.protobuf.Timestamp}
  */
 proto.service.Email.prototype.getSentAt = function() {
   return /** @type{?proto.google.protobuf.Timestamp} */ (
-    jspb.Message.getWrapperField(this, google_protobuf_timestamp_pb.Timestamp, 5));
+    jspb.Message.getWrapperField(this, google_protobuf_timestamp_pb.Timestamp, 4));
 };
 
 
@@ -2002,7 +1940,7 @@ proto.service.Email.prototype.getSentAt = function() {
  * @return {!proto.service.Email} returns this
 */
 proto.service.Email.prototype.setSentAt = function(value) {
-  return jspb.Message.setWrapperField(this, 5, value);
+  return jspb.Message.setWrapperField(this, 4, value);
 };
 
 
@@ -2020,17 +1958,17 @@ proto.service.Email.prototype.clearSentAt = function() {
  * @return {boolean}
  */
 proto.service.Email.prototype.hasSentAt = function() {
-  return jspb.Message.getField(this, 5) != null;
+  return jspb.Message.getField(this, 4) != null;
 };
 
 
 /**
- * optional google.protobuf.Timestamp received_at = 6;
+ * optional google.protobuf.Timestamp received_at = 5;
  * @return {?proto.google.protobuf.Timestamp}
  */
 proto.service.Email.prototype.getReceivedAt = function() {
   return /** @type{?proto.google.protobuf.Timestamp} */ (
-    jspb.Message.getWrapperField(this, google_protobuf_timestamp_pb.Timestamp, 6));
+    jspb.Message.getWrapperField(this, google_protobuf_timestamp_pb.Timestamp, 5));
 };
 
 
@@ -2039,7 +1977,7 @@ proto.service.Email.prototype.getReceivedAt = function() {
  * @return {!proto.service.Email} returns this
 */
 proto.service.Email.prototype.setReceivedAt = function(value) {
-  return jspb.Message.setWrapperField(this, 6, value);
+  return jspb.Message.setWrapperField(this, 5, value);
 };
 
 
@@ -2057,17 +1995,17 @@ proto.service.Email.prototype.clearReceivedAt = function() {
  * @return {boolean}
  */
 proto.service.Email.prototype.hasReceivedAt = function() {
-  return jspb.Message.getField(this, 6) != null;
+  return jspb.Message.getField(this, 5) != null;
 };
 
 
 /**
- * optional google.protobuf.Timestamp snoozed_at = 7;
+ * optional google.protobuf.Timestamp snoozed_at = 6;
  * @return {?proto.google.protobuf.Timestamp}
  */
 proto.service.Email.prototype.getSnoozedAt = function() {
   return /** @type{?proto.google.protobuf.Timestamp} */ (
-    jspb.Message.getWrapperField(this, google_protobuf_timestamp_pb.Timestamp, 7));
+    jspb.Message.getWrapperField(this, google_protobuf_timestamp_pb.Timestamp, 6));
 };
 
 
@@ -2076,7 +2014,7 @@ proto.service.Email.prototype.getSnoozedAt = function() {
  * @return {!proto.service.Email} returns this
 */
 proto.service.Email.prototype.setSnoozedAt = function(value) {
-  return jspb.Message.setWrapperField(this, 7, value);
+  return jspb.Message.setWrapperField(this, 6, value);
 };
 
 
@@ -2094,16 +2032,16 @@ proto.service.Email.prototype.clearSnoozedAt = function() {
  * @return {boolean}
  */
 proto.service.Email.prototype.hasSnoozedAt = function() {
-  return jspb.Message.getField(this, 7) != null;
+  return jspb.Message.getField(this, 6) != null;
 };
 
 
 /**
- * optional bool fwd = 8;
+ * optional bool fwd = 7;
  * @return {boolean}
  */
 proto.service.Email.prototype.getFwd = function() {
-  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 8, false));
+  return /** @type {boolean} */ (jspb.Message.getBooleanFieldWithDefault(this, 7, false));
 };
 
 
@@ -2112,19 +2050,19 @@ proto.service.Email.prototype.getFwd = function() {
  * @return {!proto.service.Email} returns this
  */
 proto.service.Email.prototype.setFwd = function(value) {
-  return jspb.Message.setProto3BooleanField(this, 8, value);
+  return jspb.Message.setProto3BooleanField(this, 7, value);
 };
 
 
 /**
- * map<string, string> labels = 9;
+ * map<string, string> labels = 8;
  * @param {boolean=} opt_noLazyCreate Do not create the map if
  * empty, instead returning `undefined`
  * @return {!jspb.Map<string,string>}
  */
 proto.service.Email.prototype.getLabelsMap = function(opt_noLazyCreate) {
   return /** @type {!jspb.Map<string,string>} */ (
-      jspb.Message.getMapField(this, 9, opt_noLazyCreate,
+      jspb.Message.getMapField(this, 8, opt_noLazyCreate,
       null));
 };
 
@@ -2178,7 +2116,7 @@ proto.service.Thread.prototype.toObject = function(opt_includeInstance) {
 proto.service.Thread.toObject = function(includeInstance, msg) {
   var f, obj = {
     id: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    snipped: jspb.Message.getFieldWithDefault(msg, 2, ""),
+    snippet: jspb.Message.getFieldWithDefault(msg, 2, ""),
     historyId: jspb.Message.getFieldWithDefault(msg, 3, ""),
     emailList: jspb.Message.toObjectList(msg.getEmailList(),
     proto.service.Email.toObject, includeInstance)
@@ -2224,7 +2162,7 @@ proto.service.Thread.deserializeBinaryFromReader = function(msg, reader) {
       break;
     case 2:
       var value = /** @type {string} */ (reader.readString());
-      msg.setSnipped(value);
+      msg.setSnippet(value);
       break;
     case 3:
       var value = /** @type {string} */ (reader.readString());
@@ -2271,7 +2209,7 @@ proto.service.Thread.serializeBinaryToWriter = function(message, writer) {
       f
     );
   }
-  f = message.getSnipped();
+  f = message.getSnippet();
   if (f.length > 0) {
     writer.writeString(
       2,
@@ -2315,10 +2253,10 @@ proto.service.Thread.prototype.setId = function(value) {
 
 
 /**
- * optional string snipped = 2;
+ * optional string snippet = 2;
  * @return {string}
  */
-proto.service.Thread.prototype.getSnipped = function() {
+proto.service.Thread.prototype.getSnippet = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
@@ -2327,7 +2265,7 @@ proto.service.Thread.prototype.getSnipped = function() {
  * @param {string} value
  * @return {!proto.service.Thread} returns this
  */
-proto.service.Thread.prototype.setSnipped = function(value) {
+proto.service.Thread.prototype.setSnippet = function(value) {
   return jspb.Message.setProto3StringField(this, 2, value);
 };
 
@@ -2435,7 +2373,7 @@ proto.service.Envelope.toObject = function(includeInstance, msg) {
     proto.service.Recipient.toObject, includeInstance),
     bccList: jspb.Message.toObjectList(msg.getBccList(),
     proto.service.Recipient.toObject, includeInstance),
-    groupsList: jspb.Message.toObjectList(msg.getGroupsList(),
+    groupList: jspb.Message.toObjectList(msg.getGroupList(),
     proto.service.Recipient.toObject, includeInstance),
     tagsMap: (f = msg.getTagsMap()) ? f.toObject(includeInstance, undefined) : [],
     message: (f = msg.getMessage()) && proto.service.Message.toObject(includeInstance, f),
@@ -2504,7 +2442,7 @@ proto.service.Envelope.deserializeBinaryFromReader = function(msg, reader) {
     case 6:
       var value = new proto.service.Recipient;
       reader.readMessage(value,proto.service.Recipient.deserializeBinaryFromReader);
-      msg.addGroups(value);
+      msg.addGroup(value);
       break;
     case 7:
       var value = msg.getTagsMap();
@@ -2590,7 +2528,7 @@ proto.service.Envelope.serializeBinaryToWriter = function(message, writer) {
       proto.service.Recipient.serializeBinaryToWriter
     );
   }
-  f = message.getGroupsList();
+  f = message.getGroupList();
   if (f.length > 0) {
     writer.writeRepeatedMessage(
       6,
@@ -2791,10 +2729,10 @@ proto.service.Envelope.prototype.clearBccList = function() {
 
 
 /**
- * repeated Recipient groups = 6;
+ * repeated Recipient group = 6;
  * @return {!Array<!proto.service.Recipient>}
  */
-proto.service.Envelope.prototype.getGroupsList = function() {
+proto.service.Envelope.prototype.getGroupList = function() {
   return /** @type{!Array<!proto.service.Recipient>} */ (
     jspb.Message.getRepeatedWrapperField(this, proto.service.Recipient, 6));
 };
@@ -2804,7 +2742,7 @@ proto.service.Envelope.prototype.getGroupsList = function() {
  * @param {!Array<!proto.service.Recipient>} value
  * @return {!proto.service.Envelope} returns this
 */
-proto.service.Envelope.prototype.setGroupsList = function(value) {
+proto.service.Envelope.prototype.setGroupList = function(value) {
   return jspb.Message.setRepeatedWrapperField(this, 6, value);
 };
 
@@ -2814,7 +2752,7 @@ proto.service.Envelope.prototype.setGroupsList = function(value) {
  * @param {number=} opt_index
  * @return {!proto.service.Recipient}
  */
-proto.service.Envelope.prototype.addGroups = function(opt_value, opt_index) {
+proto.service.Envelope.prototype.addGroup = function(opt_value, opt_index) {
   return jspb.Message.addToRepeatedWrapperField(this, 6, opt_value, proto.service.Recipient, opt_index);
 };
 
@@ -2823,8 +2761,8 @@ proto.service.Envelope.prototype.addGroups = function(opt_value, opt_index) {
  * Clears the list making it empty but non-null.
  * @return {!proto.service.Envelope} returns this
  */
-proto.service.Envelope.prototype.clearGroupsList = function() {
-  return this.setGroupsList([]);
+proto.service.Envelope.prototype.clearGroupList = function() {
+  return this.setGroupList([]);
 };
 
 
@@ -2926,32 +2864,6 @@ proto.service.Envelope.prototype.clearAttachmentsList = function() {
 
 
 
-/**
- * Oneof group definitions for this message. Each group defines the field
- * numbers belonging to that group. When of these fields' value is set, all
- * other fields in the group are cleared. During deserialization, if multiple
- * fields are encountered for a group, only the last value seen will be kept.
- * @private {!Array<!Array<number>>}
- * @const
- */
-proto.service.Message.oneofGroups_ = [[4,5]];
-
-/**
- * @enum {number}
- */
-proto.service.Message.BodyCase = {
-  BODY_NOT_SET: 0,
-  DATA: 4,
-  URI: 5
-};
-
-/**
- * @return {proto.service.Message.BodyCase}
- */
-proto.service.Message.prototype.getBodyCase = function() {
-  return /** @type {proto.service.Message.BodyCase} */(jspb.Message.computeOneofCase(this, proto.service.Message.oneofGroups_[0]));
-};
-
 
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
@@ -2985,9 +2897,9 @@ proto.service.Message.toObject = function(includeInstance, msg) {
   var f, obj = {
     id: jspb.Message.getFieldWithDefault(msg, 1, ""),
     subject: jspb.Message.getFieldWithDefault(msg, 2, ""),
-    mimetype: jspb.Message.getFieldWithDefault(msg, 3, ""),
-    data: msg.getData_asB64(),
-    uri: jspb.Message.getFieldWithDefault(msg, 5, "")
+    snippet: jspb.Message.getFieldWithDefault(msg, 3, ""),
+    mimetype: jspb.Message.getFieldWithDefault(msg, 4, ""),
+    bodyUri: jspb.Message.getFieldWithDefault(msg, 5, "")
   };
 
   if (includeInstance) {
@@ -3034,15 +2946,15 @@ proto.service.Message.deserializeBinaryFromReader = function(msg, reader) {
       break;
     case 3:
       var value = /** @type {string} */ (reader.readString());
-      msg.setMimetype(value);
+      msg.setSnippet(value);
       break;
     case 4:
-      var value = /** @type {!Uint8Array} */ (reader.readBytes());
-      msg.setData(value);
+      var value = /** @type {string} */ (reader.readString());
+      msg.setMimetype(value);
       break;
     case 5:
       var value = /** @type {string} */ (reader.readString());
-      msg.setUri(value);
+      msg.setBodyUri(value);
       break;
     default:
       reader.skipField();
@@ -3087,22 +2999,22 @@ proto.service.Message.serializeBinaryToWriter = function(message, writer) {
       f
     );
   }
-  f = message.getMimetype();
+  f = message.getSnippet();
   if (f.length > 0) {
     writer.writeString(
       3,
       f
     );
   }
-  f = /** @type {!(string|Uint8Array)} */ (jspb.Message.getField(message, 4));
-  if (f != null) {
-    writer.writeBytes(
+  f = message.getMimetype();
+  if (f.length > 0) {
+    writer.writeString(
       4,
       f
     );
   }
-  f = /** @type {string} */ (jspb.Message.getField(message, 5));
-  if (f != null) {
+  f = message.getBodyUri();
+  if (f.length > 0) {
     writer.writeString(
       5,
       f
@@ -3148,10 +3060,10 @@ proto.service.Message.prototype.setSubject = function(value) {
 
 
 /**
- * optional string mimetype = 3;
+ * optional string snippet = 3;
  * @return {string}
  */
-proto.service.Message.prototype.getMimetype = function() {
+proto.service.Message.prototype.getSnippet = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
 };
 
@@ -3160,76 +3072,34 @@ proto.service.Message.prototype.getMimetype = function() {
  * @param {string} value
  * @return {!proto.service.Message} returns this
  */
-proto.service.Message.prototype.setMimetype = function(value) {
+proto.service.Message.prototype.setSnippet = function(value) {
   return jspb.Message.setProto3StringField(this, 3, value);
 };
 
 
 /**
- * optional bytes data = 4;
+ * optional string mimetype = 4;
  * @return {string}
  */
-proto.service.Message.prototype.getData = function() {
+proto.service.Message.prototype.getMimetype = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
 };
 
 
 /**
- * optional bytes data = 4;
- * This is a type-conversion wrapper around `getData()`
- * @return {string}
- */
-proto.service.Message.prototype.getData_asB64 = function() {
-  return /** @type {string} */ (jspb.Message.bytesAsB64(
-      this.getData()));
-};
-
-
-/**
- * optional bytes data = 4;
- * Note that Uint8Array is not supported on all browsers.
- * @see http://caniuse.com/Uint8Array
- * This is a type-conversion wrapper around `getData()`
- * @return {!Uint8Array}
- */
-proto.service.Message.prototype.getData_asU8 = function() {
-  return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-      this.getData()));
-};
-
-
-/**
- * @param {!(string|Uint8Array)} value
+ * @param {string} value
  * @return {!proto.service.Message} returns this
  */
-proto.service.Message.prototype.setData = function(value) {
-  return jspb.Message.setOneofField(this, 4, proto.service.Message.oneofGroups_[0], value);
+proto.service.Message.prototype.setMimetype = function(value) {
+  return jspb.Message.setProto3StringField(this, 4, value);
 };
 
 
 /**
- * Clears the field making it undefined.
- * @return {!proto.service.Message} returns this
- */
-proto.service.Message.prototype.clearData = function() {
-  return jspb.Message.setOneofField(this, 4, proto.service.Message.oneofGroups_[0], undefined);
-};
-
-
-/**
- * Returns whether this field is set.
- * @return {boolean}
- */
-proto.service.Message.prototype.hasData = function() {
-  return jspb.Message.getField(this, 4) != null;
-};
-
-
-/**
- * optional string uri = 5;
+ * optional string body_uri = 5;
  * @return {string}
  */
-proto.service.Message.prototype.getUri = function() {
+proto.service.Message.prototype.getBodyUri = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 5, ""));
 };
 
@@ -3238,55 +3108,11 @@ proto.service.Message.prototype.getUri = function() {
  * @param {string} value
  * @return {!proto.service.Message} returns this
  */
-proto.service.Message.prototype.setUri = function(value) {
-  return jspb.Message.setOneofField(this, 5, proto.service.Message.oneofGroups_[0], value);
+proto.service.Message.prototype.setBodyUri = function(value) {
+  return jspb.Message.setProto3StringField(this, 5, value);
 };
 
 
-/**
- * Clears the field making it undefined.
- * @return {!proto.service.Message} returns this
- */
-proto.service.Message.prototype.clearUri = function() {
-  return jspb.Message.setOneofField(this, 5, proto.service.Message.oneofGroups_[0], undefined);
-};
-
-
-/**
- * Returns whether this field is set.
- * @return {boolean}
- */
-proto.service.Message.prototype.hasUri = function() {
-  return jspb.Message.getField(this, 5) != null;
-};
-
-
-
-/**
- * Oneof group definitions for this message. Each group defines the field
- * numbers belonging to that group. When of these fields' value is set, all
- * other fields in the group are cleared. During deserialization, if multiple
- * fields are encountered for a group, only the last value seen will be kept.
- * @private {!Array<!Array<number>>}
- * @const
- */
-proto.service.Attachment.oneofGroups_ = [[4,5]];
-
-/**
- * @enum {number}
- */
-proto.service.Attachment.ContentCase = {
-  CONTENT_NOT_SET: 0,
-  DATA: 4,
-  URI: 5
-};
-
-/**
- * @return {proto.service.Attachment.ContentCase}
- */
-proto.service.Attachment.prototype.getContentCase = function() {
-  return /** @type {proto.service.Attachment.ContentCase} */(jspb.Message.computeOneofCase(this, proto.service.Attachment.oneofGroups_[0]));
-};
 
 
 
@@ -3322,8 +3148,7 @@ proto.service.Attachment.toObject = function(includeInstance, msg) {
     id: jspb.Message.getFieldWithDefault(msg, 1, ""),
     filename: jspb.Message.getFieldWithDefault(msg, 2, ""),
     mimetype: jspb.Message.getFieldWithDefault(msg, 3, ""),
-    data: msg.getData_asB64(),
-    uri: jspb.Message.getFieldWithDefault(msg, 5, "")
+    dataUri: jspb.Message.getFieldWithDefault(msg, 5, "")
   };
 
   if (includeInstance) {
@@ -3372,13 +3197,9 @@ proto.service.Attachment.deserializeBinaryFromReader = function(msg, reader) {
       var value = /** @type {string} */ (reader.readString());
       msg.setMimetype(value);
       break;
-    case 4:
-      var value = /** @type {!Uint8Array} */ (reader.readBytes());
-      msg.setData(value);
-      break;
     case 5:
       var value = /** @type {string} */ (reader.readString());
-      msg.setUri(value);
+      msg.setDataUri(value);
       break;
     default:
       reader.skipField();
@@ -3430,15 +3251,8 @@ proto.service.Attachment.serializeBinaryToWriter = function(message, writer) {
       f
     );
   }
-  f = /** @type {!(string|Uint8Array)} */ (jspb.Message.getField(message, 4));
-  if (f != null) {
-    writer.writeBytes(
-      4,
-      f
-    );
-  }
-  f = /** @type {string} */ (jspb.Message.getField(message, 5));
-  if (f != null) {
+  f = message.getDataUri();
+  if (f.length > 0) {
     writer.writeString(
       5,
       f
@@ -3502,70 +3316,10 @@ proto.service.Attachment.prototype.setMimetype = function(value) {
 
 
 /**
- * optional bytes data = 4;
+ * optional string data_uri = 5;
  * @return {string}
  */
-proto.service.Attachment.prototype.getData = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
-};
-
-
-/**
- * optional bytes data = 4;
- * This is a type-conversion wrapper around `getData()`
- * @return {string}
- */
-proto.service.Attachment.prototype.getData_asB64 = function() {
-  return /** @type {string} */ (jspb.Message.bytesAsB64(
-      this.getData()));
-};
-
-
-/**
- * optional bytes data = 4;
- * Note that Uint8Array is not supported on all browsers.
- * @see http://caniuse.com/Uint8Array
- * This is a type-conversion wrapper around `getData()`
- * @return {!Uint8Array}
- */
-proto.service.Attachment.prototype.getData_asU8 = function() {
-  return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-      this.getData()));
-};
-
-
-/**
- * @param {!(string|Uint8Array)} value
- * @return {!proto.service.Attachment} returns this
- */
-proto.service.Attachment.prototype.setData = function(value) {
-  return jspb.Message.setOneofField(this, 4, proto.service.Attachment.oneofGroups_[0], value);
-};
-
-
-/**
- * Clears the field making it undefined.
- * @return {!proto.service.Attachment} returns this
- */
-proto.service.Attachment.prototype.clearData = function() {
-  return jspb.Message.setOneofField(this, 4, proto.service.Attachment.oneofGroups_[0], undefined);
-};
-
-
-/**
- * Returns whether this field is set.
- * @return {boolean}
- */
-proto.service.Attachment.prototype.hasData = function() {
-  return jspb.Message.getField(this, 4) != null;
-};
-
-
-/**
- * optional string uri = 5;
- * @return {string}
- */
-proto.service.Attachment.prototype.getUri = function() {
+proto.service.Attachment.prototype.getDataUri = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 5, ""));
 };
 
@@ -3574,26 +3328,8 @@ proto.service.Attachment.prototype.getUri = function() {
  * @param {string} value
  * @return {!proto.service.Attachment} returns this
  */
-proto.service.Attachment.prototype.setUri = function(value) {
-  return jspb.Message.setOneofField(this, 5, proto.service.Attachment.oneofGroups_[0], value);
-};
-
-
-/**
- * Clears the field making it undefined.
- * @return {!proto.service.Attachment} returns this
- */
-proto.service.Attachment.prototype.clearUri = function() {
-  return jspb.Message.setOneofField(this, 5, proto.service.Attachment.oneofGroups_[0], undefined);
-};
-
-
-/**
- * Returns whether this field is set.
- * @return {boolean}
- */
-proto.service.Attachment.prototype.hasUri = function() {
-  return jspb.Message.getField(this, 5) != null;
+proto.service.Attachment.prototype.setDataUri = function(value) {
+  return jspb.Message.setProto3StringField(this, 5, value);
 };
 
 

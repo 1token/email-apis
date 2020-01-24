@@ -122,9 +122,8 @@ class Recipient extends $pb.GeneratedMessage {
 class Draft extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Draft', package: const $pb.PackageName('service'), createEmptyInstance: create)
     ..aOS(1, 'id')
-    ..aOS(2, 'snipped')
-    ..aOM<Envelope>(3, 'envelope', subBuilder: Envelope.create)
-    ..m<$core.String, $core.String>(4, 'labels', entryClassName: 'Draft.LabelsEntry', keyFieldType: $pb.PbFieldType.OS, valueFieldType: $pb.PbFieldType.OS, packageName: const $pb.PackageName('service'))
+    ..aOM<Envelope>(2, 'envelope', subBuilder: Envelope.create)
+    ..m<$core.String, $core.String>(3, 'labels', entryClassName: 'Draft.LabelsEntry', keyFieldType: $pb.PbFieldType.OS, valueFieldType: $pb.PbFieldType.OS, packageName: const $pb.PackageName('service'))
     ..hasRequiredFields = false
   ;
 
@@ -153,40 +152,30 @@ class Draft extends $pb.GeneratedMessage {
   void clearId() => clearField(1);
 
   @$pb.TagNumber(2)
-  $core.String get snipped => $_getSZ(1);
+  Envelope get envelope => $_getN(1);
   @$pb.TagNumber(2)
-  set snipped($core.String v) { $_setString(1, v); }
+  set envelope(Envelope v) { setField(2, v); }
   @$pb.TagNumber(2)
-  $core.bool hasSnipped() => $_has(1);
+  $core.bool hasEnvelope() => $_has(1);
   @$pb.TagNumber(2)
-  void clearSnipped() => clearField(2);
+  void clearEnvelope() => clearField(2);
+  @$pb.TagNumber(2)
+  Envelope ensureEnvelope() => $_ensure(1);
 
   @$pb.TagNumber(3)
-  Envelope get envelope => $_getN(2);
-  @$pb.TagNumber(3)
-  set envelope(Envelope v) { setField(3, v); }
-  @$pb.TagNumber(3)
-  $core.bool hasEnvelope() => $_has(2);
-  @$pb.TagNumber(3)
-  void clearEnvelope() => clearField(3);
-  @$pb.TagNumber(3)
-  Envelope ensureEnvelope() => $_ensure(2);
-
-  @$pb.TagNumber(4)
-  $core.Map<$core.String, $core.String> get labels => $_getMap(3);
+  $core.Map<$core.String, $core.String> get labels => $_getMap(2);
 }
 
 class Email extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Email', package: const $pb.PackageName('service'), createEmptyInstance: create)
     ..aOS(1, 'id')
-    ..aOS(2, 'snipped')
-    ..aOS(3, 'historyId')
-    ..aOM<Envelope>(4, 'envelope', subBuilder: Envelope.create)
-    ..aOM<$2.Timestamp>(5, 'sentAt', subBuilder: $2.Timestamp.create)
-    ..aOM<$2.Timestamp>(6, 'receivedAt', subBuilder: $2.Timestamp.create)
-    ..aOM<$2.Timestamp>(7, 'snoozedAt', subBuilder: $2.Timestamp.create)
-    ..aOB(8, 'fwd')
-    ..m<$core.String, $core.String>(9, 'labels', entryClassName: 'Email.LabelsEntry', keyFieldType: $pb.PbFieldType.OS, valueFieldType: $pb.PbFieldType.OS, packageName: const $pb.PackageName('service'))
+    ..aOS(2, 'historyId')
+    ..aOM<Envelope>(3, 'envelope', subBuilder: Envelope.create)
+    ..aOM<$2.Timestamp>(4, 'sentAt', subBuilder: $2.Timestamp.create)
+    ..aOM<$2.Timestamp>(5, 'receivedAt', subBuilder: $2.Timestamp.create)
+    ..aOM<$2.Timestamp>(6, 'snoozedAt', subBuilder: $2.Timestamp.create)
+    ..aOB(7, 'fwd')
+    ..m<$core.String, $core.String>(8, 'labels', entryClassName: 'Email.LabelsEntry', keyFieldType: $pb.PbFieldType.OS, valueFieldType: $pb.PbFieldType.OS, packageName: const $pb.PackageName('service'))
     ..hasRequiredFields = false
   ;
 
@@ -215,84 +204,75 @@ class Email extends $pb.GeneratedMessage {
   void clearId() => clearField(1);
 
   @$pb.TagNumber(2)
-  $core.String get snipped => $_getSZ(1);
+  $core.String get historyId => $_getSZ(1);
   @$pb.TagNumber(2)
-  set snipped($core.String v) { $_setString(1, v); }
+  set historyId($core.String v) { $_setString(1, v); }
   @$pb.TagNumber(2)
-  $core.bool hasSnipped() => $_has(1);
+  $core.bool hasHistoryId() => $_has(1);
   @$pb.TagNumber(2)
-  void clearSnipped() => clearField(2);
+  void clearHistoryId() => clearField(2);
 
   @$pb.TagNumber(3)
-  $core.String get historyId => $_getSZ(2);
+  Envelope get envelope => $_getN(2);
   @$pb.TagNumber(3)
-  set historyId($core.String v) { $_setString(2, v); }
+  set envelope(Envelope v) { setField(3, v); }
   @$pb.TagNumber(3)
-  $core.bool hasHistoryId() => $_has(2);
+  $core.bool hasEnvelope() => $_has(2);
   @$pb.TagNumber(3)
-  void clearHistoryId() => clearField(3);
+  void clearEnvelope() => clearField(3);
+  @$pb.TagNumber(3)
+  Envelope ensureEnvelope() => $_ensure(2);
 
   @$pb.TagNumber(4)
-  Envelope get envelope => $_getN(3);
+  $2.Timestamp get sentAt => $_getN(3);
   @$pb.TagNumber(4)
-  set envelope(Envelope v) { setField(4, v); }
+  set sentAt($2.Timestamp v) { setField(4, v); }
   @$pb.TagNumber(4)
-  $core.bool hasEnvelope() => $_has(3);
+  $core.bool hasSentAt() => $_has(3);
   @$pb.TagNumber(4)
-  void clearEnvelope() => clearField(4);
+  void clearSentAt() => clearField(4);
   @$pb.TagNumber(4)
-  Envelope ensureEnvelope() => $_ensure(3);
+  $2.Timestamp ensureSentAt() => $_ensure(3);
 
   @$pb.TagNumber(5)
-  $2.Timestamp get sentAt => $_getN(4);
+  $2.Timestamp get receivedAt => $_getN(4);
   @$pb.TagNumber(5)
-  set sentAt($2.Timestamp v) { setField(5, v); }
+  set receivedAt($2.Timestamp v) { setField(5, v); }
   @$pb.TagNumber(5)
-  $core.bool hasSentAt() => $_has(4);
+  $core.bool hasReceivedAt() => $_has(4);
   @$pb.TagNumber(5)
-  void clearSentAt() => clearField(5);
+  void clearReceivedAt() => clearField(5);
   @$pb.TagNumber(5)
-  $2.Timestamp ensureSentAt() => $_ensure(4);
+  $2.Timestamp ensureReceivedAt() => $_ensure(4);
 
   @$pb.TagNumber(6)
-  $2.Timestamp get receivedAt => $_getN(5);
+  $2.Timestamp get snoozedAt => $_getN(5);
   @$pb.TagNumber(6)
-  set receivedAt($2.Timestamp v) { setField(6, v); }
+  set snoozedAt($2.Timestamp v) { setField(6, v); }
   @$pb.TagNumber(6)
-  $core.bool hasReceivedAt() => $_has(5);
+  $core.bool hasSnoozedAt() => $_has(5);
   @$pb.TagNumber(6)
-  void clearReceivedAt() => clearField(6);
+  void clearSnoozedAt() => clearField(6);
   @$pb.TagNumber(6)
-  $2.Timestamp ensureReceivedAt() => $_ensure(5);
+  $2.Timestamp ensureSnoozedAt() => $_ensure(5);
 
   @$pb.TagNumber(7)
-  $2.Timestamp get snoozedAt => $_getN(6);
+  $core.bool get fwd => $_getBF(6);
   @$pb.TagNumber(7)
-  set snoozedAt($2.Timestamp v) { setField(7, v); }
+  set fwd($core.bool v) { $_setBool(6, v); }
   @$pb.TagNumber(7)
-  $core.bool hasSnoozedAt() => $_has(6);
+  $core.bool hasFwd() => $_has(6);
   @$pb.TagNumber(7)
-  void clearSnoozedAt() => clearField(7);
-  @$pb.TagNumber(7)
-  $2.Timestamp ensureSnoozedAt() => $_ensure(6);
+  void clearFwd() => clearField(7);
 
   @$pb.TagNumber(8)
-  $core.bool get fwd => $_getBF(7);
-  @$pb.TagNumber(8)
-  set fwd($core.bool v) { $_setBool(7, v); }
-  @$pb.TagNumber(8)
-  $core.bool hasFwd() => $_has(7);
-  @$pb.TagNumber(8)
-  void clearFwd() => clearField(8);
-
-  @$pb.TagNumber(9)
-  $core.Map<$core.String, $core.String> get labels => $_getMap(8);
+  $core.Map<$core.String, $core.String> get labels => $_getMap(7);
 }
 
 class Thread extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Thread', package: const $pb.PackageName('service'), createEmptyInstance: create)
     ..aOS(1, 'id')
-    ..aOS(2, 'snipped')
+    ..aOS(2, 'snippet')
     ..aOS(3, 'historyId')
     ..pc<Email>(4, 'email', $pb.PbFieldType.PM, subBuilder: Email.create)
     ..hasRequiredFields = false
@@ -323,13 +303,13 @@ class Thread extends $pb.GeneratedMessage {
   void clearId() => clearField(1);
 
   @$pb.TagNumber(2)
-  $core.String get snipped => $_getSZ(1);
+  $core.String get snippet => $_getSZ(1);
   @$pb.TagNumber(2)
-  set snipped($core.String v) { $_setString(1, v); }
+  set snippet($core.String v) { $_setString(1, v); }
   @$pb.TagNumber(2)
-  $core.bool hasSnipped() => $_has(1);
+  $core.bool hasSnippet() => $_has(1);
   @$pb.TagNumber(2)
-  void clearSnipped() => clearField(2);
+  void clearSnippet() => clearField(2);
 
   @$pb.TagNumber(3)
   $core.String get historyId => $_getSZ(2);
@@ -351,7 +331,7 @@ class Envelope extends $pb.GeneratedMessage {
     ..pc<Recipient>(3, 'to', $pb.PbFieldType.PM, subBuilder: Recipient.create)
     ..pc<Recipient>(4, 'cc', $pb.PbFieldType.PM, subBuilder: Recipient.create)
     ..pc<Recipient>(5, 'bcc', $pb.PbFieldType.PM, subBuilder: Recipient.create)
-    ..pc<Recipient>(6, 'groups', $pb.PbFieldType.PM, subBuilder: Recipient.create)
+    ..pc<Recipient>(6, 'group', $pb.PbFieldType.PM, subBuilder: Recipient.create)
     ..m<$core.String, $core.String>(7, 'tags', entryClassName: 'Envelope.TagsEntry', keyFieldType: $pb.PbFieldType.OS, valueFieldType: $pb.PbFieldType.OS, packageName: const $pb.PackageName('service'))
     ..aOM<Message>(8, 'message', subBuilder: Message.create)
     ..pc<Attachment>(9, 'attachments', $pb.PbFieldType.PM, subBuilder: Attachment.create)
@@ -403,7 +383,7 @@ class Envelope extends $pb.GeneratedMessage {
   $core.List<Recipient> get bcc => $_getList(4);
 
   @$pb.TagNumber(6)
-  $core.List<Recipient> get groups => $_getList(5);
+  $core.List<Recipient> get group => $_getList(5);
 
   @$pb.TagNumber(7)
   $core.Map<$core.String, $core.String> get tags => $_getMap(6);
@@ -423,25 +403,13 @@ class Envelope extends $pb.GeneratedMessage {
   $core.List<Attachment> get attachments => $_getList(8);
 }
 
-enum Message_Body {
-  data, 
-  uri, 
-  notSet
-}
-
 class Message extends $pb.GeneratedMessage {
-  static const $core.Map<$core.int, Message_Body> _Message_BodyByTag = {
-    4 : Message_Body.data,
-    5 : Message_Body.uri,
-    0 : Message_Body.notSet
-  };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Message', package: const $pb.PackageName('service'), createEmptyInstance: create)
-    ..oo(0, [4, 5])
     ..aOS(1, 'id')
     ..aOS(2, 'subject')
-    ..aOS(3, 'mimetype')
-    ..a<$core.List<$core.int>>(4, 'data', $pb.PbFieldType.OY)
-    ..aOS(5, 'uri')
+    ..aOS(3, 'snippet')
+    ..aOS(4, 'mimetype')
+    ..aOS(5, 'bodyUri')
     ..hasRequiredFields = false
   ;
 
@@ -459,9 +427,6 @@ class Message extends $pb.GeneratedMessage {
   @$core.pragma('dart2js:noInline')
   static Message getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Message>(create);
   static Message _defaultInstance;
-
-  Message_Body whichBody() => _Message_BodyByTag[$_whichOneof(0)];
-  void clearBody() => clearField($_whichOneof(0));
 
   @$pb.TagNumber(1)
   $core.String get id => $_getSZ(0);
@@ -482,52 +447,39 @@ class Message extends $pb.GeneratedMessage {
   void clearSubject() => clearField(2);
 
   @$pb.TagNumber(3)
-  $core.String get mimetype => $_getSZ(2);
+  $core.String get snippet => $_getSZ(2);
   @$pb.TagNumber(3)
-  set mimetype($core.String v) { $_setString(2, v); }
+  set snippet($core.String v) { $_setString(2, v); }
   @$pb.TagNumber(3)
-  $core.bool hasMimetype() => $_has(2);
+  $core.bool hasSnippet() => $_has(2);
   @$pb.TagNumber(3)
-  void clearMimetype() => clearField(3);
+  void clearSnippet() => clearField(3);
 
   @$pb.TagNumber(4)
-  $core.List<$core.int> get data => $_getN(3);
+  $core.String get mimetype => $_getSZ(3);
   @$pb.TagNumber(4)
-  set data($core.List<$core.int> v) { $_setBytes(3, v); }
+  set mimetype($core.String v) { $_setString(3, v); }
   @$pb.TagNumber(4)
-  $core.bool hasData() => $_has(3);
+  $core.bool hasMimetype() => $_has(3);
   @$pb.TagNumber(4)
-  void clearData() => clearField(4);
+  void clearMimetype() => clearField(4);
 
   @$pb.TagNumber(5)
-  $core.String get uri => $_getSZ(4);
+  $core.String get bodyUri => $_getSZ(4);
   @$pb.TagNumber(5)
-  set uri($core.String v) { $_setString(4, v); }
+  set bodyUri($core.String v) { $_setString(4, v); }
   @$pb.TagNumber(5)
-  $core.bool hasUri() => $_has(4);
+  $core.bool hasBodyUri() => $_has(4);
   @$pb.TagNumber(5)
-  void clearUri() => clearField(5);
-}
-
-enum Attachment_Content {
-  data, 
-  uri, 
-  notSet
+  void clearBodyUri() => clearField(5);
 }
 
 class Attachment extends $pb.GeneratedMessage {
-  static const $core.Map<$core.int, Attachment_Content> _Attachment_ContentByTag = {
-    4 : Attachment_Content.data,
-    5 : Attachment_Content.uri,
-    0 : Attachment_Content.notSet
-  };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Attachment', package: const $pb.PackageName('service'), createEmptyInstance: create)
-    ..oo(0, [4, 5])
     ..aOS(1, 'id')
     ..aOS(2, 'filename')
     ..aOS(3, 'mimetype')
-    ..a<$core.List<$core.int>>(4, 'data', $pb.PbFieldType.OY)
-    ..aOS(5, 'uri')
+    ..aOS(5, 'dataUri')
     ..hasRequiredFields = false
   ;
 
@@ -545,9 +497,6 @@ class Attachment extends $pb.GeneratedMessage {
   @$core.pragma('dart2js:noInline')
   static Attachment getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Attachment>(create);
   static Attachment _defaultInstance;
-
-  Attachment_Content whichContent() => _Attachment_ContentByTag[$_whichOneof(0)];
-  void clearContent() => clearField($_whichOneof(0));
 
   @$pb.TagNumber(1)
   $core.String get id => $_getSZ(0);
@@ -576,23 +525,14 @@ class Attachment extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearMimetype() => clearField(3);
 
-  @$pb.TagNumber(4)
-  $core.List<$core.int> get data => $_getN(3);
-  @$pb.TagNumber(4)
-  set data($core.List<$core.int> v) { $_setBytes(3, v); }
-  @$pb.TagNumber(4)
-  $core.bool hasData() => $_has(3);
-  @$pb.TagNumber(4)
-  void clearData() => clearField(4);
-
   @$pb.TagNumber(5)
-  $core.String get uri => $_getSZ(4);
+  $core.String get dataUri => $_getSZ(3);
   @$pb.TagNumber(5)
-  set uri($core.String v) { $_setString(4, v); }
+  set dataUri($core.String v) { $_setString(3, v); }
   @$pb.TagNumber(5)
-  $core.bool hasUri() => $_has(4);
+  $core.bool hasDataUri() => $_has(3);
   @$pb.TagNumber(5)
-  void clearUri() => clearField(5);
+  void clearDataUri() => clearField(5);
 }
 
 class Label extends $pb.GeneratedMessage {

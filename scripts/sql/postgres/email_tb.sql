@@ -5,8 +5,9 @@ CREATE TABLE email.message
 (
     id         uuid PRIMARY KEY NOT NULL,
     subject    character varying(255),
-    body_uri   character varying(4096),
+    snippet    character varying(255),
     mimetype   character varying(255),
+    body_uri   character varying(4096),
     created_at timestamptz DEFAULT now(),
     updated_at timestamptz
 );
