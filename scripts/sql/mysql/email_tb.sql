@@ -65,31 +65,6 @@ CREATE TABLE email.message
   DEFAULT CHARSET = utf8mb4
   COLLATE = utf8mb4_unicode_ci;
 
-CREATE TABLE email.envelope
-(
-    id            binary(16)                 NOT NULL,
-    owner         varchar(255)               NOT NULL,
-    -- from_id        binary(16)             NOT NULL,
-    -- to_ids         binary(16)             NOT NULL,
-    -- cc_ids         binary(16),
-    -- bcc_ids        binary(16),
-    -- group_ids      binary(16),
-    tags          varchar(4096),
-    message_id    binary(16)                 NOT NULL,
-    -- attachment_ids binary(16),
-    timeline_id   bigint                     NOT NULL,
-    history_id    bigint                     NOT NULL,
-    deleted       tinyint(1) /*DEFAULT 0*/   NOT NULL,
-    created_at    datetime /*DEFAULT NOW()*/ NOT NULL,
-    updated_at    datetime,
-    un_deleted_at datetime,
-    PRIMARY KEY (`id`),
-    FOREIGN KEY (message_id) REFERENCES email.message (id),
-    FULLTEXT KEY tags (tags)
-) ENGINE = InnoDB
-  DEFAULT CHARSET = utf8mb4
-  COLLATE = utf8mb4_unicode_ci;
-
 CREATE TABLE email.email
 (
     id            binary(16)                 NOT NULL,
@@ -98,8 +73,15 @@ CREATE TABLE email.email
     thread_id     binary(16)                 NOT NULL,
     fwd           bool,
     -- label_ids   binary(16),
-    envelope_id   binary(16)                 NOT NULL,
-    sent_at       datetime                   NOT NULL,
+    -- from_id        binary(16)             NOT NULL,
+    -- to_ids         binary(16)             NOT NULL,
+    -- cc_ids         binary(16),
+    -- bcc_ids        binary(16),
+    -- group_ids      binary(16),
+    tags          varchar(4096),
+    message_id    binary(16)                 NOT NULL,
+    -- attachment_ids binary(16),
+    sent_at       datetime,
     received_at   datetime,
     snoozed_at    datetime,
     timeline_id   bigint                     NOT NULL,
@@ -109,7 +91,7 @@ CREATE TABLE email.email
     updated_at    datetime,
     un_deleted_at datetime,
     PRIMARY KEY (`id`),
-    FOREIGN KEY (envelope_id) REFERENCES email.envelope (id)
+    FOREIGN KEY (message_id) REFERENCES email.message (id)
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8mb4
   COLLATE = utf8mb4_unicode_ci;
@@ -154,12 +136,29 @@ CREATE TABLE email.recipient
   DEFAULT CHARSET = utf8mb4
   COLLATE = utf8mb4_unicode_ci;
 
-CREATE TABLE email.envelope_attachment
+CREATE TABLE email.filter
 (
-    id            binary(16) NOT NULL,
-    owner         varchar(255)           NOT NULL,
-    envelope_id   binary(16)             NOT NULL,
-    attachment_id binary(16)             NOT NULL,
+    id            binary(16)                 NOT NULL,
+    owner         varchar(255)               NOT NULL,
+    name          varchar(255)               NOT NULL,
+    criteria      varchar(4096),
+    timeline_id   bigint                     NOT NULL,
+    history_id    bigint                     NOT NULL,
+    deleted       tinyint(1) /*DEFAULT 0*/   NOT NULL,
+    created_at    datetime /*DEFAULT NOW()*/ NOT NULL,
+    updated_at    datetime,
+    un_deleted_at datetime,
+    PRIMARY KEY (`id`)
+) ENGINE = InnoDB
+  DEFAULT CHARSET = utf8mb4
+  COLLATE = utf8mb4_unicode_ci;
+
+CREATE TABLE email.email_attachment
+(
+    id            binary(16)                 NOT NULL,
+    owner         varchar(255)               NOT NULL,
+    email_id      binary(16)                 NOT NULL,
+    attachment_id binary(16)                 NOT NULL,
     timeline_id   bigint                     NOT NULL,
     history_id    bigint                     NOT NULL,
     deleted       tinyint(1) /*DEFAULT 0*/   NOT NULL,
@@ -167,17 +166,17 @@ CREATE TABLE email.envelope_attachment
     updated_at    datetime,
     un_deleted_at datetime,
     PRIMARY KEY (`id`),
-    FOREIGN KEY (envelope_id) REFERENCES email.envelope (id),
+    FOREIGN KEY (email_id) REFERENCES email.email (id),
     FOREIGN KEY (attachment_id) REFERENCES email.attachment (id)
 );
 
-CREATE TABLE email.envelope_recipient
+CREATE TABLE email.email_recipient
 (
-    id           binary(16) NOT NULL,
-    owner        varchar(255)           NOT NULL,
-    envelope_id  binary(16)             NOT NULL,
-    recipient_id binary(16)             NOT NULL,
-    type         int                    NOT NULL,
+    id            binary(16)                 NOT NULL,
+    owner         varchar(255)               NOT NULL,
+    email_id      binary(16)                 NOT NULL,
+    recipient_id  binary(16)                 NOT NULL,
+    type          varchar(255)               NOT NULL,
     timeline_id   bigint                     NOT NULL,
     history_id    bigint                     NOT NULL,
     deleted       tinyint(1) /*DEFAULT 0*/   NOT NULL,
@@ -185,16 +184,17 @@ CREATE TABLE email.envelope_recipient
     updated_at    datetime,
     un_deleted_at datetime,
     PRIMARY KEY (`id`),
-    FOREIGN KEY (envelope_id) REFERENCES email.envelope (id),
+    FULLTEXT KEY type (type),
+    FOREIGN KEY (email_id) REFERENCES email.email (id),
     FOREIGN KEY (recipient_id) REFERENCES email.recipient (id)
 );
 
 CREATE TABLE email.email_label
 (
-    id         binary(16) NOT NULL,
-    owner      varchar(255)           NOT NULL,
-    email_id   binary(16)             NOT NULL,
-    label_id   binary(16)             NOT NULL,
+    id            binary(16)                 NOT NULL,
+    owner         varchar(255)               NOT NULL,
+    email_id      binary(16)                 NOT NULL,
+    label_id      binary(16)                 NOT NULL,
     timeline_id   bigint                     NOT NULL,
     history_id    bigint                     NOT NULL,
     deleted       tinyint(1) /*DEFAULT 0*/   NOT NULL,
@@ -204,5 +204,40 @@ CREATE TABLE email.email_label
     PRIMARY KEY (`id`),
     FOREIGN KEY (email_id) REFERENCES email.email (id),
     FOREIGN KEY (label_id) REFERENCES email.label (id)
+);
+
+CREATE TABLE email.filter_label
+(
+    id            binary(16)                 NOT NULL,
+    owner         varchar(255)               NOT NULL,
+    filter_id     binary(16)                 NOT NULL,
+    label_id      binary(16)                 NOT NULL,
+    timeline_id   bigint                     NOT NULL,
+    history_id    bigint                     NOT NULL,
+    deleted       tinyint(1) /*DEFAULT 0*/   NOT NULL,
+    created_at    datetime /*DEFAULT NOW()*/ NOT NULL,
+    updated_at    datetime,
+    un_deleted_at datetime,
+    PRIMARY KEY (`id`),
+    FOREIGN KEY (filter_id) REFERENCES email.filter (id),
+    FOREIGN KEY (label_id) REFERENCES email.label (id)
+);
+
+CREATE TABLE email.filter_recipient
+(
+    id            binary(16)                 NOT NULL,
+    owner         varchar(255)               NOT NULL,
+    filter_id     binary(16)                 NOT NULL,
+    recipient_id  binary(16)                 NOT NULL,
+    type          varchar(255)               NOT NULL,
+    timeline_id   bigint                     NOT NULL,
+    history_id    bigint                     NOT NULL,
+    deleted       tinyint(1) /*DEFAULT 0*/   NOT NULL,
+    created_at    datetime /*DEFAULT NOW()*/ NOT NULL,
+    updated_at    datetime,
+    un_deleted_at datetime,
+    PRIMARY KEY (`id`),
+    FOREIGN KEY (filter_id) REFERENCES email.filter (id),
+    FOREIGN KEY (recipient_id) REFERENCES email.recipient (id)
 );
 
