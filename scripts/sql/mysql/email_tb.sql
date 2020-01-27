@@ -96,26 +96,6 @@ CREATE TABLE email.email
   DEFAULT CHARSET = utf8mb4
   COLLATE = utf8mb4_unicode_ci;
 
-CREATE TABLE email.label
-(
-    id            binary(16)                 NOT NULL,
-    owner         varchar(255)               NOT NULL,
-    type          varchar(255)               NOT NULL,
-    name          varchar(255)               NOT NULL,
-    timeline_id   bigint                     NOT NULL,
-    history_id    bigint                     NOT NULL,
-    deleted       tinyint(1) /*DEFAULT 0*/   NOT NULL,
-    created_at    datetime /*DEFAULT NOW()*/ NOT NULL,
-    updated_at    datetime,
-    un_deleted_at datetime,
-    PRIMARY KEY (`id`),
-    FULLTEXT KEY type (type),
-    FULLTEXT KEY name (name),
-    FULLTEXT KEY label (type, name)
-) ENGINE = InnoDB
-  DEFAULT CHARSET = utf8mb4
-  COLLATE = utf8mb4_unicode_ci;
-
 CREATE TABLE email.recipient
 (
     id            binary(16)                 NOT NULL,
@@ -132,6 +112,26 @@ CREATE TABLE email.recipient
     FULLTEXT KEY email_address (email_address),
     FULLTEXT KEY display_name (display_name),
     FULLTEXT KEY recipient (email_address, display_name)
+) ENGINE = InnoDB
+  DEFAULT CHARSET = utf8mb4
+  COLLATE = utf8mb4_unicode_ci;
+
+CREATE TABLE email.label
+(
+    id            binary(16)                 NOT NULL,
+    owner         varchar(255)               NOT NULL,
+    type          varchar(255)               NOT NULL,
+    name          varchar(255)               NOT NULL,
+    timeline_id   bigint                     NOT NULL,
+    history_id    bigint                     NOT NULL,
+    deleted       tinyint(1) /*DEFAULT 0*/   NOT NULL,
+    created_at    datetime /*DEFAULT NOW()*/ NOT NULL,
+    updated_at    datetime,
+    un_deleted_at datetime,
+    PRIMARY KEY (`id`),
+    FULLTEXT KEY type (type),
+    FULLTEXT KEY name (name),
+    FULLTEXT KEY label (type, name)
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8mb4
   COLLATE = utf8mb4_unicode_ci;
