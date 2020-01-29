@@ -1,3 +1,5 @@
+DROP TABLE IF EXISTS timeline_seq;
+DROP TABLE IF EXISTS history_seq;
 DROP TABLE IF EXISTS message;
 DROP TABLE IF EXISTS filter;
 DROP TABLE IF EXISTS label;
@@ -5,6 +7,22 @@ DROP TABLE IF EXISTS recipient;
 DROP TABLE IF EXISTS fts_message;
 DROP TABLE IF EXISTS fts_attachment;
 VACUUM;
+
+CREATE TABLE timeline_seq
+(
+    num integer(8) NOT NULL
+);
+
+INSERT INTO timeline_seq (num)
+VALUES (0);
+
+CREATE TABLE history_seq
+(
+    num integer(8) NOT NULL
+);
+
+INSERT INTO history_seq (num)
+VALUES (0);
 
 CREATE TABLE message
 (
@@ -28,12 +46,10 @@ CREATE TABLE message
     sent_at     integer(4),
     received_at integer(4),
     snoozed_at  integer(4),
-    timeline_id integer(8)             NOT NULL,
-    history_id  integer(8)             NOT NULL,
-    -- get Now/UTC, convert to local, convert to string/Unix Time, store as Integer(4)
-    created_at  integer(4)                      DEFAULT (strftime('%s', DateTime('Now', 'localtime'))),
-    updated_at  integer(4),
-    deleted_at  integer(4)
+    timeline_id integer(8)             NOT NULL DEFAULT 0,
+    history_id  integer(8)             NOT NULL DEFAULT 0,
+    last_stmt   integer(2)             NOT NULL DEFAULT 0,
+    timestamp   integer(4)                      DEFAULT (strftime('%s', DateTime('Now', 'localtime')))
 );
 
 CREATE TABLE filter
@@ -44,10 +60,8 @@ CREATE TABLE filter
     criteria    varchar(4096),
     timeline_id integer(8)             NOT NULL,
     history_id  integer(8)             NOT NULL,
-    -- get Now/UTC, convert to local, convert to string/Unix Time, store as Integer(4)
-    created_at  integer(4) DEFAULT (strftime('%s', DateTime('Now', 'localtime'))),
-    updated_at  integer(4),
-    deleted_at  integer(4)
+    last_stmt   integer(2)             NOT NULL DEFAULT 0,
+    timestamp   integer(4)                      DEFAULT (strftime('%s', DateTime('Now', 'localtime')))
 );
 
 CREATE TABLE label
@@ -58,10 +72,8 @@ CREATE TABLE label
     name        varchar(255)           NOT NULL,
     timeline_id integer(8)             NOT NULL,
     history_id  integer(8)             NOT NULL,
-    -- get Now/UTC, convert to local, convert to string/Unix Time, store as Integer(4)
-    created_at  integer(4) DEFAULT (strftime('%s', DateTime('Now', 'localtime'))),
-    updated_at  integer(4),
-    deleted_at  integer(4)
+    last_stmt   integer(2)             NOT NULL DEFAULT 0,
+    timestamp   integer(4)                      DEFAULT (strftime('%s', DateTime('Now', 'localtime')))
 );
 
 CREATE TABLE recipient
@@ -72,10 +84,8 @@ CREATE TABLE recipient
     display_name  varchar(255),
     timeline_id   integer(8)             NOT NULL,
     history_id    integer(8)             NOT NULL,
-    -- get Now/UTC, convert to local, convert to string/Unix Time, store as Integer(4)
-    created_at    integer(4) DEFAULT (strftime('%s', DateTime('Now', 'localtime'))),
-    updated_at    integer(4),
-    deleted_at    integer(4)
+    last_stmt     integer(2)             NOT NULL DEFAULT 0,
+    timestamp     integer(4)                      DEFAULT (strftime('%s', DateTime('Now', 'localtime')))
 );
 
 CREATE VIRTUAL TABLE fts_message USING fts5
@@ -99,26 +109,3 @@ CREATE VIRTUAL TABLE fts_attachment USING fts5
     attachment
 );
 
-CREATE Trigger message_updated
-    AFTER UPDATE
-    ON message
-BEGIN
-    UPDATE message
-        -- same as created_at
-    SET updated_at = strftime('%s', DateTime('Now', 'localtime'))
-    WHERE id = new.id;
-END;
-
--- convert Unix-Times to DateTimes so not every single query needs to do so
-CREATE VIEW IF NOT EXISTS message_vw AS
-SELECT id,
-       subject,
-       snippet,
-       mimetype,
-       body_uri,
-       -- convert Integer(4) (treating it as Unix-Time)
-       DateTime(created_at, 'unixepoch') AS created_at,
-       -- to YYYY-MM-DD HH:MM:SS
-       DateTime(updated_at, 'unixepoch') AS updated_at,
-       DateTime(deleted_at, 'unixepoch') AS deleted_at
-FROM message;
