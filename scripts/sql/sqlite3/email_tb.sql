@@ -34,11 +34,11 @@ CREATE TABLE message
     thread_id   binary(16)             NOT NULL,
     fwd         integer(2)             NOT NULL DEFAULT 0,
     label_ids   text,                            --json label id
-    "from"      text                   NOT NULL, --json recipient
-    "to"        text,                            --json recipient
-    "cc"        text,                            --json recipient
-    "bcc"       text,                            --json recipient
-    "group"     text,                            --json recipient
+    "from"      text                   NOT NULL, --json recipients
+    "to"        text,                            --json recipients
+    "cc"        text,                            --json recipients
+    "bcc"       text,                            --json recipients
+    "group"     text,                            --json recipients
     tags        text,                            --json key/value
     attachments text,                            --json mimetype, filename, hash
     mimetype    varchar(255),
@@ -61,19 +61,7 @@ CREATE TABLE filter
     name          varchar(255)           NOT NULL,
     criteria      varchar(4096),
     label_ids     text, --json label id
-    recipient_ids text, --json recipient id
-    timeline_id   integer(8)             NOT NULL DEFAULT 0,
-    history_id    integer(8)             NOT NULL DEFAULT 0,
-    last_stmt     integer(2)             NOT NULL DEFAULT 0,
-    timestamp     integer(4)                      DEFAULT (strftime('%s', DateTime('Now', 'localtime')))
-);
-
-CREATE TABLE recipient
-(
-    id            binary(16) PRIMARY KEY NOT NULL,
-    owner         varchar(255)           NOT NULL,
-    email_address varchar(255)           NOT NULL,
-    display_name  varchar(255),
+    recipients    text, --json recipient
     timeline_id   integer(8)             NOT NULL DEFAULT 0,
     history_id    integer(8)             NOT NULL DEFAULT 0,
     last_stmt     integer(2)             NOT NULL DEFAULT 0,
@@ -103,12 +91,14 @@ CREATE VIRTUAL TABLE fts_message USING fts5
 
 CREATE VIRTUAL TABLE fts_message_recipient USING fts5
 (
+    owner UNINDEXED,
     message_id UNINDEXED,
     recipient
 );
 
 CREATE VIRTUAL TABLE fts_message_attachment USING fts5
 (
+    owner UNINDEXED,
     message_id UNINDEXED,
     filename,
     attachment
@@ -116,6 +106,7 @@ CREATE VIRTUAL TABLE fts_message_attachment USING fts5
 
 CREATE VIRTUAL TABLE fts_message_label USING fts5
 (
+    owner UNINDEXED,
     message_id UNINDEXED,
     label_id UNINDEXED,
     label
@@ -132,11 +123,6 @@ CREATE INDEX idx_filter_owner ON filter (owner);
 CREATE INDEX idx_filter_timeline_id ON filter (timeline_id);
 CREATE INDEX idx_filter_history_id ON filter (history_id);
 CREATE INDEX idx_filter_last_stmt ON filter (last_stmt);
-
-CREATE INDEX idx_recipient_owner ON recipient (owner);
-CREATE INDEX idx_recipient_timeline_id ON recipient (timeline_id);
-CREATE INDEX idx_recipient_history_id ON recipient (history_id);
-CREATE INDEX idx_recipient_last_stmt ON recipient (last_stmt);
 
 CREATE INDEX idx_label_owner ON label (owner);
 CREATE INDEX idx_label_timeline_id ON label (timeline_id);
