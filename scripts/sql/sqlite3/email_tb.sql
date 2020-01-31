@@ -56,32 +56,42 @@ CREATE TABLE message
 
 CREATE TABLE filter
 (
-    id            binary(16) PRIMARY KEY NOT NULL,
-    owner         varchar(255)           NOT NULL,
-    name          varchar(255)           NOT NULL,
-    criteria      varchar(4096),
-    label_ids     text, --json label id
-    recipients    text, --json recipient
-    timeline_id   integer(8)             NOT NULL DEFAULT 0,
-    history_id    integer(8)             NOT NULL DEFAULT 0,
-    last_stmt     integer(2)             NOT NULL DEFAULT 0,
-    timestamp     integer(4)                      DEFAULT (strftime('%s', DateTime('Now', 'localtime')))
-);
-
-CREATE TABLE label
-(
     id          binary(16) PRIMARY KEY NOT NULL,
     owner       varchar(255)           NOT NULL,
-    type        integer(2)             NOT NULL DEFAULT 1, --0-system, 1--custom
-    label       varchar(255)           NOT NULL,
+    name        varchar(255)           NOT NULL,
+    criteria    varchar(4096),
+    label_ids   text, --json label id
+    recipients  text, --json recipient
     timeline_id integer(8)             NOT NULL DEFAULT 0,
     history_id  integer(8)             NOT NULL DEFAULT 0,
     last_stmt   integer(2)             NOT NULL DEFAULT 0,
     timestamp   integer(4)                      DEFAULT (strftime('%s', DateTime('Now', 'localtime')))
 );
 
+--roles(system folder): 0-inbox, 1-snoozed, 2-sent, 3-drafts, 4...99-reserved
+--roles(system label): 100-done, 101-archived, 102-starred, 103-important, 104-chats, 105-spam, 106-unread, 107-999-reserved
+--roles(custom label): 1000...
+CREATE TABLE label
+(
+    id              binary(16) PRIMARY KEY NOT NULL,
+    owner           varchar(255)           NOT NULL,
+    parent_id       binary(16),
+    role            integer(4)             NOT NULL DEFAULT 1000,
+    name            varchar(255)           NOT NULL,
+    messages_total  integer(4)             NOT NULL DEFAULT 0,
+    messages_unread integer(4)             NOT NULL DEFAULT 0,
+    threads_total   integer(4)             NOT NULL DEFAULT 0,
+    threads_unread  integer(4)             NOT NULL DEFAULT 0,
+    timeline_id     integer(8)             NOT NULL DEFAULT 0,
+    history_id      integer(8)             NOT NULL DEFAULT 0,
+    last_stmt       integer(2)             NOT NULL DEFAULT 0,
+    timestamp       integer(4)                      DEFAULT (strftime('%s', DateTime('Now', 'localtime'))),
+    FOREIGN KEY (parent_id) REFERENCES label (id) ON DELETE CASCADE
+);
+
 CREATE VIRTUAL TABLE fts_message USING fts5
 (
+    owner UNINDEXED,
     message_id UNINDEXED,
     subject,
     message,

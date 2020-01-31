@@ -88,6 +88,19 @@ BEGIN
         last_stmt  = new.last_stmt,
         timestamp  = strftime('%s', DateTime('Now', 'localtime'))
     WHERE id = old.id;
+
+    DELETE
+    FROM fts_message_recipient
+    WHERE owner = old.owner
+      AND message_id = old.id;
+    DELETE
+    FROM fts_message_attachment
+    WHERE owner = old.owner
+      AND message_id = old.id;
+    DELETE
+    FROM fts_message_label
+    WHERE owner = old.owner
+      AND message_id = old.id;
 END;
 
 ------------------------------filter------------------------------
@@ -182,14 +195,14 @@ BEGIN
     WHERE id = new.id;
 
     INSERT INTO fts_message_label (owner, message_id, label_id, label)
-    VALUES (new.owner, NULL, new.id, new.label);
+    VALUES (new.owner, NULL, new.id, new.name);
 END;
 
 CREATE TRIGGER IF NOT EXISTS label_before_update
     BEFORE UPDATE OF
         id,
         owner,
-        type--,
+        role--,
 --timeline_id,
 --history_id,
 --last_stmt,
@@ -200,9 +213,25 @@ BEGIN
     SELECT RAISE(ABORT, 'Update not allowed');
 END;
 
-CREATE TRIGGER IF NOT EXISTS label_after_update
+CREATE TRIGGER IF NOT EXISTS label_after_update_parent_id
     AFTER UPDATE OF
-        label
+        parent_id
+    ON label
+    FOR EACH ROW
+BEGIN
+    UPDATE timeline_seq SET num = (num + 1);
+    UPDATE history_seq SET num = (num + 1);
+    UPDATE label
+    SET timeline_id = (SELECT num FROM timeline_seq),
+        history_id  = (SELECT num FROM history_seq),
+        last_stmt   = 1,
+        timestamp   = strftime('%s', DateTime('Now', 'localtime'))
+    WHERE id = old.id;
+END;
+
+CREATE TRIGGER IF NOT EXISTS label_after_update_name
+    AFTER UPDATE OF
+        name
     ON label
     FOR EACH ROW
 BEGIN
@@ -216,8 +245,9 @@ BEGIN
     WHERE id = old.id;
 
     UPDATE fts_message_label
-    SET label = new.label
-    WHERE owner = old.owner AND label_id = old.id;
+    SET label = new.name
+    WHERE owner = old.owner
+      AND label_id = old.id;
 END;
 
 -- Mark for delete
@@ -246,6 +276,8 @@ BEGIN
         timestamp  = strftime('%s', DateTime('Now', 'localtime'))
     WHERE id = old.id;
 
-    DELETE FROM fts_message_label
-    WHERE owner = old.owner AND label_id = old.id;
+    DELETE
+    FROM fts_message_label
+    WHERE owner = old.owner
+      AND label_id = old.id;
 END;
