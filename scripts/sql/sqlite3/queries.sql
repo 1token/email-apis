@@ -1,7 +1,3 @@
-DROP VIEW IF EXISTS message_vw;
-
--- convert Unix-Times to DateTimes so not every single query needs to do so
-CREATE VIEW IF NOT EXISTS message_vw AS
 SELECT m.id,
        m.owner,
        --(SELECT json_group_array(json_object('id', cast(l.id AS INTEGER), 'name', l.name))
@@ -20,8 +16,9 @@ SELECT m.id,
        -- convert Integer(4) (treating it as Unix-Time)
        -- to YYYY-MM-DD HH:MM:SS
        --DateTime(timestamp, 'unixepoch') AS timestamp
-FROM message m
+FROM message m, json_each(m.label_ids) lbl
 --WHERE m.owner = 'john.doe@foo.org'
+WHERE cast(lbl.value AS BLOB) = cast(3143 AS BLOB)
 ORDER BY timeline_id
 ;
 
