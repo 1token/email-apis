@@ -3,9 +3,11 @@ DROP TABLE IF EXISTS history_seq;
 DROP TABLE IF EXISTS message;
 DROP TABLE IF EXISTS filter;
 DROP TABLE IF EXISTS label;
-DROP TABLE IF EXISTS recipient;
 DROP TABLE IF EXISTS fts_message;
-DROP TABLE IF EXISTS fts_message_recipient;
+DROP TABLE IF EXISTS fts_message_to;
+DROP TABLE IF EXISTS fts_message_cc;
+DROP TABLE IF EXISTS fts_message_bcc;
+DROP TABLE IF EXISTS fts_message_group;
 DROP TABLE IF EXISTS fts_message_attachment;
 DROP TABLE IF EXISTS fts_message_label;
 VACUUM;
@@ -30,8 +32,9 @@ CREATE TABLE message
 (
     id          binary(16) PRIMARY KEY NOT NULL,
     owner       varchar(255)           NOT NULL,
-    parent_id   binary(16),
-    thread_id   binary(16)             NOT NULL,
+    message_uid binary(16)             NOT NULL,
+    parent_uid  binary(16),
+    thread_uid  binary(16)             NOT NULL,
     fwd         integer(2)             NOT NULL DEFAULT 0,
     label_ids   text,                            --json label id
     "from"      text                   NOT NULL, --json recipients
@@ -99,11 +102,32 @@ CREATE VIRTUAL TABLE fts_message USING fts5
     tag
 );
 
-CREATE VIRTUAL TABLE fts_message_recipient USING fts5
+CREATE VIRTUAL TABLE fts_message_to USING fts5
 (
     owner UNINDEXED,
     message_id UNINDEXED,
-    recipient
+    "to"
+);
+
+CREATE VIRTUAL TABLE fts_message_cc USING fts5
+(
+    owner UNINDEXED,
+    message_id UNINDEXED,
+    "cc"
+);
+
+CREATE VIRTUAL TABLE fts_message_bcc USING fts5
+(
+    owner UNINDEXED,
+    message_id UNINDEXED,
+    "bcc"
+);
+
+CREATE VIRTUAL TABLE fts_message_group USING fts5
+(
+    owner UNINDEXED,
+    message_id UNINDEXED,
+    "group"
 );
 
 CREATE VIRTUAL TABLE fts_message_attachment USING fts5

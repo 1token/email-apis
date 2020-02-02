@@ -20,39 +20,33 @@ BEGIN
             LEFT JOIN label ON cast(label.id AS BLOB) = cast(value AS BLOB)
     WHERE label.owner = new.owner;
 
-    /*INSERT INTO fts_message_label (owner, message_id, label_id, label)
-    SELECT new.owner, new.id, cast(t2.value AS BLOB), 'test'
-    FROM message AS t1
-             JOIN json_each((SELECT "label_ids" FROM message WHERE id = t1.id)) AS t2
-    WHERE t1.id = new.id AND owner = t1.owner;*/
+    INSERT INTO fts_message_to (owner, message_id, "to")
+    SELECT new.owner, new.id, json_extract(value, '$.display_name') || ' ' || json_extract(value, '$.email_address') FROM
+        json_each(new."to");
+
+    INSERT INTO fts_message_cc (owner, message_id, "cc")
+    SELECT new.owner, new.id, json_extract(value, '$.display_name') || ' ' || json_extract(value, '$.email_address') FROM
+        json_each(new."cc");
+
+    INSERT INTO fts_message_bcc (owner, message_id, "bcc")
+    SELECT new.owner, new.id, json_extract(value, '$.display_name') || ' ' || json_extract(value, '$.email_address') FROM
+        json_each(new."bcc");
+
+    INSERT INTO fts_message_group (owner, message_id, "group")
+    SELECT new.owner, new.id, json_extract(value, '$.display_name') || ' ' || json_extract(value, '$.email_address') FROM
+        json_each(new."group");
 END;
 
-/*SELECT 'aaa', owner, value, label.name FROM
-json_each('[3143,3134]')
-LEFT JOIN label ON cast(label.id AS BLOB) = cast(value AS BLOB);*/
-
-/*
-     UPDATE fts_message_label
-    SET message_id = new.id
-    WHERE cast(label_id AS BLOB) IN
-          (SELECT cast(t2.value AS BLOB) AS label_id
-           FROM message AS t1
-                    JOIN json_each((SELECT "label_ids" FROM message WHERE id = t1.id)) AS t2
-              WHERE t1.id = new.id AND owner = t1.owner);
-*/
-
-/*SELECT * FROM fts_message_label
-WHERE cast(label_id AS BLOB) IN
-(SELECT cast(t2.value AS BLOB)
-FROM message AS t1
-         JOIN json_each((SELECT "label_ids" FROM message WHERE id = t1.id)) AS t2);*/
+/*SELECT json_extract(value, '$.display_name') || ' ' || json_extract(value, '$.email_address') FROM
+    json_each('[{"email_address":"jane.doe@foo.org","display_name":"Jane Doe"},{"email_address":"bruce.wayne@foo.org","display_name":"Bruce Wayne"}]');*/
 
 CREATE TRIGGER IF NOT EXISTS message_before_update
     BEFORE UPDATE OF
         id,
         owner,
-        parent_id,
-        thread_id,
+        message_uid,
+        parent_uid,
+        thread_uid,
         fwd,
         "from",
         sent_at,
@@ -68,13 +62,42 @@ BEGIN
     SELECT RAISE(ABORT, 'Update not allowed');
 END;
 
-CREATE TRIGGER IF NOT EXISTS message_after_update
-    AFTER UPDATE OF
-        subject,
+CREATE TRIGGER IF NOT EXISTS message_before_update_sent
+    BEFORE UPDATE OF
+        id,
+        owner,
+        message_uid,
+        parent_uid,
+        thread_uid,
+        fwd,
+        "from",
         "to",
         "cc",
         "bcc",
         "group",
+        tags,
+        attachments,
+        mimetype,
+        subject,
+        snippet,
+        body_uri,
+        sent_at,
+        received_at,
+        snoozed_at--,
+--timeline_id,
+--history_id,
+--last_stmt,
+--timestamp
+    ON message
+    FOR EACH ROW
+    WHEN old.sent_at IS NOT NULL
+BEGIN
+    SELECT RAISE(ABORT, 'Update for sent messages not allowed');
+END;
+
+CREATE TRIGGER IF NOT EXISTS message_after_update
+    AFTER UPDATE OF
+        subject,
         tags,
         attachments,
         mimetype,
@@ -120,6 +143,110 @@ BEGIN
     WHERE label.owner = new.owner;
 END;
 
+CREATE TRIGGER IF NOT EXISTS message_after_update_to
+    AFTER UPDATE OF
+        "to"
+    ON message
+    FOR EACH ROW
+    WHEN new."to" <> old."to"
+BEGIN
+    UPDATE timeline_seq SET num = (num + 1);
+    UPDATE history_seq SET num = (num + 1);
+    UPDATE message
+    SET timeline_id = (SELECT num FROM timeline_seq),
+        history_id  = (SELECT num FROM history_seq),
+        last_stmt   = 1,
+        timestamp   = strftime('%s', DateTime('Now', 'localtime'))
+    WHERE id = old.id;
+
+    DELETE
+    FROM fts_message_to
+    WHERE owner = old.owner
+      AND message_id = old.id;
+
+    INSERT INTO fts_message_to (owner, message_id, "to")
+    SELECT new.owner, new.id, json_extract(value, '$.display_name') || ' ' || json_extract(value, '$.email_address') FROM
+        json_each(new."to");
+END;
+
+CREATE TRIGGER IF NOT EXISTS message_after_update_cc
+    AFTER UPDATE OF
+        "cc"
+    ON message
+    FOR EACH ROW
+    WHEN new."cc" <> old."cc"
+BEGIN
+    UPDATE timeline_seq SET num = (num + 1);
+    UPDATE history_seq SET num = (num + 1);
+    UPDATE message
+    SET timeline_id = (SELECT num FROM timeline_seq),
+        history_id  = (SELECT num FROM history_seq),
+        last_stmt   = 1,
+        timestamp   = strftime('%s', DateTime('Now', 'localtime'))
+    WHERE id = old.id;
+
+    DELETE
+    FROM fts_message_cc
+    WHERE owner = old.owner
+      AND message_id = old.id;
+
+    INSERT INTO fts_message_cc (owner, message_id, "cc")
+    SELECT new.owner, new.id, json_extract(value, '$.display_name') || ' ' || json_extract(value, '$.email_address') FROM
+        json_each(new."cc");
+END;
+
+CREATE TRIGGER IF NOT EXISTS bcc
+    AFTER UPDATE OF
+        "bcc"
+    ON message
+    FOR EACH ROW
+    WHEN new."bcc" <> old."bcc"
+BEGIN
+    UPDATE timeline_seq SET num = (num + 1);
+    UPDATE history_seq SET num = (num + 1);
+    UPDATE message
+    SET timeline_id = (SELECT num FROM timeline_seq),
+        history_id  = (SELECT num FROM history_seq),
+        last_stmt   = 1,
+        timestamp   = strftime('%s', DateTime('Now', 'localtime'))
+    WHERE id = old.id;
+
+    DELETE
+    FROM fts_message_bcc
+    WHERE owner = old.owner
+      AND message_id = old.id;
+
+    INSERT INTO fts_message_bcc (owner, message_id, "bcc")
+    SELECT new.owner, new.id, json_extract(value, '$.display_name') || ' ' || json_extract(value, '$.email_address') FROM
+        json_each(new."bcc");
+END;
+
+CREATE TRIGGER IF NOT EXISTS message_after_update_group
+    AFTER UPDATE OF
+        "group"
+    ON message
+    FOR EACH ROW
+    WHEN new."group" <> old."group"
+BEGIN
+    UPDATE timeline_seq SET num = (num + 1);
+    UPDATE history_seq SET num = (num + 1);
+    UPDATE message
+    SET timeline_id = (SELECT num FROM timeline_seq),
+        history_id  = (SELECT num FROM history_seq),
+        last_stmt   = 1,
+        timestamp   = strftime('%s', DateTime('Now', 'localtime'))
+    WHERE id = old.id;
+
+    DELETE
+    FROM fts_message_group
+    WHERE owner = old.owner
+      AND message_id = old.id;
+
+    INSERT INTO fts_message_group (owner, message_id, "group")
+    SELECT new.owner, new.id, json_extract(value, '$.display_name') || ' ' || json_extract(value, '$.email_address') FROM
+        json_each(new."group");
+END;
+
 -- Mark for delete
 CREATE TRIGGER IF NOT EXISTS message_before_update_delete
     BEFORE UPDATE OF
@@ -147,7 +274,19 @@ BEGIN
     WHERE id = old.id;
 
     DELETE
-    FROM fts_message_recipient
+    FROM fts_message_to
+    WHERE owner = old.owner
+      AND message_id = old.id;
+    DELETE
+    FROM fts_message_cc
+    WHERE owner = old.owner
+      AND message_id = old.id;
+    DELETE
+    FROM fts_message_bcc
+    WHERE owner = old.owner
+      AND message_id = old.id;
+    DELETE
+    FROM fts_message_group
     WHERE owner = old.owner
       AND message_id = old.id;
     DELETE
