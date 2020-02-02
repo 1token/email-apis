@@ -29,7 +29,7 @@ ORDER BY m.timeline_id DESC
 --LIMIT 2
 ;
 
---fast and labels ordered by label name
+--fast, labels ordered by label name
 --EXPLAIN QUERY PLAN
 SELECT DISTINCT m.id,
                 m.owner,
@@ -90,7 +90,7 @@ ORDER BY m.timeline_id DESC
 --LIMIT 2
 ;
 
---labels ordered by position in label_ids
+--fast, labels ordered by position in label_ids
 --EXPLAIN QUERY PLAN
 SELECT DISTINCT m.id,
                 m.owner,

@@ -99,6 +99,7 @@ CREATE TRIGGER IF NOT EXISTS message_after_update_label_ids
         label_ids
     ON message
     FOR EACH ROW
+    WHEN new.label_ids <> old.label_ids
 BEGIN
     UPDATE history_seq SET num = (num + 1);
     UPDATE message
@@ -106,6 +107,17 @@ BEGIN
         last_stmt   = 1,
         timestamp   = strftime('%s', DateTime('Now', 'localtime'))
     WHERE id = old.id;
+
+    DELETE
+    FROM fts_message_label
+    WHERE owner = old.owner
+      AND message_id = old.id;
+
+    INSERT INTO fts_message_label (owner, message_id, label_id, label)
+    SELECT new.owner, new.id, cast(value AS BLOB), label.name FROM
+        json_each(new.label_ids)
+            LEFT JOIN label ON cast(label.id AS BLOB) = cast(value AS BLOB)
+    WHERE label.owner = new.owner;
 END;
 
 -- Mark for delete
