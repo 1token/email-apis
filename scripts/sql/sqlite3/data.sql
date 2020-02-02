@@ -113,7 +113,7 @@ VALUES (cast(1001 AS BLOB), 'john.doe@foo.org', null, cast(101 AS BLOB), '[3134,
 ---sent jane.doe@foo.org
 INSERT INTO message (id, owner, parent_id, thread_id, label_ids, "from", "to", cc, bcc, "group", tags, attachments,
                      mimetype, subject, snippet, body_uri, sent_at, received_at, snoozed_at)
-VALUES (cast(1002 AS BLOB), 'jane.doe@foo.org', null, cast(201 AS BLOB), '[3133]',
+VALUES (cast(1002 AS BLOB), 'jane.doe@foo.org', null, cast(201 AS BLOB), '[3233]',
         '{"email_address":"jane.doe@foo.org","display_name":"Jane Doe"}',
         '[{"email_address":"john.doe@foo.org","display_name":"John Doe"}]',
         null, null, null, null, null, 'text/plain', 'Test1', 'Hello World...', null, null, null, null);
@@ -134,21 +134,21 @@ VALUES (cast(1004 AS BLOB), 'john.doe@foo.org', null, cast(102 AS BLOB), '[3134]
 --sent john.doe@foo.org
 INSERT INTO message (id, owner, parent_id, thread_id, label_ids, "from", "to", cc, bcc, "group", tags, attachments,
                      mimetype, subject, snippet, body_uri, sent_at, received_at, snoozed_at)
-VALUES (cast(1005 AS BLOB), 'john.doe@foo.org', null, cast(103 AS BLOB), '[3133,3143]',
+VALUES (cast(1005 AS BLOB), 'john.doe@foo.org', null, cast(103 AS BLOB), '[3133,3143,3142]',
         '{"email_address":"john.doe@foo.org","display_name":"John Doe"}',
         '[{"email_address":"jane.doe@foo.org","display_name":"Jane Doe"},{"email_address":"bruce.wayne@foo.org","display_name":"Bruce Wayne"}]',
         null, null, null, null, null, 'text/plain', 'Request', 'Issue 318...', null, null, null, null);
 --inbox jane.doe@foo.org
 INSERT INTO message (id, owner, parent_id, thread_id, label_ids, "from", "to", cc, bcc, "group", tags, attachments,
                      mimetype, subject, snippet, body_uri, sent_at, received_at, snoozed_at)
-VALUES (cast(1006 AS BLOB), 'jane.doe@foo.org', null, cast(103 AS BLOB), '[3131]',
+VALUES (cast(1006 AS BLOB), 'jane.doe@foo.org', null, cast(103 AS BLOB), '[3231]',
         '{"email_address":"john.doe@foo.org","display_name":"John Doe"}',
         '[{"email_address":"jane.doe@foo.org","display_name":"Jane Doe"},{"email_address":"bruce.wayne@foo.org","display_name":"Bruce Wayne"}]',
         null, null, null, null, null, 'text/plain', 'Request', 'Issue 318...', null, null, null, null);
 --inbox bruce.wayne@foo.org
 INSERT INTO message (id, owner, parent_id, thread_id, label_ids, "from", "to", cc, bcc, "group", tags, attachments,
                      mimetype, subject, snippet, body_uri, sent_at, received_at, snoozed_at)
-VALUES (cast(1007 AS BLOB), 'bruce.wayne@foo.org', null, cast(103 AS BLOB), '[3131]',
+VALUES (cast(1007 AS BLOB), 'bruce.wayne@foo.org', null, cast(103 AS BLOB), '[3331]',
         '{"email_address":"john.doe@foo.org","display_name":"John Doe"}',
         '[{"email_address":"jane.doe@foo.org","display_name":"Jane Doe"},{"email_address":"bruce.wayne@foo.org","display_name":"Bruce Wayne"}]',
         null, null, null, null, null, 'text/plain', 'Request', 'Issue 318...', null, null, null, null);

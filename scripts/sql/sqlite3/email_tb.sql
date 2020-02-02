@@ -123,6 +123,7 @@ CREATE VIRTUAL TABLE fts_message_label USING fts5
 );
 
 CREATE INDEX idx_message_owner ON message (owner);
+--CREATE INDEX idx_message_label_ids ON message (label_ids COLLATE NOCASE);
 CREATE INDEX idx_message_sent_at ON message (sent_at);
 CREATE INDEX idx_message_received_at ON message (received_at);
 CREATE INDEX idx_message_timeline_id ON message (timeline_id);
@@ -135,6 +136,7 @@ CREATE INDEX idx_filter_history_id ON filter (history_id);
 CREATE INDEX idx_filter_last_stmt ON filter (last_stmt);
 
 CREATE INDEX idx_label_owner ON label (owner);
+CREATE INDEX idx_label_name ON label (name);
 CREATE INDEX idx_label_timeline_id ON label (timeline_id);
 CREATE INDEX idx_label_history_id ON label (history_id);
 CREATE INDEX idx_label_last_stmt ON label (last_stmt);

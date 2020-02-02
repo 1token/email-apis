@@ -1,30 +1,164 @@
-SELECT m.id,
+--the fastest
+--EXPLAIN QUERY PLAN
+SELECT DISTINCT m.id,
        m.owner,
-       --(SELECT json_group_array(json_object('id', cast(l.id AS INTEGER), 'name', l.name))
-       -- FROM label AS l
-       --WHERE l.id = cast(3134 AS BLOB) OR l.id = cast(3143 AS BLOB)) AS labels,
-       (SELECT json_group_array(json_object('id', cast(l2.value AS INTEGER), 'name', lab.name)) FROM message m2, json_each(m2.label_ids) l2
-       LEFT JOIN label lab ON cast(l2.value AS BLOB) = cast(lab.id AS BLOB)
-       WHERE m2.id = m.id) AS labels,
+       (SELECT json_group_array(json_object('id', cast(lbl.label_id AS INTEGER), 'name', lbl.label))
+        FROM fts_message_label AS lbl
+        WHERE cast(m.id AS BLOB) = cast(lbl.message_id AS BLOB)
+        --AND lbl.owner = m.owner
+        --AND lbl.owner = 'john.doe@foo.org'
+           ) AS labels,
        subject,
        snippet,
        --mimetype,
        --body_uri,
        "from",
-       "to"--,
+       "to",
+       tags--,
        --timeline_id,
        -- convert Integer(4) (treating it as Unix-Time)
        -- to YYYY-MM-DD HH:MM:SS
        --DateTime(timestamp, 'unixepoch') AS timestamp
-FROM message m, json_each(m.label_ids) lbl
---WHERE m.owner = 'john.doe@foo.org'
-WHERE cast(lbl.value AS BLOB) = cast(3143 AS BLOB)
-ORDER BY timeline_id
+FROM message m INNER JOIN fts_message_label flbl
+                          ON m.id = flbl.message_id --AND
+                             --flbl.owner = 'john.doe@foo.org'
+WHERE m.owner = 'john.doe@foo.org' AND
+    (cast(flbl.label_id AS BLOB) = cast(3143 AS BLOB) OR cast(flbl.label_id AS BLOB) = cast(3133 AS BLOB)) AND
+        m.last_stmt < 2
+ORDER BY m.timeline_id DESC
+--LIMIT 2
 ;
 
-/*
-SELECT m.id, l.value, lab.name FROM message m, json_each(m.label_ids) l
-LEFT JOIN label lab ON cast(l.value AS BLOB) = cast(lab.id AS BLOB)
-WHERE m.id = cast(1001 AS BLOB);
+--fast and labels ordered by label name
+--EXPLAIN QUERY PLAN
+SELECT DISTINCT m.id,
+                m.owner,
+                (SELECT json_group_array(json_object('id', cast(lbl0.label_id AS INTEGER), 'name', lbl0.label))
+                 FROM (SELECT lbl.label_id, lbl.label FROM fts_message_label AS lbl
+                       WHERE cast(m.id AS BLOB) = cast(lbl.message_id AS BLOB)
+                             --AND lbl.owner = m.owner
+                             --AND lbl.owner = 'john.doe@foo.org'
+                       ORDER BY lbl.label
+                      ) AS lbl0) AS labels,
+                subject,
+                snippet
+FROM message m INNER JOIN fts_message_label flbl
+                          ON m.id = flbl.message_id --AND
+                             --flbl.owner = 'john.doe@foo.org'
+WHERE m.owner = 'john.doe@foo.org' AND
+    (cast(flbl.label_id AS BLOB) = cast(3143 AS BLOB) OR cast(flbl.label_id AS BLOB) = cast(3133 AS BLOB)) AND
+        m.last_stmt < 2
+ORDER BY m.timeline_id DESC
+--LIMIT 2
+;
 
-SELECT json_array(label_ids) FROM message;*/
+--labels ordered by label name
+--EXPLAIN QUERY PLAN
+SELECT DISTINCT m.id,
+                m.owner,
+                (SELECT json_group_array(json_object('id', cast(lbl0.label_id AS INTEGER), 'name', lbl0.label))
+                 FROM (SELECT lbl.label_id, lbl.label FROM fts_message_label AS lbl
+                 WHERE cast(m.id AS BLOB) = cast(lbl.message_id AS BLOB)
+                    --AND lbl.owner = m.owner
+                    --AND lbl.owner = 'john.doe@foo.org'
+                     ORDER BY lbl.label
+                ) AS lbl0) AS labels,
+                subject,
+                snippet,
+                --mimetype,
+                --body_uri,
+                "from",
+                "to",
+                tags--,
+                --timeline_id,
+                -- convert Integer(4) (treating it as Unix-Time)
+                -- to YYYY-MM-DD HH:MM:SS
+                --DateTime(timestamp, 'unixepoch') AS timestamp
+FROM message m,
+     json_each(m.label_ids) lbl2
+         INNER JOIN label ON
+                 cast(label.id AS BLOB) = cast(value AS BLOB) AND
+                 label.owner = 'john.doe@foo.org' AND
+             --label.owner = m.owner AND
+             --(label.id = cast(3143 AS BLOB) OR label.id = cast(3133 AS BLOB)) AND
+                 label.last_stmt < 2
+WHERE m.owner = 'john.doe@foo.org' AND
+    (cast(lbl2.value AS BLOB) = cast(3143 AS BLOB) OR cast(lbl2.value AS BLOB) = cast(3133 AS BLOB)) AND
+  --(m.label_ids LIKE '%3143%' OR m.label_ids LIKE '%3133%') AND
+        m.last_stmt < 2
+ORDER BY m.timeline_id DESC
+--LIMIT 2
+;
+
+--labels ordered by position in label_ids
+--EXPLAIN QUERY PLAN
+SELECT DISTINCT m.id,
+                m.owner,
+                (SELECT json_group_array(json_object('id', cast(value AS INTEGER), 'name', label.name))
+                 FROM json_each(m.label_ids)
+                          CROSS JOIN label ON --LEFT JOIN and CROSS JOIN preserves order by position in label_ids
+                             cast(label.id AS BLOB) = cast(value AS BLOB) AND
+                         --label.owner = m.owner AND
+                         --label.owner = 'john.doe@foo.org' AND
+                             label.last_stmt < 2
+                ) AS labels,
+                subject,
+                snippet,
+                --mimetype,
+                --body_uri,
+                "from",
+                "to",
+                tags--,
+                --timeline_id,
+                -- convert Integer(4) (treating it as Unix-Time)
+                -- to YYYY-MM-DD HH:MM:SS
+                --DateTime(timestamp, 'unixepoch') AS timestamp
+FROM message m INNER JOIN fts_message_label flbl
+                          ON m.id = flbl.message_id --AND
+                             --flbl.owner = 'john.doe@foo.org'
+WHERE m.owner = 'john.doe@foo.org' AND
+    (cast(flbl.label_id AS BLOB) = cast(3143 AS BLOB) OR cast(flbl.label_id AS BLOB) = cast(3133 AS BLOB)) AND
+        m.last_stmt < 2
+ORDER BY m.timeline_id DESC
+--LIMIT 2
+;
+
+--labels ordered by position in label_ids
+--EXPLAIN QUERY PLAN
+SELECT DISTINCT m.id,
+       m.owner,
+       (SELECT json_group_array(json_object('id', cast(value AS INTEGER), 'name', label.name))
+        FROM json_each(m.label_ids)
+                 CROSS JOIN label ON --LEFT JOIN and CROSS JOIN preserves order by position in label_ids
+            cast(label.id AS BLOB) = cast(value AS BLOB) AND
+            --label.owner = m.owner AND
+            --label.owner = 'john.doe@foo.org' AND
+            label.last_stmt < 2
+       ) AS labels,
+       subject,
+       snippet,
+       --mimetype,
+       --body_uri,
+       "from",
+       "to",
+       tags--,
+       --timeline_id,
+       -- convert Integer(4) (treating it as Unix-Time)
+       -- to YYYY-MM-DD HH:MM:SS
+       --DateTime(timestamp, 'unixepoch') AS timestamp
+FROM message m,
+     json_each(m.label_ids) lbl2
+         INNER JOIN label ON
+             cast(label.id AS BLOB) = cast(value AS BLOB) AND
+             label.owner = 'john.doe@foo.org' AND
+             --label.owner = m.owner AND
+             --(label.id = cast(3143 AS BLOB) OR label.id = cast(3133 AS BLOB)) AND
+            label.last_stmt < 2
+WHERE m.owner = 'john.doe@foo.org' AND
+    (cast(lbl2.value AS BLOB) = cast(3143 AS BLOB) OR cast(lbl2.value AS BLOB) = cast(3133 AS BLOB)) AND
+    --(m.label_ids LIKE '%3143%' OR m.label_ids LIKE '%3133%') AND
+    m.last_stmt < 2
+ORDER BY m.timeline_id DESC
+--LIMIT 2
+;
+

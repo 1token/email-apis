@@ -13,7 +13,39 @@ BEGIN
         last_stmt   = 0,
         timestamp   = strftime('%s', DateTime('Now', 'localtime'))
     WHERE id = new.id;
+
+    INSERT INTO fts_message_label (owner, message_id, label_id, label)
+    SELECT new.owner, new.id, cast(value AS BLOB), label.name FROM
+        json_each(new.label_ids)
+            LEFT JOIN label ON cast(label.id AS BLOB) = cast(value AS BLOB)
+    WHERE label.owner = new.owner;
+
+    /*INSERT INTO fts_message_label (owner, message_id, label_id, label)
+    SELECT new.owner, new.id, cast(t2.value AS BLOB), 'test'
+    FROM message AS t1
+             JOIN json_each((SELECT "label_ids" FROM message WHERE id = t1.id)) AS t2
+    WHERE t1.id = new.id AND owner = t1.owner;*/
 END;
+
+/*SELECT 'aaa', owner, value, label.name FROM
+json_each('[3143,3134]')
+LEFT JOIN label ON cast(label.id AS BLOB) = cast(value AS BLOB);*/
+
+/*
+     UPDATE fts_message_label
+    SET message_id = new.id
+    WHERE cast(label_id AS BLOB) IN
+          (SELECT cast(t2.value AS BLOB) AS label_id
+           FROM message AS t1
+                    JOIN json_each((SELECT "label_ids" FROM message WHERE id = t1.id)) AS t2
+              WHERE t1.id = new.id AND owner = t1.owner);
+*/
+
+/*SELECT * FROM fts_message_label
+WHERE cast(label_id AS BLOB) IN
+(SELECT cast(t2.value AS BLOB)
+FROM message AS t1
+         JOIN json_each((SELECT "label_ids" FROM message WHERE id = t1.id)) AS t2);*/
 
 CREATE TRIGGER IF NOT EXISTS message_before_update
     BEFORE UPDATE OF
@@ -38,7 +70,6 @@ END;
 
 CREATE TRIGGER IF NOT EXISTS message_after_update
     AFTER UPDATE OF
-        label_ids,
         subject,
         "to",
         "cc",
@@ -58,6 +89,20 @@ BEGIN
     UPDATE message
     SET timeline_id = (SELECT num FROM timeline_seq),
         history_id  = (SELECT num FROM history_seq),
+        last_stmt   = 1,
+        timestamp   = strftime('%s', DateTime('Now', 'localtime'))
+    WHERE id = old.id;
+END;
+
+CREATE TRIGGER IF NOT EXISTS message_after_update_label_ids
+    AFTER UPDATE OF
+        label_ids
+    ON message
+    FOR EACH ROW
+BEGIN
+    UPDATE history_seq SET num = (num + 1);
+    UPDATE message
+    SET history_id  = (SELECT num FROM history_seq),
         last_stmt   = 1,
         timestamp   = strftime('%s', DateTime('Now', 'localtime'))
     WHERE id = old.id;
