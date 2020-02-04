@@ -37,9 +37,6 @@ BEGIN
         json_each(new."group");
 END;
 
-/*SELECT json_extract(value, '$.display_name') || ' ' || json_extract(value, '$.email_address') FROM
-    json_each('[{"email_address":"jane.doe@foo.org","display_name":"Jane Doe"},{"email_address":"bruce.wayne@foo.org","display_name":"Bruce Wayne"}]');*/
-
 CREATE TRIGGER IF NOT EXISTS message_before_update
     BEFORE UPDATE OF
         id,
