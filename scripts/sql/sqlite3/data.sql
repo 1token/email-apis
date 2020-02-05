@@ -104,35 +104,40 @@ INSERT INTO label (id, owner, role, name)
 VALUES (cast(3441 AS BLOB), 'luke.skywalker@foo.org', 106, 'Unread');
 ----------------------------------------message timeline----------------------------------------
 ---draft john.doe@foo.org
-INSERT INTO message (id, owner, message_uid, parent_uid, thread_uid, label_ids, "from", "to", cc, bcc, "group", tags, attachments,
+INSERT INTO message (id, owner, message_uid, parent_uid, thread_uid, label_ids, "from", "to", cc, bcc, "group", tags,
+                     attachments,
                      mimetype, subject, snippet, body_uri, sent_at, received_at, snoozed_at)
 VALUES (cast(1001 AS BLOB), 'john.doe@foo.org', cast(501 AS BLOB), null, cast(101 AS BLOB), '[3134,3143]',
         '{"email_address":"john.doe@foo.org","display_name":"John Doe"}',
         '[{"email_address":"jane.doe@foo.org","display_name":"Jane Doe"},{"email_address":"bruce.wayne@foo.org","display_name":"Bruce Wayne"}]',
         null, null, null, null, null, 'text/plain', 'Project', 'Data storage system...', null, null, null, null);
 ---sent jane.doe@foo.org
-INSERT INTO message (id, owner, message_uid, parent_uid, thread_uid, label_ids, "from", "to", cc, bcc, "group", tags, attachments,
+INSERT INTO message (id, owner, message_uid, parent_uid, thread_uid, label_ids, "from", "to", cc, bcc, "group", tags,
+                     attachments,
                      mimetype, subject, snippet, body_uri, sent_at, received_at, snoozed_at)
 VALUES (cast(1002 AS BLOB), 'jane.doe@foo.org', cast(502 AS BLOB), null, cast(201 AS BLOB), '[3233]',
         '{"email_address":"jane.doe@foo.org","display_name":"Jane Doe"}',
         '[{"email_address":"john.doe@foo.org","display_name":"John Doe"}]',
         null, null, null, null, null, 'text/plain', 'Test1', 'Hello World...', null, 1580668000, null, null);
 ---inbox john.doe@foo.org
-INSERT INTO message (id, owner, message_uid, parent_uid, thread_uid, label_ids, "from", "to", cc, bcc, "group", tags, attachments,
+INSERT INTO message (id, owner, message_uid, parent_uid, thread_uid, label_ids, "from", "to", cc, bcc, "group", tags,
+                     attachments,
                      mimetype, subject, snippet, body_uri, sent_at, received_at, snoozed_at)
 VALUES (cast(1003 AS BLOB), 'john.doe@foo.org', cast(502 AS BLOB), null, cast(201 AS BLOB), '[3131]',
         '{"email_address":"jane.doe@foo.org","display_name":"Jane Doe"}',
         '[{"email_address":"john.doe@foo.org","display_name":"John Doe"}]',
         null, null, null, null, null, 'text/plain', 'Test1', 'Hello World...', null, 1580668000, 1580668100, null);
 ---draft john.doe@foo.org
-INSERT INTO message (id, owner, message_uid, parent_uid, thread_uid, label_ids, "from", "to", cc, bcc, "group", tags, attachments,
+INSERT INTO message (id, owner, message_uid, parent_uid, thread_uid, label_ids, "from", "to", cc, bcc, "group", tags,
+                     attachments,
                      mimetype, subject, snippet, body_uri, sent_at, received_at, snoozed_at)
 VALUES (cast(1004 AS BLOB), 'john.doe@foo.org', cast(503 AS BLOB), null, cast(102 AS BLOB), '[3134]',
         '{"email_address":"john.doe@foo.org","display_name":"John Doe"}',
         '[{"email_address":"luke.skywalker@foo.org","display_name":"Luke Skywalker"},{"email_address":"bruce.wayne@foo.org","display_name":"Bruce Wayne"}]',
         null, null, null, null, null, 'text/plain', 'Meeting', 'Create a complet new...', null, null, null, null);
 --sent john.doe@foo.org
-INSERT INTO message (id, owner, message_uid, parent_uid, thread_uid, label_ids, "from", "to", cc, bcc, "group", tags, attachments,
+INSERT INTO message (id, owner, message_uid, parent_uid, thread_uid, label_ids, "from", "to", cc, bcc, "group", tags,
+                     attachments,
                      mimetype, subject, snippet, body_uri, sent_at, received_at, snoozed_at)
 VALUES (cast(1005 AS BLOB), 'john.doe@foo.org', cast(504 AS BLOB), null, cast(103 AS BLOB), '[3133,3143,3142]',
         '{"email_address":"john.doe@foo.org","display_name":"John Doe"}',
@@ -140,7 +145,8 @@ VALUES (cast(1005 AS BLOB), 'john.doe@foo.org', cast(504 AS BLOB), null, cast(10
         '[{"email_address":"bruce.wayne@foo.org","display_name":"Bruce Wayne"}]',
         null, null, null, null, 'text/plain', 'Request', 'Issue 318...', null, 1580668165, null, null);
 --inbox jane.doe@foo.org
-INSERT INTO message (id, owner, message_uid, parent_uid, thread_uid, label_ids, "from", "to", cc, bcc, "group", tags, attachments,
+INSERT INTO message (id, owner, message_uid, parent_uid, thread_uid, label_ids, "from", "to", cc, bcc, "group", tags,
+                     attachments,
                      mimetype, subject, snippet, body_uri, sent_at, received_at, snoozed_at)
 VALUES (cast(1006 AS BLOB), 'jane.doe@foo.org', cast(504 AS BLOB), null, cast(103 AS BLOB), '[3231]',
         '{"email_address":"john.doe@foo.org","display_name":"John Doe"}',
@@ -148,7 +154,8 @@ VALUES (cast(1006 AS BLOB), 'jane.doe@foo.org', cast(504 AS BLOB), null, cast(10
         '[{"email_address":"bruce.wayne@foo.org","display_name":"Bruce Wayne"}]',
         null, null, null, null, 'text/plain', 'Request', 'Issue 318...', null, 1580668165, 1580668200, null);
 --inbox bruce.wayne@foo.org
-INSERT INTO message (id, owner, message_uid, parent_uid, thread_uid, label_ids, "from", "to", cc, bcc, "group", tags, attachments,
+INSERT INTO message (id, owner, message_uid, parent_uid, thread_uid, label_ids, "from", "to", cc, bcc, "group", tags,
+                     attachments,
                      mimetype, subject, snippet, body_uri, sent_at, received_at, snoozed_at)
 VALUES (cast(1007 AS BLOB), 'bruce.wayne@foo.org', cast(504 AS BLOB), null, cast(103 AS BLOB), '[3331]',
         '{"email_address":"john.doe@foo.org","display_name":"John Doe"}',
@@ -156,3 +163,6 @@ VALUES (cast(1007 AS BLOB), 'bruce.wayne@foo.org', cast(504 AS BLOB), null, cast
         '[{"email_address":"bruce.wayne@foo.org","display_name":"Bruce Wayne"}]',
         null, null, null, null, 'text/plain', 'Request', 'Issue 318...', null, 1580668165, 1580668202, null);
 
+
+INSERT INTO filter (id, owner, name, criteria, label_ids, recipients)
+VALUES (cast(4001 AS BLOB), 'john.doe@foo.org', 'Project XYZ', 'from:jane.doe@foo.org', '3143', null)

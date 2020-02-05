@@ -35,6 +35,10 @@ BEGIN
     INSERT INTO fts_message_group (owner, message_id, "group")
     SELECT new.owner, new.id, json_extract(value, '$.display_name') || ' ' || json_extract(value, '$.email_address') FROM
         json_each(new."group");
+
+    INSERT INTO fts_message_attachment (owner, message_id, filename, attachment)
+    SELECT new.owner, new.id, json_extract(value, '$.filename'), json_extract(value, '$.attachment') FROM
+        json_each(new.attachments);
 END;
 
 CREATE TRIGGER IF NOT EXISTS message_before_update
@@ -96,7 +100,6 @@ CREATE TRIGGER IF NOT EXISTS message_after_update
     AFTER UPDATE OF
         subject,
         tags,
-        attachments,
         mimetype,
         subject,
         snippet,
@@ -242,6 +245,33 @@ BEGIN
     INSERT INTO fts_message_group (owner, message_id, "group")
     SELECT new.owner, new.id, json_extract(value, '$.display_name') || ' ' || json_extract(value, '$.email_address') FROM
         json_each(new."group");
+END;
+
+CREATE TRIGGER IF NOT EXISTS message_after_update_attachments
+    AFTER UPDATE OF
+        attachments
+    ON message
+    FOR EACH ROW
+    WHEN new.attachments <> old.attachments
+BEGIN
+    UPDATE timeline_seq SET num = (num + 1);
+    UPDATE history_seq SET num = (num + 1);
+    UPDATE message
+    SET timeline_id = (SELECT num FROM timeline_seq),
+        history_id  = (SELECT num FROM history_seq),
+        last_stmt   = 1,
+        timestamp   = strftime('%s', DateTime('Now', 'localtime'))
+    WHERE id = old.id;
+
+    -- todo refine!!!
+    DELETE
+    FROM fts_message_attachment
+    WHERE owner = old.owner
+      AND message_id = old.id;
+
+    INSERT INTO fts_message_attachment (owner, message_id, filename, attachment)
+    SELECT new.owner, new.id, json_extract(value, '$.filename'), json_extract(value, '$.attachment') FROM
+        json_each(new.attachments);
 END;
 
 -- Mark for delete
