@@ -263,7 +263,7 @@ BEGIN
         timestamp   = strftime('%s', DateTime('Now', 'localtime'))
     WHERE id = old.id;
 
-    -- todo refine!!!
+    -- todo refine or revamp!!!
     DELETE
     FROM fts_message_attachment
     WHERE owner = old.owner
