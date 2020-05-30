@@ -71,7 +71,7 @@ CREATE TABLE filter
     timestamp   integer(4)                      DEFAULT (strftime('%s', DateTime('Now', 'localtime')))
 );
 
---roles(system folder): 0-inbox, 1-snoozed, 2-sent, 3-drafts, 4-outbox, 5...99-reserved
+--roles(system folder): 0-inbox, 1-snoozed, 2-sent, 3-drafts, 4-outbox, 5-deliverybox, 6...99-reserved
 --roles(system label): 100-done, 101-archived, 102-starred, 103-important, 104-chats, 105-spam, 106-unread, 107-999-reserved
 --roles(custom label): 1000...
 CREATE TABLE label
